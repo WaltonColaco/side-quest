@@ -7,7 +7,8 @@ Usage:
     --input-dir normalized_information \
     --output merged/merged.json \
     --conflicts merged/conflicts.json \
-    --doc-priority "leed,standard"
+    --doc-priority "leed,standard" \
+    --include-pattern housing
 """
 import argparse
 import json
@@ -15,9 +16,12 @@ from pathlib import Path
 from typing import Dict, Any, List
 
 
-def load_records(input_dir: Path) -> List[Dict[str, Any]]:
+def load_records(input_dir: Path, include_pattern: str) -> List[Dict[str, Any]]:
     records = []
+    pat = include_pattern.lower()
     for path in sorted(input_dir.glob("*.json")):
+        if pat and pat not in path.name.lower():
+            continue
         data = json.loads(path.read_text(encoding="utf-8"))
         records.append(data)
     if not records:
@@ -106,6 +110,7 @@ def main():
     ap.add_argument("--output", default="merged/merged.json", type=Path)
     ap.add_argument("--conflicts", default="merged/conflicts.json", type=Path)
     ap.add_argument("--doc-priority", default="", help="Comma-separated priority hints (substr match, earlier = higher)")
+    ap.add_argument("--include-pattern", default="", help="Only include normalized files with this substring in filename (case-insensitive)")
     args = ap.parse_args()
 
     priorities = [p.strip() for p in args.doc_priority.split(",") if p.strip()]
@@ -113,7 +118,7 @@ def main():
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.conflicts.parent.mkdir(parents=True, exist_ok=True)
 
-    records = load_records(args.input_dir)
+    records = load_records(args.input_dir, args.include_pattern)
     merged, conflicts = merge_requirements(records, priorities)
 
     merged_out = {"requirements": list(merged.values())}
