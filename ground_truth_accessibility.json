@@ -1,0 +1,194 @@
+{
+  "document_type": "ground_truth",
+  "domain": "accessibility_and_inclusion",
+  "context": "commercial_interiors",
+  "intent": "To support the diverse needs of occupants and increase widespread usability of spaces",
+  "categories": [
+    {
+      "id": "physical_access",
+      "label": "Physical Accessibility",
+      "requirements": [
+        {
+          "id": "phys_001",
+          "label": "Accessible Routes",
+          "description": "Accessible routes must be provided throughout the building",
+          "keywords": ["accessible route", "path of travel", "circulation"]
+        },
+        {
+          "id": "phys_002",
+          "label": "Ramps",
+          "description": "Ramps must be provided as alternatives to stepped changes in level",
+          "keywords": ["ramp", "slope", "grade change", "level change"]
+        },
+        {
+          "id": "phys_003",
+          "label": "Exterior Building Entrances",
+          "description": "Regular exterior building entrances must be accessible",
+          "keywords": ["entrance", "entry", "exterior door", "main entrance"]
+        },
+        {
+          "id": "phys_004",
+          "label": "Door Minimum Width",
+          "description": "Minimum clear width of doors must be 32 inches (0.86 meters) to allow passage",
+          "value": {
+            "imperial": "32 inches",
+            "metric": "0.86 meters"
+          },
+          "keywords": ["door width", "clear width", "doorway", "passage width"]
+        },
+        {
+          "id": "phys_005",
+          "label": "Accessible Reception and Counters",
+          "description": "Reception desks and counters must include a front-approach, wheelchair-accessible section",
+          "keywords": ["reception desk", "counter", "front approach", "wheelchair accessible", "service counter"]
+        },
+        {
+          "id": "phys_006",
+          "label": "Automatic Door Operation",
+          "description": "Doors should support wave-to-open, vertical hand press, or foot press activation",
+          "keywords": ["automatic door", "wave to open", "hands-free", "foot press", "motion sensor door"]
+        },
+        {
+          "id": "phys_007",
+          "label": "Mobility Device Space in Meeting Rooms",
+          "description": "Meeting spaces must accommodate mobility devices for at least 10% of occupants",
+          "value": {
+            "percentage": "10%",
+            "applies_to": "meeting spaces"
+          },
+          "keywords": ["mobility device", "wheelchair space", "meeting room", "turning radius", "accessible seating"]
+        },
+        {
+          "id": "phys_008",
+          "label": "Inclusive Fitness Facilities",
+          "description": "Fitness facilities must include inclusive equipment and activities",
+          "keywords": ["fitness", "gym", "inclusive equipment", "adaptive equipment", "accessible fitness"]
+        },
+        {
+          "id": "phys_009",
+          "label": "Alternate Accessible Routes (Stair Alternatives)",
+          "description": "Alternate accessible routes must be provided instead of or in addition to stairs",
+          "keywords": ["stair alternative", "elevator", "lift", "accessible route", "ramp"]
+        },
+        {
+          "id": "phys_010",
+          "label": "Non-Slip Flooring",
+          "description": "Flooring surfaces must be non-slip throughout accessible routes and spaces",
+          "keywords": ["non-slip", "slip resistant", "flooring", "floor surface", "traction"]
+        },
+        {
+          "id": "phys_011",
+          "label": "Area Rug Secured",
+          "description": "Area rugs must be fixed/secured to prevent trip hazards",
+          "keywords": ["area rug", "rug", "carpet", "secured flooring", "trip hazard"]
+        },
+        {
+          "id": "phys_012",
+          "label": "Glazing Visual Indication",
+          "description": "Full-height glazing must have visual indication or railings at appropriate height",
+          "keywords": ["glazing", "glass wall", "full height glass", "visual indication", "manifestation", "railing"]
+        }
+      ]
+    },
+    {
+      "id": "sensory_alerts",
+      "label": "Audible and Visual Alerts",
+      "requirements": [
+        {
+          "id": "sens_001",
+          "label": "Audible and Visual Alerts",
+          "description": "Emergency and notification systems must provide both audible and visual alerts",
+          "keywords": ["audible alert", "visual alert", "alarm", "strobe", "notification", "emergency signal"]
+        },
+        {
+          "id": "sens_002",
+          "label": "Visual Contrast Between Walls and Floors",
+          "description": "Sufficient visual contrast must exist between wall and floor surfaces to aid navigation",
+          "keywords": ["visual contrast", "colour contrast", "wall floor contrast", "tonal contrast"]
+        },
+        {
+          "id": "sens_003",
+          "label": "Warning Indicators",
+          "description": "Visual, tactile, and photoluminescent warnings must be provided at hazard locations",
+          "keywords": ["tactile warning", "photoluminescent", "hazard warning", "visual warning", "floor marking", "warning strip"]
+        }
+      ]
+    },
+    {
+      "id": "social_health",
+      "label": "Social Health and Wellbeing",
+      "requirements": [
+        {
+          "id": "soc_001",
+          "label": "Lactation Room",
+          "description": "A dedicated lactation room must be provided",
+          "keywords": ["lactation room", "nursing room", "mothers room", "breastfeeding room"]
+        },
+        {
+          "id": "soc_002",
+          "label": "All-Gender Single-User Restroom",
+          "description": "At least one fully accessible all-gender single-user restroom must be provided",
+          "keywords": ["all gender restroom", "gender neutral", "single user", "accessible washroom", "universal restroom"]
+        },
+        {
+          "id": "soc_003",
+          "label": "Adult Changing Facility",
+          "description": "An adult changing station must be provided, either in a family restroom or in both men's and women's restrooms",
+          "keywords": ["adult changing", "changing table", "family restroom", "changing station", "adult care"]
+        },
+        {
+          "id": "soc_004",
+          "label": "Multilingual Signage",
+          "description": "Signage must be provided in any language spoken by more than 5% of the building population",
+          "value": {
+            "threshold": "5% of population"
+          },
+          "keywords": ["multilingual", "signage", "language", "translation", "wayfinding language"]
+        }
+      ]
+    },
+    {
+      "id": "neurodivergent",
+      "label": "Neurodivergent User Support",
+      "requirements": [
+        {
+          "id": "nd_001",
+          "label": "Clear Wayfinding Signage",
+          "description": "Wayfinding signage must clearly indicate exits, entrances, and major functions",
+          "keywords": ["wayfinding", "signage", "exit sign", "entrance sign", "directional sign", "orientation"]
+        },
+        {
+          "id": "nd_002",
+          "label": "Non-Text Diagrams and Symbols",
+          "description": "Non-text diagrams and universal symbols must be used alongside text in signage",
+          "keywords": ["pictogram", "symbol", "icon", "diagram", "non-text", "universal symbol"]
+        },
+        {
+          "id": "nd_003",
+          "label": "Braille, Visual, and Audio Cues",
+          "description": "Navigation support must include braille, visual cues, and audio cues",
+          "keywords": ["braille", "audio cue", "visual cue", "tactile sign", "talking sign", "auditory navigation"]
+        },
+        {
+          "id": "nd_004",
+          "label": "Pattern and Colour Blocking for Key Access",
+          "description": "Patterns and colour blocking must be used to identify key access points and zones",
+          "keywords": ["colour blocking", "pattern", "floor pattern", "colour coding", "zone identification", "visual landmark"]
+        },
+        {
+          "id": "nd_005",
+          "label": "Haptic and Tactile Maps",
+          "description": "Haptic or tactile maps must be provided to support navigation for users with visual impairments",
+          "keywords": ["haptic map", "tactile map", "raised map", "touch map", "tactile navigation", "orientation map"]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "standard": "Leeds Accessibility and Inclusion",
+    "building_type": "commercial_interiors",
+    "version": "1.0",
+    "created": "2026-02-20",
+    "notes": "Ground truth document for structured extraction. All requirements are mandatory unless otherwise noted. Percentages and measurements are minimum thresholds."
+  }
+}
