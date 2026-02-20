@@ -1,5 +1,5 @@
 
-# Accessibility Rubric (commercial_interiors)
+# Accessibility Rubric (housing)
 
 - Requirements covered: 38
 - Categories: 4

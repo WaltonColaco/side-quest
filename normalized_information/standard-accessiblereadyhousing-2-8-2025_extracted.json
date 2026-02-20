@@ -2,7 +2,7 @@
   "document": {
     "doc_id": "doc_ee880e420cc3",
     "filename": "standard-accessiblereadyhousing-2-8-2025.md",
-    "building_type": "commercial_interiors"
+    "building_type": "housing"
   },
   "requirements": [
     {
@@ -11,7 +11,7 @@
       "label": "Multilingual Signage",
       "description": "Standards must be available in multiple formats, including plain-language, ASL, and LSQ summaries, to ensure accessibility for diverse users.",
       "category_id": "social_health",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "providing standards in multiple formats, including plain-language, American Sign language (ASL) and langue des signes qu\u00e9b\u00e9coise (LSQ) summaries",
       "page_numbers": [
         9
@@ -33,7 +33,7 @@
       "label": "Accessible Routes",
       "description": "Design for accessible-ready (DAR) requires a path of travel that can be constructed to serve all rooms and spaces without destructive modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have designed a path of travel complying with CSA/ASC B652 clause 4.4.1, Clause 15.1 of this standard, or ramp complying with CSA/ASC B652 clause 5.5 that can be constructed to serve those areas without destructive modifications",
       "page_numbers": [
         36
@@ -53,7 +53,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Where stairs are present, design must allow for future installation of ramps or other accessible routes without major modifications.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "path of travel complying with CSA/ASC B652 clause 4.4.1, Clause 15.1 of this standard, or ramp complying with CSA/ASC B652 clause 5.5 that can be constructed to serve those areas without destructive modifications",
       "page_numbers": [
         36
@@ -73,7 +73,7 @@
       "label": "Accessible Operating Controls",
       "description": "All rooms and spaces must have operating controls in accordance with Clauses 13.1 to 13.9, supporting future accessibility.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have operating controls in accordance with Clauses 13.1 to 13.9",
       "page_numbers": [
         36
@@ -93,7 +93,7 @@
       "label": "Non-Slip Flooring",
       "description": "Flooring and ground surfaces must be replaceable or modifiable to meet accessibility standards for flooring, supporting non-slip and accessible surfaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have flooring and ground surfaces that can be replaced with or modified to flooring in accordance with CSA/ASC B652 clause 4.6",
       "page_numbers": [
         36
@@ -113,7 +113,7 @@
       "label": "Headroom Clearance",
       "description": "Maintain headroom clearances in accordance with Clause 12.3.6 to ensure accessible movement throughout the dwelling.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "maintain headroom clearances in accordance with Clause 12.3.6",
       "page_numbers": [
         36
@@ -133,7 +133,7 @@
       "label": "Accessible Lighting Design",
       "description": "Design for accessible-ready (DAR) must accommodate illumination in accordance with CSA/ASC B652 clause 4.8, allowing for future accessible lighting installation.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be designed to accommodate illumination in accordance with CSA/ASC B652 clause 4.8",
       "page_numbers": [
         36
@@ -153,7 +153,7 @@
       "label": "Accessible Routes",
       "description": "A path of travel to the main entrance must comply with CSA/ASC B652 clause 4.3.2 and 5.2.1, or provide a lift per CSA/ASC B652 5.8.2.2.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a path of travel in accordance with CSA/ASC B652 clause 4.3.2 and 5.2.1; or a lift in accordance with CSA/ASC B652 clause 5.8.2.2.(a) and (c)",
       "page_numbers": [
         40
@@ -173,7 +173,7 @@
       "label": "Exterior Building Entrances",
       "description": "Entrance doors for accessible-ready houses must comply with CSA/ASC B652 clause 5.7 and Clauses 12.3.2.7 and 12.3.2.8.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Doors serving accessible-ready houses shall comply with CSA/ASC B652 clause 5.7, and Clauses 12.3.2.7 and 12.3.2.8 of this Standard.",
       "page_numbers": [
         41
@@ -193,7 +193,7 @@
       "label": "Accessible Routes",
       "description": "Balconies, backyards, or outdoor amenity spaces must be served by a path of travel per CSA/ASC B652 4.3.2 and 5.2.1, or have minimum clear floor space per 4.4.2 b).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be served with a path of travel in accordance with CSA/ASC B652 clause 4.3.2 and 5.2.1; ... minimum clear floor space in accordance with CSA/ASC B652 clause 4.4.2 b)",
       "page_numbers": [
         41
@@ -213,7 +213,7 @@
       "label": "Accessible Routes",
       "description": "Exterior amenities must be served by a path of travel per CSA/ASC B652 4.3.2 and 5.2.1, or a ramp per 5.5.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Exterior amenities shall: a) be served with a path of travel in accordance with CSA/ASC B652 clause 4.3.2 and 5.2.1; b) be served with a ramp conforming to CSA/ASC B652 clause 5.5;",
       "page_numbers": [
         42
@@ -233,7 +233,7 @@
       "label": "Ramps",
       "description": "Exterior amenities may be served by a ramp conforming to CSA/ASC B652 clause 5.5.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be served with a ramp conforming to CSA/ASC B652 clause 5.5;",
       "page_numbers": [
         42
@@ -253,7 +253,7 @@
       "label": "Accessible Landscaping for Future Features",
       "description": "Landscaping on accessible-ready exterior paths must be removable with standard hand tools and not require a permit for removal.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be removable using standard hand tools (e.g., gardening tools, shovels, picks, crowbars, etc.); and ii) not require a permit for removal or demolition of the landscaping (e.g. trees).",
       "page_numbers": [
         43
@@ -273,7 +273,7 @@
       "label": "Exterior Stairs Compliance",
       "description": "Exterior stairs must be designed and constructed in compliance with clause 5.6 of CSA B652.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Exterior stairs shall be designed and constructed in compliance with clause 5.6 of CSA B652.",
       "page_numbers": [
         43
@@ -293,7 +293,7 @@
       "label": "Accessible Routes",
       "description": "Driveways and garages must provide access to the home via a path of travel per 12.3.3, or a ramp/lift designed per CSA/ASC B652.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "access shall be provided into the home from the main entrance and garage entrance (as per Clause 12.1) by: a) a path of travel in accordance with clause 12.3.3 a).",
       "page_numbers": [
         44
@@ -313,7 +313,7 @@
       "label": "Ramps",
       "description": "Design for accessible-ready: have a ramp designed in accordance with CSA/ASC B652 clause 5.5.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Design for accessible-ready (DAR): have a ramp designed in accordance with CSA/ASC B652clause 5.5.",
       "page_numbers": [
         44
@@ -333,7 +333,7 @@
       "label": "Accessible Parking for Shared Amenities",
       "description": "Shared parking amenities must provide assigned accessible parking per CSA/ASC B652 clause 5.3.2, or garages per 5.3.3.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "assigned accessible parking in accordance with CSA/ASC B652 clause 5.3.2, or garages designed in accordance with CSA/ASC B652 clause 5.3.3 must be provided.",
       "page_numbers": [
         45
@@ -353,7 +353,7 @@
       "label": "Accessible-Ready Parking Spaces",
       "description": "Parking spaces serving only an accessible-ready house must be designed per CSA/ASC B652 clause 5.3.1 and 5.3.2, allowing area allowances without destructive modifications.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "parking spaces serving only an accessible-ready house shall be designed in accordance with CSA/ASC B652 clause 5.3.1 and clause 5.3.2.",
       "page_numbers": [
         46
@@ -373,7 +373,7 @@
       "label": "Accessible-Ready Parking Garage Dimensions",
       "description": "Parking garages or carports serving only an accessible-ready house must have a driveway at least 4600 mm wide by 8600 mm long, or comply with CSA/ASC B652 5.3.3 and 5.3.4.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a parking space (i.e. driveway) leading up to the parking garage or carport that is a minimum of 4600 mm wide by 8600 mm long; or b) be designed in accordance with CSA/ASC B652 clause 5.3.3 and clause 5.3.4.",
       "page_numbers": [
         46
@@ -396,7 +396,7 @@
       "label": "Accessible-Ready Interior Spaces",
       "description": "Accessible-ready houses must have at least one accessible-ready bathroom, kitchen, bedroom, laundry room, and entry/dining/living room with accessible path of travel.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Accessible-ready houses shall be designed such that they have at least: a) one bathroom in accordance with Clause 12.3.10; ... e) if present, one entry way, dining room, living room served with a path of travel in accordance with Clause 12.3.3.",
       "page_numbers": [
         47
@@ -416,7 +416,7 @@
       "label": "Door Minimum Width",
       "description": "The clear opening width of a doorway shall be in compliance with CSA/ASC B652 clause 5.7.1.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The clear opening width of a doorway shall be in compliance with CSA/ASC B652 clause 5.7.1.",
       "page_numbers": [
         48
@@ -436,7 +436,7 @@
       "label": "Door Minimum Width",
       "description": "Doorways must have a minimum width of 860 mm with maneuvering areas as specified for accessibility.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "for doorways, the width shall be at least 860 mm with a maneuvering area in accordance with clause 12.3.2.2.",
       "page_numbers": [
         52
@@ -458,7 +458,7 @@
       "label": "Accessible Routes",
       "description": "Paths of travel must be at least 1200 mm wide for interiors and 1500 mm for exteriors, with exceptions for short indentations.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a width of at least 1200 mm for interior environments, and 1500 mm for exterior environment",
       "page_numbers": [
         52
@@ -480,7 +480,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Clear floor or ground spaces must accommodate a person using a wheeled mobility device, with specified minimum dimensions and turning diameters.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be at least 820 mm by 1390 mm for a stationary position; have a minimum 1800 mm turning diameter; ... for a T-turn",
       "page_numbers": [
         53,
@@ -503,7 +503,7 @@
       "label": "Exterior Building Entrances",
       "description": "Main entrance doors must be equipped for vision panels or door viewers at specified heights for accessibility.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "main entrance door shall be equipped with a single door viewer installed at 1500 mm to 1700 mm ... with the ability to install a second door viewer at 1000 to 1200 mm",
       "page_numbers": [
         51
@@ -525,7 +525,7 @@
       "label": "Automatic Door Operation",
       "description": "Electrical rough-in must be provided for future installation of power-assisted doors at accessible-ready bathroom, main entrance, and garage entrance.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Roughed-in electrical shall be provided for the future installation of a power-assisted door at the accessible-ready bathroom ... main entrance, and garage entrance.",
       "page_numbers": [
         50
@@ -547,7 +547,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Counters and work surfaces must be installed so they can be replaced with accessible versions without modifying structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Counters and work surfaces shall: a) be installed in a manner that their removal and replacement ... can be conducted without any modifications to the structural, electrical, plumbing, or HVAC systems;",
       "page_numbers": [
         55
@@ -569,7 +569,7 @@
       "label": "Accessible Maneuvering Area at Doors",
       "description": "Doorways must have a level, clear, and unobstructed maneuvering area extending specified distances beyond the latch-side and path of travel.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a level, clear, and unobstructed maneuvering area that extends for the full height of the door and is not less than: 600 mm beyond the latch-side on the pull side; 300 mm beyond the latch-side on the push side; ... not less than 1200 mm for interior spaces and not less than 1500 mm for exterior spaces.",
       "page_numbers": [
         49
@@ -591,7 +591,7 @@
       "label": "Accessible Two Doors in Series",
       "description": "Where two doors are in series, design must allow for removal of one door or achieving required distance without major modifications to building systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be designed such that one of the doors can be removed without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         49
@@ -613,7 +613,7 @@
       "label": "Accessible-Ready Path and Space Modifications",
       "description": "Walls that may need to be moved for accessible paths or spaces must be non-loadbearing, with easily terminable electrical, and no plumbing or HVAC.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "requiring walls that may need to be moved to achieve the space requirement to: 1) be non-load bearing walls ... 2) have electrical systems that can be terminated at a nearby junction box ... 3) have no plumbing in them, and 4) have no HVAC in them.",
       "page_numbers": [
         52,
@@ -636,7 +636,7 @@
       "label": "Accessible Door Hardware Compatibility",
       "description": "Doors must be designed to accept hardware that complies with accessibility standards, allowing for easy replacement.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Doors shall be designed and constructed to accept door hardware that complies with CSA/ASC B652 clause 5.7.5.",
       "page_numbers": [
         50
@@ -658,7 +658,7 @@
       "label": "Accessible Door Thresholds",
       "description": "Door thresholds must comply with accessibility requirements as specified in referenced standards.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Thresholds shall be as required by CSA/ASC B652 clause 5.7.4.",
       "page_numbers": [
         50
@@ -680,7 +680,7 @@
       "label": "Accessible Door-Opening Force",
       "description": "Door openings must be designed to accept doors that comply with accessible door-opening force requirements.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The design and the construction of door openings shall accept doors that comply with CSA/ASC B652 clause 5.7.6.",
       "page_numbers": [
         50
@@ -702,7 +702,7 @@
       "label": "Accessible Door Vision Panel Compatibility",
       "description": "Door openings must be compatible with doors or sidelights that have vision panels meeting accessibility standards.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the door opening shall be compatible to receive a door where the vision panel in the door or the sidelight comply with CSA/ASC B652 clause 5.7.9.",
       "page_numbers": [
         51
@@ -724,7 +724,7 @@
       "label": "Accessible Counter Backsplash Height",
       "description": "Where present, counter backsplashes must start from a height of 730 mm above the finished floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "where present, have the backsplash start from a height of 730 mm above the finished floor.",
       "page_numbers": [
         55
@@ -746,7 +746,7 @@
       "label": "Accessible Routes",
       "description": "Headroom clearances along a path of travel must meet CSA/ASC B652 clause 4.7.1, with basements requiring a minimum of 2030 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Headroom clearances along a path of travel shall be as per CSA/ASC B652 clause 4.7.1, except in basements. Basements shall have a headroom clearance...2030 mm.",
       "page_numbers": [
         56
@@ -768,7 +768,7 @@
       "label": "Protruding Objects",
       "description": "All protrusions must comply with CSA/ASC B652 clause 4.7.2 or be removable without affecting integral building systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "All protrusions shall: a) comply with the limitations and requirements of CSA/ASC B652 clause 4.7.2; or b) be removable without affecting the integral buildings systems...",
       "page_numbers": [
         56
@@ -788,7 +788,7 @@
       "label": "Non-Slip Flooring",
       "description": "Floor and ground surfaces must be installed per CSA/ASC B652 clause 4.6 or allow for future replacement to compliant flooring without major repairs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Floor and ground surfaces covering shall: a) be installed in accordance with CSA/ASC B652 clause 4.6; or b) be installed: i) in a manner that allows their replacement...",
       "page_numbers": [
         57
@@ -808,7 +808,7 @@
       "label": "Accessible Wall Finishes",
       "description": "Wall finishes must be installed per CSA/ASC B652 clause 4.6 or allow for future replacement to compliant finishes without major repairs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Wall finishes, surfaces, and coverings shall: a) be installed in accordance with CSA/ASC B652 clause 4.6; or b) be installed: i) in a manner that allows their replacement...",
       "page_numbers": [
         57
@@ -828,7 +828,7 @@
       "label": "Accessible-Ready Bathroom",
       "description": "At least one bathroom in an accessible-ready house must be designed as an accessible-ready bathroom.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "At least one bathroom in an accessible-ready house shall be designed as an accessible-ready bathroom.",
       "page_numbers": [
         58
@@ -848,7 +848,7 @@
       "label": "Bathroom Turning Space",
       "description": "Turning space in the accessible-ready bathroom must comply with Clause 12.3.4 or be designed for future compliance without significant modifications.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The turning space within the accessible-ready bathroom...shall: a) comply with the requirements of Clause 12.3.4; or b) ...be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications...",
       "page_numbers": [
         58,
@@ -869,7 +869,7 @@
       "label": "Door Minimum Width",
       "description": "Accessible-ready bathroom doors must comply with Clauses 12.3.2.1 to 12.3.2.7.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom doors shall comply with Clauses 12.3.2.1 to 12.3.2.7.",
       "page_numbers": [
         59
@@ -889,7 +889,7 @@
       "label": "Non-Slip Flooring",
       "description": "Accessible-ready bathroom floors must comply with Clause 12.3.8 (floor and ground surface covering requirements).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom floors shall comply with Clause 12.3.8.",
       "page_numbers": [
         59
@@ -909,7 +909,7 @@
       "label": "Bathroom Wall Reinforcing",
       "description": "Accessible-ready bathroom walls must comply with CSA/ASC B652 clause 5.9.5 for reinforcement (e.g., for grab bars).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom walls shall comply with CSA/ASC B652 clause 5.9.5.",
       "page_numbers": [
         60
@@ -929,7 +929,7 @@
       "label": "Bathroom Lighting Compatibility",
       "description": "Accessible-ready bathroom lighting must be compatible with fixtures that comply with CSA/ASC B652 clause 5.9.6.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom lighting shall be compatible with lighting fixtures that comply with the requirements of CSA/ASC B652 clause 5.9.6.",
       "page_numbers": [
         60
@@ -949,7 +949,7 @@
       "label": "Bathroom Electrical Accessibility",
       "description": "Accessible-ready bathroom electrical must comply with CSA/ASC B652 clause 5.9.8 or have conduits for future GFCI receptacle installation without major work.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom electrical shall: a) comply with the requirements of CSA/ASC B652 clause 5.9.8; or b) have electrical conduits between a power source and the locations where GFCI receptacles need to be located...",
       "page_numbers": [
         60,
@@ -970,7 +970,7 @@
       "label": "Bathroom Luminance (Colour) Contrast",
       "description": "Accessible-ready bathroom fixtures must be compatible for replacement with fixtures complying with CSA/ASC B652 clause 5.9.9.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom fixtures shall be compatible to be replaced with fixtures complying with the CSA/ASC B652 clause 5.9.9.",
       "page_numbers": [
         61
@@ -990,7 +990,7 @@
       "label": "Bathroom Toilet and Accessories",
       "description": "Accessible-ready bathroom toilet and accessories must comply with CSA/ASC B652 clause 5.9.10 or be designed for future compliance without significant modifications.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom toilet and accessories shall: a) comply with the requirements of CSA/ASC B652 clause 5.9.10; or b) ...be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications...",
       "page_numbers": [
         61
@@ -1010,7 +1010,7 @@
       "label": "Bathroom Grab Bars",
       "description": "Where installed, bathroom grab bars must meet the requirements of CSA/ASC B652 clause 5.9.11.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where installed, bathroom grab bars shall meet the requirements of CSA/ASC B652 clause 5.9.11.",
       "page_numbers": [
         61
@@ -1030,7 +1030,7 @@
       "label": "Bathroom Sink and Vanity",
       "description": "Accessible-ready bathroom sink and vanity must comply with CSA/ASC B652 clause 5.9.12 or be designed for future compliance without significant modifications.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible-ready bathroom sink and vanity shall: a) comply with the requirements of CSA/ASC B652 clause 5.9.12; or b) ...be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications...",
       "page_numbers": [
         62
@@ -1050,7 +1050,7 @@
       "label": "Accessible-Ready Bathroom Showers",
       "description": "Bathroom showers must be designed to allow future retrofit to CSA/ASC B652 clause 5.9.13 compliance without significant modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The bathroom, including the shower, shall be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         63
@@ -1070,7 +1070,7 @@
       "label": "Accessible-Ready Bathroom Bathtubs",
       "description": "Bathroom bathtubs must be designed to allow future retrofit to CSA/ASC B652 clause 5.9.14 compliance without significant modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The bathroom, including the bathtub, shall be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         63
@@ -1090,7 +1090,7 @@
       "label": "Accessible-Ready Bathroom Medicine Cabinets",
       "description": "Bathroom medicine cabinets must be designed to allow future retrofit to CSA/ASC B652 clause 5.9.15 compliance without significant modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The bathroom, including the medicine cabinet, shall be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         64
@@ -1110,7 +1110,7 @@
       "label": "Accessible-Ready Bathroom Storage",
       "description": "Bathroom storage must comply with CSA/ASC B652 clauses 4.4 and 4.5 or be removable without significant modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "bathroom storage shall: a) comply with CSA/ASC B652 clauses 4.4 and 4.5; or b) be removable without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         64
@@ -1130,7 +1130,7 @@
       "label": "Accessible-Ready Kitchens",
       "description": "Kitchens must be designed to allow future retrofit to CSA/ASC B652 clause 5.10 compliance without significant modifications to structural, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The kitchen shall be designed such that it can be constructed meeting the requirements of sentence (a) without significant modifications for the structural, plumbing, or HVAC systems",
       "page_numbers": [
         65
@@ -1150,7 +1150,7 @@
       "label": "Accessible-Ready Bedrooms",
       "description": "Bedrooms must be designed to allow future retrofit to CSA/ASC B652 clauses 5.11.1, 5.11.2, and 5.11.3 compliance without significant modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The bedroom shall be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         66
@@ -1170,7 +1170,7 @@
       "label": "Accessible-Ready Laundry Rooms",
       "description": "Laundry rooms must be designed to allow future retrofit to CSA/ASC B652 clause 5.12 compliance without significant modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The laundry room shall be designed such that it can be constructed meeting the requirements of sentence aa) without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         67
@@ -1190,7 +1190,7 @@
       "label": "Accessible-Ready Closets",
       "description": "Closets must comply with CSA/ASC B652 clause 5.13, be removable, or be designed for future retrofit without significant modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The closet shall be designed such that it can be constructed meeting the requirements of sentence a) without significant modifications for the structural, electrical, plumbing, or HVAC systems",
       "page_numbers": [
         68
@@ -1210,7 +1210,7 @@
       "label": "Accessible Service Rooms and Spaces",
       "description": "Service rooms must be served by accessible paths of travel, clear floor space, and have equipment controls located per referenced clauses, except for items requiring professional servicing.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a) be served by a path of travel in accordance with Clause 12.3.3; b) be served by a clear floor space in accordance with CSA/ASC B652 clause 4.4.2; and c) have equipment controls located in accordance with Clause 10",
       "page_numbers": [
         69
@@ -1230,7 +1230,7 @@
       "label": "Accessible Routes",
       "description": "Raised or sunken floor levels within a single storey or mezzanine are not permitted unless connected by an accessible path of travel as specified in CSA/ASC B652.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Raised or sunken floor levels shall not be permitted within a single storey or mezzanine unless connected to that storey or mezzanine by an accessible path of travel as specified in CSA/ASC B652.",
       "page_numbers": [
         77
@@ -1250,7 +1250,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Multi-storey accessible-ready homes must be designed to allow installation of accessible access (e.g., elevating device) between storeys/mezzanines without modifications to structural, electrical, plumbing, or HVAC systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the house shall be designed to allow for the installation of means of accessible access between the storeys and mezzanines without any modifications to the structural, electrical (except those required for the vertical transportation system), plumbing, and HVAC systems.",
       "page_numbers": [
         77
@@ -1270,7 +1270,7 @@
       "label": "Ramps",
       "description": "Where an elevating device is installed or planned, it must comply with CSA/ASC B652 clause 5.8.2.2.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where an elevating device is installed or is part of a design for accessible-ready, it shall comply with CSA/ASC B652 clause 5.8.2.2.",
       "page_numbers": [
         77
@@ -1290,7 +1290,7 @@
       "label": "Non-Slip Flooring",
       "description": "Stair treads must be slip-resistant or compatible with an acceptable slip-resistant strip or covering.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have treads that are slip-resistant or are compatible with an acceptable slip-resistant strip or covering;",
       "page_numbers": [
         75
@@ -1310,7 +1310,7 @@
       "label": "Area Rug Secured",
       "description": "Stair nosing must be compatible to accept a horizontal strip that is slip resistant and extends the full width of the tread.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be compatible, without the need to modify the stair structure, treads, risers, or coverings, to accept a horizontal strip 50 \u00b1 10 mm deep that: ... is slip resistant; ... extends the full width of the tread.",
       "page_numbers": [
         76
@@ -1332,7 +1332,7 @@
       "label": "Glazing Visual Indication",
       "description": "Stair nosing must be luminance (colour) contrasted with the tread and riser.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "is luminance (colour) contrasted with the tread and riser;",
       "page_numbers": [
         76
@@ -1352,7 +1352,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Controls within living rooms, bedrooms, offices, and hallways must be adjacent to and centered on a clear floor space of 820 mm by 1390 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Controls within living rooms, bedrooms, offices, and hallways shall be adjacent to and centered on either the length or the width of a clear floor space of 820 mm by 1390 mm.",
       "page_numbers": [
         71
@@ -1374,7 +1374,7 @@
       "label": "Operating Controls Height and Reach",
       "description": "Operating controls must be installed between 400 mm and 1100 mm from the floor, or 900 mm to 1100 mm where reading a display is required; must allow relocation between 400 mm and 1500 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be installed between 400 mm and 1100 mm from the floor, and between 900 mm and 1100 mm from the floor in situations where reading a display is required ... allow the centerline ... to be relocated ... between 400 mm and 1500 mm from the floor.",
       "page_numbers": [
         71
@@ -1396,7 +1396,7 @@
       "label": "Operating Controls Forward/Side Approach",
       "description": "Operating controls must have clear forward or side approach space per CSA/ASC B652 clause 4.5.4, or be relocatable without rewiring.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be installed with the clear forward space is provided for forward or side approach in compliance with CSA/ASC B652 clause 4.5.4; or ... be installed in a manner where the operable control can be relocated without the need to rewire.",
       "page_numbers": [
         71
@@ -1416,7 +1416,7 @@
       "label": "Replaceable Operating Controls",
       "description": "Controls must be installed to allow replacement with controls complying with CSA/ASC B652 clauses 4.5.5, 4.5.6, 4.5.7, and 4.5.8 without additional work or repairs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Controls shall be installed in a manner which allows their replacement with controls complying with CSA/ASC B652 clause 4.5.5 a) and b) without requiring any additional work or repairs.",
       "page_numbers": [
         72,
@@ -1437,7 +1437,7 @@
       "label": "Operating Controls Luminance Contrast",
       "description": "Controls must be installed to allow replacement with controls complying with CSA/ASC B652 clause 4.5.9, or allow background to be painted for compliant contrast.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be installed in a manner which allows their replacement with controls complying with CSA/ASC B652 clause 4.5.9 ... or ... background can be painted to allow for the combination of control and background complying with CSA/ASC B652 clause 4.5.9.",
       "page_numbers": [
         73
@@ -1457,7 +1457,7 @@
       "label": "Replaceable General and Task Lighting",
       "description": "General and task lighting must be installed to allow replacement with fixtures compliant with CSA/ASC B652 clauses 4.8.1 and 4.8.2 without repairs or changes to building systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "General (ambient) lights shall be installed in a manner that allows for their replacement with built-in lighting fixtures in compliance with CSA/ASC B652 clause 4.8.1, without the need for any repairs or changes to the building systems.",
       "page_numbers": [
         74
@@ -1477,7 +1477,7 @@
       "label": "Stair Tread and Riser Dimensions",
       "description": "Stair risers must not exceed 200 mm in height; runs must be at least 255 mm deep; nosing must not project more than 38 mm; radius of curvature at leading edge not more than 13 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have risers not more than 200 mm high; have runs not less than 255 mm deep ... The nosing shall: a) project not more than 38 mm; ... have a radius of curvature at the leading edge of the tread not more than 13 mm;",
       "page_numbers": [
         75,
@@ -1500,7 +1500,7 @@
       "label": "Stair Handrail Accommodation",
       "description": "Stairs must be designed and constructed to accept handrails in compliance with CSA/ASC B652 clause 5.6.3.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Stairs shall be designed and constructed to accept handrails in compliance with CSA/ASC B652 clause 5.6.3.",
       "page_numbers": [
         76
@@ -1520,7 +1520,7 @@
       "label": "Wall Reinforcement for Future Accessibility Features",
       "description": "Walls that may support future accessible features must be reinforced, with reinforcement material, location, intent, connection details, and load capacity clearly shown on drawings.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "any walls that need to support future accessible features shall be reinforced to accommodate the relevant future modification. The structural or architectural drawings shall: a) clearly show the reinforcement material, location, and intent; b) identify the connection details of the reinforcement; and c) identify the loads that the reinforcement is designed to withstand relative to its intended use.",
       "page_numbers": [
         79
@@ -1540,7 +1540,7 @@
       "label": "Floor Shafts and Plugs for Lifts",
       "description": "Where vertical travel requires future floor shafts/openings, structure must include slab/floor opening, plug supporting full floor loads, and detailed drawings for opening, plug, connections, loads, and removal method.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the structure shall be: a) designed with a slab/floor opening to accommodate the possible installation of the service; b) designed with a plug capable of supporting the full loads of the floor; c) shown on the drawings with: i) the opening structural details; ii) the plug structural details; iii) the connection details; iv) the loads that they are designed to withstand in all configurations, and v) the method to be used to remove the plug.",
       "page_numbers": [
         80
@@ -1560,7 +1560,7 @@
       "label": "Accessible Routes",
       "description": "All emergency egress paths must be accessible-ready and shown on design forms and drawings, with a secondary accessible-ready path where possible.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "all emergency egress paths in compliance with CSA/ASC B652 clause 5.8.3 shall be shown on the accessible-ready design form and accessible-ready drawings.",
       "page_numbers": [
         81
@@ -1580,7 +1580,7 @@
       "label": "Ramps",
       "description": "Main entrances and outdoor amenity spaces must have a path of travel or ramp per CSA/ASC B652, or a designated area for future ramp installation without major modifications.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Main entrances into a dwelling shall be provided a path of travel in accordance with CSA/ASC B652 clause 4.4.1, a ramp conforming to CSA/ASC B652 clause 5.5 or have sufficient designated area to be incorporated without the requirement of structural, electrical, plumbing, or HVAC system modifications.",
       "page_numbers": [
         89
@@ -1600,7 +1600,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Where a dwelling has more than one storey and no elevating device is installed, a designated area for future installation must be identified and kept clear of building systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where an accessible-ready dwelling has more than one storey, and an elevating device is not installed at the time of construction, a designated area shall be identified on construction plans, as well as structural notes on framing for this area. This area shall remain clear of any electrical, mechanical, or plumbing systems.",
       "page_numbers": [
         92
@@ -1620,7 +1620,7 @@
       "label": "Exterior Building Entrances",
       "description": "Path of travel to the main entrance must be at least 1200 mm wide, slope less than 1:20, and free of obstructions.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A 1200 mm path of travel having a slope less than 1:20 is shown on drawing AC01, and that area is free of any structural, electrical, or mechanical components that would need to be modified to construct this path of travel.",
       "page_numbers": [
         83
@@ -1643,7 +1643,7 @@
       "label": "Door Minimum Width",
       "description": "Doors and doorway openings must be designed and built as accessible-ready, with area allowances for paths of travel and clear floor spaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Doors and doorway openings ... Area allowances for paths of travel ... Area allowances for clear floor spaces",
       "page_numbers": [
         85
@@ -1663,7 +1663,7 @@
       "label": "Automatic Door Operation",
       "description": "Power-assisted doors must have electrical rough-in provided for future installation.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Power-assisted doors \u2013 electrical rough-in",
       "page_numbers": [
         85
@@ -1683,7 +1683,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Rooms and spaces (bathroom, kitchen, bedroom, laundry) must be designed and built as accessible-ready, with clear floor space and turning spaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Access within a house \u2013 rooms and spaces (identify which bathroom, kitchen, bedroom, and laundry) are designed and built as accessible-ready",
       "page_numbers": [
         85
@@ -1703,7 +1703,7 @@
       "label": "Non-Slip Flooring",
       "description": "Floor and ground surface coverings must be accessible-ready.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Floor and ground surfaces covering",
       "page_numbers": [
         86
@@ -1723,7 +1723,7 @@
       "label": "Glazing Visual Indication",
       "description": "Protruding objects must be removable without affecting building systems.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Protruding objects are removable without affecting building systems",
       "page_numbers": [
         86
@@ -1743,7 +1743,7 @@
       "label": "Accessible Parking and Garage",
       "description": "Parking spaces, garages, and carports must provide accessible-ready paths of travel and be free of permanent obstructions.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Parking and garage path of travel from main entrance and garage entrance ... Parking and garages, parking spaces ... Parking and garages, carport serving a single-family house",
       "page_numbers": [
         84
@@ -1763,7 +1763,7 @@
       "label": "Accessible Site Plan",
       "description": "Site plans must show designated areas for future development that remain free from structural, mechanical, electrical, and plumbing features.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Provide a clear overall site plan to show designated areas for future development that are to remain free from structural, mechanical, electrical, and plumbing features.",
       "page_numbers": [
         90
@@ -1783,7 +1783,7 @@
       "label": "Accessible Cabinetry and Built-ins",
       "description": "Cabinetry in kitchens, bathrooms, and laundry rooms must allow for clear floor space, knee and toe clearance, and be replaceable without major modifications.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Cabinetry areas that require clear floor space, knee and toe clearance for stationary working areas to comply with Clause 12.3.4, such as kitchens, bathrooms, laundry rooms, need not be indicated on the accessible-ready construction plan as long as cabinetry can be replaced with compliant items.",
       "page_numbers": [
         93
@@ -1803,7 +1803,7 @@
       "label": "Audible and Visual Alerts",
       "description": "Fire alarms, smoke detectors, and carbon monoxide detectors must provide both visual and audible signals.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Fire alarms, smoke detectors, and carbon monoxide detectors shall be equipped to provide both visual and audible signals.",
       "page_numbers": [
         81

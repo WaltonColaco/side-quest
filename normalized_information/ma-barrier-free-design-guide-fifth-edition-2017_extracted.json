@@ -2,7 +2,7 @@
   "document": {
     "doc_id": "doc_41e9cb7a1eb5",
     "filename": "ma-barrier-free-design-guide-fifth-edition-2017.md",
-    "building_type": "commercial_interiors"
+    "building_type": "housing"
   },
   "requirements": [
     {
@@ -11,7 +11,7 @@
       "label": "Accessible Routes",
       "description": "Provide safe paths of travel to, within, and through buildings and facilities, including doorways, ramps, elevators, and pedestrian pathways such as hallways and emergency exits.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Safe paths of travel to, within, and through buildings and facilities that include but are not limited to doorways, ramps, elevators, and pedestrian pathways such as hallways and emergency exits.",
       "page_numbers": [
         6
@@ -31,7 +31,7 @@
       "label": "Exterior Building Entrances",
       "description": "Ensure access to rooms or suites within facilities, including office areas, conference facilities, dining establishments, washrooms, and recreational areas.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Access to rooms or suites within facilities, including but not limited to office areas, conference facilities, dining establishments, washrooms and recreational areas, such as swimming pools, ice rinks, theatres, etc.",
       "page_numbers": [
         6
@@ -51,7 +51,7 @@
       "label": "Accessible Routes",
       "description": "Provide safe paths of travel between facilities and public streets, pathways, sidewalks, parking areas, passenger loading and unloading zones, and bus stops.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Safe paths of travel between facilities and public streets, pathways, sidewalks, parking areas, passenger loading and unloading zones, and bus stops.",
       "page_numbers": [
         6
@@ -71,7 +71,7 @@
       "label": "Accessible Routes",
       "description": "A barrier-free path of travel must be provided from required entrances throughout all normally occupied floor areas, except for specific exempted spaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a barrier-free path of travel from the entrances required by Sentence 3.8.1.2.(1) and (2) shall be provided throughout all normally occupied \ufb02oor areas.",
       "page_numbers": [
         14
@@ -91,7 +91,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Barrier-free access to a second storey or basement can be achieved by a passenger-elevating device or a compliant ramp.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Barrier-free access to a second storey or a basement can be achieved by using design alternatives such as providing a passenger-elevating device... or a ramp that complies...",
       "page_numbers": [
         16
@@ -111,7 +111,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Spaces designated for use by persons using wheelchairs within rooms or areas with fixed seats must be dispersed in each floor level, price range, and viewing section.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the number of spaces designated for use by persons using wheelchairs within rooms or areas with \ufb01xed seats shall conform to Table 3.8.2.1. and be dispersed a) in each \ufb02oor level of seating, c) in each price range of seating, and d) in each viewing section of seating.",
       "page_numbers": [
         15
@@ -131,7 +131,7 @@
       "label": "Exterior Building Entrances",
       "description": "Access to the building from the exterior and movement throughout the interior shall be by a barrier-free path of travel.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Access to the building from the exterior and movement throughout the interior of the building shall be by a barrier-free path of travel.",
       "page_numbers": [
         13
@@ -151,7 +151,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Service counters used by the general public must be accessible, including ticket counters, refreshment stands, drinking fountains, cafeteria counters, check-out counters, and bank service counters.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "service counters used by the general public (e.g., ticket counters, refreshment stands, drinking fountains, cafeteria counters, check-out counters, bank service counters).",
       "page_numbers": [
         17
@@ -171,7 +171,7 @@
       "label": "Accessible Routes",
       "description": "Barrier-free path of travel must have an unobstructed width of at least 920 mm; recommended to double width for long paths.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the unobstructed width of a barrier-free path of travel shall be not less than 920 mm.",
       "page_numbers": [
         18
@@ -193,7 +193,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Barrier-free path of travel may include ramps, elevators, or platform-equipped devices to overcome level changes greater than 13 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A barrier-free path of travel is permitted to include ramps, passenger elevators or other platform-equipped passenger-elevating devices to overcome a di\u0119 erence in level.",
       "page_numbers": [
         19
@@ -215,7 +215,7 @@
       "label": "Ramps",
       "description": "Ramps must be provided at changes in level greater than 13 mm; must be stable, firm, and slip-resistant.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be provided with sloped \ufb02 oors or ramps at changes in level more than 13 mm.",
       "page_numbers": [
         18
@@ -237,7 +237,7 @@
       "label": "Non-Slip Flooring",
       "description": "Interior and exterior walking surfaces in barrier-free paths must be stable, firm, and slip-resistant.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be stable, \ufb01 rm and slip-resistant",
       "page_numbers": [
         18,
@@ -258,7 +258,7 @@
       "label": "Walking Surface Openings",
       "description": "Walking surfaces in barrier-free paths must have no opening permitting passage of a sphere more than 13 mm in diameter; elongated openings must be perpendicular to travel.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have no opening that will permit the passage of a sphere more than 13 mm in diam.",
       "page_numbers": [
         18
@@ -280,7 +280,7 @@
       "label": "Bevelled Changes in Level",
       "description": "Changes in level not more than 13 mm must be bevelled at a maximum slope of 1 in 2.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be bevelled at a maximum slope of 1 in 2 at changes in level not more than 13 mm",
       "page_numbers": [
         18
@@ -302,7 +302,7 @@
       "label": "Escalator Step Demarcation",
       "description": "Escalator steps must have yellow demarcation lines: back strip 38\u201350 mm wide; side lines at least 13 mm, not exceeding 50 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "demarcation lines on the step tread...yellow strip with a minimum of 38 mm and a maximum of 50 mm in width...side lines...at least 13 mm wide and shall not exceed 50 mm",
       "page_numbers": [
         20
@@ -324,7 +324,7 @@
       "label": "Visitable Housing Features",
       "description": "Visitable homes must have no-step entrance, doorways and hallways min 900 mm wide, and wheelchair accessible bathroom with 1500 mm turning diameter and grab bars.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "No-step entrance...Wider doorways (min 900 mm) and hallways (900\u20131200 mm)...Wheelchair accessible bathroom...min 1500 mm turning diameter.",
       "page_numbers": [
         20
@@ -346,7 +346,7 @@
       "label": "Warning Indicators",
       "description": "Visual and tactile/textural warning systems should be provided on escalator steps and floor surfaces at the top and bottom of escalators for orientation.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "visual and tactile/textural warning system on escalator steps and \ufb02 oor surfaces at the top and bottom of the escalator",
       "page_numbers": [
         20
@@ -366,7 +366,7 @@
       "label": "Accessible Routes",
       "description": "A barrier-free path of travel shall be provided from the entrance to exterior parking, at least one parking level, and every level served by a passenger elevator.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A barrier-free path of travel shall be provided from the entrance described in Article 3.8.1.2. to a) an exterior parking area...",
       "page_numbers": [
         28
@@ -386,7 +386,7 @@
       "label": "Ramps",
       "description": "Curb ramps should be made detectable by persons whose vision is impaired or blind, or with cognitive impairments, using a different surface as an indicator or warning of a change in slope.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The curb ramps should be made detectable by persons whose vision is impaired or blind, or even persons with cognitive impairments, with a di\u0119 erent surface as an indicator or warning of a change in slope.",
       "page_numbers": [
         31
@@ -406,7 +406,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "If parking spaces for individuals with disabilities cannot be located close to the elevator or accessible entrance, a safe barrier-free path of travel must be designated.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If parking spaces designated for individuals with disabilities cannot be located close to the elevator or an accessible entrance, then it is necessary that a safe barrier-free path of travel is designated.",
       "page_numbers": [
         28
@@ -426,7 +426,7 @@
       "label": "Non-Slip Flooring",
       "description": "Parking stall surfaces must be firm, slip-resistant, and level. Painting the entire area blue is unsafe as the paint is not slip-resistant under dry or wet conditions.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a \ufb01 rm, slip-resistant and level surface...the paint is not slip-resistant under dry or wet conditions.",
       "page_numbers": [
         28,
@@ -447,7 +447,7 @@
       "label": "Accessible Parking Stall Dimensions",
       "description": "A parking stall for persons using a wheelchair or mobility aid must be 2.4 m wide, adjacent to a 2.4 m wide access aisle, with demarcation indicating no parking.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be designed as a 2.4 m wide parking stall adjacent to a 2.4 m wide access aisle where the access aisle is demarcated to indicate no parking",
       "page_numbers": [
         28
@@ -469,7 +469,7 @@
       "label": "Accessible Parking Signage",
       "description": "Accessible parking stalls must be clearly marked with a vertically mounted sign (1,600\u20132,500 mm from finished surface) and the International Symbol of Access painted on the pavement.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "clearly marked and identi\ufb01 ed by i) a vertically mounted sign...with the centre of the sign between 1 600 to 2 500 mm from the \ufb01 nished surface, and ii) the International Symbol of Access painted on the pavement",
       "page_numbers": [
         28
@@ -491,7 +491,7 @@
       "label": "Accessible Parking Height Clearance",
       "description": "Accessible parking level should allow a minimum 3,000-mm height clearance in a parkade to accommodate larger vehicles used by drivers or passengers with a disability.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The accessible parking level should allow a minimum 3 000-mm height clearance in a parkade in order to accommodate larger vehicles...",
       "page_numbers": [
         28
@@ -513,7 +513,7 @@
       "label": "Passenger Loading Zone Dimensions",
       "description": "Exterior passenger loading zones must have an access aisle at least 1,500 mm wide and 6,000 mm long, a curb ramp if needed, and a clear height of at least 2,750 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "an access aisle not less than 1 500 mm wide and 6 000 mm long...a clear height of not less than 2 750 mm at the pull-up space",
       "page_numbers": [
         30
@@ -535,7 +535,7 @@
       "label": "Wheel Stops for Sidewalk Protection",
       "description": "Wheel stops should be used to prevent vehicles from intruding onto the walk or path, maintaining a barrier-free path of travel on pedestrian walkways.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "wheel stops should be used to prevent vehicles from intruding onto the walk or path.",
       "page_numbers": [
         31
@@ -555,7 +555,7 @@
       "label": "Curb Ramp Placement",
       "description": "Curb ramps shall NOT be located in front of designated stall; they should be between stalls (access aisle) or to the side/adjacent to the stall.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Curb ramps shall NOT be located in front of designated stall because the vehicle will block access...In a vehicle pull-up space, the curb ramp shall be located between stalls (such as the access aisle) or to the side of or adjacent to the designated stall.",
       "page_numbers": [
         32
@@ -575,7 +575,7 @@
       "label": "Accessible Parking for Adaptable Units",
       "description": "If adaptable and/or barrier-free dwelling units are provided, one parking stall per unit shall be provided meeting accessible requirements.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If adaptable and/or barrier-free dwelling units are provided, one parking stall per unit shall be provided meeting the requirements of Sentence (4).",
       "page_numbers": [
         30
@@ -595,7 +595,7 @@
       "label": "Accessible Parking Stall Markings",
       "description": "Only the accessibility symbol in yellow needs to be located on the pavement of the stall to identify it as accessible; painting the entire area blue is not required.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Only the symbol in yellow needs to be located on the pavement of the stall in order to identify it as an accessible parking stall.",
       "page_numbers": [
         29
@@ -615,7 +615,7 @@
       "label": "Accessible Parking Directional Signage",
       "description": "Where the location of designated parking spaces is not obvious or is distant, directional signs should be placed along the route leading to them.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "directional signs should be placed along the route leading to them.",
       "page_numbers": [
         30
@@ -635,7 +635,7 @@
       "label": "Ramps",
       "description": "Curb ramps must be at least 760 mm wide and 1,500 mm long, pointed in the direction of travel at street corners.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The curb ramp should be at least 760 mm wide and 1 500 mm long. At street corners, the curb ramp should be pointed in the direction of travel.",
       "page_numbers": [],
       "values": {
@@ -656,7 +656,7 @@
       "label": "Warning Indicators",
       "description": "Tactile Walking Surface Indicators (TWSIs) must be used to alert to hazards (e.g., stairs, platform edges) and provide wayfinding for people with vision loss.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Tactile walking surface indicators (TWSIs), sometimes known as detectable warning surfaces, are standardized walking surfaces that convey information to people with vision loss through texture, and, occasionally, through sound.",
       "page_numbers": [
         33
@@ -676,7 +676,7 @@
       "label": "Visual Contrast Between Walls and Floors",
       "description": "TWSIs should be colour-contrasted with the surrounding walking surface; industrial yellow is preferred, or light on dark/dark on light.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "TWSIs should be colour-contrasted with the surrounding walking surface. Industrial yellow is the preferred colour. However, a light colour on a dark ground surface or a dark colour on a light ground surface also works e\u0119 ectively.",
       "page_numbers": [
         33
@@ -696,7 +696,7 @@
       "label": "Warning Indicators",
       "description": "Attention TWSIs must be installed at platform edges, ferry dock edges, unprotected reflecting pools, top of stairs, both sides of ground-level railway crossings, blended curbs, and moving walkways.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "CNIB recommends attention TWSIs should be used at the following locations: Platform edges... The top of stairs... Both sides of ground-level railway crossings... Blended curbs...",
       "page_numbers": [
         34
@@ -716,7 +716,7 @@
       "label": "Warning Indicators",
       "description": "Attention TWSIs on platforms/ferry docks must begin 610 mm before the drop-off, run full length of unprotected edges; at stairs, commence one tread before nosing, minimum 920 mm deep.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "When attention TWSIs are used on platforms and ferry docks, CNIB recommends they begin 610 millimeters before the drop-o\u0119 , running the full length of all unprotected platform/dock edges... The depth of the TWSIs used at the top of stairs should be a minimum of 920 mm.",
       "page_numbers": [
         35
@@ -740,7 +740,7 @@
       "label": "Warning Indicators",
       "description": "At railway crossings, attention TWSIs must be 1.8 m min to 4.6 m max from centerline of nearest rail; at blended curbs, set back 150\u2013200 mm, min depth 610 mm.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "At railway crossings, attention TWSIs should be located so that the edges of TWSIs are 1.8 m minimum and 4.6 m maximum from the centerline of the nearest rail... set back 150 mm to 200 mm from the curb\u2019s edge, and they should extend a minimum depth of 610 mm in the direction of travel.",
       "page_numbers": [
         35
@@ -766,7 +766,7 @@
       "label": "Warning Indicators",
       "description": "Attention TWSIs must have domes 5mm \u00b11mm high, top diameter 12\u201320mm, base 10mm \u00b11mm wider, min 15mm between bases, spacing per table.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Attention TWSIs should have the following speci\ufb01 cations: 1) The height of the \ufb02 at-topped domes should be 5mm +/- 1mm. 2) The diameter of the top of the \ufb02 at-topped domes should be between 12 mm and 20mm. 3) The diameter of the lower base of the \ufb02 at-topped domes should be 10mm +/- 1mm more than the diameter of the top. 4) The distance between the bases of adjacent domes should be a minimum of 15mm. 5) The spacing between adjacent \ufb02 at-topped domes should be adjusted depending on the size of the domes, as shown in the table below.",
       "page_numbers": [
         33
@@ -791,7 +791,7 @@
       "label": "Warning Indicators",
       "description": "Guidance TWSIs must be parallel flat-topped bars, 250\u2013550mm wide, 600mm min clearance each side, 5mm \u00b11mm high, top width 17\u201330mm, base 10mm \u00b11mm wider, spacing per table.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "CNIB recommends guidance TWSIs have the following speci\ufb01 cations: They should be a minimum width of 250mm and a maximum of 550mm. They should have a minimum clearance of 600mm on either side of them. The height of the bars should be 5mm +/- 1mm. The width of the top of the \ufb02 at-topped elongated bars should be between 17 mm and 30 mm. The width of the base of the bars should be 10mm +/- 1mm wider than the top.",
       "page_numbers": [
         35
@@ -818,7 +818,7 @@
       "label": "Warning Indicators",
       "description": "Guidance TWSIs crossing the path of travel (e.g., bus shelters) must be at least 550mm wide.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "When used to cross the path of travel, in locations such as bus shelters, guidance TWSIs should be a minimum width of 550mm to ensure detection.",
       "page_numbers": [
         36
@@ -840,7 +840,7 @@
       "label": "Accessible Routes",
       "description": "Exterior walks forming part of a barrier-free path must have a cross slope \u22641:50, width \u22651,100 mm, level area at entrances, 75 mm curb at vertical drops >75 mm, contrasting texture/colour, and be free from obstructions for at least 1,980 mm height.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Exterior walks that form part of a barrier-free path of travel shall a) have a cross slope of not more than 1:50, b) be not less than 1 100 mm wide... f) be free from obstructions for the full width of the walk to not less than 1 980 mm...",
       "page_numbers": [
         36
@@ -864,7 +864,7 @@
       "label": "Accessible Routes",
       "description": "Walkways should have a hard, even, slip-resistant surface; minimum width 1,100 mm, preferred 1,500 mm; every 30 m, widen to 1,500 mm for 2,000 mm as a rest area.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "An exterior walk shall be at least 1 100 mm wide... The preferred width... is 1 500 mm. It is also good practice that every 30 m, the walkway should be widened to 1 500 mm for a length of 2 000 mm to act as a rest area.",
       "page_numbers": [
         37
@@ -890,7 +890,7 @@
       "label": "Accessible Routes",
       "description": "Gratings in walkways must have max clear opening 13 mm, long dimension perpendicular to travel; joints max 13 mm wide, 6 mm deep, flush with surface.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If these covers must be in walkways, the gratings shall have a maximum clear opening of 13 mm... Joints in sidewalks or between bricks or stones should not exceed 13 mm in width and 6 mm in depth, and shall be \ufb02 ush with the adjoining surfaces.",
       "page_numbers": [
         38
@@ -914,7 +914,7 @@
       "label": "Ramps",
       "description": "Any path with slope >1:20 must be designed as a ramp; ramps must have a curb if drop-off exceeds 75 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Any part of a path that has a slope steeper than 1 in 20 in a barrier-free path of travel shall be designed as a ramp. A curb on the ramp helps to prevent the front guide wheels of a wheelchair from accidentally going over the edge where the drop o\u0119  exceeds 75 mm.",
       "page_numbers": [
         38
@@ -937,7 +937,7 @@
       "label": "Accessible Routes",
       "description": "Overhead objects along walkways must be at least 1,980 mm above the walking surface to avoid hazards.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Overhead objects (e.g., signage, tree branches/limbs, free-standing staircases/escalators) should be at a height of 1 980 mm or greater to avoid becoming a hazard.",
       "page_numbers": [
         38
@@ -959,7 +959,7 @@
       "label": "Exterior Building Entrances",
       "description": "A level area of at least 1,500 mm by 1,500 mm must be provided in front of the entrance for ease of access.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A level area of at least 1 500 mm by 1 500 mm is to be provided in front of the entrance to allow ease of access into or out of a building.",
       "page_numbers": [
         38
@@ -981,7 +981,7 @@
       "label": "Ramps",
       "description": "Ramps in barrier-free paths must have clear width \u2265870 mm, slope \u22641:12, level areas \u22651,500x1,500 mm at top/bottom/intermediate, handrails, and turning areas as specified.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A ramp located in a barrier-free path of travel shall a) have a clear width of not less than 870 mm... b) have a slope of not more than 1 in 12... c) have a level area not less than 1 500 by 1 500 mm at the top and bottom and at intermediate levels...",
       "page_numbers": [
         38,
@@ -1006,7 +1006,7 @@
       "label": "Ramps",
       "description": "Ramps in a barrier-free path of travel must have a minimum width of 870 mm, a maximum slope of 1 in 12, and level landings at top/bottom and every 9 m.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ramps in a barrier-free path of travel shall have a minimum unobstructed width of 870 mm and a maximum slope of 1 in 12. A level landing of at least 1 500 mm by 1 500 mm is required at the top and bottom of the ramp. Intermediate landings shall be provided at intervals of not more than 9 m.",
       "page_numbers": [
         40
@@ -1031,7 +1031,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Where alternate routes are provided for persons with disabilities, signs are required to give directions.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where alternate routes are provided for persons with disabilities, signs are required to give directions.",
       "page_numbers": [
         40
@@ -1051,7 +1051,7 @@
       "label": "Accessible Routes",
       "description": "Barrier-free path of travel over 30 m must have a widened section of at least 1,500 mm for 1,500 mm at intervals not exceeding 30 m.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The width of a barrier-free path of travel that is more than 30 m long shall be increased to not less than 1 500 mm for a length of 1 500 mm at intervals not exceeding 30 m.",
       "page_numbers": [
         40
@@ -1074,7 +1074,7 @@
       "label": "Ramps",
       "description": "Maximum ramp slopes vary by occupancy: 1:10 for assembly/care/residential, 1:6 for mercantile/industrial, 1:8 for other, 1:10 for exterior ramps.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the maximum slope of a ramp shall be a) 1 in 10 in any assembly, care, treatment, detention or residential occupancy, b) 1 in 6 in rooms or \ufb02 oor areas classi\ufb01 ed as a mercantile or industrial occupancy, c) 1 in 8 in any other \ufb02 oor area, and d) 1 in 10 for an exterior ramp.",
       "page_numbers": [
         40
@@ -1099,7 +1099,7 @@
       "label": "Ramp Edge Protection",
       "description": "Ramps must have provisions such as curbs, handrails, or guards to prevent wheelchairs or mobility aids from going over the edge.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A variety of provisions can be used to prevent people using wheelchairs or other mobility aids from accidentally going over the edge of a ramp. Curbs are often combined with handrails and guards.",
       "page_numbers": [
         41
@@ -1119,7 +1119,7 @@
       "label": "Ramps",
       "description": "Floors or walks in a barrier-free path of travel with a slope steeper than 1 in 20 must be designed as ramps.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Floors or walks in a barrier-free path of travel having a slope steeper than 1 in 20 shall be designed as ramps.",
       "page_numbers": [
         41
@@ -1141,7 +1141,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Wayfinding design must provide logical/intuitive space, textural contrasts, tactile cues, acoustics, color/brightness contrast, and signage (tactile, Braille, audible).",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Way\ufb01 nding design organizes the built environment to provide useful information for navigation... Logical and intuitive space... Textural contrasts and tactile cues... Signage, including tactile, Braille, and audible signs...",
       "page_numbers": [
         44
@@ -1161,7 +1161,7 @@
       "label": "Exterior Building Entrances",
       "description": "At least 50% of pedestrian entrances, including the primary entrance, must be barrier-free, with accessible walkways from public thoroughfares and parking.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "not less than 50% of the pedestrian entrances, including the primary entrance... shall be barrier-free.",
       "page_numbers": [
         44
@@ -1183,7 +1183,7 @@
       "label": "Exterior Building Entrances",
       "description": "The primary entrance and at least 50% of total entrances must be barrier-free, providing alternate egress routes in emergencies.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The primary entrance of the building shall be designed to be barrier-free. The remaining 50% (at least) of the total number of entrances in the building shall also be barrier-free. This provides alternate egress routes in case of an emergency.",
       "page_numbers": [
         45
@@ -1205,7 +1205,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Clear and sufficient signage is required to indicate the way to and location of all doors designated for use by people with physical disabilities or mobility issues.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Clear and su\u011a  cient signage is required to indicate the way to and location of all doors designated for use by people with physical disabilities or mobility issues.",
       "page_numbers": [
         45
@@ -1225,7 +1225,7 @@
       "label": "Exterior Building Entrances",
       "description": "Barrier-free entrances must comply with Article 3.8.3.3. If a walkway or bridge connects two barrier-free storeys, the path must be barrier-free.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If a walkway or pedestrian bridge connects two barrier-free storeys in di\u0119 erent buildings, the path of travel from one storey to the other storey by means of the walkway or bridge shall be barrier-free.",
       "page_numbers": [
         46
@@ -1245,7 +1245,7 @@
       "label": "Audible and Visual Alerts",
       "description": "If an entrance is equipped with a security system, both visual and audible signals must indicate when the door lock is released.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If an entrance is equipped with a security system, both visual and audible signals shall be used to indicate when the door lock is released.",
       "page_numbers": [
         46
@@ -1265,7 +1265,7 @@
       "label": "Exterior Building Entrances",
       "description": "All entrances to facilities only accessible from the outside (e.g., strip shopping centres) must be barrier-free.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The entrances to all these facilities shall be barrier-free in order to minimize or eliminate obstacles that would require assistance to accessing necessary services and social or recreational opportunities.",
       "page_numbers": [
         46
@@ -1285,7 +1285,7 @@
       "label": "Door Minimum Width",
       "description": "Every doorway in a barrier-free path of travel must have a clear opening width of at least 850 mm when the door is fully open.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Every doorway that is located in a barrier-free path of travel shall have a clear width not less than 850 mm when the door is in the open position.",
       "page_numbers": [
         47
@@ -1307,7 +1307,7 @@
       "label": "Door Minimum Width",
       "description": "Every doorway into rooms within a suite of residential occupancy must have a clear width of at least 850 mm when the door is open.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Every doorway into rooms within a suite of residential occupancy shall have a clear width not less than 850 mm when the door is in the open position.",
       "page_numbers": [
         47
@@ -1329,7 +1329,7 @@
       "label": "Accessible Door Hardware",
       "description": "Door operating devices must not require tight grasping or twisting of the wrist; lever handles are preferred.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Door operating devices shall be of a design which does not require tight grasping and twisting of the wrist as the only means of operation.",
       "page_numbers": [
         47
@@ -1349,7 +1349,7 @@
       "label": "Door Hardware Height",
       "description": "Door hardware should be installed between 900 mm and 1,065 mm above the finished floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Door hardware should be installed between 900 mm and 1 065 mm above the \ufb01 nished \ufb02 oor.",
       "page_numbers": [
         47
@@ -1372,7 +1372,7 @@
       "label": "Door Latch Side Clearance",
       "description": "Doorways must provide at least 600 mm of clear space on the latch side for wheelchair or mobility aid users.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the doorway shall provide a minimum of 600 mm of clear space on the latch side of the door to allow a person in a wheelchair, or those using other mobility aids, ease of movement and safety.",
       "page_numbers": [
         47
@@ -1394,7 +1394,7 @@
       "label": "Automatic Door Operation",
       "description": "Power-assist doors must be used if required force or clear space is not achievable for accessibility.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Power-assist doors shall be used if either or both the required force and a clear space is not achievable.",
       "page_numbers": [
         47
@@ -1414,7 +1414,7 @@
       "label": "Threshold Height and Bevel",
       "description": "A threshold for a doorway must not be more than 13 mm higher than the finished floor and must be bevelled for wheelchair passage.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A threshold for a doorway... shall be not more than 13 mm higher than the \ufb01 nished \ufb02 oor surface and shall be bevelled to facilitate the passage of wheelchairs.",
       "page_numbers": [
         48
@@ -1436,7 +1436,7 @@
       "label": "Automatic Door Operation",
       "description": "Every door in a barrier-free path of travel through certain entrances must be equipped with a power door operator, with exceptions for small suites.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "every door that provides a barrier-free path of travel through an entrance referred to in Article 3.8.1.2... shall be equipped with a power door operator that allows persons to activate the opening of the door from either side if the entrance serves a) a hotel, b) a building of Group B, Division 2 major occupancy, or c) a building of Group A, Group B, Division 3, Group D or E major occupancy more than 500 m\u00b2  in building area.",
       "page_numbers": [
         48
@@ -1458,7 +1458,7 @@
       "label": "Threshold Visual Contrast",
       "description": "Thresholds should be identified by an alternate colour or brightness to indicate a change in level.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the threshold should be identi\ufb01 ed by an alternate colour or brightness to indicate a change in level from area to area.",
       "page_numbers": [
         48
@@ -1478,7 +1478,7 @@
       "label": "Door Opening Force",
       "description": "A closer for a door in a barrier-free path of travel must permit opening with a force not more than 38 N for exterior doors.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a closer for a door in a barrier-free path of travel shall be designed to permit the door to open when the force applied... is not more than a) 38 N in the case of an exterior door",
       "page_numbers": [
         49
@@ -1500,7 +1500,7 @@
       "label": "Door Minimum Width",
       "description": "Doors in a barrier-free path of travel must have clear space on the latch side: 600 mm if door swings toward approach, 300 mm if away.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a door in a barrier-free path of travel shall have a clear space on the latch side... not less than a) 600 mm... b) 300 mm...",
       "page_numbers": [
         50
@@ -1522,7 +1522,7 @@
       "label": "Automatic Door Operation",
       "description": "Power-operated doors are required at entrances of assembly buildings, care facilities, or buildings \u2265500 m2. Must be manually operable during power failure.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A power-operated door is required to be installed at entrances... in a care facility... or in any building of major occupancy 500 m2 or greater.",
       "page_numbers": [
         50
@@ -1544,7 +1544,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Push button operators for power-assisted doors must be mounted 900\u20131,100 mm high for ease of access and use.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The push button operators for the power-assisted door should be mounted 900 mm - 1 100 mm high for ease of access and use.",
       "page_numbers": [
         50
@@ -1566,7 +1566,7 @@
       "label": "Non-Slip Flooring",
       "description": "Surfaces of ramps, landings, and treads must be slip resistant; public areas require colour contrast or distinctive pattern at leading edges.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "shall have a \ufb01 nish that is slip resistant, and... have either a colour contrast or a distinctive pattern to demarcate the leading edge",
       "page_numbers": [
         54
@@ -1588,7 +1588,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Where stairs are used to define spaces, barrier-free ramps or equivalent accessible spaces must be provided for wheelchair users.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "shall provide properly designed barrier-free ramps to these areas or provide equally interesting spaces on the entrance level for those using wheelchairs.",
       "page_numbers": [
         55
@@ -1610,7 +1610,7 @@
       "label": "Area Rug Secured",
       "description": "Obstructions within 1,980 mm of the floor must not project more than 100 mm into corridors unless clearance below is less than 680 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "obstructions located within 1 980 mm of the \ufb02 oor shall not project more than 100 mm horizontally into an exit passageway...",
       "page_numbers": [
         51,
@@ -1633,7 +1633,7 @@
       "label": "Glazing Visual Indication",
       "description": "Entrances must be identified by contrasting colours for door frames, handles, awnings, etc. Entrances and vestibules should be well lit.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Entrances shall be identi\ufb01 ed by the use of contrasting colours for door frames, handles, awnings, etc. Entrances and vestibules should be well lit.",
       "page_numbers": [
         51
@@ -1655,7 +1655,7 @@
       "label": "Accessible Routes",
       "description": "Minimum width of public corridors and unobstructed corridors is 1,100 mm. Dead-end corridors not more than 3 m long unless exceptions apply.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The minimum width of a public corridor shall be 1 100 mm... a dead-end corridor is permitted provided it is not more than 3 m long.",
       "page_numbers": [
         51,
@@ -1678,7 +1678,7 @@
       "label": "Ramps",
       "description": "Slip resistance and colour contrast or pattern required at the beginning and end of ramps. Treads and landings must be slip resistant.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "shall have a \ufb01 nish that is slip resistant, and... have either a colour contrast or a distinctive pattern... as well as the beginning and the end of a ramp.",
       "page_numbers": [
         54
@@ -1700,7 +1700,7 @@
       "label": "Exterior Building Entrances",
       "description": "Vestibules in barrier-free paths must allow wheelchair movement and provide at least 1,200 mm between doors plus width of any door swinging into the space.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "shall provide a distance between 2 doors in series of not less than 1 200 mm plus the width of any door that swings into the space",
       "page_numbers": [
         50
@@ -1722,7 +1722,7 @@
       "label": "Non-Slip Flooring",
       "description": "Nosings on stairs should be of a contrasting colour or colour tone from the respective risers and treads, and should be distinguishable whether approaching the stairs from the top or bottom.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Nosings on stairs should be of a contrasting colour or colour tone from the respective risers and treads, and should be distinguishable whether approaching the stairs from the top or bottom.",
       "page_numbers": [
         57
@@ -1742,7 +1742,7 @@
       "label": "Ramps",
       "description": "A ramp shall have handrails on both sides.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A ramp shall have handrails on both sides.",
       "page_numbers": [
         57
@@ -1762,7 +1762,7 @@
       "label": "Accessible Routes",
       "description": "Where passenger elevators are used in a barrier-free path of travel, features described in Appendix E of ASME A17.1/CSA B44, \u201cSafety Code for Elevators and Escalators,\u201d shall be included in their design and construction.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where passenger elevators are used in a barrier-free path of travel, features described in Appendix E of ASME A17.1/CSA B44, \u201cSafety Code for Elevators and Escalators,\u201d shall be included in their design and construction.",
       "page_numbers": [
         60
@@ -1782,7 +1782,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "A platform-equipped passenger-elevating device used in a barrier-free path of travel shall conform to the elevating devices regulations made pursuant to the Safety Codes Act.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A platform-equipped passenger-elevating device used in a barrier-free path of travel shall conform to the elevating devices regulations made pursuant to the Safety Codes Act.",
       "page_numbers": [
         61
@@ -1802,7 +1802,7 @@
       "label": "Elevator Car Stretcher Accommodation",
       "description": "At least one elevator must have inside dimensions to accommodate a patient stretcher 2,010 mm long and 610 mm wide in the prone position.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "all storeys shall be served by at least one elevator which has inside dimensions that will accommodate and provide adequate access for a patient stretcher 2 010 mm long and 610 mm wide in the prone position.",
       "page_numbers": [
         61,
@@ -1826,7 +1826,7 @@
       "label": "Elevator Identification",
       "description": "An elevator satisfying stretcher accommodation requirements shall be clearly identified on the main entrance level of the building.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "An elevator satisfying the requirements of Sentence (1) shall be clearly identi\ufb01 ed on the main entrance level of the building.",
       "page_numbers": [
         61
@@ -1846,7 +1846,7 @@
       "label": "Platform Lift Travel Limits",
       "description": "The travel of a vertical platform lift shall not exceed 2,500 mm for unenclosed type or 7,000 mm for enclosed type.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The travel of a vertical platform lift shall not exceed the following (a)  2500 mm for unenclosed type; or (b)  7000 mm for enclosed type",
       "page_numbers": [
         61
@@ -1869,7 +1869,7 @@
       "label": "Elevator Minimum Car Size for Lift Substitution",
       "description": "When an elevator is used instead of a lift, the car must meet the minimum size in Table 1 of CSA-B355 and is restricted to a maximum rise of 7,000 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the car cannot be less than the minimum as set out in Table 1 of CSA-B355, and the elevator is restricted to a maximum rise of 7000 mm.",
       "page_numbers": [
         62
@@ -1891,7 +1891,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Spaces for wheelchair users in fixed seating areas must be dispersed across floor levels, price ranges, and viewing sections, and allow a choice of locations.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the number of spaces designated for use by persons using wheelchairs...shall...be dispersed a) in each floor level of seating, b) in each price range of seating, and c) in each viewing section of seating.",
       "page_numbers": [
         65
@@ -1911,7 +1911,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Spaces for wheelchair users must be clear, level, at least 900 mm wide and 1,525 mm long (side approach), or 1,220 mm long (front/rear approach), and at least two spaces side by side.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Spaces designated for use by persons using wheelchairs...shall be a) clear and level...b) not less than 900 mm wide and 1 525 mm long...and 1 220 mm long...c) arranged so that at least 2 designated spaces are side by side",
       "page_numbers": [
         65
@@ -1935,7 +1935,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Accessible seating should be 0.005\u20130.0075% of total seats, including a companion seat.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "accessible seating to be allocated from 0.005\u20130.0075% of the total number of seats in the arena. This percentage also includes the companion seat",
       "page_numbers": [
         65
@@ -1957,7 +1957,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Every counter over 2 m long serving the public must have at least one barrier-free section not less than 760 mm long, centered over a knee space.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Every counter more than 2 m long, at which the public is served, shall have at least one barrier-free section not less than 760 mm long centred over a knee space",
       "page_numbers": [
         66
@@ -1979,7 +1979,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Barrier-free counter surface must not be more than 865 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A barrier-free counter surface shall not be more than 865 mm above the floor.",
       "page_numbers": [
         67
@@ -2001,7 +2001,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Knee space beneath a barrier-free counter must be at least 760 mm wide, 685 mm high, and 485 mm deep.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the knee space beneath a barrier-free counter...shall not be less than a) 760 mm wide, b) 685 mm high, and c) 485 mm deep.",
       "page_numbers": [
         67
@@ -2025,7 +2025,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Service counters in banks and accessible ATMs must meet the same standards as other barrier-free counters.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Banks shall also conform to Sentences (2) and (3) when designing service counters for clients who may use a wheelchair or other mobility device...The same standards should be applied when installing accessible ATMs",
       "page_numbers": [
         68
@@ -2045,7 +2045,7 @@
       "label": "Accessible Drinking Fountains",
       "description": "At least one drinking fountain must be barrier-free, with a spout no more than 915 mm above the floor and controls operable with one hand using \u226422 N force or automatic.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If drinking fountains are provided, at least one shall be barrier-free and shall a) have a spout located near the front of the unit not more than 915 mm above the floor, and b) be equipped with controls...using one hand with a force of not more than 22 N, or be automatically operable.",
       "page_numbers": [
         68
@@ -2068,7 +2068,7 @@
       "label": "Drinking Fountain Cane Detectability",
       "description": "Drinking fountains on barrier-free paths should have cane-detectable barriers on each side, with enough space for wheelchairs or scooters.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "when the fountain is located in a barrier-free path of travel, a partition or cane-detectable barrier on each side of the wall-mounted drinking fountain should be provided. Enough space should still be provided between the partitions for persons who use wheelchairs or scooters.",
       "page_numbers": [
         69
@@ -2088,7 +2088,7 @@
       "label": "Obstacle Recessing on Barrier-Free Paths",
       "description": "Telephone kiosks, fire extinguishers, vending machines, planters, and ashtrays should be recessed or located alongside barrier-free paths to avoid being obstacles.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Telephone kiosks, fire extinguishers, and vending machines should be recessed on a barrier-free path of travel to prevent them from being obstacles...Planters and ashtrays should be recessed or located alongside the designated barrier-free path of travel.",
       "page_numbers": [
         69
@@ -2108,7 +2108,7 @@
       "label": "Signage and Fixture Height for Visual Safety",
       "description": "Bottom edges of signs and bases of wall lighting fixtures should be at least 2 m above the finished floor to prevent hazards for people with visual disabilities.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The bottom edges of signs and the bases of wall lighting fixtures should be located no lower than 2 m, measured from the finished floor surface, to prevent them from being hazards to persons with visual disabilities.",
       "page_numbers": [
         69
@@ -2130,7 +2130,7 @@
       "label": "Accessible Building Controls",
       "description": "Controls for building services must be accessible to wheelchair users, operable with one hand, and mounted between 400 mm and 1,200 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "controls...shall be accessible to a person in a wheelchair, operable with one hand and mounted between 400 mm and 1 200 mm above the floor.",
       "page_numbers": [
         69
@@ -2153,7 +2153,7 @@
       "label": "Braille and Colour Contrast for Controls",
       "description": "Raised lettering and/or Braille and colour contrast should be used for building service controls to aid persons with visual disabilities.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Raised lettering and/or Braille should be added to help persons with visual disabilities to access building service controls...using colour contrast to the background for ease of identification",
       "page_numbers": [
         69
@@ -2173,7 +2173,7 @@
       "label": "Light Switch Height",
       "description": "Light switches should be located between 1,100 mm and 1,200 mm above the finished floor for improved access.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Light switches should be located between 1 100 mm and 1 200 mm above the finished floor to improve access for people in wheelchairs",
       "page_numbers": [
         70
@@ -2196,7 +2196,7 @@
       "label": "Electrical Outlet Height",
       "description": "Electrical outlets should be at least 650 mm from the finished floor to the center of the plate.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Electrical outlets should be located at a minimum of 650 mm when measured from the centre of the plate to the finished floor",
       "page_numbers": [
         70
@@ -2218,7 +2218,7 @@
       "label": "Barrier-Free Public Washrooms",
       "description": "All public washrooms on a barrier-free path must be barrier-free, except in certain residential or small suite cases with accessible alternatives within 45 m.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "all washrooms in a barrier-free path of travel shall be barrier-free...A washroom need not conform...if...there are barrier-free washrooms on the same floor area within 45 m.",
       "page_numbers": [
         70
@@ -2240,7 +2240,7 @@
       "label": "Barrier-Free Water Closet on Entrance Storey",
       "description": "At least one barrier-free water closet must be provided on the entrance storey unless a barrier-free path leads to accessible water closets elsewhere.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "at least one barrier-free water closet shall be provided in the entrance storey, unless a) a barrier-free path of travel is provided to barrier-free water closets elsewhere in the building",
       "page_numbers": [
         70
@@ -2260,7 +2260,7 @@
       "label": "Universal Toilet Room in Transportation Terminals",
       "description": "At least one universal toilet room must be provided in a regional transportation terminal.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "at least one universal toilet room conforming to Article 3.8.3.12. shall be provided in a regional transportation terminal.",
       "page_numbers": [
         71
@@ -2280,7 +2280,7 @@
       "label": "Barrier-Free Stall Ratio in Washrooms",
       "description": "A barrier-free stall must be provided for every 10 stalls or part thereof in public washrooms and for temporary uses like fairs and festivals.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a barrier-free stall shall be provided for every 10 stalls or part thereof...For temporary uses, such as outdoor fairs and festivals, a barrier-free stall shall be provided for every 10 stalls or part thereof.",
       "page_numbers": [
         71
@@ -2302,7 +2302,7 @@
       "label": "Accessible Routes",
       "description": "Universal toilet rooms must be served by a barrier-free path of travel.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a) be served by a barrier-free path of travel",
       "page_numbers": [
         76
@@ -2322,7 +2322,7 @@
       "label": "Exterior Building Entrances",
       "description": "Universal toilet room doors must be easy to open and close, with clear opening of at least 850 mm (900 mm preferred).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The doorway will have a clear opening of 850 mm (900 mm is preferred) and must be easy to open and close.",
       "page_numbers": [
         77
@@ -2345,7 +2345,7 @@
       "label": "Door Minimum Width",
       "description": "Universal toilet room doors must have a clear opening of at least 850 mm (900 mm preferred).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The doorway will have a clear opening of 850 mm (900 mm is preferred)",
       "page_numbers": [
         77
@@ -2368,7 +2368,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Lavatories in barrier-free washrooms must be accessible, with specified clearances and heights for wheelchair users.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A barrier-free washroom shall be provided with a lavatory that ... has a rim height not more than 865 mm above the \ufb02 oor",
       "page_numbers": [
         72
@@ -2392,7 +2392,7 @@
       "label": "Non-Slip Flooring",
       "description": "Where a maze entrance exists for a public washroom, the floor finish shall be slip-resistant and high in colour contrast to the wall finish.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the \ufb02 oor \ufb01 nish shall be slip-resistant and be high in colour contrast to the wall \ufb01 nish",
       "page_numbers": [
         72
@@ -2412,7 +2412,7 @@
       "label": "Area Rug Secured",
       "description": "Any shelf or projection above a lavatory shall be located so that it will not be a hazard.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Any shelf or projection above a lavatory shall be located so that it will not be a hazard.",
       "page_numbers": [
         75
@@ -2432,7 +2432,7 @@
       "label": "Glazing Visual Indication",
       "description": "Faucets and shelves should be of contrasting colour to the surfaces to which they are attached to aid those with visual disabilities.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Faucets and shelves should be of contrasting colour to the surfaces to which they are attached.",
       "page_numbers": [
         75
@@ -2452,7 +2452,7 @@
       "label": "Universal Toilet Room Minimum Size",
       "description": "Universal toilet rooms must have no internal dimension between walls less than 1,700 mm and should be at least 2,100 mm x 1,700 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have no internal dimension between the walls that is less than 1 700 mm",
       "page_numbers": [
         76,
@@ -2476,7 +2476,7 @@
       "label": "Universal Toilet Room Turning Space",
       "description": "Universal toilet rooms must permit a wheelchair to turn in an open space not less than 1,500 mm in diameter.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be designed to permit a wheelchair to turn in an open space not less than 1 500 mm in diameter.",
       "page_numbers": [
         76
@@ -2498,7 +2498,7 @@
       "label": "Universal Toilet Room Door Hardware",
       "description": "Universal toilet room doors must have a latch-operating mechanism operable with a closed fist, located 900\u20131,000 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a latch-operating mechanism that is operable with a closed \ufb01 st, located not less than 900 mm and not more than 1 000 mm above the \ufb02 oor",
       "page_numbers": [
         76
@@ -2521,7 +2521,7 @@
       "label": "Universal Toilet Room Grab Bars",
       "description": "Universal toilet rooms must have grab bars conforming to specified dimensions, including L-shaped and horizontal bars.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The horizontal grab bar located adjacent to the water closet shall be installed 500 mm from the wall to the midpoint of the grab bar.",
       "page_numbers": [
         77
@@ -2545,7 +2545,7 @@
       "label": "Universal Toilet Room Coat Hook",
       "description": "A coat hook should be located not less than 1,100 mm from the floor, measured to the centre line of the hook.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A coat hook ... should be located not less than 1 100 mm from the \ufb02 oor, and measured to the centre line of the hook",
       "page_numbers": [
         77
@@ -2567,7 +2567,7 @@
       "label": "Universal Toilet Room Toilet Height",
       "description": "The toilet shall be no lower than 430 mm \u00b1 30 mm from the floor to the surface of the toilet seat.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The toilet shall be no lower than 430 mm \u00b1 30 mm when measured from the \ufb02 oor to the surface of the toilet seat.",
       "page_numbers": [
         77
@@ -2590,7 +2590,7 @@
       "label": "Universal Toilet Room Emergency Release",
       "description": "Universal toilet room doors must be capable of being locked from the inside and released from the outside in case of emergency.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a door capable of being locked from the inside and released from the outside in case of emergency",
       "page_numbers": [
         76
@@ -2610,7 +2610,7 @@
       "label": "Universal Toilet Room Door Pull",
       "description": "If the door swings outward, a door pull not less than 140 mm long must be located on the inside, 200\u2013300 mm from the hinged side, 900\u20131,000 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a door pull not less than 140 mm long located on the inside so that its midpoint is not less than 200 mm and not more than 300 mm from the hinged side of the door and not less than 900 mm and not more than 1 000 mm above the \ufb02 oor",
       "page_numbers": [
         76
@@ -2636,7 +2636,7 @@
       "label": "Universal Toilet Room Automatic Door Opener",
       "description": "It is recommended that automatic door openers on both the interior and exterior of the washroom be installed for ease of entry and egress.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "It is recommended that automatic door openers on both the interior and exterior of the washroom be installed for ease of entry and egress.",
       "page_numbers": [
         77
@@ -2656,7 +2656,7 @@
       "label": "Lavatory Pipe Insulation",
       "description": "Hot-water and drain pipes under lavatories must be insulated to prevent burn hazards to wheelchair users.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Hot-water and drain pipes under lavatories shall be insulated to prevent the pipes from becoming a burn hazard to persons who use wheelchairs.",
       "page_numbers": [
         73
@@ -2676,7 +2676,7 @@
       "label": "Lavatory Faucet Operation",
       "description": "Lavatories must be equipped with faucets that operate automatically or have lever-type handles that do not close under spring action.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Lavatories required by Sentence (1) shall be equipped with faucets that a) operate automatically, or b) have lever-type handles that do not close under spring action.",
       "page_numbers": [
         75
@@ -2696,7 +2696,7 @@
       "label": "Lavatory Soap and Towel Dispenser Height",
       "description": "Soap and towel dispensers must be located close to the lavatory, not more than 1,200 mm above the floor, and accessible to persons in wheelchairs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "soap dispenser located close to the lavatory, not more than 1 200 mm above the \ufb02 oor and accessible to persons in wheelchairs",
       "page_numbers": [
         72
@@ -2718,7 +2718,7 @@
       "label": "Mirror Accessibility",
       "description": "If mirrors are provided, at least one must be mounted with its bottom edge not more than 1,000 mm above the floor or be inclined to be usable by a person in a wheelchair.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "at least one mirror shall be a) mounted with its bottom edge not more than 1 000 mm above the \ufb02 oor, or b) be inclined to the vertical to be usable by a person in a wheelchair.",
       "page_numbers": [
         73
@@ -2740,7 +2740,7 @@
       "label": "Mirror Mounting Above Lavatory",
       "description": "Tilt mirrors should be mounted no more than 200 mm above the lavatory when measured from the surface of the sink or counter.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The mirror should be mounted no more than 200 mm above the lavatory when measured from the surface of the sink or counter.",
       "page_numbers": [
         74
@@ -2762,7 +2762,7 @@
       "label": "Lavatory Clearance for Wheelchair",
       "description": "Lavatory should have a clearance of 870 mm from the lowest part of the apron to the floor to allow a person in a wheelchair to maneuver beneath.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "It is preferred that the lavatory should have a clearance of 870 mm measured from the lowest part of the apron to the \ufb02 oor",
       "page_numbers": [
         77
@@ -2784,7 +2784,7 @@
       "label": "Lavatory Rim Height in Universal Toilet Room",
       "description": "The rim height of the sink or top of the counter may not be greater than 875 mm from the surface to the finished floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The rim height of the sink or top of the counter may not be greater than 875 mm when measured from the surface to the \ufb01 nished \ufb02 oor.",
       "page_numbers": [
         77
@@ -2806,7 +2806,7 @@
       "label": "Lavatory Pipe Offset and Insulation",
       "description": "Drain pipes beneath the lavatory should be offset and insulated to permit the person in a wheelchair to maneuver as far in as possible without burning limbs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The drain pipes beneath the lavatory should be o\u0119 set and insulated to permit the person in a wheelchair to manoeuvre as far in as possible without burning limbs",
       "page_numbers": [
         77
@@ -2826,7 +2826,7 @@
       "label": "Water Temperature Limiting",
       "description": "The temperature of the water from faucets shall be limited to a maximum of 49\u00b0C.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the temperature of the water from faucets shall be limited to a maximum of 49\u00b0C.",
       "page_numbers": [
         73
@@ -2848,7 +2848,7 @@
       "label": "Universal Toilet Room Shelf Height",
       "description": "A shelf must be located not more than 1,200 mm above the floor in universal toilet rooms.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a shelf located not more than 1 200 mm above the \ufb02 oor",
       "page_numbers": [
         76
@@ -2870,7 +2870,7 @@
       "label": "Universal Toilet Room Water Closet Clearance",
       "description": "Water closet must have a clearance to the walls of 285\u2013305 mm on one side and not less than 875 mm on the other side.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "has a clearance to the walls of i) not less than 285 mm and not more than 305 mm on one side, and ii) not less than 875 mm on the other side",
       "page_numbers": [
         76
@@ -2894,7 +2894,7 @@
       "label": "Universal Toilet Room Wheelchair Back-in Space",
       "description": "Universal toilet rooms must be designed to permit a wheelchair to back in alongside the water closet.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be designed to permit a wheelchair to back in alongside the water closet in the space referred to in Subclause (d) (ii)",
       "page_numbers": [
         76
@@ -2914,7 +2914,7 @@
       "label": "Universal Toilet Room Door Closer",
       "description": "If the door is outward-swinging, it must have a door closer, spring hinges, or gravity hinges so that the door closes automatically.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "if it is an outward-swinging door, a door closer, spring hinges or gravity hinges, so that the door closes automatically",
       "page_numbers": [
         76
@@ -2934,7 +2934,7 @@
       "label": "Universal Toilet Room Attendant Accommodation",
       "description": "Universal toilet rooms must accommodate a user and a family member or attendant of the opposite gender for private hygiene.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A universal toilet room is required to accommodate a user and a family member or an attendant of the opposite gender so that hygiene may be carried out with dignity and in private.",
       "page_numbers": [
         75
@@ -2954,7 +2954,7 @@
       "label": "Visual Contrast Between Walls and Floors",
       "description": "Where a maze entrance exists for a public washroom, the floor finish shall be high in colour contrast to the wall finish for wayfinding.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the \ufb02 oor \ufb01 nish shall be slip-resistant and be high in colour contrast to the wall \ufb01 nish. This is to provide safe and appropriate way\ufb01 nding for people who have visual disabilities",
       "page_numbers": [
         72
@@ -2974,7 +2974,7 @@
       "label": "Accessible Routes",
       "description": "Water closet stalls must allow a person using a wheelchair to turn in an open space with a diameter of at least 1,500 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be designed to allow a person using a wheelchair to turn in an open space that has a diameter of not less than 1 500 mm",
       "page_numbers": [
         80
@@ -2996,7 +2996,7 @@
       "label": "Door Minimum Width",
       "description": "Stall doors must provide a clear opening of at least 800 mm when open.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provides a clear opening of not less than 800 mm wide with the door in the open position",
       "page_numbers": [
         80
@@ -3018,7 +3018,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Dispensers must be mounted at accessible heights: toilet paper 750\u2013850 mm, paper towel/hand dryer 1100\u20131200 mm, soap 900\u20131000 mm, other dispensers 1100\u20131200 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Toilet paper dispenser: 750 mm\u2013850 mm\nb) Paper towel dispenser or hand dryer: 1 100 mm\u20131 200 mm\nc) Soap: 900 mm\u20131 000 mm\nd) Other dispensers: 1 100 mm\u20131 200 mm",
       "page_numbers": [],
       "values": {
@@ -3042,7 +3042,7 @@
       "label": "Exterior Building Entrances",
       "description": "Stall doors must swing outward unless sufficient room is provided inside to close the door without interfering with a wheelchair user.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "swings outward, unless su\u011a  cient room is provided within the stall or enclosure to allow the door to be closed without interfering with the person using a wheelchair",
       "page_numbers": [
         80
@@ -3062,7 +3062,7 @@
       "label": "Automatic Door Operation",
       "description": "Stall doors must be latchable from the inside with a closed fist and have D-shaped door pulls at least 140 mm long, mounted horizontally, with specific mounting heights and distances.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "can be latched from the inside with a closed \ufb01 st...door pull on the inside not less than 140 mm long located so that its midpoint is not less than 200 mm and not more than 300 mm from the hinged side of the door and not less than 900 mm and not more than 1 000 mm from the \ufb02 oor",
       "page_numbers": [
         80,
@@ -3087,7 +3087,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Stall must have a clearance of at least 1,700 mm between the outside of the stall face and the face of an in-swinging washroom door, and 1,400 mm between the outside of the stall face and any wall-mounted fixture.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a clearance of not less than 1 700 mm between the outside of the stall face and the face of an in-swinging washroom door and 1 400 mm between the outside of the stall face and any wall- mounted \ufb01 xture",
       "page_numbers": [
         80
@@ -3110,7 +3110,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "If the stall door swings inward, an additional 900 mm of space is required to allow a wheelchair user to close the door from within.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If the door of the stall swings inward, there should be an additional 900 mm of space to allow an occupant in a wheelchair to close the door from within the stall.",
       "page_numbers": [
         81
@@ -3132,7 +3132,7 @@
       "label": "Glazing Visual Indication",
       "description": "Coat hooks must be mounted no more than 1,200 mm above the floor and project no more than 50 mm from the wall.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be equipped with a coat hook mounted not more than 1 200 mm above the \ufb02 oor on a side wall and projecting not more than 50 mm from the wall",
       "page_numbers": [
         80
@@ -3155,7 +3155,7 @@
       "label": "Grab Bar Backing and Strength",
       "description": "Backing for grab bar installation must be at least a 19 mm sheet of plywood or reasonable alternative, floor to ceiling, to ensure grab bars resist a load of 1.3 kN (132 kg) applied vertically or horizontally.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Su\u011a  cient backing (at least a 19 mm sheet of plywood or reasonable alternative behind cement board, \ufb02 oor to ceiling, is preferred for optimum strength and placement) is required for the installation of grab bars...Grab bars shall resist a load of 1.3 kN (132 kg) applied vertically or horizontally",
       "page_numbers": [
         82
@@ -3178,7 +3178,7 @@
       "label": "Grab Bar Dimensions and Placement",
       "description": "Grab bars must be 30\u201340 mm in diameter, with 35\u201345 mm clearance from the wall, and mounted as specified beside and behind the water closet.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be not less than 30 mm and not more than 40 mm in diameter, and e) have a clearance of not less than 35 mm and not more than 45 mm from the wall",
       "page_numbers": [
         81
@@ -3201,7 +3201,7 @@
       "label": "Water Closet Height and Controls",
       "description": "Water closet seat height must be 400\u2013460 mm above the floor, with hand-operated or automatic flush controls accessible to wheelchair users, and must not have a spring-actuated seat.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be equipped with a seat located at not less than 400 mm and not more than 460 mm above the \ufb02 oor, b) be equipped with hand-operated \ufb02 ushing controls that are easily accessible to a wheelchair user or be automatically operable, ... d) not have a spring-actuated seat.",
       "page_numbers": [
         82
@@ -3223,7 +3223,7 @@
       "label": "Urinal Accessibility",
       "description": "At least one urinal must be wall-mounted (rim 488\u2013512 mm above floor) or floor-mounted (rim at floor level), with 800 mm clear width of approach, no step, and vertical grab bars (\u2265300 mm long, centreline 1000 mm above floor, \u2264380 mm from urinal centreline).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "wall mounted, with the rim located between 488 mm and 512 mm above the \ufb02 oor...clear width of approach of 800 mm centred on the urinal, b) no step in front, and c) installed on each side a vertically mounted grab bar that is not less than 300 mm long, with its centreline 1 000 mm above the \ufb02 oor, and located not more than 380 mm from the centreline of the urinal.",
       "page_numbers": [
         84
@@ -3249,7 +3249,7 @@
       "label": "Ramps",
       "description": "At least one accessible shower stall and one accessible change cubicle are required for each gender in assembly buildings with individual showers.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "at least one accessible shower stall and one accessible change cubicle are required for each gender",
       "page_numbers": [
         86
@@ -3269,7 +3269,7 @@
       "label": "Exterior Building Entrances",
       "description": "At least one entrance serving an adaptable dwelling unit, including walkways from public thoroughfare and on-site parking, shall be barrier-free.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "At least one entrance serving an adaptable dwelling unit, including walkways leading to the entrance from a public thoroughfare and from on-site parking areas, shall be barrier-free.",
       "page_numbers": [
         90
@@ -3289,7 +3289,7 @@
       "label": "Door Minimum Width",
       "description": "Every doorway into rooms within the dwelling unit shall have a clear width not less than 850 mm when the door is in the open position.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Every doorway into rooms within the dwelling unit shall have a clear width not less than 850 mm when the door is in the open position.",
       "page_numbers": [
         90
@@ -3311,7 +3311,7 @@
       "label": "Non-Slip Flooring",
       "description": "Shower stalls and change cubicles must have slip-resistant floor surfaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a slip-resistant \ufb02 oor surface",
       "page_numbers": [
         86,
@@ -3332,7 +3332,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Entryways, kitchens, washrooms, laundry rooms and other areas of a dwelling unit shall be designed with an unobstructed turning diameter of not less than 1 500 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "designed with an unobstructed turning diameter of not less than 1 500 mm",
       "page_numbers": [
         90
@@ -3354,7 +3354,7 @@
       "label": "Area Rug Secured",
       "description": "Shower stalls must have a bevelled threshold not more than 13 mm higher than the finished floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a bevelled threshold not more than 13 mm higher than the \ufb01 nished \ufb02 oor",
       "page_numbers": [
         86
@@ -3376,7 +3376,7 @@
       "label": "Glazing Visual Indication",
       "description": "Door and window frames and baseboards shall be contrasting in colour to doors, walls and floors.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Door and window frames and baseboards shall be contrasting in colour to doors, walls and \ufb02 oors.",
       "page_numbers": [
         90
@@ -3396,7 +3396,7 @@
       "label": "Accessible Shower Stall Dimensions",
       "description": "The inside measurements of a wheelchair-accessible shower stall shall be a minimum of 1 500 mm in length and a minimum of 900 mm in depth.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The inside measurements of a wheelchair-accessible shower stall shall be a minimum of 1 500 mm in length and a minimum of 900 mm in depth",
       "page_numbers": [
         86
@@ -3418,7 +3418,7 @@
       "label": "Accessible Change Cubicle Dimensions",
       "description": "The inside measurement of a change cubicle should be at least 2 000 mm \u00d7 2 000 mm with slip-resistant flooring and equipped with a wall-mounted bench seat.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The inside measurement of a change cubicle should be at least 2 000 mm \u00d7 2 000 mm with slip-resistant \ufb02 ooring and equipped with a wall-mounted bench seat",
       "page_numbers": [
         87
@@ -3440,7 +3440,7 @@
       "label": "Grab Bar Load Resistance",
       "description": "Grab bars that are installed shall resist a load not less than 1.3 kN applied vertically or horizontally.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Grab bars that are installed shall resist a load not less than 1.3 kN applied vertically or horizontally.",
       "page_numbers": [
         87
@@ -3462,7 +3462,7 @@
       "label": "Accessible Controls Mounting Height",
       "description": "Controls for building services or safety devices, including electrical switches, panels, thermostats, and intercoms, shall be mounted between 400 mm and 1 200 mm above the finished floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Controls for the operation of building services or safety devices...shall be mounted between 400 mm and 1 200 mm above the \ufb01 nished \ufb02 oor.",
       "page_numbers": [
         90
@@ -3484,7 +3484,7 @@
       "label": "Accessible Electrical Outlet Height",
       "description": "Electrical outlets shall be mounted between 400 mm and 1 200 mm above the finished floor level.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Electrical outlets shall be mounted between 400 mm and 1 200 mm above the \ufb01 nished \ufb02 oor level.",
       "page_numbers": [
         90
@@ -3506,7 +3506,7 @@
       "label": "Accessible Window Controls",
       "description": "Window opening devices shall be located not more than 60 mm above the window sill and not require tight grasping, pinching, or twisting of the wrist.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "opening devices located not more than 60 mm above the window sill and of a design that does not require tight grasping, pinching or twisting of the wrist",
       "page_numbers": [
         90
@@ -3528,7 +3528,7 @@
       "label": "Accessible Window Sill Height",
       "description": "Window sills shall be located so that the sill is not more than 865 mm above the floor level.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be located so that the sill is not more than 865 mm above the \ufb02 oor level",
       "page_numbers": [
         90
@@ -3550,7 +3550,7 @@
       "label": "Accessible Routes",
       "description": "Entrances should be at grade to provide a seamless path of travel into the dwelling unit. Ramps or lifts should be used where grade-level entry is not possible.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "entrances should be at grade to provide a seamless path of travel into the dwelling unit...install a ramp or lift to create a barrier-free path of travel.",
       "page_numbers": [
         95
@@ -3573,7 +3573,7 @@
       "label": "Door Minimum Width",
       "description": "Exterior and interior doorways must have a minimum clear opening of 850 mm to accommodate wheelchairs, including larger power wheelchairs and scooters.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "exterior doorways should be wide enough (at least 850 mm clear opening)...Interior doorways are required to have a minimum doorway width of 850 mm",
       "page_numbers": [
         95,
@@ -3596,7 +3596,7 @@
       "label": "Ramps",
       "description": "Ramp length without a landing should not exceed 9 m, with a maximum rise of 750 mm. Use a lift for rises over 750 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The length of a ramp, without a landing, should not exceed 9 m. A ramp of 9 m in length will elevate the user 750 mm.",
       "page_numbers": [
         95
@@ -3619,7 +3619,7 @@
       "label": "Non-Slip Flooring",
       "description": "Ensure that bathtubs have slip-resistant surfaces. If feasible, add a non-slip, waterproof seating area a minimum of 400 mm deep at the end of the tub.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ensure that bathtubs have slip-resistant surfaces. If feasible, add a non-slip, waterproof seating area a minimum of 400 mm deep",
       "page_numbers": [
         101
@@ -3641,7 +3641,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Every kitchen counter must have at least one barrier-free section not less than 760 mm long, with a top surface not more than 865 mm above the finished floor and knee space beneath.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Every kitchen counter shall have at least one barrier-free section not less than 760 mm long...top surface...not more than 865 mm above the finished floor.",
       "page_numbers": [
         92
@@ -3664,7 +3664,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Turning diameter of 1.5 m (1500 mm) or greater is required in all areas of the unit, including entry, laundry, kitchen, and bathroom areas.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "1.5 m turning diameter in all areas of the unit, including entry and laundry areas...Turning diameter of 1 500 mm or greater.",
       "page_numbers": [
         95,
@@ -3689,7 +3689,7 @@
       "label": "Electrical Outlet Height",
       "description": "Electrical outlets should be no lower than 600 mm from the finished floor (measured to the centre line of the plate).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Electrical outlets should be no lower than 600 mm when measured from the centre line of the plate to the finished floor.",
       "page_numbers": [
         95
@@ -3711,7 +3711,7 @@
       "label": "Light Switch Height",
       "description": "Light switches should be mounted between 1200 mm and 1400 mm from the finished floor (measured to the centre line of the plate).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Light switches should be mounted between 1 200 mm \u2013 1 400 mm when measured from the centre line of the plate to the finished floor.",
       "page_numbers": [
         95
@@ -3734,7 +3734,7 @@
       "label": "Control Height (Thermostats, etc.)",
       "description": "Controls such as thermostats should be mounted at 1400 mm from the finished floor (measured to the centre line of the plate).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Controls, like thermostats should be mounted at 1 400 mm when measured from the centre line of the plate to the finished floor.",
       "page_numbers": [
         95
@@ -3756,7 +3756,7 @@
       "label": "Colour Contrast for Doors",
       "description": "Provide colour contrast between the door trim, door, and wall for better visibility.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Colour contrast between the door trim, door and wall.",
       "page_numbers": [
         95
@@ -3776,7 +3776,7 @@
       "label": "Tactile Differentiation for Wayfinding",
       "description": "Effective tactile differentiation between living areas should be provided for wayfinding and safety.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Effective tactile-differentiation between living areas for wayfinding and safety.",
       "page_numbers": [
         95
@@ -3796,7 +3796,7 @@
       "label": "Lever-Handled Door Hardware",
       "description": "Lever-handled hardware should be used on all doors that latch.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Lever-handled hardware on all doors that latch.",
       "page_numbers": [
         95,
@@ -3817,7 +3817,7 @@
       "label": "Minimum Hallway Width",
       "description": "A minimum width of 1200 mm is needed for hallways to allow movement of a person who uses a wheelchair.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A minimum width of 1 200 mm is needed for movement of a person who uses a wheelchair.",
       "page_numbers": [
         96
@@ -3839,7 +3839,7 @@
       "label": "Window Sill Height (Living/Dining)",
       "description": "Window sills in living and dining rooms should be no higher than 600 mm from the finished floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "window sill in living and dining rooms no higher than 600 mm.",
       "page_numbers": [
         96
@@ -3861,7 +3861,7 @@
       "label": "Window Sill Height (Bedroom/Bathroom/Other)",
       "description": "Window sills in bedrooms, bathrooms, and other rooms should be no higher than 750 mm from the finished floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "window sills should be no higher than 750 mm when measured from the finished floor.",
       "page_numbers": [
         96
@@ -3883,7 +3883,7 @@
       "label": "Window Control Height",
       "description": "Window controls should be placed 750 mm to 1000 mm from the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "window controls should be placed in an area 750 mm to 1 000 mm when measured from the floor.",
       "page_numbers": [
         96
@@ -3906,7 +3906,7 @@
       "label": "Bariatric Accommodation (Doorways and Hallways)",
       "description": "For bariatric accommodation, doorways should have a clear width opening of 1100 mm - 1200 mm, and hallways should be 1200 mm \u2013 1500 mm in width.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "doorways...should have a clear width opening of 1100 mm - 1200 mm, and hallways should be 1200 mm \u2013 1500 mm in width",
       "page_numbers": [
         96
@@ -3931,7 +3931,7 @@
       "label": "Kitchen Counter Heights and Knee Space",
       "description": "Counter tops should have at least two heights (915 mm and 760 mm) with knee space beneath. Height-adjustable cooktop and sink recommended.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Counter tops with at least two counter heights (915 mm and 760 mm) and with knee space beneath. Height-adjustable cook top...height-adjustable sink",
       "page_numbers": [
         97
@@ -3956,7 +3956,7 @@
       "label": "Bathroom Transfer Space",
       "description": "A transfer space of 900 - 1000 mm located beside the toilet is required for wheelchair users.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A transfer space (for those who use wheelchairs) of 900 - 1 000 mm located beside the toilet.",
       "page_numbers": [
         100
@@ -3979,7 +3979,7 @@
       "label": "Shower Size and Lip",
       "description": "Showers should be 1500 x 1500 mm with no lip for barrier-free access.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "1 500 x 1 500 mm shower with no lip",
       "page_numbers": [
         100
@@ -4001,7 +4001,7 @@
       "label": "Grab Bars in Bathrooms",
       "description": "Grab bars should be provided for the toilet, shower, and bathtub.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Grab bars for the toilet, shower and bathtub.",
       "page_numbers": [
         100
@@ -4021,7 +4021,7 @@
       "label": "Accessible Routes",
       "description": "A hotel or motel suite must have a barrier-free path of travel to its entry, including wider doorways into the suite and bathrooms within.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A hotel or motel suite must have a barrier-free path of travel to its entry. This includes wider doorways into the suite and wider doorways to the bathrooms within.",
       "page_numbers": [],
       "values": {},
@@ -4039,7 +4039,7 @@
       "label": "Ramps",
       "description": "A barrier-free path of travel may have a ramp leading to ground level as an alternative to an exterior exit at ground level.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have an exterior exit at ground level, or have a ramp leading to ground level.",
       "page_numbers": [
         103
@@ -4059,7 +4059,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Every floor area above or below the first storey that is not sprinklered and has a barrier-free path of travel shall be served by an elevator.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Every \ufb02 oor area above or below the \ufb01 rst storey that is not sprinklered throughout and that has a barrier-free path of travel shall be served by an elevator",
       "page_numbers": [
         103
@@ -4079,7 +4079,7 @@
       "label": "Tactile Warning Strips at Elevation Changes",
       "description": "A downward change in elevation in a barrier-free path of travel shall be signalled by a 600 mm wide tactile warning strip placed 250 mm from the edge and for the full width, identified using colour and brightness contrast.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a downward change in elevation shall be signalled by the use of a 600 mm wide tactile warning strip placed 250 mm from the edge and for the full width of a stair, escalator, moving walkway, ramp or platform, and identi\ufb01 ed using colour and brightness contrast.",
       "page_numbers": [
         104
@@ -4102,7 +4102,7 @@
       "label": "Balcony Refuge Dimensions",
       "description": "A balcony required as a refuge must have direct barrier-free access, be at least 1.5 m deep, and provide at least 1.5 m\u00b2 per nonambulatory occupant and 0.5 m\u00b2 per ambulatory occupant.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be not less than 1.5 m deep from the outside face of the exterior wall to the inside edge of the balcony, and provide not less than 1.5 m\u00b2 of balcony space for each nonambulatory occupant and 0.5 m\u00b2 for each ambulatory occupant.",
       "page_numbers": [
         104
@@ -4126,7 +4126,7 @@
       "label": "Grab Bars in Bathtubs",
       "description": "Grab bars must be installed in every bathing unit, whether designated accessible or not, to provide safety and accommodate guests needing moderate assistance.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Grab bars must be installed in every bathing unit, whether designated accessible or not.",
       "page_numbers": [],
       "values": {},
@@ -4144,7 +4144,7 @@
       "label": "Bathtub Clear Floor Space and Grab Bar Placement",
       "description": "Bathtubs must have a clear floor space at least 900 mm wide along its length, and grab bars 1200 mm long located vertically and horizontally at specified heights above the rim.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "have a clear \ufb02 oor space at least 900 mm wide along its length, ... grab bars that ... are 1 200 mm long located vertically at the end ... with the lower end between 180 mm and 280 mm above the bathtub rim, and ... are 1 200 mm long located horizontally along the length ... at 180 mm to 280 mm above the bathtub rim",
       "page_numbers": [],
       "values": {
@@ -4167,7 +4167,7 @@
       "label": "Audible and Visual Alerts",
       "description": "An audible signal shall be accompanied with a visual signal to ensure that people who are deaf or hard of hearing and people who are blind receive notification of the alert and/or alarm in an emergency.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "An audible signal shall be accompanied with a visual signal to ensure that people who are deaf or hard of hearing and people who are blind receive noti\ufb01 cation of the alert and/or alarm in an emergency.",
       "page_numbers": [
         106
@@ -4187,7 +4187,7 @@
       "label": "Audible and Visual Alerts",
       "description": "Alert signals must be clearly audible in continuously staffed locations and throughout floor areas, and must be accompanied by visual cues in all areas.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "alert signals are clearly audible in continuously sta\u0119 ed locations, and ... throughout the \ufb02 oor area. ... All audible sounds must be accompanied with visual cues",
       "page_numbers": [
         108,
@@ -4208,7 +4208,7 @@
       "label": "Warning Indicators",
       "description": "Tactile warning strips in contrasting colours must be used at the top of escalators, ramps, moving walkways, stairways, and platform edges not served by handrails or guards.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "tactile warning strips in contrasting colours shall be used at the top of escalators, ramps, moving walkways, stairways, and at the edge of platforms not served by handrails or guards",
       "page_numbers": [
         111
@@ -4228,7 +4228,7 @@
       "label": "Fire Alarm Sound Pressure Levels",
       "description": "Fire alarm signal sound pressure level must not exceed 110 dBA in any normally occupied area; in sleeping rooms, not less than 75 dBA with doors closed.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The \ufb01 re alarm signal sound pressure level shall be not more than 110 dBA ... The sound pressure level in a sleeping room ... shall be not less than 75 dBA ... doors ... closed.",
       "page_numbers": [
         108
@@ -4251,7 +4251,7 @@
       "label": "Alarm Sound Level Above Ambient",
       "description": "Fire alarm audible signal devices must be at least 10 dBA above ambient noise, and not less than 65 dBA.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "sound pressure level from a \ufb01 re alarm system\u2019s audible signal device ... shall be not less than 10 dBA above the ambient noise level without being less than 65 dBA.",
       "page_numbers": [
         108
@@ -4274,7 +4274,7 @@
       "label": "Manual Silencing of Audible Signal Devices",
       "description": "Audible signal devices in dwelling units must include a means for manual silencing for up to 10 minutes, after which they restore to normal operation.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "audible signal devices located within a dwelling unit shall include a means for them to be manually silenced for a period of not more than 10 min, after which time the devices shall restore themselves to normal operation.",
       "page_numbers": [
         108
@@ -4296,7 +4296,7 @@
       "label": "Visual Signal Device Installation",
       "description": "Visual signal devices must be installed in addition to audible devices in buildings with fire alarm systems, conforming to CAN/ULC-S526, and be visible within suites.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Visual signal devices shall be installed in addition to audible signal devices in buildings required to have a \ufb01 re alarm system and shall conform to CAN/ULC-S526 ... so that the signal from at least one device is visible within a suite",
       "page_numbers": [
         109
@@ -4316,7 +4316,7 @@
       "label": "Vibration Devices for Deaf/Hard of Hearing",
       "description": "Suites for persons who are deaf, hard of hearing, or deaf-blind should be equipped with visual signalling devices and a vibration device for the bed.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Suites designated for use by persons who are deaf, hard of hearing or deaf-blind should also be equipped with visual signalling devices and a vibration device for the bed",
       "page_numbers": [
         109
@@ -4336,7 +4336,7 @@
       "label": "Tactile Warning Strip Placement and Contrast",
       "description": "Tactile warning strips must begin 850 mm back from the edge, be full width, feel/sound different, and be in contrasting colour to surrounding flooring.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The required tactile warning strip shall begin 850 mm back from the edge in question and for its full width. It should feel and/or sound noticeably di\u0119 erent ... and be in a contrasting colour",
       "page_numbers": [
         111
@@ -4358,7 +4358,7 @@
       "label": "Downward Elevation Change Warning",
       "description": "A 600 mm wide tactile warning strip, placed 250 mm from the edge, must signal a downward change in elevation in a barrier-free path of travel.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a downward change in elevation shall be signalled by the use of a 600 mm wide tactile warning strip placed 250 mm from the edge and for the full width",
       "page_numbers": [
         111
@@ -4381,7 +4381,7 @@
       "label": "Pattern and Colour Blocking for Key Access",
       "description": "Tactile warning strips must be in contrasting colours to assist persons with limited vision and those who are blind.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "tactile warning strips in contrasting colours shall be used ... To assist persons with limited vision and those who are blind",
       "page_numbers": [
         111
@@ -4401,7 +4401,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Built-in shelves or counters for public telephones must be level, not less than 265 mm deep, and provide a clear adjacent space not less than 265 mm wide and 265 mm high.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Shelves or counters...shall be level and...not be less than 265 mm deep, have...a clear space adjacent...not less than 265 mm wide, having no obstruction within 265 mm above the surface.",
       "page_numbers": [
         115
@@ -4423,7 +4423,7 @@
       "label": "Door Minimum Width",
       "description": "Coin slots and other features of public telephones must be within reach of a person sitting in a wheelchair and not higher than 1 370 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Coin slots and other features shall be within reach of a person sitting in a wheelchair. These should not be higher than 1 370 mm above the \ufb02 oor.",
       "page_numbers": [
         115
@@ -4445,7 +4445,7 @@
       "label": "Accessible Reception and Counters",
       "description": "The top surface of a section of the shelf or counter serving at least one telephone shall be not more than 865 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The top surface of a section of the shelf or counter...shall be not more than 865 mm above the \ufb02 oor.",
       "page_numbers": [
         115
@@ -4467,7 +4467,7 @@
       "label": "Door Minimum Width",
       "description": "If a wall-hung telephone is provided above a shelf or counter, the receiver and coin slot must not be more than 1 370 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If a wall-hung telephone is provided...it shall be located so that the receiver and coin slot are not more than 1 370 mm above the \ufb02 oor.",
       "page_numbers": [
         115
@@ -4489,7 +4489,7 @@
       "label": "Cane-Detectable Partition at Telephones",
       "description": "Public telephones or banks of telephones should retain a cane-detectable partition for people with visual disabilities.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "should retain a cane-detectable partition in order for a person with visual disabilities to detect that s/he is approaching an area with projecting shelves and telephones.",
       "page_numbers": [
         115
@@ -4509,7 +4509,7 @@
       "label": "Audible and Visual Alerts",
       "description": "If an entrance is equipped with a security system, both visual and audible signals must be used to indicate when the door lock is released.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "If an entrance is equipped with a security system, both visual and audible signals shall be used to indicate when the door lock is released.",
       "page_numbers": [
         115
@@ -4529,7 +4529,7 @@
       "label": "TTY/TDD Public Telephone Availability",
       "description": "At least one telephone with a built-in telecommunication device for the deaf (TTY/TDD) shall be provided if public telephones are installed.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "At least one telephone with a built-in telecommunication device for the deaf (TTY/TDD) shall be provided if public telephones are installed.",
       "page_numbers": [
         115
@@ -4549,7 +4549,7 @@
       "label": "TTY Signage in Large Complexes",
       "description": "In large complexes with more than one bank of pay telephones, signs should indicate the location of the TTY.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "where more than one bank of pay telephones is provided, signs should indicate the location of the TTY.",
       "page_numbers": [
         115
@@ -4569,7 +4569,7 @@
       "label": "Assistive Listening System in Assembly Areas",
       "description": "All assembly areas over 100 m\u00b2 must be equipped with an assistive listening system encompassing the entire seating area, except induction loop systems may cover half.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "all assembly areas with an area of more than 100 m\u00b2 shall be equipped with an assistive listening system encompassing the entire seating area.",
       "page_numbers": [
         116
@@ -4591,7 +4591,7 @@
       "label": "Assistive Listening Devices for 50+ Occupancy",
       "description": "Assistive Listening Devices (ALD) should be installed in all areas of any building where occupancy might be 50 persons and more.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Assistive Listening Devices (ALD) should be installed in all areas of any building where occupancy might be 50 persons and more.",
       "page_numbers": [
         116
@@ -4613,7 +4613,7 @@
       "label": "Annual ALD System Check",
       "description": "All Assisted Listening Systems should be checked once per year to ensure proper operation.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "All Assisted Listening Systems should be checked once per year to ensure proper operation.",
       "page_numbers": [
         116
@@ -4633,7 +4633,7 @@
       "label": "Induction Loop Receiver Provision",
       "description": "Where an induction loop system is deployed, the building should have 1 loop receiver for every 50 occupants.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "the building should have 1 loop receiver for every 50 occupants",
       "page_numbers": [
         116
@@ -4655,7 +4655,7 @@
       "label": "Induction Loop System Certification",
       "description": "Installation of induction loop shall comply with IEC60118-4 2014 standard, and a Certificate of Conformity should be issued; checked annually.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Installation of induction loop shall comply with the IEC60118-4 2014 standard, and a Certi\ufb01 cate of Conformity should be issued...Once per year, each loop installation should be checked and a Certi\ufb01 cate of Conformity shall be issued.",
       "page_numbers": [
         116
@@ -4675,7 +4675,7 @@
       "label": "Magnetic Counter Loop in Health Care",
       "description": "Health care locations manned by staff should be equipped with a magnetic counter loop system and the 't coil' symbol should be displayed.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Heath Care locations manned by sta\u0119  should be equipped with a magnetic counter loop system and the \u201ct coil\u201d symbol should be displayed.",
       "page_numbers": [
         116
@@ -4695,7 +4695,7 @@
       "label": "Braille, Visual, and Audio Cues",
       "description": "Accessibility signs for universal toilet rooms must include Braille identification by use of Braille dots not less than 1 mm in relief, located directly below the tactile signage.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "include Braille identi\ufb01 cation by use of Braille dots not less than 1 mm in relief, located directly below the tactile signage.",
       "page_numbers": [
         119
@@ -4717,7 +4717,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Signs incorporating the international symbol of accessibility for persons with physical disabilities shall be installed to indicate the location of a barrier-free entrance.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Signs incorporating the international symbol of accessibility for persons with physical disabilities shall be installed to indicate the location of a barrier-free entrance.",
       "page_numbers": [
         119
@@ -4737,7 +4737,7 @@
       "label": "Non-Text Diagrams and Symbols",
       "description": "Facilities and services for persons with a specific disability shall be identified using nationally recognized symbols.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Facilities and services for persons with a speci\ufb01 c disability shall be identi\ufb01 ed using nationally recognized symbols.",
       "page_numbers": [
         119
@@ -4757,7 +4757,7 @@
       "label": "Tactile Signage Requirements",
       "description": "Tactile signage must be not less than 60 mm high, raised ~0.7 mm, located \u22641200 mm above floor, \u2264150 mm from entrance, and contrasting in colour.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "be not less than 60 mm high, raised approximately 0.7 mm above the surface, be located not more than 1 200 mm above the \ufb01 nished \ufb02 oor, begin not more than 150 mm from the door or entrance, be contrasting in colour",
       "page_numbers": [
         119
@@ -4779,7 +4779,7 @@
       "label": "Non-Text Diagrams and Symbols",
       "description": "Use graphics or internationally recognized symbols to indicate direction or identify facilities and services for people with language or cognitive difficulties.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The use of graphics or internationally recognized symbols to indicate direction or identify facilities and services will be beneficial to persons with...little or no knowledge of the local written language.",
       "page_numbers": [
         121
@@ -4799,7 +4799,7 @@
       "label": "Braille, Visual, and Audio Cues",
       "description": "Provide tactile signs with raised letters, and consider audio cues (e.g., Talking Signs) for wayfinding for people with visual disabilities.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "speci\ufb01 c tactile signs with letters not less than 60 mm high, raised 0.7 mm above the surface...Recent technology (such as a product known as Talking Signs)...provides beams of invisible light to receivers...",
       "page_numbers": [
         121
@@ -4821,7 +4821,7 @@
       "label": "Pattern and Colour Blocking for Key Access",
       "description": "Use colour/contrast cues, patterns, and textures to define locations of doorways, controls, and changes in direction for orientation.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "colour/contrast cues, i.e., used to de\ufb01 ne the location of doorways, building controls...patterns...textures (di\u0119 erent \ufb02 ooring materials to indicate change in direction or use)",
       "page_numbers": [
         121,
@@ -4842,7 +4842,7 @@
       "label": "Haptic and Tactile Maps",
       "description": "Provide tactile maps and directories with raised characters for orientation for people who are blind.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Building directories should be conveniently located, tactile in nature...Characters that are raised at least 0.7 mm are needed.",
       "page_numbers": [
         121
@@ -4864,7 +4864,7 @@
       "label": "Visual Contrast Between Walls and Floors",
       "description": "Signs and floor identification for orientation should offer maximum colour contrast, preferably white on black or black on white, and be glare-free.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "it is recommended that white on black or black on white is used, as this combination produces the best legibility...sign surfaces be processed to prevent glare.",
       "page_numbers": [
         122
@@ -4884,7 +4884,7 @@
       "label": "Warning Indicators",
       "description": "Use tactile cues (different flooring), colour contrast, and changes in illumination to warn of changes in direction or use.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "tactile cues, i.e., di\u0119 erent types of \ufb02 ooring that mark a pathway, or change from one area to another, thus serving as a warning that a change in direction is to take place",
       "page_numbers": [
         121,
@@ -4905,7 +4905,7 @@
       "label": "Multilingual Signage",
       "description": "Where wording is used on signs, language should be simple and concise to be accessible for most building users.",
       "category_id": "social_health",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "if wording is to be used on signs, the language on them should be simple and concise to be accessible for most building users.",
       "page_numbers": [
         121
@@ -4925,7 +4925,7 @@
       "label": "Accessible Routes",
       "description": "Temporary pedestrian routes around construction sites must be accessible, clear of obstructions, and replicate positive characteristics of existing walks.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "All pedestrians shall be provided with safe passage through or around any construction or demolition site...temporary walking surface that replicates to the greatest extent practical the positive characteristics of the existing walk being closed.",
       "page_numbers": [
         124,
@@ -4946,7 +4946,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Where sidewalks are obstructed, provide temporary sidewalks with ramps and handrails as needed, ensuring accessibility for all users.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where construction operations necessitate the obstruction of a sidewalk, a temporary sidewalk shall be provided...Handrails and clearly demarcated temporary ramps with detectable warnings may be needed.",
       "page_numbers": [
         125
@@ -4966,7 +4966,7 @@
       "label": "Non-Slip Flooring",
       "description": "Temporary walking surfaces must be slip-resistant even when wet; address mud, snow, and ice promptly.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ensure that temporary walking surfaces such as plywood are selected for slip-resistance even when wet. Mud, snow, and ice accumulations require timely attention.",
       "page_numbers": [
         125
@@ -4986,7 +4986,7 @@
       "label": "Covered Way Minimum Dimensions and Features",
       "description": "Covered ways at construction sites must have a clear height \u22652.5m, clear width \u22651.5m, weathertight roof, smooth enclosure, adequate lighting, and lockable gates.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A covered way shall a) have a clear height of not less than 2.5 m, b) have a clear width of not less than 1.5 m...g) be adequately lighted...h) have...a gate not less than 1 200 mm high...",
       "page_numbers": [
         125
@@ -5010,7 +5010,7 @@
       "label": "Obstruction-Free Temporary Routes",
       "description": "Temporary sidewalks and adjacent sidewalks must be kept clear of obstructions at all times; no materials, scrap, or equipment on walking surfaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "where a sidewalk exists adjacent to the site, it shall be kept clear of obstructions at all times...Materials, scrap, and equipment cannot be placed on the walking surface as this poses a hazard for all users.",
       "page_numbers": [
         125
@@ -5030,7 +5030,7 @@
       "label": "Cane-Detectable Zone",
       "description": "Fences and covered ways must not have objects protruding beyond the cane-detectable zone to ensure safety for people with visual disabilities.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Care is called for in erecting fences and covered ways so that no objects protrude beyond the cane-detectable zone.",
       "page_numbers": [
         125
@@ -5050,7 +5050,7 @@
       "label": "Advance Notice and Intelligible Signage",
       "description": "Provide intelligible signage with symbols, arrows, and large print in contrasting colours to give advance notice of closures, detours, or delays.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Use symbols, arrows, and large-sized print text in contrasting colours identified with safety and danger...Advance notice\u2014time and positional\u2014results in more-informed decisions by all users...",
       "page_numbers": [
         126
@@ -5070,7 +5070,7 @@
       "label": "Accessible Routes",
       "description": "Outdoor public use eating areas must be located on an accessible path of travel or trail.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "locate on an accessible path of travel or trail;",
       "page_numbers": [
         129
@@ -5090,7 +5090,7 @@
       "label": "Accessible Reception and Counters",
       "description": "At least 20% of tables and no fewer than one in outdoor public use eating areas must be accessible.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure a minimum of twenty percent (20%) of tables and no fewer than one (1) in outdoor public use eating area are accessible;",
       "page_numbers": [
         129
@@ -5112,7 +5112,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Accessible tables must provide suitable knee and toe clearances and a clear space of 2000 mm minimum on all sides.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure accessible tables provide suitable knee and toe clearances (Figure 105b); provide a clear space of 2000 mm (minimum) on all sides of the table (Figure 105a);",
       "page_numbers": [
         129
@@ -5134,7 +5134,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Ground surface leading to and under tables must be firm, stable, and no steeper than 1:50 (2%).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure ground surface leading to and under tables is \ufb01 rm, stable, and no steeper than 1:50 (2%);",
       "page_numbers": [
         129
@@ -5156,7 +5156,7 @@
       "label": "Glazing Visual Indication",
       "description": "Barbecues in outdoor public-use eating areas must be placed away from accessible paths and on a surface with high tonal and textural contrast.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure that they are placed away from the accessible path of travel and on a surface with high tonal and textural contrast with the adjacent surfaces;",
       "page_numbers": [
         129
@@ -5176,7 +5176,7 @@
       "label": "Accessible Washroom in Outdoor Areas",
       "description": "Where washrooms are provided in outdoor public use eating areas, at least one universal toilet room per cluster of regular washrooms must be accessible.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure accessible features (e.g., at least one universal toilet room per cluster of regular washrooms).",
       "page_numbers": [
         129
@@ -5196,7 +5196,7 @@
       "label": "Accessible Trailhead Signage",
       "description": "Designated trailheads must include information signage at key entrance, exit, and decision points.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure that designated trailheads with information signage are integrated as part of the trail design at key entrance and exit points along the trail, intermediate areas on lengthy trails, or decision points",
       "page_numbers": [
         131
@@ -5216,7 +5216,7 @@
       "label": "Door Minimum Width",
       "description": "Trail entrance/exit points must provide 850 mm to 1000 mm clear opening and be free of obstructions.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide 850 mm to 1000 mm clear opening whether entrance includes a gate, bollard, or other entrance design; and ensure that entrances are maintained and clear of obstructions",
       "page_numbers": [
         131
@@ -5238,7 +5238,7 @@
       "label": "Trail Clear Width and Passing Spaces",
       "description": "Trails must have a clear width of 1000 mm minimum (1800 mm preferred); if less than 1800 mm, provide 1800 mm x 1800 mm passing spaces every 30 m.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide clear width of 1000 mm (minimum) to 1800 mm (preferred); where the clear width is less than 1800 mm, provide a passing space of 1800 mm wide by 1800 mm (minimum) long, at intervals no more than 30 m",
       "page_numbers": [
         131
@@ -5260,7 +5260,7 @@
       "label": "Trail Headroom Clearance",
       "description": "Ensure headroom clearance is 2100 mm minimum above the trail and no obstructions or projections along trail.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure headroom clearance is 2100 mm (minimum) above the trail; and ensure that there are no obstructions or projections along trail.",
       "page_numbers": [
         131
@@ -5282,7 +5282,7 @@
       "label": "Trail Surface Openings",
       "description": "Trail surface openings must not allow passage of objects >20 mm diameter (13 mm preferred); elongated openings oriented perpendicular to travel.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "openings must not allow passage of an object that has a diameter of more than 20 mm (13 mm diameter preferred), and that any elongated openings are oriented approximately perpendicular to the direction of travel;",
       "page_numbers": [
         132
@@ -5304,7 +5304,7 @@
       "label": "Trail Surface Stability and Durability",
       "description": "Trail surfaces must be firm, stable, resistant to weather, and able to sustain typical wear and tear between maintenance cycles.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure that surface is \ufb01 rm and stable; ensure that surface is resistant to damage by normal weather conditions, with ability to sustain typical wear and tear between planned maintenance cycles;",
       "page_numbers": [
         132
@@ -5324,7 +5324,7 @@
       "label": "Trail Surface Information Signage",
       "description": "Type of surface and expected changing conditions must be identified in information signage at trailhead.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure that type of surface used and expected conditions that may change over time are identi\ufb01 ed in information signage provided at trailhead.",
       "page_numbers": [
         132
@@ -5344,7 +5344,7 @@
       "label": "Trail Slope Requirements",
       "description": "Provide running and cross slopes as gentle as possible, as permitted by terrain, to minimize user effort and provide even surfaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide a running slope that is as gentle as possible, as permitted by the terrain, to minimize amount of strength and stamina required to use the trail; and ensure that cross slopes are as gentle as possible, as permitted by the terrain, to provide an even surface for diverse users",
       "page_numbers": [
         133
@@ -5364,7 +5364,7 @@
       "label": "Ramps",
       "description": "Where ramps are provided on trails, running slope must not exceed 1:10 (10%) and comply with ramp requirements from Section 2.2.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide a running slope no greater than 1:10 (10%); and with the exception of the running slope, ensure compliance with ramp requirements from Section 2.2",
       "page_numbers": [
         133
@@ -5386,7 +5386,7 @@
       "label": "Edge Protection for Trails Adjacent to Hazards",
       "description": "Where trails are adjacent to water or drop-offs, provide edge protection: elevated barrier, top at least 50 mm above trail, not impeding drainage.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide edge protection with the following requirements: constitute of an elevated barrier ... top of the edge protection at 50 mm (minimum) high above the trail surface; ... not to impede the drainage",
       "page_numbers": [
         133
@@ -5408,7 +5408,7 @@
       "label": "Trailhead Signage Content and Contrast",
       "description": "Trailhead signage must include trail length, surface type, width, slopes, features, and have high tonal contrast with sans serif font.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide signage with the following information ... ensure that signage text has high tonal contrast with its background in order to assist with visual recognition, with text that includes characters that use a sans serif font.",
       "page_numbers": [
         134
@@ -5428,7 +5428,7 @@
       "label": "Accessible Trail Information in Other Media",
       "description": "Where other media (websites, brochures) provide trail information, include the same information as trailhead signage.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "where other media such as park websites or brochures are used to provide information about the recreational trail ... provide the same information identi\ufb01 ed on the trailhead signage.",
       "page_numbers": [
         135
@@ -5448,7 +5448,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Provide directional signage at strategic locations to identify accessible tables and public use eating areas.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide directional signage at strategic locations to identify the location(s) of accessible tables and or public use eating areas;",
       "page_numbers": [
         129
@@ -5468,7 +5468,7 @@
       "label": "Accessible Routes",
       "description": "Provide a clear opening of 1000 mm at entrances, including gates or bollards, and ensure accessible routes to and within outdoor spaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide 1000 mm clear opening whether entrance includes a gate, bollard. or other entrance design.",
       "page_numbers": [
         136
@@ -5490,7 +5490,7 @@
       "label": "Accessible Routes",
       "description": "Provide clear width of 1000 mm (minimum) and headroom clearance of 2100 mm (minimum) above beach access route.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide clear width of 1000 mm (minimum); and provide headroom clearance of 2100 mm (minimum) above beach access route.",
       "page_numbers": [
         136
@@ -5512,7 +5512,7 @@
       "label": "Non-Slip Flooring",
       "description": "Ensure surface is firm and stable; constructed surfaces must have bevels and slopes within specified limits.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure surface is \ufb01 rm and stable;",
       "page_numbers": [
         136
@@ -5534,7 +5534,7 @@
       "label": "Ramps",
       "description": "Provide a ramp where changes in level are greater than 200 mm; running slope no greater than 1:10 (10%).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide a ramp where changes in level are greater than 200 mm.",
       "page_numbers": [
         136
@@ -5556,7 +5556,7 @@
       "label": "Accessible Routes",
       "description": "Boardwalks must have a clear width of 1000 mm (minimum); passing space of 1800 mm x 1800 mm at intervals no more than 30 m if width <1800 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide clear width of 1000 mm (minimum); ... passing space of 1800 mm wide by 1800 mm (minimum) long, at intervals no more than 30 m;",
       "page_numbers": [
         136
@@ -5578,7 +5578,7 @@
       "label": "Non-Slip Flooring",
       "description": "Boardwalk surfaces must be firm and stable; openings must not allow passage of an object >20 mm (13 mm preferred), oriented perpendicular to travel.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure surface is \ufb01 rm and stable; ... openings must not allow passage of an object that has a diameter of more than 20 mm (13 mm diameter preferred)",
       "page_numbers": [
         136
@@ -5600,7 +5600,7 @@
       "label": "Accessible Routes",
       "description": "Boardwalks must have headroom clearance of 2100 mm (minimum) above the boardwalk.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure that headroom clearance is 2100 mm (minimum) above the boardwalk.",
       "page_numbers": [
         136
@@ -5622,7 +5622,7 @@
       "label": "Edge Protection on Boardwalks",
       "description": "Provide edge protection that is 50 mm (minimum) high on boardwalks; design must allow suitable drainage.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide edge protection that is 50 mm (minimum) high; and ... design allows suitable drainage",
       "page_numbers": [
         136
@@ -5644,7 +5644,7 @@
       "label": "Accessible Trailhead Amenities",
       "description": "Exterior amenities (e.g., parking, accessible routes, public washrooms) should be provided at trailheads and reviewed for accessibility compliance.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Are EXTERIOR AMENITIES provided at trailheads (e.g., parking, accessible routes, public washrooms, etc.)?",
       "page_numbers": [
         138
@@ -5666,7 +5666,7 @@
       "label": "Trail Clear Width and Obstruction-Free",
       "description": "Trail clear width must be at least 1000 mm (1800 mm preferred); vegetation and features must not obstruct accessible route.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Is the CLEAR WIDTH of the trail at least 1000 mm (1800 mm preferred)? ... does not create obstruction or projection along accessible route.",
       "page_numbers": [
         138
@@ -5688,7 +5688,7 @@
       "label": "Trail Edge Protection and Marking",
       "description": "Where there are changes in level, provide edge protection at least 50 mm high and clearly marked (e.g., colour and texture contrast).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "are EDGE PROTECTION at least 50 mm high provided and edges clearly marked (e.g., colour and texture contrast)",
       "page_numbers": [
         138
@@ -5710,7 +5710,7 @@
       "label": "Trail Headroom Clearance",
       "description": "Headroom clearance above the trail must be at least 2100 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Is the HEADROOM CLEARANCE above the trail at least 2100 mm?",
       "page_numbers": [
         138
@@ -5732,7 +5732,7 @@
       "label": "Trail Slope",
       "description": "Running and cross slopes should be as gentle as possible, as permitted by the terrain.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Is the RUNNING SLOPE as gentle as possible, as permitted by the terrain?",
       "page_numbers": [
         138
@@ -5754,7 +5754,7 @@
       "label": "Non-Slip Flooring",
       "description": "Trail surface must be firm and stable; identify type of surface and material used to meet accessibility requirements.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Is the TRAIL SURFACE \ufb01 rm and stable? Identify type of surface and material used to meet accessibility requirements.",
       "page_numbers": [
         138
@@ -5776,7 +5776,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Provide trail name/identification signage at trailheads and key access points, with accessibility features (e.g., large print, strong tonal contrast, pictograms).",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Is there suitable TRAIL NAME / IDENTIFICATION SIGNAGE at trailheads and key access points, with accessibility features (e.g., large print, use of strong tonal contrast and pictograms)",
       "page_numbers": [
         139
@@ -5798,7 +5798,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Signage should include trail name, map, length, surface type, running slope, cross slope, and manager/operator in accessible format.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Identifying this information in accessible format allows users of all ages and abilities to make an informed decision about using the trail.",
       "page_numbers": [
         139
@@ -5820,7 +5820,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Barriers to accessibility (e.g., steep slopes, difficult topography) should be identified on signage at strategic locations.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Have any barriers to accessibility (e.g., steep slopes or di\u011a  cult topography) along the trail been identi\ufb01 ed on signage at strategic locations?",
       "page_numbers": [
         139
@@ -5842,7 +5842,7 @@
       "label": "Rest Areas and Trail Experience Options",
       "description": "Trail design should offer areas for rest and options for shorter or longer on-trail adventures to suit user preferences.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Does the trail o\u0119 er areas for rest and options for shorter or longer on-trail adventures so that trail users can choose the experience that most suit them?",
       "page_numbers": [
         139
@@ -5864,7 +5864,7 @@
       "label": "Trail Maintenance Policy",
       "description": "A policy should be in place to address maintenance issues for year-round trails (e.g., removal of debris and obstructions).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Is there a policy in place to address maintenance issues for trails designed for year-round use (e.g., removal of debris and obstructions on trail surfaces etc)?",
       "page_numbers": [
         139
@@ -5886,7 +5886,7 @@
       "label": "Inclusive Play Space Consultation",
       "description": "Consultation with the public, persons with disabilities, and Accessibility Advisory Committee is required when constructing or redeveloping outdoor play spaces.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "consultation on the needs of children and caregivers with various disabilities must occur with: a) the public and persons with disabilities; and b) your local Accessibility Advisory Committee",
       "page_numbers": [
         140
@@ -5908,7 +5908,7 @@
       "label": "Inclusive Play Space Features",
       "description": "Incorporate accessibility features, such as sensory and active play components, for children and caregivers with various disabilities into outdoor play space design.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "incorporate accessibility features, such as sensory and active play components, for children and caregivers with various disabilities into the design of outdoor play spaces;",
       "page_numbers": [
         141
@@ -5930,7 +5930,7 @@
       "label": "Non-Slip Flooring",
       "description": "Outdoor play spaces must have ground surface that is firm, stable, impact-attenuating for injury prevention, and provide sufficient clearance for movement.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure that outdoor play spaces have ground surface that is \ufb01 rm, stable, and has impact-attenuating properties for injury prevention and su\u011a  cient clearance",
       "page_numbers": [
         141
@@ -5952,7 +5952,7 @@
       "label": "Inclusive Play Space Standards Compliance",
       "description": "Design of inclusive play spaces and features must meet requirements of CAN/CSA Z614-14, Annex H.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ensure that the design of inclusive play spaces and features meet the requirements of CAN / CSA Z614-14, Annex H",
       "page_numbers": [
         141
@@ -5974,7 +5974,7 @@
       "label": "Accessible Play Space Entry/Exit Points",
       "description": "Provide a minimum of two accessible ingress/egress points, located as part of an adjacent accessible route, with firm, stable, slip-resistant connections.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Provide a minimum of two accessible ingress/egress points: a) that are located as part of an adjacent accessible route; b) that ensure that accessible connections provided to play space surfaces are \ufb01 rm, stable, and slip-resistant",
       "page_numbers": [
         142
@@ -5996,7 +5996,7 @@
       "label": "Accessible Routes",
       "description": "At least one accessible route must connect the play space boundary, ground-level and elevated play components, with a minimum clear width of 1525 mm and a maximum slope of 1:16.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide at least one accessible route within the boundary of the play space, connecting ground-level play components and elevated play components",
       "page_numbers": [
         143
@@ -6018,7 +6018,7 @@
       "label": "Ramps",
       "description": "At least 50% of elevated play components must be connected to a ramp or transfer system.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "ensure that at least 50% of elevated play components are connected to a ramp or transfer system",
       "page_numbers": [
         143,
@@ -6041,7 +6041,7 @@
       "label": "Exterior Building Entrances",
       "description": "Entry/exit points from an accessible route along the boundary of the play space must be provided for users of mobility aids where there is a change in level.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Entry / exit points from an accessible route along the boundary of the play space for users of mobility aids to access play components, where there is a change in level.",
       "page_numbers": [
         148
@@ -6061,7 +6061,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Provide clear turning space for mobility aids of 1675 mm (preferred) or 1500 mm (minimum) diameter on the same level as play components.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide clear turning space for mobility aids of 1675 mm (preferred) or 1500 mm (minimum) diameter on the same level as play components.",
       "page_numbers": [
         144
@@ -6083,7 +6083,7 @@
       "label": "Accessible Play Surface Materials",
       "description": "Play spaces must provide accessible surface materials such as poured-in-place rubber, accessible turf, rubber mats and tiles, bonded and engineered wood fibers, or shredded rubber.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide accessible surface materials for play spaces such as poured-in-place rubber, accessible turf, rubber mats and tiles, bonded and engineered wood \ufb01 bers or shredded rubber.",
       "page_numbers": [
         143,
@@ -6104,7 +6104,7 @@
       "label": "Transfer Systems for Play Components",
       "description": "Provide transfer systems (e.g., transfer steps or platforms) to connect elevated or ground-level play components, with a minimum clear floor space of 915 mm wide by 1370 mm long adjacent to all transfer locations.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide transfer systems to connect elevated or ground-level play components (e.g., transfer steps or platforms); ... provide a minimum clear \ufb02 oor space of 915 mm wide by 1370 mm long adjacent to all transfer locations",
       "page_numbers": [
         143
@@ -6126,7 +6126,7 @@
       "label": "Ground-Level Play Component Ratios",
       "description": "Provide the minimum number and variety of ground-level play components along accessible routes, as determined by the number of elevated play components (see Table 14).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Provide the ratio of ground-level play component alternatives, compared to elevated play components, as identi\ufb01 ed in Table 14.",
       "page_numbers": [
         145,
@@ -6147,7 +6147,7 @@
       "label": "High Tonal Contrast for Play Components",
       "description": "Provide a high tonal contrast between a play component and its surroundings.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "provide a high tonal contrast between a play component and its surroundings.",
       "page_numbers": [
         143
@@ -6167,7 +6167,7 @@
       "label": "Door Minimum Width",
       "description": "Doorways must have a minimum clearance of 1,140 mm to accommodate wider wheelchairs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ensure that doorways have a minimum clearance of 1 140 mm.",
       "page_numbers": [
         159
@@ -6189,7 +6189,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Accessible washrooms and stalls, access to paper towels and soap dispensers, lever handles, and larger handles on locking devices must be provided.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "accessible washrooms and stalls, access to paper towels and soap dispensers, lever handles, larger handles on locking devices",
       "page_numbers": [
         157
@@ -6209,7 +6209,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Provide a turning radius to accommodate wheelchairs or scooters.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a turning radius to accommodate wheelchairs or scooters",
       "page_numbers": [
         157
@@ -6229,7 +6229,7 @@
       "label": "Bariatric Toilet and Shower Accommodation",
       "description": "Bathrooms must use bariatric floor-mounted toilets rated to 450 kg, provide minimum 530 mm between toilet and wall, and showers at least 1,500 mm \u00d7 1,500 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Use bariatric \ufb02oor-mounted toilets that are rated to 450 kg...minimum distance of 530 mm between the toilet and the \ufb02anking wall...private showers are at least 1 500 mm \u00d7 1 500 mm.",
       "page_numbers": [
         157,
@@ -6254,7 +6254,7 @@
       "label": "Reinforced Grab Bars for Bariatric Use",
       "description": "Wall-mounted grab bars must be structurally reinforced and rated to handle 4.5 kN (454 kg), and mounted further forward from the back wall.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ensure that wall-mounted grab bars are structurally reinforced and rated to handle 4.5 kN (454 kg). They should also be mounted further forward from the back wall.",
       "page_numbers": [
         158
@@ -6276,7 +6276,7 @@
       "label": "Shower Accessibility for Bariatric Users",
       "description": "Showers must avoid enclosing walls, use curtains, include multiple reinforced grab bars, removable shower head, and avoid curbs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Avoid enclosing walls; instead, use shower curtains...multiple, reinforced grab bars...removable shower head...Avoid curbs into accessible showers.",
       "page_numbers": [
         158
@@ -6296,7 +6296,7 @@
       "label": "Turning Radius for Wheelchairs and Caregivers",
       "description": "Allow a larger turning radius for individuals using wheelchairs; recommended 1,900 mm for wheelchairs or commodes and a caregiver.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A recommended 1 900 mm turning radius for wheelchairs or commodes and a caregiver is suggested.",
       "page_numbers": [
         158
@@ -6318,7 +6318,7 @@
       "label": "Barrier-Free Safe Path of Travel",
       "description": "Provide a barrier-free safe path of travel, accessible entrances (preferably at zero grade with powered doors).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "require ease of access to buildings and all facilities and services. This includes a barrier-free safe path of travel, accessible entrances (preferably at zero grade with powered doors)",
       "page_numbers": [
         157
@@ -6338,7 +6338,7 @@
       "label": "Audible and Visual Alerts",
       "description": "Provide visual cues such as a light to alert users of a ringing telephone, doorbell, or alarm for people who are deaf or hard of hearing.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "relies on visual cues such as a light to alert him/her of a ringing telephone, a doorbell, or an alarm",
       "page_numbers": [
         156
@@ -6358,7 +6358,7 @@
       "label": "Visual Contrast Between Walls and Floors",
       "description": "Use colour/contrast cues to define building landmarks, identify obstacles, and assist with locating building controls.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "colour/contrast cues, which can be used to de\ufb01ne building landmarks, help one identify obstacles in a path of travel, and assist with locating building controls",
       "page_numbers": [
         155
@@ -6378,7 +6378,7 @@
       "label": "Warning Indicators",
       "description": "Apply tactile warning surfaces and auditory cues to help users map their environment and identify hazards.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "auditory cues...tactile and kinaesthetic cues, such as the application of di\u0119erent \ufb02oor surfaces and approved tactile warning surfaces",
       "page_numbers": [
         155
@@ -6398,7 +6398,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Signs with simple pictures and written information limited to short, simple concepts are important for people with communication and cognitive disabilities.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Signs with simple pictures and with written information limited to short, simple concepts are important for this group.",
       "page_numbers": [
         156
@@ -6418,7 +6418,7 @@
       "label": "Pattern and Colour Blocking for Key Access",
       "description": "People with communication disabilities may benefit from colour/contrast, lighting, auditory, tactile/kinaesthetic and ergonomic cues.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "may also bene\ufb01t from the use of design considerations for those with visual disabilities (e.g., colour/contrast, lighting, auditory, tactile/kinaesthetic and ergonomic cues)",
       "page_numbers": [
         156
@@ -6438,7 +6438,7 @@
       "label": "Door Minimum Width",
       "description": "Doors in barrier-free paths must have a minimum clearance of 1,140 mm; larger clearances may be needed for oversized equipment.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ensure that doorways located in a barrier-free path of travel have a minimum clearance of 1 140 mm",
       "page_numbers": [
         160
@@ -6460,7 +6460,7 @@
       "label": "Ramps",
       "description": "Ramps must have a minimum unobstructed width of 1,140 mm, a gradient of 1 in 20, and level areas of at least 1,500 mm x 1,500 mm at turns.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Use ramps that have a minimum unobstructed width of 1 140 mm...Use a gradient of 1 in 20...minimum 1 500 mm \u00d7 1 500 mm level area where a ramp makes a 90\u00b0 or 180\u00b0 turn",
       "page_numbers": [
         160
@@ -6484,7 +6484,7 @@
       "label": "Accessible Routes",
       "description": "Corridors/hallways should be at least 1,500 mm wide to allow passage of a person using a bariatric walker and another person; wider for larger equipment.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A 1 500 mm-wide corridor allows for one person who is obese and using a walker and one person of regular size and no equipment to pass.",
       "page_numbers": [
         160
@@ -6506,7 +6506,7 @@
       "label": "Exterior Building Entrances",
       "description": "Curb cutouts and openings must be at least 1,140 mm wide to accommodate larger wheelchair widths.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Ensure that curb cutouts and openings are at least 1 140 mm wide to accommodate larger wheelchair widths.",
       "page_numbers": [
         160
@@ -6528,7 +6528,7 @@
       "label": "Automatic Door Operation",
       "description": "Elevator doors must be power-operated, horizontally sliding, and opened/closed by automatic means.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Power-operated, horizontally sliding car and landing doors opened and closed by automatic means shall be provided.",
       "page_numbers": [
         165
@@ -6548,7 +6548,7 @@
       "label": "Alternate Accessible Routes (Stair Alternatives)",
       "description": "Where a doorway or stairway empties onto a ramp through an end wall, a level area must extend across the full width of the ramp and at least 1,500 mm along its length.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where a doorway or stairway empties onto a ramp through an end wall, have a level area extending across the full width of the ramp (e.g., 1 140 mm) and along its length for not less than 1 500 mm.",
       "page_numbers": [
         160
@@ -6570,7 +6570,7 @@
       "label": "Handrail Load Requirements",
       "description": "Handrails must withstand a minimum of 4.5 kN (454 kg) at any point and a uniform load of 3.3 kN (340 kg) in any direction outside dwelling units.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Recommend construction to withstand a minimum of 4.5 kN (454 kg) applied at any point and in any direction and a uniform load of 3.3 kN (340 kg) applied in any direction to handrails",
       "page_numbers": [
         160
@@ -6593,7 +6593,7 @@
       "label": "Bedroom Clearance for Bariatric Users",
       "description": "Provide 1,500 mm of clearance around the bed for caregiver assistance, equipment, and lifts.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Have 1 500 mm of clearance available around the bed of an obese individual to allow room for caregiver assistance, equipment such as wheelchairs and walkers, and space for lifts",
       "page_numbers": [
         160
@@ -6615,7 +6615,7 @@
       "label": "Grab Bar Load Rating",
       "description": "Grab bars must be rated for at least 454 kg and placed strategically from bed to toilet.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Have grab bars rated for at least 454 kg placed strategically from bed to toilet",
       "page_numbers": [
         160
@@ -6637,7 +6637,7 @@
       "label": "Space for Oversized Equipment",
       "description": "Provide space for oversized furniture and storage of oversized equipment (e.g., 1 sq m for a portable lift, 370 sq m for a walker, 1.5 sq m for a wheelchair, 465 sq mm for a commode).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Consider space for oversized furniture and storage of oversized equipment (i.e., 1 sq m for a portable lift, 370 sq m for a walker, 1.5 sq m for a wheelchair, 465 sq mm for a commode).",
       "page_numbers": [
         160
@@ -6662,7 +6662,7 @@
       "label": "Personal Space Temperature Control",
       "description": "Provide strategies for temperature control in personal spaces, such as increased air conditioning, access to controls, and/or fans.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Recommend strategies to help them control temperature in personal spaces, e.g., increase air conditioning capacity, allow access to temperature controls, and/or add a ceiling fan or portable fan.",
       "page_numbers": [
         160
@@ -6682,7 +6682,7 @@
       "label": "Elevator Door Reopening Device",
       "description": "Elevator doors must have a reopening device that stops and reopens the door to at least 910 mm if obstructed, sensing objects at 125 mm \u00b125 and 735 mm \u00b125 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Doors shall be provided with a door-reopening device that will function to stop and reopen a car door and an adjacent landing door to at least 910 mm, in case the car door is obstructed while closing. This reopening device shall also be capable of sensing an object or person in the path of a closing door at a nominal 125 mm \u00b125 and 735 mm \u00b125 mm above the floor without requiring contact for activation.",
       "page_numbers": [
         165
@@ -6705,7 +6705,7 @@
       "label": "Elevator Door Timing",
       "description": "Elevator doors must remain open at least 5 seconds for hall calls and 3 seconds for car calls before closing.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a minimum period of 5 seconds shall elapse before the doors start to close if it is a hall call, and 3 seconds if it is a car call.",
       "page_numbers": [
         165
@@ -6728,7 +6728,7 @@
       "label": "Elevator Car Controls Clear Floor Space",
       "description": "A clear floor space of 760 mm x 1,220 mm minimum must be provided at elevator controls.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A clear floor space of 760 mm \u00d7 1 220 mm minimum shall be provided at the controls.",
       "page_numbers": [
         166
@@ -6750,7 +6750,7 @@
       "label": "Elevator Car Control Heights",
       "description": "Elevator floor buttons must be a maximum of 1,220 mm above the floor; emergency controls grouped at the bottom, with centre lines at least 890 mm above the floor.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Buttons with floor designations shall be located a maximum of 1 220 mm above the floor...Emergency control buttons have their centre lines 890 mm minimum above the floor",
       "page_numbers": [
         166
@@ -6773,7 +6773,7 @@
       "label": "Elevator Car Inside Dimensions",
       "description": "Elevator car inside dimensions must comply with Table E-1 (referenced as based on ANSI/ICC A117.1), with a tolerance of minus 16 mm.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The inside dimensions of elevator cars shall comply with Table E-1...A tolerance of minus 16 mm shall be permitted.",
       "page_numbers": [
         166
@@ -6795,7 +6795,7 @@
       "label": "Elevator Self-Levelling",
       "description": "Elevators must have a self-levelling feature that maintains the car at floor landings within \u00b113 mm under all loading conditions.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Each car shall be equipped with a self-levelling feature that will automatically bring and maintain the car at floor landings within a tolerance of \u00b113 mm under rated loading to zero loading conditions.",
       "page_numbers": [
         165
@@ -6817,7 +6817,7 @@
       "label": "Elevator Door Reopening Device Duration",
       "description": "Elevator door-reopening devices must remain effective for at least 20 seconds.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Door-reopening devices shall remain effective for a period of not less than 20 seconds.",
       "page_numbers": [
         165
@@ -6839,7 +6839,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Arrange information consistent with its importance and maximize legibility of essential information for all users.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Arrange information consistent with its importance. Maximize legibility of essential information.",
       "page_numbers": [
         162,
@@ -6860,7 +6860,7 @@
       "label": "Non-Text Diagrams and Symbols",
       "description": "Use different modes (e.g., pictorial, verbal, tactile) for redundant presentation of essential information.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Use different modes (e.g., pictorial, verbal, tactile) for redundant presentation of essential information.",
       "page_numbers": [
         162
@@ -6880,7 +6880,7 @@
       "label": "Braille, Visual, and Audio Cues",
       "description": "Provide compatibility with a variety of techniques or devices used by people with sensory limitations.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Provide compatibility with a variety of techniques or devices used by people with sensory limitations.",
       "page_numbers": [
         163
@@ -6900,7 +6900,7 @@
       "label": "Pattern and Colour Blocking for Key Access",
       "description": "Differentiate elements in ways that can be described to make it easy to give instructions or directions.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Differentiate elements in ways that can be described (in order to make it easy to give instructions or directions).",
       "page_numbers": [
         163
@@ -6920,7 +6920,7 @@
       "label": "Visual Contrast Between Walls and Floors",
       "description": "Provide adequate contrast between essential information and its surroundings.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Provide adequate contrast between essential information and its surroundings.",
       "page_numbers": [
         162
@@ -6940,7 +6940,7 @@
       "label": "Warning Indicators",
       "description": "Provide warnings of hazards and errors.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Provide warnings of hazards and errors.",
       "page_numbers": [
         163
@@ -6960,7 +6960,7 @@
       "label": "Door Minimum Width",
       "description": "Elevator door clear width must be at least 1065 mm (centered) or 915 mm (side/any).",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Door clear width mm Centered 1065 ... Side (o\u0119 -centre) 915",
       "page_numbers": [
         167
@@ -6982,7 +6982,7 @@
       "label": "Accessible Routes",
       "description": "A clear floor space of 760 mm \u00d7 1 220 mm minimum shall be provided at hall buttons and controls.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "A clear \ufb02oor space of 760 mm \u00d7 1 220 mm minimum shall be provided at the hall buttons.",
       "page_numbers": [
         169
@@ -7004,7 +7004,7 @@
       "label": "Non-Slip Flooring",
       "description": "Floor surfaces in elevator cars shall be firm, stable, and skid-resistant, permitting easy movement of wheelchairs.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Floor surfaces in elevator cars shall be \ufb01rm, stable, and skid-resistant, permitting easy movement of wheelchairs.",
       "page_numbers": [
         168
@@ -7024,7 +7024,7 @@
       "label": "Accessible Reception and Counters",
       "description": "Elevator car controls, platform, car threshold, and landing sill must have illumination of at least 100 lx.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The level of illumination at the car controls, platform, car threshold, and landing sill shall be 100 lx minimum.",
       "page_numbers": [
         168
@@ -7046,7 +7046,7 @@
       "label": "Glazing Visual Indication",
       "description": "Objects located beneath hall buttons shall protrude 25 mm maximum.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Objects located beneath hall buttons shall protrude 25 mm maximum.",
       "page_numbers": [
         169
@@ -7068,7 +7068,7 @@
       "label": "Mobility Device Space in Meeting Rooms",
       "description": "Minimum diameter of LU/LA elevators is 815 mm; inside car dimensions must allow wheelchair access.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Minimum Diameter of LU/LA (Limited Use/Limited Application) Elevators Any 815",
       "page_numbers": [
         167
@@ -7090,7 +7090,7 @@
       "label": "Handrail Height and Clearance",
       "description": "Handrails shall be provided on all non-access walls at 800 mm to 920 mm height, with 35 mm to 45 mm clearance from wall.",
       "category_id": "physical_access",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Handrails shall be provided on all non-access walls. The top of the gripping surfaces of the handrails shall be at a height of 800 mm to 920 mm, with a space of 35 mm to 45 mm between the handrails and wall.",
       "page_numbers": [
         168
@@ -7112,7 +7112,7 @@
       "label": "Audible and Visual Alerts",
       "description": "Both audible and visible car floor location indicators shall be provided in elevator cars.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "In elevator cars, both audible and visible car \ufb02oor location indicators shall be provided to identify the \ufb02oor location of the car.",
       "page_numbers": [
         168
@@ -7132,7 +7132,7 @@
       "label": "Warning Indicators",
       "description": "Visible indicators must extinguish when the car arrives at the designated floor; audible signals must be 10 dBA above ambient, not exceeding 80 dBA.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "The visible indication shall extinguish when the car arrives at the designated \ufb02oor. The audible signal shall be 10 dBA minimum above ambient, but shall not exceed 80 dBA maximum.",
       "page_numbers": [
         168
@@ -7154,7 +7154,7 @@
       "label": "Visible Signal Size and Height",
       "description": "Visible signal elements at hall entrances must be at least 60 mm in smallest dimension and 1,830 mm minimum above floor.",
       "category_id": "sensory_alerts",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Hall \ufb01xture signals shall be 1 830 mm minimum above the \ufb02oor ... The visible signal elements shall be 60 mm minimum in the smallest dimension.",
       "page_numbers": [
         169,
@@ -7177,7 +7177,7 @@
       "label": "Braille, Visual, and Audio Cues",
       "description": "Control buttons shall be identified by tactile characters and Braille placed immediately to the left of the button.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "control buttons shall be identi\ufb01ed by tactile characters complying with Clause E.19. Tactile characters and Braille shall be placed immediately to the left of the button",
       "page_numbers": [
         167
@@ -7197,7 +7197,7 @@
       "label": "Non-Text Diagrams and Symbols",
       "description": "Control buttons for main entry floor and others shall be identified with tactile and visual symbols as shown in Table 2.26.12.1.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "control buttons ... shall be identi\ufb01ed with tactile and visual symbols as shown in Table 2.26.12.1.",
       "page_numbers": [
         167
@@ -7217,7 +7217,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Raised character and Braille floor designations shall be provided on both jambs of elevator hoistway entrances, centered at 1,525 mm above the floor.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Raised character and Braille \ufb02oor designations shall be provided on both jambs of elevator hoistway entrances and shall be centred at 1 525 mm above the \ufb02oor",
       "page_numbers": [
         170
@@ -7239,7 +7239,7 @@
       "label": "Tactile Elevator Car Identification",
       "description": "A tactile elevator car identification shall be placed immediately below the hoistway entrance floor designation; characters shall be 50 mm high.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "a tactile elevator car identi\ufb01cation shall be placed immediately below the hoistway entrance \ufb02oor designation. The characters shall be 50 mm high",
       "page_numbers": [
         171
@@ -7261,7 +7261,7 @@
       "label": "Clear Wayfinding Signage",
       "description": "Signs required to be tactile, visual, or both must comply with detailed requirements for tactile, visual, and pictogram signage, including mounting, finish, and contrast.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Signs that are required to be tactile, visual, or both shall comply with Clauses E.19.2 to E.19.7.",
       "page_numbers": [
         172
@@ -7281,7 +7281,7 @@
       "label": "Braille, Visual, and Audio Cues",
       "description": "Tactile characters must be duplicated in Braille, with Braille located below the corresponding text and following specific standards for height, spacing, and format.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Tactile characters shall be duplicated in Braille in accordance with Clause E.19.5",
       "page_numbers": [
         172,
@@ -7304,7 +7304,7 @@
       "label": "Non-Text Diagrams and Symbols",
       "description": "Accessible pictograms must have a minimum field height, non-reflective finish, and contrast with their field; text descriptors must be placed below or adjacent.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Where pictograms are required to be accessible, they shall comply with Clauses E.19.6.2 to E.19.6.4.",
       "page_numbers": [
         176
@@ -7326,7 +7326,7 @@
       "label": "Pattern and Colour Blocking for Key Access",
       "description": "Characters and backgrounds for tactile and visual signage must have a non-glare finish and contrast: light on dark or dark on light.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Characters and their background shall have a non-glare finish. Characters shall contrast with their background: either light characters shall appear on a dark background or dark characters shall appear on a light background.",
       "page_numbers": [
         172,
@@ -7348,7 +7348,7 @@
       "label": "Haptic and Tactile Maps",
       "description": "Tactile characters must be raised a minimum of 0.8 mm above the background, with specific requirements for character height, width, stroke, and spacing.",
       "category_id": "neurodivergent",
-      "building_type": "commercial_interiors",
+      "building_type": "housing",
       "evidence": "Tactile characters shall be raised a minimum of 0.8 mm above the background.",
       "page_numbers": [
         172,

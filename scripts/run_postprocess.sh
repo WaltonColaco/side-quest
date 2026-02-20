@@ -3,16 +3,22 @@ set -euo pipefail
 
 # Run steps 4-6: normalize -> merge -> render
 # Env overrides:
-#   BUILDING_TYPE   (default: commercial_interiors)
-#   DOC_PRIORITY    (default: "leed,standard")
-#   PER_CATEGORY    (default: 12)
+#   BUILDING_TYPE     (default: housing)
+#   DOC_PRIORITY      (default: "leed,standard")
+#   PER_CATEGORY      (default: 12)
+#   MIN_CONFIDENCE    (default: 0.0)
+#   TOP_N             (default: 0 => no global cap)
+#   OUTPUT_FILE       (default: reports/<building_type>.md)
 
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-BUILDING_TYPE="${BUILDING_TYPE:-commercial_interiors}"
+BUILDING_TYPE="${BUILDING_TYPE:-housing}"
 DOC_PRIORITY="${DOC_PRIORITY:-leed,standard}"
 PER_CATEGORY="${PER_CATEGORY:-12}"
+MIN_CONFIDENCE="${MIN_CONFIDENCE:-0}"
+TOP_N="${TOP_N:-0}"
+OUTPUT_FILE="${OUTPUT_FILE:-reports/${BUILDING_TYPE}.md}"
 
 if [[ -x "./.venv/Scripts/python.exe" ]]; then
   PYTHON="./.venv/Scripts/python.exe"
@@ -38,5 +44,7 @@ fi
 
 "$PYTHON" scripts/render_doc.py \
   --input merged/merged.json \
-  --output reports/compiled.md \
-  --per-category "$PER_CATEGORY"
+  --output "$OUTPUT_FILE" \
+  --per-category "$PER_CATEGORY" \
+  --min-confidence "$MIN_CONFIDENCE" \
+  --top-n "$TOP_N"

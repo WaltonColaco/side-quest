@@ -60,8 +60,10 @@ python scripts/merge_json.py \
 ```
 python scripts/render_doc.py \
   --input merged/merged.json \
-  --output reports/compiled.md \
-  --per-category 12
+  --output reports/commercial_interiors.md \
+  --per-category 12 \
+  --min-confidence 0.0 \
+  --top-n 0
 ```
 
 ### 6b) One-liner for steps 4–6 (normalize → merge → render)
@@ -69,7 +71,8 @@ python scripts/render_doc.py \
 chmod +x scripts/run_postprocess.sh
 bash scripts/run_postprocess.sh
 ```
-Optional overrides: `BUILDING_TYPE=commercial_interiors DOC_PRIORITY="leed,standard" PER_CATEGORY=8 bash scripts/run_postprocess.sh`
+Defaults now target housing: BUILDING_TYPE=housing, OUTPUT_FILE=reports/housing.md.  
+Override example for commercial interiors: `BUILDING_TYPE=commercial_interiors OUTPUT_FILE=reports/commercial_interiors.md DOC_PRIORITY="leed,standard" PER_CATEGORY=12 MIN_CONFIDENCE=0.9 TOP_N=40 bash scripts/run_postprocess.sh`
 
 ### Notes
 - Ground truth schema lives in `ground_truth_accessibility.json`; update it to change categories/ids.
