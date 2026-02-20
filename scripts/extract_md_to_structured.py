@@ -116,20 +116,71 @@ def call_openai(prompt: str, model: str) -> str:
     return response.choices[0].message.content
 
 
-def process_file(md_path: Path, output_dir: Path, ground_truth: dict, model: str, dry_run: bool = False):
+def chunk_markdown(md_text: str, max_chars: int) -> list[str]:
+    """Chunk markdown into blocks not exceeding max_chars (by characters)."""
+    chunks = []
+    current: list[str] = []
+    size = 0
+    for line in md_text.splitlines():
+        line_len = len(line) + 1  # account for newline
+        if current and size + line_len > max_chars:
+            chunks.append("\n".join(current).strip())
+            current = [line]
+            size = line_len
+        else:
+            current.append(line)
+            size += line_len
+    if current:
+        chunks.append("\n".join(current).strip())
+    return chunks
+
+
+def process_file(
+    md_path: Path,
+    output_dir: Path,
+    ground_truth: dict,
+    model: str,
+    dry_run: bool = False,
+    chunk_chars: int = 12000,
+):
     text = md_path.read_text(encoding="utf-8")
-    prompt = build_prompt(text, md_path, ground_truth)
+    chunks = chunk_markdown(text, chunk_chars)
+
+    combined_requirements = []
+
+    for idx, chunk_text in enumerate(chunks, start=1):
+        prompt = build_prompt(chunk_text, md_path, ground_truth)
+
+        if dry_run:
+            preview_path = output_dir / f"{md_path.stem}_chunk{idx}_prompt.txt"
+            preview_path.write_text(prompt, encoding="utf-8")
+            print(f"[dry-run] wrote prompt to {preview_path}")
+            continue
+
+        result_json = call_openai(prompt, model)
+        try:
+            data = json.loads(result_json)
+            combined_requirements.extend(data.get("requirements", []))
+        except Exception as exc:
+            error_path = output_dir / f"{md_path.stem}_chunk{idx}_error.txt"
+            error_path.write_text(result_json, encoding="utf-8")
+            print(f"[warn] chunk {idx} JSON parse failed, saved raw response to {error_path}: {exc}")
 
     if dry_run:
-        # Save prompt for inspection instead of calling the API.
-        preview_path = output_dir / f"{md_path.stem}_prompt.txt"
-        preview_path.write_text(prompt, encoding="utf-8")
-        print(f"[dry-run] wrote prompt to {preview_path}")
         return
 
-    result_json = call_openai(prompt, model)
+    output = {
+        "document": {
+            "source": md_path.name,
+            "generated": date.today().isoformat(),
+            "chunks_processed": len(chunks),
+            "chunk_chars": chunk_chars,
+        },
+        "requirements": combined_requirements,
+    }
+
     output_path = output_dir / f"{md_path.stem}_extracted.json"
-    output_path.write_text(result_json, encoding="utf-8")
+    output_path.write_text(json.dumps(output, indent=2), encoding="utf-8")
     print(f"Wrote {output_path}")
 
 
@@ -141,6 +192,7 @@ def main():
     parser.add_argument("--env-file", default=".env", type=Path, help="Path to .env file containing OPENAI_API_KEY")
     parser.add_argument("--model", default="gpt-4.1", help="OpenAI model name")
     parser.add_argument("--dry-run", action="store_true", help="Do not call API; write prompts for review")
+    parser.add_argument("--chunk-chars", type=int, default=12000, help="Max characters per API chunk (rough token proxy)")
     args = parser.parse_args()
 
     load_env_file(args.env_file)
@@ -162,7 +214,14 @@ def main():
         raise SystemExit("OPENAI_API_KEY is not set. Use --dry-run to skip API calls.")
 
     for md_path in md_files:
-        process_file(md_path, args.output_dir, ground_truth, args.model, dry_run=args.dry_run)
+        process_file(
+            md_path,
+            args.output_dir,
+            ground_truth,
+            args.model,
+            dry_run=args.dry_run,
+            chunk_chars=args.chunk_chars,
+        )
 
     print("Done.")
 
