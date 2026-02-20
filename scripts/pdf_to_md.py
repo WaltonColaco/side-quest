@@ -1,14 +1,28 @@
 #!/usr/bin/env python3
 import argparse
-import re
 from pathlib import Path
 
 import fitz  # PyMuPDF
 
 
-def normalize_blank_lines(text: str) -> str:
-    # Collapse 3+ blank lines to 2 for tidier output
-    return re.sub(r"\n{3,}", "\n\n", text).strip() + "\n"
+def format_markdown(text: str) -> str:
+    """
+    Clean markdown output:
+    - trim trailing spaces
+    - collapse multiple blank lines to a single blank line
+    """
+    lines = []
+    previous_blank = False
+    for line in text.splitlines():
+        stripped = line.rstrip()
+        if stripped == "":
+            if not previous_blank:
+                lines.append("")
+            previous_blank = True
+        else:
+            lines.append(stripped)
+            previous_blank = False
+    return "\n".join(lines).strip() + "\n"
 
 
 def extract_page_markdown(page) -> str:
@@ -29,7 +43,7 @@ def pdf_to_markdown(pdf_path: Path, out_dir: Path) -> Path:
     doc.close()
 
     output = out_dir / f"{pdf_path.stem}.md"
-    output.write_text(normalize_blank_lines("\n\n".join(parts)), encoding="utf-8")
+    output.write_text(format_markdown("\n\n".join(parts)), encoding="utf-8")
     return output
 
 

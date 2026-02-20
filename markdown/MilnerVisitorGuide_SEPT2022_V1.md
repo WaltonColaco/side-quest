@@ -6,39 +6,39 @@ Discover the Stanley A. Milner Library!
 ## Page 2
 
 1
-WELCOME TO THE 
-STANLEY A. MILNER LIBRARY! 
-Enjoy the amazing transformation of this timeless public building 
-in the heart of downtown — a free space open to all. 
-Don’t miss key features like our Shelley Milner Children’s Library 
-including an indoor play area and a children’s makerspace. Plus, 
-a 10,000 square foot makerspace for grown-ups, our multi-storey 
-interactive simulation wall, Indigenous gathering space, and so 
-much more. 
+WELCOME TO THE
+STANLEY A. MILNER LIBRARY!
+Enjoy the amazing transformation of this timeless public building
+in the heart of downtown — a free space open to all.
+Don’t miss key features like our Shelley Milner Children’s Library
+including an indoor play area and a children’s makerspace. Plus,
+a 10,000 square foot makerspace for grown-ups, our multi-storey
+interactive simulation wall, Indigenous gathering space, and so
+much more.
 Enjoy the endless possibilities to learn, create, be and work.
 FEATURES
 PLAY & LEARN
-Check out the Shelley Milner Children’s Library with a makerspace, gaming 
-space, a BIG floor piano and more on the first floor. This is a kid’s paradise! 
-A place where children can tinker, play and learn. Plus drop by our Gamerspace 
-on the second floor for the young at heart, and check out the multiple gaming 
+Check out the Shelley Milner Children’s Library with a makerspace, gaming
+space, a BIG floor piano and more on the first floor. This is a kid’s paradise!
+A place where children can tinker, play and learn. Plus drop by our Gamerspace
+on the second floor for the young at heart, and check out the multiple gaming
 platforms with a wide selection of games for novice and expert gamers alike.
 CREATE & EXPERIMENT
 Spend some time creating, making and experimenting on the second floor.
-Access new leading-edge technologies at the Makerspace and Fab Lab. 
+Access new leading-edge technologies at the Makerspace and Fab Lab.
 Plus take a look at our sound and video production suites!
 ART & CULTURE
-Take in an event at the Muttart Theatre on the lower floor. Plus, check out 
-Capital City Artwork—from local artists at the Gallery at Milner on the main 
+Take in an event at the Muttart Theatre on the lower floor. Plus, check out
+Capital City Artwork—from local artists at the Gallery at Milner on the main
 and second floors and our community art galleries throughout the library.
 JUST BE
-The Wall on the first floor is a must-see! A multi-storey digital wall, facilitating 
-hands-on, interactive learning as well as large-scale multimedia presentations. 
-If you’re looking for a relaxing spot to just take in the stunning view, come 
+The Wall on the first floor is a must-see! A multi-storey digital wall, facilitating
+hands-on, interactive learning as well as large-scale multimedia presentations.
+If you’re looking for a relaxing spot to just take in the stunning view, come
 to the Civic Corner with its large skylights on the third floor!
 TAKE A SELF-GUIDED TOUR
-Learn about the Milner Library as you listen to EPL staff guide you through the 
-spaces. Reference the maps and headphone icons with numbers in this guide 
+Learn about the Milner Library as you listen to EPL staff guide you through the
+spaces. Reference the maps and headphone icons with numbers in this guide
 to explore at your own pace. Download the recorded tour at epl.ca/HelloMilner.
 
 ## Page 3
@@ -52,13 +52,13 @@ ROOM 2
 COMMUNITY
 ROOM 1
 EXIT TO
-LRT AND 
+LRT AND
 PARKING
 PARKADE
 ELEVATOR
 PARKADE
 STAIRS
-EXIT TO 
+EXIT TO
 PARKING
 100 STREET
 26
@@ -71,14 +71,14 @@ Elevator
 Universal Washroom
 Audio Tour
 DID YOU KNOW?
-Inside the Muttart Theatre 
-on the back of some seats, 
-you’ll find the names of 
-Edmontonians who have 
-contributed to the Milner 
-Library revitalization project. 
-Interested in having your 
-name placed on a seat? 
+Inside the Muttart Theatre
+on the back of some seats,
+you’ll find the names of
+Edmontonians who have
+contributed to the Milner
+Library revitalization project.
+Interested in having your
+name placed on a seat?
 Find out how at epl.ca/give.
 
 ## Page 4
@@ -88,7 +88,7 @@ Escalator
 Audio Tour
 ACCESS RAMP
 PATIO
-24 HOUR RETURNS 
+24 HOUR RETURNS
 STAFF AREA
 CUSTOMER
 SERVICE
@@ -97,17 +97,17 @@ SERVICE
 CIVIC
 EMPLOYEES
 FUND
-PROGRAM 
+PROGRAM
 ROOM 3
-CIVIC 
-EMPLOYEES 
+CIVIC
+EMPLOYEES
 FUND
-PROGRAM 
+PROGRAM
 ROOM 2
-CIVIC 
-EMPLOYEES 
+CIVIC
+EMPLOYEES
 FUND
-PROGRAM 
+PROGRAM
 ROOM 1
 THE WALL
 GWYN MORGAN &
@@ -137,7 +137,7 @@ Donor
 Recognition
 Capital
 City Art
-Gallery 
+Gallery
 2
 SECOND CUP COFFEE CO.
 MAIN
@@ -188,7 +188,7 @@ Women’s Washroom
 Men’s Washroom
 No Snacks Allowed
 DID YOU KNOW?
-The Children’s Library has over 100 robots, 25,000 
+The Children’s Library has over 100 robots, 25,000
 LEGO pieces and 17,000 items in our collection!
 
 ## Page 5
@@ -209,8 +209,8 @@ STUDIO
 BLIND ENTHUSIASM
 COMPUTER LAB
 THE KITCHEN
-ROBERT TEGLER 
-TRUST OUTREACH 
+ROBERT TEGLER
+TRUST OUTREACH
 SERVICES
 MEETING ROOM
 OPEN TO BELOW
@@ -285,7 +285,7 @@ NON-FICTION
 NON-FICTION
 OPEN TO BELOW
 OPEN TO BELOW
-EARLY LEARNING 
+EARLY LEARNING
 AND CARE CENTRE
 COMING SOON
 CATALOGUE
@@ -308,19 +308,19 @@ Universal Washroom
 Women’s Washroom
 Men’s Washroom
 DID YOU KNOW?
-Our Milner Library collection 
+Our Milner Library collection
 is over 150,000 items!
 
 ## Page 7
 
-LEARNING 
+LEARNING
 LOFT 1
-LEARNING 
+LEARNING
 LOFT 2
-LEARNING 
+LEARNING
 LOFT 3
-OFFICE SPACE FOR 
-NON-FOR-PROFIT 
+OFFICE SPACE FOR
+NON-FOR-PROFIT
 ORGANIZATIONS
 100 STREET
 LEVEL 6
@@ -339,20 +339,20 @@ of meeting spaces!
 
 VISIT US
 7 Sir Winston Churchill Square
-BRANCH HOURS: 
-Monday to Friday: 9 a.m. – 9 p.m. 
-Saturday: 9 a.m. – 6 p.m. 
+BRANCH HOURS:
+Monday to Friday: 9 a.m. – 9 p.m.
+Saturday: 9 a.m. – 6 p.m.
 Sunday: 1 p.m. – 5 p.m.
-Hours subject to change. 
-Visit epl.ca/hours for more information. 
-MEMBERSHIP 
+Hours subject to change.
+Visit epl.ca/hours for more information.
+MEMBERSHIP
 GET A FREE LIBRARY CARD
-Did you know EPL is the largest lender of information and entertainment 
-in town? Access physical and digital items like books, movies, music and 
-magazines, attend classes and events in-branch or online, hop on a public 
-computer, access fax and printing or get creative with our 3D printer, sound 
-recording studios and more — all for FREE! 
-Visit a Customer Service Desk or epl.ca/signup today to get the card that 
+Did you know EPL is the largest lender of information and entertainment
+in town? Access physical and digital items like books, movies, music and
+magazines, attend classes and events in-branch or online, hop on a public
+computer, access fax and printing or get creative with our 3D printer, sound
+recording studios and more — all for FREE!
+Visit a Customer Service Desk or epl.ca/signup today to get the card that
 rules them all.
 epl.ca/HelloMilner
 @EPLdotCA
