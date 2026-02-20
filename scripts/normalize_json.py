@@ -6,7 +6,8 @@ Usage:
   python scripts/normalize_json.py \
     --input-dir extracted_information \
     --output-dir normalized_information \
-    --building-type commercial_interiors
+    --building-type commercial_interiors \
+    --include-pattern housing
 """
 import argparse
 import hashlib
@@ -96,11 +97,16 @@ def main():
     ap.add_argument("--input-dir", default="extracted_information", type=Path)
     ap.add_argument("--output-dir", default="normalized_information", type=Path)
     ap.add_argument("--building-type", default="commercial_interiors", help="Building type to stamp into records")
+    ap.add_argument("--include-pattern", default="", help="Only process files whose names contain this substring (case-insensitive)")
     args = ap.parse_args()
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    files = sorted(p for p in args.input_dir.glob("*.json") if p.is_file())
+    pattern = args.include_pattern.lower()
+    files = sorted(
+        p for p in args.input_dir.glob("*.json")
+        if p.is_file() and (pattern in p.name.lower() if pattern else True)
+    )
     if not files:
         raise SystemExit(f"No JSON files found in {args.input_dir}")
 

@@ -53,7 +53,7 @@ def render_markdown(building_type: str, grouped, total_conflicts: int):
 {% for r in items %}
 - **{{ r.label }}** (id: {{ r.requirement_id }}, conf {{ '%.2f' % r.confidence }})
   - desc: {{ r.description }}
-  - values: {{ r.values if r.values else 'n/a' }}
+  - values: {{ r['values'] if r['values'] else 'n/a' }}
   - pages: {{ r.page_numbers if r.page_numbers else 'n/a' }}
   - source: {{ r.source.filename }}{% if r.conflict %} ⚠ conflict{% endif %}
 {% endfor %}
@@ -82,12 +82,19 @@ def render_markdown(building_type: str, grouped, total_conflicts: int):
 def main():
     ap = argparse.ArgumentParser(description="Render merged JSON to Markdown rubric")
     ap.add_argument("--input", default="merged/merged.json", type=Path)
-    ap.add_argument("--output", default="reports/compiled.md", type=Path)
+    ap.add_argument("--output", default="reports/commercial_interiors.md", type=Path)
     ap.add_argument("--per-category", type=int, default=12, help="Max items per category")
+    ap.add_argument("--min-confidence", type=float, default=0.0, help="Minimum confidence to include")
+    ap.add_argument("--top-n", type=int, default=0, help="Optional global cap across all items (0 = no cap)")
     args = ap.parse_args()
 
     data = load_data(args.input)
     reqs = data.get("requirements", [])
+    # confidence filter
+    reqs = [r for r in reqs if r.get("confidence", 0) >= args.min_confidence]
+    # optional global top-N by confidence
+    if args.top_n and args.top_n > 0:
+        reqs = sorted(reqs, key=lambda x: x.get("confidence", 0), reverse=True)[: args.top_n]
     building_type = choose_building_type(reqs)
     grouped = group_by_category(reqs, args.per_category)
 

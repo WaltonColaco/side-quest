@@ -44,7 +44,8 @@ chmod +x scripts/run_extraction.sh
 python scripts/normalize_json.py \
   --input-dir extracted_information \
   --output-dir normalized_information \
-  --building-type commercial_interiors
+  --building-type commercial_interiors \
+  --include-pattern ""   # optional substring filter (case-insensitive)
 ```
 
 ### 5) Merge normalized JSON deterministically + capture conflicts
@@ -53,15 +54,18 @@ python scripts/merge_json.py \
   --input-dir normalized_information \
   --output merged/merged.json \
   --conflicts merged/conflicts.json \
-  --doc-priority "leed,standard"
+  --doc-priority "leed,standard" \
+  --include-pattern ""   # optional substring filter (case-insensitive)
 ```
 
 ### 6) Render concise rubric-style Markdown (includes building type)
 ```
 python scripts/render_doc.py \
   --input merged/merged.json \
-  --output reports/compiled.md \
-  --per-category 12
+  --output reports/commercial_interiors.md \
+  --per-category 12 \
+  --min-confidence 0.0 \
+  --top-n 0
 ```
 
 ### 6b) One-liner for steps 4–6 (normalize → merge → render)
@@ -69,7 +73,9 @@ python scripts/render_doc.py \
 chmod +x scripts/run_postprocess.sh
 bash scripts/run_postprocess.sh
 ```
-Optional overrides: `BUILDING_TYPE=commercial_interiors DOC_PRIORITY="leed,standard" PER_CATEGORY=8 bash scripts/run_postprocess.sh`
+Defaults now target housing: BUILDING_TYPE=housing, OUTPUT_FILE=reports/housing.md.  
+Override example for commercial interiors: `BUILDING_TYPE=commercial_interiors OUTPUT_FILE=reports/commercial_interiors.md DOC_PRIORITY="leed,standard" PER_CATEGORY=12 MIN_CONFIDENCE=0.9 TOP_N=40 bash scripts/run_postprocess.sh`
+Use `INCLUDE_PATTERN=<substring>` to run the pipeline on a subset of files (case-insensitive filename match).
 
 ### Notes
 - Ground truth schema lives in `ground_truth_accessibility.json`; update it to change categories/ids.
