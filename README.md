@@ -39,6 +39,38 @@ chmod +x scripts/run_extraction.sh
 ```
 - Optionally override the model: `MODEL_NAME=gpt-4.1-mini ./scripts/run_extraction.sh`
 
+### 4) Normalize extracted JSON (adds provenance + stable IDs)
+```
+python scripts/normalize_json.py \
+  --input-dir extracted_information \
+  --output-dir normalized_information \
+  --building-type commercial_interiors
+```
+
+### 5) Merge normalized JSON deterministically + capture conflicts
+```
+python scripts/merge_json.py \
+  --input-dir normalized_information \
+  --output merged/merged.json \
+  --conflicts merged/conflicts.json \
+  --doc-priority "leed,standard"
+```
+
+### 6) Render concise rubric-style Markdown (includes building type)
+```
+python scripts/render_doc.py \
+  --input merged/merged.json \
+  --output reports/compiled.md \
+  --per-category 12
+```
+
+### 6b) One-liner for steps 4–6 (normalize → merge → render)
+```
+chmod +x scripts/run_postprocess.sh
+bash scripts/run_postprocess.sh
+```
+Optional overrides: `BUILDING_TYPE=commercial_interiors DOC_PRIORITY="leed,standard" PER_CATEGORY=8 bash scripts/run_postprocess.sh`
+
 ### Notes
 - Ground truth schema lives in `ground_truth_accessibility.json`; update it to change categories/ids.
 - Scripts assume Markdown pages are labeled with `## Page N` (added by the PDF→MD step) to derive page_numbers.
