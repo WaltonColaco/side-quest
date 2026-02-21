@@ -226,6 +226,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Django collected static files
+staticfiles/
+
 # database files
 *.db
 *.sqlite

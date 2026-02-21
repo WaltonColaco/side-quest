@@ -25,6 +25,21 @@ export async function fetchComparisons() {
   return data;
 }
 
+export async function extractFile(file, buildingType = null, model = "gpt-4.1") {
+  const formData = new FormData();
+  formData.append("file", file);
+  if (buildingType) formData.append("building_type", buildingType);
+  formData.append("model", model);
+
+  const { data } = await api.post("/api/extract/", formData, {
+    // Set to undefined so axios removes the default "application/json" and lets
+    // the browser auto-set "multipart/form-data" with the correct boundary
+    headers: { "Content-Type": undefined },
+    timeout: 300000, // 5 minutes — extraction can take a while
+  });
+  return data;
+}
+
 export async function fetchFeatures() {
   const { data } = await api.get("/api/features/");
   return data;
