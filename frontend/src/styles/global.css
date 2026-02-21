@@ -379,6 +379,133 @@ h1 {
   background: var(--forest);
 }
 
+.login-screen {
+  min-height: 100vh;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: 48px 64px;
+}
+
+.login-logo {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+.login-content {
+  min-height: 900px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-left {
+  position: absolute;
+  top: 30px;
+  left: 145px;
+  width: 392px;
+}
+
+.login-right {
+  position: absolute;
+  top: -400px;
+  right: 0;
+  width: 895px;
+  height: 895px;
+}
+
+.login-title {
+  margin: 0 0 24px;
+  color: var(--sage);
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.login-role-list {
+  display: grid;
+  gap: 32px;
+}
+
+.login-role-button {
+  width: 392px;
+  height: 87px;
+  border: none;
+  border-radius: 20px;
+  background: var(--forest);
+  color: #ffffff;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-role-link {
+  width: 392px;
+  height: 87px;
+  border-radius: 20px;
+  background: var(--forest);
+  color: #ffffff;
+  font-family: "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name-form {
+  width: 392px;
+  display: grid;
+  gap: 20px;
+}
+
+.name-input {
+  width: 392px;
+  height: 87px;
+  border: none;
+  border-radius: 20px;
+  background: #d9d9d9;
+  padding: 0 24px;
+  font-size: 28px;
+  color: var(--forest);
+  font-family: "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+.name-next-button {
+  width: 392px;
+  height: 87px;
+  border-radius: 20px;
+  background: var(--forest);
+  color: #ffffff;
+  font-family: "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-user-image {
+  width: 895px;
+  height: 895px;
+  transform: none;
+  object-fit: contain;
+  opacity: 1;
+}
+
 @media (max-width: 960px) {
   .global-nav-button {
     top: 8px;
@@ -512,5 +639,246 @@ h1 {
   .information-check-icon {
     width: 52px;
     height: auto;
+  }
+
+  .login-screen {
+    padding: 20px 16px 28px;
+  }
+
+  .login-logo {
+    width: 118px;
+  }
+
+  .login-content {
+    min-height: auto;
+    margin-top: 24px;
+  }
+
+  .login-left {
+    position: static;
+    width: 100%;
+    max-width: 392px;
+    margin: 0 auto;
+  }
+
+  .login-title {
+    font-size: clamp(2rem, 8.8vw, 2.6rem);
+    margin-bottom: 18px;
+  }
+
+  .login-role-button {
+    width: 100%;
+    height: 74px;
+    font-size: clamp(1.5rem, 6.6vw, 2rem);
+    border-radius: 18px;
+  }
+
+  .login-role-link {
+    width: 100%;
+    height: 74px;
+    font-size: clamp(1.5rem, 6.6vw, 2rem);
+    border-radius: 18px;
+  }
+
+  .name-form {
+    width: 100%;
+  }
+
+  .name-input,
+  .name-next-button {
+    width: 100%;
+    height: 74px;
+    font-size: clamp(1.3rem, 6vw, 1.9rem);
+    border-radius: 18px;
+  }
+
+  .login-right {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+    margin: 16px auto 0;
+  }
+
+  .login-user-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .login-bottom-shape {
+    width: 520px;
+    height: 520px;
+    right: -220px;
+    bottom: -300px;
+  }
+}
+
+.login-overlay-screen {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-overlay-map {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.login-overlay-dim {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.58);
+  z-index: 1;
+}
+
+.login-overlay-logo {
+  position: absolute;
+  top: 74px;
+  left: 72px;
+  width: 180px;
+  height: auto;
+  z-index: 3;
+}
+
+.login-overlay-card {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -50%);
+  width: min(760px, calc(100% - 36px));
+  min-height: 670px;
+  border-radius: 24px;
+  background: #c9c9c9;
+  padding: 36px 46px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-overlay-close {
+  position: absolute;
+  top: 18px;
+  right: 28px;
+  color: var(--sage);
+  font-size: 76px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.login-overlay-title {
+  margin: 8px 0 28px;
+  color: var(--sage);
+  font-family: "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.login-overlay-input {
+  width: 100%;
+  max-width: 470px;
+  height: 86px;
+  border: none;
+  border-radius: 22px;
+  background: #afafaf;
+  margin-bottom: 20px;
+  padding: 0 34px;
+  font-size: 36px;
+  color: #5a5a5a;
+}
+
+.login-overlay-input::placeholder {
+  color: #6a6a6a;
+}
+
+.login-overlay-forgot {
+  margin-top: 2px;
+  border: none;
+  background: transparent;
+  color: var(--sage);
+  font-size: 38px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-overlay-submit {
+  margin-top: 36px;
+  width: 202px;
+  height: 86px;
+  border: none;
+  border-radius: 22px;
+  background: var(--forest);
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-overlay-signup {
+  margin-top: 62px;
+  color: var(--forest);
+  font-size: 40px;
+}
+
+.login-overlay-signup a {
+  color: var(--forest);
+  text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  .login-overlay-logo {
+    top: 20px;
+    left: 16px;
+    width: 112px;
+  }
+
+  .login-overlay-card {
+    top: 54%;
+    width: calc(100% - 22px);
+    min-height: 560px;
+    padding: 28px 18px 30px;
+    border-radius: 18px;
+  }
+
+  .login-overlay-close {
+    font-size: 58px;
+    top: 10px;
+    right: 16px;
+  }
+
+  .login-overlay-title {
+    margin-top: 18px;
+    margin-bottom: 20px;
+    font-size: clamp(2.1rem, 8.2vw, 2.8rem);
+  }
+
+  .login-overlay-input {
+    height: 70px;
+    border-radius: 16px;
+    font-size: 26px;
+    padding: 0 20px;
+    margin-bottom: 14px;
+  }
+
+  .login-overlay-forgot {
+    font-size: 28px;
+  }
+
+  .login-overlay-submit {
+    margin-top: 24px;
+    width: 170px;
+    height: 64px;
+    border-radius: 16px;
+    font-size: 30px;
+  }
+
+  .login-overlay-signup {
+    margin-top: 36px;
+    font-size: 28px;
+    text-align: center;
   }
 }

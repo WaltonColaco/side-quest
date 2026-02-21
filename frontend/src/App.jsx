@@ -3,10 +3,13 @@ import { useLocation } from "react-router-dom";
 import NavButton from "./components/NavButton";
 import TopNav from "./components/TopNav";
 import About from "./pages/About";
+import AboutUser from "./pages/AboutUser";
 import Home from "./pages/Home";
 import HowItWorks from "./pages/HowItWorks";
 import Information from "./pages/Information";
+import LoginOverlay from "./pages/LoginOverlay";
 import MapHeat from "./pages/MapHeat";
+import Name from "./pages/Name";
 import NotFound from "./pages/NotFound";
 import ScoreProject from "./pages/ScoreProject";
 import Settings from "./pages/Settings";
@@ -14,8 +17,16 @@ import Settings from "./pages/Settings";
 function App() {
   const location = useLocation();
   const showGlobalLogo =
-    location.pathname !== "/" && location.pathname !== "/information";
-  const showTopNav = location.pathname !== "/information";
+    location.pathname !== "/" &&
+    location.pathname !== "/information" &&
+    location.pathname !== "/aboutuser" &&
+    location.pathname !== "/name" &&
+    location.pathname !== "/login-overlay";
+  const showTopNav =
+    location.pathname !== "/information" &&
+    location.pathname !== "/aboutuser" &&
+    location.pathname !== "/name" &&
+    location.pathname !== "/login-overlay";
 
   return (
     <>
@@ -28,6 +39,10 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/about" element={<About />} />
         <Route path="/information" element={<Information />} />
+        <Route path="/aboutuser" element={<AboutUser />} />
+        <Route path="/name" element={<Name />} />
+        <Route path="/login" element={<Navigate to="/aboutuser" replace />} />
+        <Route path="/login-overlay" element={<LoginOverlay />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
