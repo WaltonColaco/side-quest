@@ -12,7 +12,7 @@ function Name() {
           <h1 className="login-title name-title">What is your name?</h1>
           <div className="name-form">
             <input className="name-input" type="text" placeholder="Your name" />
-            <Link className="name-next-button" to="/map-heat">
+            <Link className="name-next-button" to="/location">
               Continue
             </Link>
           </div>
