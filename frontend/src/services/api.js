@@ -1,11 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000",
+  // Prefer explicit env; otherwise fall back to relative calls so Vite proxy/same-origin works.
+  baseURL: import.meta.env.VITE_API_URL || "",
   timeout: 10000,
-  headers: {
-    "Content-Type": "application/json",
-  },
 });
 
 api.interceptors.response.use(
@@ -22,6 +20,16 @@ export async function fetchAssessments() {
 
 export async function fetchComparisons() {
   const { data } = await api.get("/api/comparisons/");
+  return data;
+}
+
+export async function fetchLocations() {
+  const { data } = await api.get("/api/location/");
+  return data;
+}
+
+export async function fetchLocationDetail() {
+  const { data } = await api.get("/api/location/detail/");
   return data;
 }
 

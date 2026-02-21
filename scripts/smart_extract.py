@@ -552,7 +552,6 @@ def run_extraction(
     raw = location.get("raw")
 
     if coords_valid:
-        location["address"] = None
         print(f"[smart_extract] Coordinates extracted directly: {coords['lat']}, {coords['lon']}", file=sys.stderr)
     else:
         geocode_query = address or raw
