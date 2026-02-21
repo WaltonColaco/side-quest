@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet.heat";
@@ -7,6 +7,9 @@ import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
 import marker2x from "leaflet/dist/images/marker-icon-2x.png";
 import marker from "leaflet/dist/images/marker-icon.png";
 import shadow from "leaflet/dist/images/marker-shadow.png";
+import { useSettings } from "../context/SettingsContext";
+import SettingsCard from "../components/SettingsCard";
+import { fetchFeatures } from "../services/api";
 
 const heatData = [
   [53.5444, -113.4909, 0.96], // Downtown
@@ -21,11 +24,39 @@ const heatData = [
   [53.5895, -113.4077, 0.6], // Northlands area
 ];
 
-const pins = [
-  { id: "downtown", name: "Downtown Edmonton", position: [53.5444, -113.4909] },
-  { id: "whyte", name: "Whyte Avenue", position: [53.5232, -113.5263] },
-  { id: "west-edmonton", name: "West Edmonton", position: [53.5463, -113.5954] },
-  { id: "southgate", name: "Southgate Area", position: [53.4978, -113.5144] },
+const basePins = [
+  {
+    id: "downtown",
+    name: "Downtown Edmonton",
+    position: [53.5444, -113.4909],
+    ramp: false,
+    powerDoors: false,
+    elevator: false,
+  },
+  {
+    id: "whyte",
+    name: "Whyte Avenue",
+    position: [53.5232, -113.5263],
+    ramp: false,
+    powerDoors: false,
+    elevator: false,
+  },
+  {
+    id: "west-edmonton",
+    name: "West Edmonton",
+    position: [53.5463, -113.5954],
+    ramp: false,
+    powerDoors: false,
+    elevator: false,
+  },
+  {
+    id: "southgate",
+    name: "Southgate Area",
+    position: [53.4978, -113.5144],
+    ramp: false,
+    powerDoors: false,
+    elevator: false,
+  },
 ];
 
 const pinIcon = L.icon({
@@ -57,14 +88,57 @@ function HeatLayer() {
   return null;
 }
 
-function MapHeat() {
+function MapHeat({ showSettings: initialShowSettings = false }) {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { state } = useSettings();
+  const [showSettings, setShowSettings] = useState(
+    initialShowSettings || location.pathname === "/settings"
+  );
+  const [featureFlags, setFeatureFlags] = useState({ ramp: false, powerDoors: false, elevator: false });
+
+  useEffect(() => {
+    setShowSettings(initialShowSettings || location.pathname === "/settings");
+  }, [initialShowSettings, location.pathname]);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data = await fetchFeatures();
+        setFeatureFlags(data);
+      } catch (e) {
+        console.error("Failed to load features", e);
+      }
+    };
+    load();
+  }, []);
+
+  const pins = useMemo(() => {
+    return basePins.map((p) => ({
+      ...p,
+      ramp: featureFlags.ramp,
+      powerDoors: featureFlags.powerDoors,
+      elevator: featureFlags.elevator,
+    }));
+  }, [featureFlags]);
+
+  const filteredPins = useMemo(() => {
+    return pins.filter((pin) => {
+      if (state.filters.ramp && !pin.ramp) return false;
+      if (state.filters.powerDoors && !pin.powerDoors) return false;
+      if (state.filters.elevator && !pin.elevator) return false;
+      return true;
+    });
+  }, [state.filters]);
 
   return (
     <section className="map-heat-screen" aria-label="Heatmap view">
       <Link className="map-back-link" to="/">
         Back
       </Link>
+      <button className="floating-settings" type="button" onClick={() => setShowSettings(true)}>
+        Settings
+      </button>
       <MapContainer
         center={[53.5461, -113.4938]}
         zoom={12}
@@ -76,7 +150,7 @@ function MapHeat() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <HeatLayer />
-        {pins.map((pin) => (
+        {filteredPins.map((pin) => (
           <Marker
             key={pin.id}
             position={pin.position}
@@ -93,6 +167,16 @@ function MapHeat() {
           </Marker>
         ))}
       </MapContainer>
+      {showSettings && (
+        <div className="settings-overlay">
+          <SettingsCard
+            onClose={() => {
+              setShowSettings(false);
+              if (location.pathname === "/settings") navigate("/map-heat");
+            }}
+          />
+        </div>
+      )}
     </section>
   );
 }

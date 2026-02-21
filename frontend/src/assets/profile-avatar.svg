@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" role="img" aria-label="Profile avatar">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2f4b3d" />
+      <stop offset="100%" stop-color="#274233" />
+    </linearGradient>
+  </defs>
+  <circle cx="300" cy="200" r="130" fill="#2f4b3d" />
+  <path d="M60 700c35-180 180-240 240-240s205 60 240 240H60z" fill="url(#bodyGrad)" />
+</svg>

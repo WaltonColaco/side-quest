@@ -40,4 +40,9 @@ export async function extractFile(file, buildingType = null, model = "gpt-4.1") 
   return data;
 }
 
+export async function fetchFeatures() {
+  const { data } = await api.get("/api/features/");
+  return data;
+}
+
 export default api;
