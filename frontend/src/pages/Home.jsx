@@ -13,7 +13,7 @@ function Home() {
           <Link className="landing-action" to="/map-heat">
             Explore the Map
           </Link>
-          <Link className="landing-action" to="/aboutuser">
+          <Link className="landing-action" to="/score-project">
             Audit A Project
           </Link>
         </div>
