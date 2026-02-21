@@ -9,7 +9,7 @@ Smart Accessibility Feature Extractor
 - Outputs a Markdown report to extracted_output/
 
 Usage:
-    python scripts/smart_extract.py --input <file.pdf|file.txt|file.md> [--building-type housing|commercial] [--output extracted_output/result.md] [--model gpt-4.1]
+    python scripts/smart_extract.py --input inputs/<file.pdf|file.txt|file.md> [--building-type housing|commercial] [--output extracted_output/result.md] [--model gpt-4.1]
 
 If --building-type is omitted, OpenAI will detect it automatically from the document.
 """

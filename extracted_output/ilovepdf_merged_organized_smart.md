@@ -6,48 +6,45 @@
 - **Model:** gpt-4.1
 
 ## Notes
-The document consists of floor plans for a multi-level public/commercial building (library). Accessibility features such as elevators, ramps, wide corridors, and clear wayfinding are visually present. There is no explicit mention or depiction of tactile, braille, or assistive listening systems. No adult changing facilities are marked. Multilingual signage is inferred from the presence of a 'World Languages' section. Most accessibility features are visually implied rather than explicitly measured or described.
+The document consists of floor plans for a multi-level public/commercial building (library/theatre). Accessibility features such as elevators, ramps, universal washrooms, and clear wayfinding are visually present and well-marked. There is strong use of color and symbols for navigation. No explicit measurements or technical specifications for door widths, alarms, or tactile/Braille signage are provided. No adult changing facilities are indicated.
 
 ## Found Requirements
 
 ### physical_access
 - **Accessible Routes** (confidence: 100%)
-  - Accessible routes are indicated on all floor plans (pages 2-6) by the presence of elevators, ramps, and wide corridors connecting major rooms and entrances.
+  - Elevators, ramps, and universal washrooms are marked on all floor plans (pages 2-6), indicating accessible routes between levels and throughout the building.
 - **Ramps** (confidence: 100%)
-  - Ramps are visually marked on Level 1 (page 3, 'ACCESS RAMP', 'CUSTOMER SERVICE RAMP') and Level 2 (page 4, 'RAMP').
+  - Ramps are specifically labeled on Level 1 and Level 2 floor plans (pages 3 and 4), providing accessible alternatives to stairs.
 - **Alternate Accessible Routes (Stair Alternatives)** (confidence: 100%)
   - Elevators are present on every floor plan (pages 2-6), providing alternatives to stairs.
-- **Exterior Building Entrances** (confidence: 100%)
-  - Main entrances/exits are clearly marked on Level 1 (page 3: 'MAIN ENTRANCE / EXIT', 'SOUTH ENTRANCE / EXIT', 'SECOND CUP ENTRANCE').
-- **Door Minimum Width** (confidence: 70%)
-  - Doors are visually present throughout all floor plans (pages 2-6), especially at entrances, washrooms, and meeting rooms.
+- **Exterior Building Entrances** (confidence: 70%)
+  - Main entrances/exits are clearly marked on Level 1 (page 3), including South and Main entrances, suggesting accessible entry points.
 - **Mobility Device Space in Meeting Rooms** (confidence: 70%)
-  - Meeting rooms and community rooms are shown with open layouts (pages 2, 4, 6), suggesting space for mobility devices.
+  - Large open spaces are shown in meeting rooms and community rooms (pages 2, 4, 6), likely accommodating mobility devices.
 
 ### neurodivergent
 - **Clear Wayfinding Signage** (confidence: 100%)
-  - Wayfinding is supported by labeled rooms, color-coded areas, and map legends on all floor plans (pages 2-6).
+  - All floor plans (pages 2-6) use clear, color-coded legends and icons for navigation, indicating strong wayfinding support.
 - **Pattern and Colour Blocking for Key Access** (confidence: 100%)
-  - Distinct color blocks are used to differentiate areas and functions on all floor plans (pages 2-6).
+  - Distinct color blocks are used on all floor plans (pages 2-6) to differentiate areas and functions, aiding navigation.
 - **Non-Text Diagrams and Symbols** (confidence: 100%)
-  - Symbols for elevators, stairs, washrooms, and other features are used throughout the maps (pages 2-6).
+  - All maps (pages 2-6) use icons and symbols (e.g., elevators, washrooms, stairs) to communicate information non-verbally.
 - **High Colour Contrast for Orientation Signs** (confidence: 100%)
-  - Maps use high-contrast colors for different zones and legends (pages 2-6).
+  - Maps (pages 2-6) use high-contrast colors for different zones and icons, supporting visual orientation.
 
 ### sensory_alerts
-- **Audible and Visual Alerts** (confidence: 100%)
-  - Audio Tour icons are present on all floor plans (pages 2-5), indicating the availability of auditory information.
 - **Visual Contrast Between Walls and Floors** (confidence: 70%)
-  - Floor plans use distinct color zones to differentiate spaces, suggesting visual contrast (pages 2-6).
+  - Floor plans (pages 2-6) visually distinguish between different spaces and circulation paths using contrasting colors.
 
 ### social_health
 - **Multilingual Signage** (confidence: 70%)
-  - Presence of 'WORLD LANGUAGES' section on Level 3 (page 5) implies multilingual resources and likely signage.
+  - The 'World Languages' section is labeled on Level 3 (page 5), suggesting the presence of multilingual resources and possibly signage.
 
 ## Not Found
 
 ### physical_access
 - Automatic Door Operation
+- Door Minimum Width
 - Accessible Viewing Space Dimensions
 - Maintain Required Aisle Width Behind Accessible Seating
 - Limits of Protruding Objects
@@ -65,6 +62,7 @@ The document consists of floor plans for a multi-level public/commercial buildin
 - Quiet Space Availability
 
 ### sensory_alerts
+- Audible and Visual Alerts
 - Warning Indicators
 - Tactile Attention Indicator Configuration
 - Tactile Attention Indicator Installation
