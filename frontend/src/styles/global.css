@@ -552,6 +552,73 @@ h1 {
   margin: 4px 0 0;
   line-height: 1.5;
 }
+
+/* About User */
+.about-user-screen {
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(28px, 6vw, 48px);
+}
+
+.about-user-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: clamp(16px, 4vw, 40px);
+  margin-top: clamp(40px, 7vh, 70px);
+  width: min(1200px, 96vw);
+  padding: clamp(20px, 3vw, 32px);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.about-user-left h2 {
+  margin: 0 0 26px;
+  color: #5f8165;
+  font-size: clamp(22px, 3vw, 28px);
+}
+
+.about-user-buttons {
+  display: grid;
+  gap: 16px;
+  max-width: 320px;
+}
+
+.about-user-btn {
+  background: #2f4b3d;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  transition: filter 120ms ease, transform 120ms ease;
+}
+
+.about-user-btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.about-user-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-user-avatar-img {
+  width: clamp(220px, 30vw, 320px);
+  height: clamp(220px, 30vw, 320px);
+  object-fit: contain;
+}
 .information-screen {
   height: 100vh;
   width: 100%;
