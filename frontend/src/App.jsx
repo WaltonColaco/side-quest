@@ -8,24 +8,31 @@ import Home from "./pages/Home";
 import HowItWorks from "./pages/HowItWorks";
 import Information from "./pages/Information";
 import Login from "./pages/Login";
+import Location from "./pages/Location";
 import MapHeat from "./pages/MapHeat";
 import Name from "./pages/Name";
 import NotFound from "./pages/NotFound";
 import ScoreProject from "./pages/ScoreProject";
+import Signup from "./pages/Signup";
 
 function App() {
   const location = useLocation();
   const showGlobalLogo =
     location.pathname !== "/" &&
+    location.pathname !== "/home" &&
     location.pathname !== "/information" &&
     location.pathname !== "/aboutuser" &&
     location.pathname !== "/name" &&
+    location.pathname !== "/location" &&
+    location.pathname !== "/signup" &&
     location.pathname !== "/login";
   const showTopNav =
     location.pathname !== "/" &&
     location.pathname !== "/information" &&
     location.pathname !== "/aboutuser" &&
     location.pathname !== "/name" &&
+    location.pathname !== "/location" &&
+    location.pathname !== "/signup" &&
     location.pathname !== "/login";
 
   return (
@@ -42,6 +49,8 @@ function App() {
         <Route path="/information" element={<Information />} />
         <Route path="/aboutuser" element={<AboutUser />} />
         <Route path="/name" element={<Name />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/home" element={<Home />} />
