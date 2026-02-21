@@ -354,7 +354,7 @@ h1 {
   font-family:
     "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
   font-weight: 700;
-  font-size: 96px;
+  font-size: 106px;
   line-height: 100%;
   letter-spacing: 0.05em;
 }
@@ -365,7 +365,7 @@ h1 {
   font-family:
     "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 34px;
   line-height: 100%;
   letter-spacing: 0.05em;
 }
@@ -376,17 +376,26 @@ h1 {
 
 .information-checklist {
   margin-top: 28px;
-  width: 65px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display: grid;
+  gap: 12px;
 }
 
 .information-check-icon {
-  width: 65px;
-  height: auto;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   display: block;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-label {
+  color: #2f4b3d;
+  font-weight: 600;
 }
 
 .nav-link {

@@ -36,7 +36,11 @@ function ScoreProject() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!file) return;
+    if (!file) {
+      // If no file selected yet, prompt for one instead of silently doing nothing.
+      fileInputRef.current?.click();
+      return;
+    }
     setLoading(true);
     setError(null);
     setResult(null);
@@ -109,8 +113,12 @@ function ScoreProject() {
           </select>
         </div>
 
-        <button type="submit" disabled={!file || loading} className="landing-action">
-          {loading ? "analysing… this may take a minute" : "extract features"}
+        <button
+          type="submit"
+          disabled={loading}
+          className="landing-action"
+        >
+          {loading ? "analysing… this may take a minute" : file ? "extract features" : "choose a file to extract"}
         </button>
       </form>
 

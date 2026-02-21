@@ -6,8 +6,8 @@ Chunk-level Markdown vector comparison against rubric and persistence to SQLite.
 - Detects building type (housing vs commercial) and selects the correct rubric file.
 - Embeds chunks with OpenAI embeddings (default: text-embedding-3-small).
 - Runs coverage comparison (rubric -> candidate) with cosine similarity thresholds:
-    strong >= 0.85, partial >= 0.70, otherwise missing.
-- Normalizes to a rubric-style score: strong = 1.0, partial = 0.5, missing = 0.0.
+    strong >= 0.80, partial >= 0.45, otherwise missing.
+- Normalizes to a rubric-style score (weighted): strong = 1.0, partial = 0.75, missing = 0.0.
 - Saves documents, chunks, comparisons, and chunk_matches into SQLite.
 
 Usage:
@@ -46,7 +46,7 @@ DEFAULT_RUBRIC_HOUSING = ROOT / "reports" / "housing.md"
 DEFAULT_RUBRIC_COMMERCIAL = ROOT / "reports" / "commercial_interiors.md"
 
 STRONG_THRESHOLD = 0.80
-PARTIAL_THRESHOLD = 0.60
+PARTIAL_THRESHOLD = 0.45
 
 
 # ---------- DATA CLASSES ----------
@@ -320,9 +320,9 @@ def persist_chunks(con: sqlite3.Connection, doc_id: int, chunks: List[Chunk]) ->
         ch.db_id = cur.lastrowid
 
 
-def coverage(rubric_chunks: List[Chunk], cand_chunks: List[Chunk]) -> List[dict]:
+def coverage(rubric_chunks: List[Chunk], cand_chunks: List[Chunk], weights: List[float]) -> List[dict]:
     results = []
-    for r in rubric_chunks:
+    for r, w in zip(rubric_chunks, weights):
         best = None
         best_sim = -1.0
         for c in cand_chunks:
@@ -342,6 +342,7 @@ def coverage(rubric_chunks: List[Chunk], cand_chunks: List[Chunk]) -> List[dict]
                 "candidate_chunk": best,
                 "similarity": best_sim if best_sim >= 0 else 0.0,
                 "status": status,
+                "weight": w,
             }
         )
     return results
@@ -350,10 +351,20 @@ def coverage(rubric_chunks: List[Chunk], cand_chunks: List[Chunk]) -> List[dict]
 def overall_score(results: List[dict]) -> float:
     if not results:
         return 0.0
-    total = len(results)
-    strong = sum(1 for r in results if r["status"] == "strong")
-    partial = sum(1 for r in results if r["status"] == "partial")
-    return (strong + 0.5 * partial) / total
+    score_sum = 0.0
+    weight_sum = 0.0
+    for r in results:
+        w = r.get("weight", 0) or 0
+        weight_sum += w
+        if r["status"] == "strong":
+            score_sum += 1.0 * w
+        elif r["status"] == "partial":
+            score_sum += 0.75 * w
+        else:
+            score_sum += 0.0
+    if weight_sum == 0:
+        return 0.0
+    return score_sum / weight_sum
 
 
 def persist_comparison(con: sqlite3.Connection, rubric_doc_id: int, cand_doc_id: int, model: str, results: List[dict]) -> int:
@@ -519,7 +530,7 @@ def ensure_project_assessment(
         status = row["status"]
         r_chunk: Chunk = row["rubric_chunk"]
         c_chunk: Chunk | None = row["candidate_chunk"]
-        item_score = 1.0 if status == "strong" else 0.5 if status == "partial" else 0.0
+        item_score = 1.0 if status == "strong" else 0.75 if status == "partial" else 0.0
         key = f"{slugify(r_chunk.label)}_{r_chunk.idx}"
         label = r_chunk.label
         evidence = c_chunk.clean_text if c_chunk else "Not found"
@@ -616,7 +627,8 @@ def main():
         else:
             cand_chunks = cached_cand_chunks
 
-        results = coverage(rubric_chunks, cand_chunks)
+        weights = compute_weights(building_type, rubric_chunks)
+        results = coverage(rubric_chunks, cand_chunks, weights)
         comp_id = persist_comparison(con, rubric_doc_id, cand_doc_id, args.model, results)
         score = overall_score(results)
         con.commit()
