@@ -251,25 +251,65 @@ class LocationDetailView(APIView):
         passes = []
         fails = []
         if loc.comparison_id:
-            matches = (
-                ChunkMatch.objects.filter(comparison_id=loc.comparison_id)
-                .order_by("-similarity")
-                .values("status", "similarity", "rubric_path", "rubric_excerpt")
+            raw = list(
+                ChunkMatch.objects.filter(comparison_id=loc.comparison_id).values(
+                    "status", "similarity", "rubric_path", "rubric_excerpt"
+                )
             )
-            for m in matches:
-                label = m["rubric_excerpt"] or m["rubric_path"]
-                if label and "desc:" in label:
+
+            def clean_label(label: str | None) -> str | None:
+                if not label:
+                    return None
+                if "desc:" in label:
                     label = label.split("desc:", 1)[1]
-                if label and "- values" in label:
+                if "- values" in label:
                     label = label.split("- values", 1)[0]
+                if "- val" in label:
+                    label = label.split("- val", 1)[0]
+                label = label.strip(" ,-\n\t")
+                # Skip aggregate or metadata-like labels
+                lower = label.lower()
+                if lower.startswith("requirements covered") or lower.startswith("categories:"):
+                    return None
+                # sentence casing and punctuation tidy
                 if label:
-                    label = label.strip(" -\n\t")
-                item = {"label": label, "similarity": m["similarity"]}
-                if m["status"] in ("strong", "partial") and len(passes) < 2:
-                    passes.append(item)
-                elif m["status"] == "missing" and len(fails) < 1:
-                    fails.append(item)
-                if len(passes) >= 2 and len(fails) >= 1:
+                    label = label[0].upper() + label[1:]
+                    if label.endswith(","):
+                        label = label[:-1]
+                    if not label.endswith((".", "!", "?")):
+                        label = label + "."
+                return label
+
+            # Best 2 passes by highest similarity
+            for m in sorted(raw, key=lambda x: x["similarity"], reverse=True):
+                if m["status"] not in ("strong", "partial"):
+                    continue
+                label = clean_label(m["rubric_excerpt"] or m["rubric_path"])
+                if not label:
+                    continue
+                passes.append({"label": label, "similarity": m["similarity"]})
+                if len(passes) >= 2:
+                    break
+
+            # Worst (most-missing) single fail by lowest similarity
+            missing = [m for m in raw if m["status"] == "missing"]
+            for m in sorted(missing, key=lambda x: x["similarity"]):
+                label = clean_label(m["rubric_excerpt"] or m["rubric_path"])
+                if not label:
+                    continue
+                fails.append({"label": label, "similarity": m["similarity"]})
+                break
+
+            # If no explicit missing, fall back to weakest partial to still show a concern
+            if not fails:
+                weakest_partial = [
+                    m for m in sorted(raw, key=lambda x: x["similarity"]) if m["status"] == "partial"
+                ]
+                for m in weakest_partial:
+                    label = clean_label(m["rubric_excerpt"] or m["rubric_path"])
+                    if not label:
+                        continue
+                    fails.append({"label": label, "similarity": m["similarity"]})
                     break
 
         data = {
