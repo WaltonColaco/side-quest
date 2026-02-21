@@ -83,6 +83,13 @@ REST_FRAMEWORK = {
     ),
 }
 
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=7),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=30),
+}
+
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Allow uploads up to 50 MB (default is 2.5 MB, too small for large PDFs)

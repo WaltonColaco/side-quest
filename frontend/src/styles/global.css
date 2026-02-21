@@ -913,6 +913,19 @@ h1 {
   color: #6a6a6a;
 }
 
+.login-overlay-error {
+  color: #e05252;
+  font-size: 13px;
+  margin: 6px 0 0;
+  text-align: center;
+}
+
+.signup-error {
+  color: #e05252;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
 .login-overlay-forgot {
   margin-top: 0;
   border: none;

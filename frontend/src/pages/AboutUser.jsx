@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../hacked-logo.png";
 import userImage from "../../user.png.png";
 
 const roles = ["Resident/Visitor", "Design Professional", "Business Owner"];
 
 function AboutUser() {
+  const navigate = useNavigate();
+
+  const handleRoleSelect = (role) => {
+    localStorage.setItem("user_role", role);
+    navigate("/name");
+  };
+
   return (
     <section className="login-screen" aria-label="About user page">
       <img className="login-logo" src={logo} alt="Hacked logo" />
@@ -14,9 +21,14 @@ function AboutUser() {
           <h1 className="login-title">Who are you? I am a..</h1>
           <div className="login-role-list">
             {roles.map((role) => (
-              <Link key={role} to="/name" className="login-role-link">
+              <button
+                key={role}
+                type="button"
+                className="login-role-link"
+                onClick={() => handleRoleSelect(role)}
+              >
                 {role}
-              </Link>
+              </button>
             ))}
           </div>
         </div>

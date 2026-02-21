@@ -5,12 +5,14 @@ import re
 import sqlite3
 import subprocess
 
+from django.contrib.auth.models import User
 from rest_framework import generics, permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework_simplejwt.authentication import JWTAuthentication
 import httpx
 
-from .models import Assessment, Comparison, Location, ChunkMatch
+from .models import Assessment, Comparison, Location, ChunkMatch, UserProfile
 from .serializers import (
     AssessmentSerializer,
     ComparisonSerializer,
@@ -23,6 +25,54 @@ if _SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, _SCRIPTS_DIR)
 
 import smart_extract  # noqa: E402
+
+
+class RegisterView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        email = request.data.get("email", "").strip().lower()
+        password = request.data.get("password", "")
+        if not email or not password:
+            return Response(
+                {"error": "Email and password are required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        if "@" not in email:
+            return Response(
+                {"error": "Please enter a valid email address."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        if User.objects.filter(username=email).exists():
+            return Response(
+                {"error": "An account with this email already exists."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        name = request.data.get("name", "").strip()
+        role = request.data.get("role", "").strip()
+        location = request.data.get("location", "").strip()
+        user = User.objects.create_user(username=email, email=email, password=password)
+        if name:
+            user.first_name = name
+            user.save()
+        UserProfile.objects.create(user=user, role=role, location=location)
+        return Response({"id": user.id, "email": user.email}, status=status.HTTP_201_CREATED)
+
+
+class MeView(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        profile = getattr(user, "profile", None)
+        return Response({
+            "id": user.id,
+            "email": user.email or user.username,
+            "name": user.first_name,
+            "role": profile.role if profile else "",
+            "location": profile.location if profile else "",
+        })
 
 
 class LatestAssessments(generics.ListAPIView):
