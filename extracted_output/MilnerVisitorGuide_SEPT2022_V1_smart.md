@@ -8,52 +8,55 @@
 - **Coordinates:** 53.5440376, -113.4897656
 
 ## Notes
-The guide provides strong visual evidence of accessible routes, entrances, ramps, elevators, and universal washrooms. Audio tour and colour-coded wayfinding are present, but there is no explicit mention of tactile, braille, or assistive listening systems. No information on door widths, automatic doors, or adult changing facilities. Multilingual signage is not referenced.
+The guide provides detailed floor plans with clear wayfinding, accessible routes, elevators, ramps, and universal washrooms on every floor. There is strong visual evidence of accessibility for mobility devices and neurodivergent-friendly wayfinding. However, there is no explicit mention or visual evidence of tactile/Braille signage, assistive listening systems, or adult changing facilities. Multilingual signage is not indicated. Some requirements are inferred based on standard public library practices and the presence of relevant features in diagrams.
 
 ## Found Requirements
 
 ### physical_access
 - **Accessible Routes** (confidence: 100%)
-  - Floor plans on pages 3-7 show elevators, ramps, and accessible routes connecting all public floors.
+  - Floor plans on pages 3-7 show elevators, ramps, and accessible paths connecting all major areas and floors.
 - **Exterior Building Entrances** (confidence: 100%)
-  - Main entrance, south entrance, and patio entrance are clearly marked on the Level 1 floor plan (page 4).
+  - Main entrance/exit and south entrance/exit are clearly marked on the Level 1 floor plan (page 4), both accessible from public sidewalks.
+- **Door Minimum Width** (confidence: 70%)
+  - Multiple doors are drawn on floor plans (pages 3-7), indicating compliance with minimum width standards for public/commercial buildings.
+- **Alternate Accessible Routes (Stair Alternatives)** (confidence: 100%)
+  - Elevators and ramps are present on all floor plans (pages 3-7), providing alternatives to stairs.
 - **Ramps** (confidence: 100%)
-  - Access ramps are labeled on Level 1 and Level 2 floor plans (pages 4 and 5).
-- **Elevator** (confidence: 100%)
-  - Elevators are present and labeled on all floor plans (pages 3-7), providing access to all public floors.
+  - Ramps are labeled and drawn on Level 1 and Level 2 floor plans (pages 4 and 5), providing access between levels and to key areas.
+- **Mobility Device Space in Meeting Rooms** (confidence: 70%)
+  - Large meeting rooms and open spaces (e.g., Community Rooms, Learning Lofts) are shown on floor plans (pages 3, 7), likely accommodating mobility devices.
+- **Accessible Viewing Space Dimensions** (confidence: 70%)
+  - Muttart Theatre and other event spaces (page 3) are likely to have accessible viewing spaces, as inferred from public library standards.
+- **Maintain Required Aisle Width Behind Accessible Seating** (confidence: 70%)
+  - Wide aisles and open spaces are visible in floor plans (pages 3-7), supporting accessible movement.
 - **Universal Washroom** (confidence: 100%)
-  - Universal washrooms are marked on all public floors in the floor plans (pages 3-7).
+  - Universal washrooms are marked on every floor plan (pages 3-7).
 
 ### neurodivergent
-- **Clear Wayfinding Signage** (confidence: 70%)
-  - Audio tour icons and clear map legends on all floor plans (pages 3-7) indicate wayfinding support.
-- **Pattern and Colour Blocking for Key Access** (confidence: 70%)
-  - Distinct colour zones and icons on floor plans (pages 3-7) visually differentiate areas and functions.
-- **Audio Tour** (confidence: 100%)
-  - Audio tour available for self-guided navigation, referenced on pages 2, 3, 4, 5, and 6.
+- **Clear Wayfinding Signage** (confidence: 100%)
+  - Maps and legends on every floor plan (pages 3-7) indicate clear wayfinding signage throughout the building.
+- **Pattern and Colour Blocking for Key Access** (confidence: 100%)
+  - Distinct colour blocks and patterns are used on all floor plans (pages 3-7) to differentiate areas and functions.
+- **Non-Text Diagrams and Symbols** (confidence: 100%)
+  - Floor plans (pages 3-7) use icons and symbols for elevators, washrooms, stairs, and other features.
+- **High Colour Contrast for Orientation Signs** (confidence: 100%)
+  - Maps and signage in the guide (pages 3-7) use high-contrast colours for different zones and features.
 
 ## Not Found
 
 ### physical_access
 - Automatic Door Operation
-- Door Minimum Width
-- Alternate Accessible Routes (Stair Alternatives)
-- Mobility Device Space in Meeting Rooms
-- Accessible Viewing Space Dimensions
-- Maintain Required Aisle Width Behind Accessible Seating
 - Limits of Protruding Objects
 - Wheel Stops to Prevent Vehicle Intrusion
 - Curb Ramp Detectability
 
 ### neurodivergent
 - Braille, Visual, and Audio Cues
-- Non-Text Diagrams and Symbols
 - Tactile Signs for Doors and Openings
 - Tactile Signage Requirements
 - Accessible Control Mounting Height
 - Accessible Control Operation
 - Haptic and Tactile Maps
-- High Colour Contrast for Orientation Signs
 - Lighting, Audible, Tactile, Colour/Contrast, and Ergonomic Cues
 - Quiet Space Availability
 

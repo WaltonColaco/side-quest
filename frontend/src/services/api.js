@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  // Prefer explicit env; otherwise hit the same origin the frontend is served from.
-  baseURL: import.meta.env.VITE_API_URL || window.location.origin,
+  // Prefer explicit env; otherwise fall back to relative calls so Vite proxy/same-origin works.
+  baseURL: import.meta.env.VITE_API_URL || "",
   timeout: 10000,
 });
 
