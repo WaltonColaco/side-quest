@@ -80,3 +80,16 @@ Use `INCLUDE_PATTERN=<substring>` to run the pipeline on a subset of files (case
 ### Notes
 - Ground truth schema lives in `ground_truth_accessibility.json`; update it to change categories/ids.
 - Scripts assume Markdown pages are labeled with `## Page N` (added by the PDF→MD step) to derive page_numbers.
+
+
+### How to run smart_extract.py
+- inside virtual environment
+```
+pip install -r requirements.txt
+```
+
+- run smart_extract.py with <Input> being the .pdf containing images, or .txt/.md file conatining information on the plan. PDF or .txt/.md should be in 
+```
+python scripts/smart_extract.py --input inputs/<input file in .pdf, .txt, or .md format>
+```
+
