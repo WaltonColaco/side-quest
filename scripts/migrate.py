@@ -13,7 +13,17 @@ def main():
 
     for mig in sorted(mig_dir.glob('*.sql')):
         sql = mig.read_text(encoding='utf-8')
-        cur.executescript(sql)
+        # Run each statement individually so ALTER TABLE re-runs are skipped gracefully.
+        # executescript() would abort the whole file on first error.
+        statements = [s.strip() for s in sql.split(';') if s.strip() and not s.strip().startswith('--')]
+        for stmt in statements:
+            try:
+                cur.execute(stmt)
+            except sqlite3.OperationalError as e:
+                if 'duplicate column' in str(e).lower():
+                    pass  # column already exists — safe to ignore on re-run
+                else:
+                    raise
         print(f"Applied migration {mig.name}")
 
     con.commit()

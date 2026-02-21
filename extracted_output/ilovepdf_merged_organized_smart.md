@@ -1,80 +1,47 @@
 # Accessibility Extraction Report
 
 - **Source:** `ilovepdf_merged_organized.pdf`
-- **Building type:** commercial
+- **Building type:** housing
 - **Input type:** pdf
 - **Model:** gpt-4.1
-- **Location:** Milner Library, Edmonton, 100 Street, 102 Avenue, Sir Winston Churchill Square, Edmonton, Alberta, Canada
+- **Location:** 100 Street, Edmonton, Milner Library, Sir Winston Churchill Square, 102 Avenue, Centennial Plaza
 - **Coordinates:** 53.5430825, -113.4897956
 
 ## Notes
-The document consists of color-coded floor plans for the Milner Library in Edmonton, showing accessible routes, elevators, ramps, universal washrooms, and clear wayfinding signage. There is strong visual support for accessibility, but no explicit measurements or technical specifications for door widths, controls, or tactile features. No explicit mention of assistive listening systems, adult changing facilities, or fire alarm details.
+The document contains both a residential housing floor plan (page 1) and public library floor plans (pages 2-6). Accessibility features such as elevators, ramps, and universal washrooms are clearly marked in the library sections. The housing floor plan shows labeled rooms and clear circulation paths, but lacks explicit accessibility measurements or standards. No explicit mention or depiction of multilingual signage, medicine cabinets, operating controls, or sensory alerts.
 
 ## Found Requirements
 
 ### physical_access
-- **Accessible Routes** (confidence: 90%)
-  - All floor plans (pages 2-6) show clear, wide corridors and pathways connecting rooms, elevators, and entrances.
-- **Elevator Universal Washroom** (confidence: 100%)
-  - Universal washrooms are marked on all public floors (pages 2-5) near elevators and main corridors.
-- **Ramps** (confidence: 100%)
-  - Ramps are labeled on Level 1 (page 3, 'ACCESS RAMP', 'CUSTOMER SERVICE RAMP') and Level 2 (page 4, 'RAMP').
-- **Stair Alternatives (Elevators)** (confidence: 100%)
-  - Elevators are present and labeled on every floor plan (pages 2-6), providing alternatives to stairs.
-
-### neurodivergent
-- **Clear Wayfinding Signage** (confidence: 90%)
-  - All floor plans (pages 2-6) use color-coded areas, icons, and clear labels for rooms and amenities, supporting wayfinding.
-- **Pattern and Colour Blocking for Key Access** (confidence: 90%)
-  - Distinct color blocks and patterns are used on all maps (pages 2-6) to differentiate areas and functions.
-- **Non-Text Diagrams and Symbols** (confidence: 100%)
-  - All maps (pages 2-6) use icons for elevators, stairs, washrooms, and other features.
-- **High Colour Contrast for Orientation Signs** (confidence: 80%)
-  - Maps (pages 2-6) use high-contrast colors for room labels and icons.
-
-### sensory_alerts
-- **Audible and Visual Alerts** (confidence: 80%)
-  - Audio Tour icons are present on all maps (pages 2-5), indicating availability of audio cues.
-
-### social_health
-- **Multilingual Signage** (confidence: 70%)
-  - Level 3 (page 5) includes a 'World Languages' section, suggesting multilingual resources and likely signage.
+- **Accessible Routes** (confidence: 100%)
+  - Elevators, ramps, and accessible paths are clearly marked on all floor plans (pages 2-6), providing accessible routes between levels and throughout the building.
+- **Alternate Accessible Routes (Stair Alternatives)** (confidence: 100%)
+  - Elevators are present on every floor plan (pages 2-6), providing alternatives to stairs.
+- **Accessible-Ready Laundry Rooms** (confidence: 70%)
+  - Laundry room is labeled and appears accessible in the housing floor plan (page 1).
+- **Accessible-Ready Kitchens** (confidence: 70%)
+  - Kitchen is labeled and appears accessible in the housing floor plan (page 1).
+- **Accessible-Ready Bedrooms** (confidence: 70%)
+  - Bedrooms are labeled and appear accessible in the housing floor plan (page 1).
+- **Accessible-Ready Bathroom Showers** (confidence: 70%)
+  - Master bathroom and other bathrooms are labeled and appear to have space for accessible showers in the housing floor plan (page 1).
+- **Accessible-Ready Bathroom Bathtubs** (confidence: 70%)
+  - Master bathroom and other bathrooms are labeled and appear to have bathtubs in the housing floor plan (page 1).
+- **Accessible Maneuvering Area at Doors** (confidence: 70%)
+  - Floor plan (page 1) shows clear space around doors, suggesting maneuvering area for accessibility.
+- **Door Minimum Width** (confidence: 70%)
+  - Doors are drawn on the housing floor plan (page 1), indicating consideration for accessible width.
+- **Mobility Device Space in Meeting Rooms** (confidence: 70%)
+  - Community rooms, meeting rooms, and large open spaces are present on library floor plans (pages 2-6), likely providing space for mobility devices.
 
 ## Not Found
 
-### physical_access
-- Exterior Building Entrances
-- Automatic Door Operation
-- Door Minimum Width
-- Mobility Device Space in Meeting Rooms
-- Accessible Viewing Space Dimensions
-- Maintain Required Aisle Width Behind Accessible Seating
-- Limits of Protruding Objects
-- Wheel Stops to Prevent Vehicle Intrusion
-- Curb Ramp Detectability
+### social_health
+- Multilingual Signage
 
-### neurodivergent
-- Braille, Visual, and Audio Cues
-- Tactile Signs for Doors and Openings
-- Tactile Signage Requirements
-- Accessible Control Mounting Height
-- Accessible Control Operation
-- Haptic and Tactile Maps
-- Lighting, Audible, Tactile, Colour/Contrast, and Ergonomic Cues
-- Quiet Space Availability
+### physical_access
+- Accessible-Ready Bathroom Medicine Cabinets
+- Operating Controls Height and Reach
 
 ### sensory_alerts
-- Warning Indicators
-- Tactile Attention Indicator Configuration
-- Tactile Attention Indicator Installation
-- Visual Contrast Between Walls and Floors
-- Tactile Direction Indicator Configuration
-- Fire Alarm Sound Pressure Levels
-- Visual Signal Device Installation
-- Assistive Listening at Service Counters
-- Assistive Listening Systems in Public Areas
-- Induction Loop Receiver Ratio
-- Annual ALD and Loop System Testing
-
-### social_health
-- Adult Changing Facility
+- Audible and Visual Alerts

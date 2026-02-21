@@ -1,14 +1,39 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import logo from "../../hacked-logo.png";
+import { useAuth } from "../context/AuthContext";
 
 function Login() {
-  const navigate = useNavigate();
+  const { login } = useAuth();
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate("/home");
+    setError("");
+    const form = event.currentTarget;
+    const email = form.email.value.trim();
+    const password = form.password.value;
+
+    if (!email || !password) {
+      setError("Please enter your email and password.");
+      return;
+    }
+
+    setLoading(true);
+    try {
+      await login(email, password);
+    } catch (err) {
+      const msg =
+        err.response?.data?.detail ||
+        err.response?.data?.error ||
+        "Invalid email or password.";
+      setError(msg);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -40,6 +65,7 @@ function Login() {
             name="email"
             type="email"
             placeholder="Email"
+            autoComplete="email"
           />
           <input
             className="login-overlay-input"
@@ -47,12 +73,14 @@ function Login() {
             name="password"
             type="password"
             placeholder="Password"
+            autoComplete="current-password"
           />
+          {error && <p className="login-overlay-error">{error}</p>}
           <button type="button" className="login-overlay-forgot">
             Forgot Password
           </button>
-          <button type="submit" className="login-overlay-submit">
-            Login
+          <button type="submit" className="login-overlay-submit" disabled={loading}>
+            {loading ? "Logging in…" : "Login"}
           </button>
         </form>
         <p className="login-overlay-signup">
