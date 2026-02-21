@@ -15,4 +15,14 @@ api.interceptors.response.use(
   }
 );
 
+export async function fetchAssessments() {
+  const { data } = await api.get("/api/assessments/");
+  return data;
+}
+
+export async function fetchComparisons() {
+  const { data } = await api.get("/api/comparisons/");
+  return data;
+}
+
 export default api;
