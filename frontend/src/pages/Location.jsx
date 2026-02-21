@@ -9,7 +9,9 @@ function Location() {
 
   return (
     <section className="location-page" aria-label="Location page">
-      <img className="location-top-logo" src={logo} alt="Hacked logo" />
+      <Link to="/home" aria-label="Go home">
+        <img className="location-top-logo" src={logo} alt="Hacked logo" />
+      </Link>
 
       <div className="location-layout">
         <div className="location-left">
