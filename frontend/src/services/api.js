@@ -25,6 +25,16 @@ export async function fetchComparisons() {
   return data;
 }
 
+export async function fetchLocations() {
+  const { data } = await api.get("/api/location/");
+  return data;
+}
+
+export async function fetchLocationDetail() {
+  const { data } = await api.get("/api/location/detail/");
+  return data;
+}
+
 export async function extractFile(file, buildingType = null, model = "gpt-4.1") {
   const formData = new FormData();
   formData.append("file", file);

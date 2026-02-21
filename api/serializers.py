@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Assessment, Comparison
+from .models import Assessment, Comparison, Location
 
 
 class AssessmentSerializer(serializers.ModelSerializer):
@@ -15,3 +15,18 @@ class ComparisonSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comparison
         fields = "__all__"
+
+
+class LocationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Location
+        fields = "__all__"
+
+
+class PinDetailSerializer(serializers.Serializer):
+    score = serializers.FloatField(allow_null=True)
+    address = serializers.CharField(allow_null=True)
+    name = serializers.CharField(allow_null=True)
+    source = serializers.CharField(allow_null=True)
+    passes = serializers.ListField()
+    fails = serializers.ListField()

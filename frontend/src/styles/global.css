@@ -817,17 +817,26 @@ h1 {
 
 .information-checklist {
   margin-top: 28px;
-  width: 65px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+  display: grid;
+  gap: 12px;
 }
 
 .information-check-icon {
-  width: 65px;
-  height: auto;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   display: block;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-label {
+  color: #2f4b3d;
+  font-weight: 600;
 }
 
 .nav-link {

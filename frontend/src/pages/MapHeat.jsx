@@ -9,7 +9,7 @@ import marker from "leaflet/dist/images/marker-icon.png";
 import shadow from "leaflet/dist/images/marker-shadow.png";
 import { useSettings } from "../context/SettingsContext";
 import SettingsCard from "../components/SettingsCard";
-import { fetchFeatures } from "../services/api";
+import { fetchFeatures, fetchLocations } from "../services/api";
 
 const heatData = [
   [53.5444, -113.4909, 0.96], // Downtown
@@ -96,6 +96,7 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
     initialShowSettings || location.pathname === "/settings"
   );
   const [featureFlags, setFeatureFlags] = useState({ ramp: false, powerDoors: false, elevator: false });
+  const [dynamicPins, setDynamicPins] = useState([]);
 
   useEffect(() => {
     setShowSettings(initialShowSettings || location.pathname === "/settings");
@@ -113,14 +114,38 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
     load();
   }, []);
 
+  useEffect(() => {
+    const loadLocs = async () => {
+      try {
+        const data = await fetchLocations();
+        const pins = (data || [])
+          .filter((d) => d.latitude && d.longitude)
+          .map((d) => ({
+            id: `loc-${d.id}`,
+            name: d.name || d.address || d.source_doc || "Analyzed Location",
+            address: d.address,
+            position: [d.latitude, d.longitude],
+            ramp: featureFlags.ramp,
+            powerDoors: featureFlags.powerDoors,
+            elevator: featureFlags.elevator,
+          }));
+        setDynamicPins(pins);
+      } catch (e) {
+        console.error("Failed to load location", e);
+      }
+    };
+    loadLocs();
+  }, [featureFlags]);
+
   const pins = useMemo(() => {
-    return basePins.map((p) => ({
+    const mapped = basePins.map((p) => ({
       ...p,
       ramp: featureFlags.ramp,
       powerDoors: featureFlags.powerDoors,
       elevator: featureFlags.elevator,
     }));
-  }, [featureFlags]);
+    return [...dynamicPins, ...mapped];
+  }, [featureFlags, dynamicPins]);
 
   const filteredPins = useMemo(() => {
     return pins.filter((pin) => {
@@ -160,9 +185,19 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
             }}
           >
             <Popup>
-              {pin.name}
-              <br />
-              Tap pin to open information.
+              <div className="pin-popup">
+                <div className="pin-popup-score">
+                  {pin.score !== undefined && pin.score !== null ? `${Math.round(pin.score * 100)}%` : "—"}
+                </div>
+                <div className="pin-popup-address">{pin.address || pin.name}</div>
+                <div className="pin-popup-tags">
+                  {pin.ramp ? "✓ Ramp" : "✕ Ramp"}
+                  {" • "}
+                  {pin.powerDoors ? "✓ Power doors" : "✕ Power doors"}
+                  {" • "}
+                  {pin.elevator ? "✓ Elevator" : "✕ Elevator"}
+                </div>
+              </div>
             </Popup>
           </Marker>
         ))}

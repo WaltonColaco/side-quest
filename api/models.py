@@ -40,3 +40,34 @@ class Comparison(models.Model):
     class Meta:
         managed = False
         db_table = "comparisons"
+
+
+class Location(models.Model):
+    name = models.TextField(null=True)
+    address = models.TextField(null=True)
+    latitude = models.FloatField()
+    longitude = models.FloatField()
+    source_doc = models.TextField(null=True)
+    score = models.FloatField(null=True)
+    comparison_id = models.IntegerField(null=True)
+    created_at = models.TextField()
+
+    class Meta:
+        managed = False
+        db_table = "locations"
+
+
+class ChunkMatch(models.Model):
+    comparison_id = models.IntegerField()
+    rubric_chunk_id = models.IntegerField()
+    candidate_chunk_id = models.IntegerField(null=True)
+    similarity = models.FloatField()
+    status = models.TextField()
+    rubric_path = models.TextField(null=True)
+    candidate_path = models.TextField(null=True)
+    rubric_excerpt = models.TextField(null=True)
+    candidate_excerpt = models.TextField(null=True)
+
+    class Meta:
+        managed = False
+        db_table = "chunk_matches"
