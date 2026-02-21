@@ -211,7 +211,6 @@ __marimo__/
 CLAUDE.md
 .claude
 
-
 # Frontend (Vite/React)
 frontend/node_modules/
 frontend/dist/
@@ -226,3 +225,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Django collected static files
+staticfiles/
+
+# database files
+*.db
+*.sqlite
+*.sqlite3
+*.sqlitedb
+*.db-wal
+*.db-shm
+*.dump
+
