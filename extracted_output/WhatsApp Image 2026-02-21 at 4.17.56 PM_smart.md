@@ -8,23 +8,29 @@
 - **Coordinates:** 53.5054235, -113.5048268
 
 ## Notes
-This is a residential floor plan with labeled rooms and measurements. No explicit accessibility features (such as ramps, grab bars, or signage) are shown, but the layout suggests potential for accessible modifications. No multilingual signage or sensory alerts are visible. No explicit measurements for door widths or maneuvering areas are provided.
+This is a residential floor plan for a single-family home. The diagram includes room labels, dimensions, and some features (e.g., showers, tubs, laundry) that may be suitable for accessibility modifications. No explicit accessibility signage, routes, or alert systems are visible. No multilingual signage or sensory alerts are indicated. No explicit measurements for door widths or maneuvering clearances are provided, but doors and open spaces are drawn.
 
 ## Found Requirements
 
 ### physical_access
 - **Door Minimum Width** (confidence: 70%)
-  - Multiple doors are drawn and labeled throughout the floor plan, indicating standard doorways for bedrooms, bathrooms, closets, and entryways.
+  - Multiple doors are drawn and labeled throughout the floor plan, indicating the presence of doors that may be assessed for minimum width.
 - **Accessible-Ready Bathroom Showers** (confidence: 70%)
-  - Master bathroom includes a labeled shower area, which could potentially be made accessible.
+  - Master bathroom shows a shower area labeled 'SHWR' with dimensions (4-0 x 5-6), which may be suitable for accessibility modifications.
+  - `shower_size`: 4-0 x 5-6
 - **Accessible-Ready Bathroom Bathtubs** (confidence: 70%)
-  - Master bathroom and Bath 2 both show bathtub locations.
+  - Bath 2 includes a labeled 'TUB/SHWR' area, indicating a bathtub/shower combination that could be modified for accessibility.
 - **Accessible-Ready Kitchens** (confidence: 70%)
-  - Kitchen is clearly labeled and centrally located, with open access from multiple rooms.
+  - Kitchen is clearly labeled and centrally located, with open access from multiple rooms, suggesting potential for accessible design.
+  - `kitchen_size`: 10-4 x 18-0
 - **Accessible-Ready Bedrooms** (confidence: 70%)
-  - Three bedrooms are labeled and accessible from hallways.
+  - Three bedrooms are labeled and appear to have direct access from hallways, which may support accessible design.
+  - `master_bedroom`: 13-0 x 15-0
+  - `bedroom_2`: 12-0 x 11-0
+  - `bedroom_3`: 11-10 x 11-4
 - **Accessible-Ready Laundry Rooms** (confidence: 70%)
-  - Laundry room is labeled and located near the master bedroom and entry.
+  - Laundry room is labeled and located near the master bedroom, with a door for access.
+  - `laundry_size`: 8-8 x 8-0
 
 ## Not Found
 
