@@ -8,43 +8,35 @@
 - **Coordinates:** 53.5430825, -113.4897956
 
 ## Notes
-The document consists of color-coded floor plans for the Milner Library, Edmonton, showing accessible routes, elevators, ramps, universal washrooms, and clear wayfinding. No explicit measurements or technical specifications are provided. Some accessibility features (e.g., door widths, tactile signage, assistive listening) are not visually or textually confirmed.
+The document consists of floor plans for the Milner Library in Edmonton, showing accessible features such as elevators, ramps, universal washrooms, and clear wayfinding signage. No explicit measurements or standards are provided for door widths, aisle widths, or signage tactile features. No evidence of adult changing facilities or multilingual signage. Audio tours are available, suggesting some auditory accessibility.
 
 ## Found Requirements
 
 ### physical_access
 - **Accessible Routes** (confidence: 90%)
-  - All floor plans (pages 2-6) show clear, wide corridors and circulation paths connecting rooms, elevators, and entrances.
+  - All floor plans (pages 2-6) show wide corridors and clear passageways connecting rooms, with elevators and ramps indicated for vertical circulation.
 - **Ramps** (confidence: 100%)
-  - Ramps are marked on Level 1 (page 3: 'ACCESS RAMP', 'CUSTOMER SERVICE RAMP') and Level 2 ('RAMP').
-- **Elevator** (confidence: 100%)
-  - Elevators are marked on all floor plans (pages 2-6) with the elevator symbol and labeled 'Elevator'.
+  - Ramps are marked on Level 1 (page 3, 'ACCESS RAMP' and 'CUSTOMER SERVICE RAMP') and Level 2 (page 4, 'RAMP').
+- **Elevator Universal Washroom** (confidence: 100%)
+  - Universal Washrooms are marked on all public floors (pages 2-5) and elevators are present on all floors (pages 2-6).
 - **Alternate Accessible Routes (Stair Alternatives)** (confidence: 100%)
-  - Elevators provide alternatives to stairs on all levels (pages 2-6).
-- **Exterior Building Entrances** (confidence: 90%)
-  - Main entrances/exits are clearly marked on Level 1 (page 3: 'MAIN ENTRANCE / EXIT', 'SOUTH ENTRANCE / EXIT', 'SECOND CUP ENTRANCE').
-- **Universal Washroom** (confidence: 100%)
-  - Universal Washrooms are marked on all public floors (pages 2-5) with the universal washroom symbol.
+  - Elevators are present on every floor (pages 2-6), providing alternatives to stairs.
 
 ### neurodivergent
 - **Clear Wayfinding Signage** (confidence: 80%)
-  - All floor plans (pages 2-6) use clear, color-coded areas and labeled rooms, with a map legend for symbols.
-- **Pattern and Colour Blocking for Key Access** (confidence: 80%)
-  - Floor plans (pages 2-6) use distinct color blocks to differentiate areas and functions.
+  - All maps (pages 2-6) use clear icons and color-coded areas for navigation, with a legend for accessibility features.
+- **Pattern and Colour Blocking for Key Access** (confidence: 70%)
+  - Maps (pages 2-6) use distinct color blocks to differentiate spaces and highlight accessible features.
 - **Non-Text Diagrams and Symbols** (confidence: 100%)
-  - All maps (pages 2-6) use icons for elevators, stairs, washrooms, and other features.
-- **High Colour Contrast for Orientation Signs** (confidence: 80%)
-  - Maps (pages 2-6) use high-contrast colors for different areas and symbols.
+  - All maps (pages 2-6) use icons for elevators, washrooms, stairs, and other features.
+- **High Colour Contrast for Orientation Signs** (confidence: 70%)
+  - Maps (pages 2-6) show high-contrast color schemes for different areas and features.
 
 ### sensory_alerts
 - **Audible and Visual Alerts** (confidence: 70%)
-  - Audio Tour symbol is present on all maps (pages 2-5), indicating availability of audio cues.
+  - Audio Tour icons are present on all maps (pages 2-5), indicating the availability of auditory navigation aids.
 - **Visual Contrast Between Walls and Floors** (confidence: 70%)
-  - Floor plans (pages 2-6) use strong visual contrast between different spaces and circulation paths.
-
-### social_health
-- **Multilingual Signage** (confidence: 70%)
-  - Level 3 (page 5) includes a 'WORLD LANGUAGES' section, suggesting multilingual resources and likely signage.
+  - Maps (pages 2-6) use strong visual contrast to delineate rooms and circulation paths.
 
 ## Not Found
 
@@ -82,3 +74,4 @@ The document consists of color-coded floor plans for the Milner Library, Edmonto
 
 ### social_health
 - Adult Changing Facility
+- Multilingual Signage

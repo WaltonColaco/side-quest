@@ -484,6 +484,106 @@ def extract_from_image(client: OpenAI, image_path: Path, system: str, model: str
     return json.loads(response.choices[0].message.content)
 
 
+# -------- CORE PIPELINE --------
+def run_extraction(
+    input_path: Path,
+    building_type: str | None = None,
+    model: str = "gpt-4.1",
+    output_path: Path | None = None,
+    source_name: str | None = None,
+) -> tuple[str, dict]:
+    """
+    Run the full extraction pipeline on input_path.
+    Returns (markdown_content, result_dict).
+    Writes the markdown to output_path, or to extracted_output/<stem>_smart.md by default.
+    source_name overrides the display name used in the report and output filename.
+    """
+    env = load_env(ENV_FILE)
+    api_key = env.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise ValueError("OPENAI_API_KEY not found in .env or environment.")
+
+    client = OpenAI(api_key=api_key)
+
+    if building_type:
+        print(f"[smart_extract] Building type: {building_type} (user specified)", file=sys.stderr)
+    else:
+        print(f"[smart_extract] No building type specified — detecting from document...", file=sys.stderr)
+        building_type = detect_building_type(client, input_path, model)
+
+    md_path = HOUSING_MD if building_type == "housing" else COMMERCIAL_MD
+    if not md_path.exists():
+        raise FileNotFoundError(f"Rubric file not found: {md_path}")
+
+    headers = parse_headers_from_md(md_path)
+    if not headers:
+        print(f"Warning: no headers parsed from {md_path}", file=sys.stderr)
+
+    header_str = headers_to_string(headers)
+    system = SYSTEM_PROMPT_TEMPLATE.format(
+        building_type=building_type,
+        header_str=header_str,
+    )
+
+    if is_pdf(input_path):
+        print(f"[smart_extract] PDF input: {input_path.name}", file=sys.stderr)
+        result = extract_from_pdf(client, input_path, system, model)
+        result["input_type"] = "pdf"
+    elif is_image(input_path):
+        print(f"[smart_extract] Image input: {input_path.name}", file=sys.stderr)
+        result = extract_from_image(client, input_path, system, model)
+        result["input_type"] = "image"
+    else:
+        print(f"[smart_extract] Text input: {input_path.name}", file=sys.stderr)
+        text = read_text(input_path)
+        result = extract_from_text(client, text, system, model)
+        result["input_type"] = "text"
+
+    display_name = source_name or input_path.name
+    result["source_file"] = display_name
+    result["building_type"] = building_type
+    result["model"] = model
+
+    maps_key = env.get("GOOGLE_MAPS_API_KEY") or os.getenv("GOOGLE_MAPS_API_KEY")
+    location = result.get("location") or {}
+    address = location.get("address")
+    coords = location.get("coordinates")
+    coords_valid = isinstance(coords, dict) and coords.get("lat") is not None
+    raw = location.get("raw")
+
+    if coords_valid:
+        location["address"] = None
+        print(f"[smart_extract] Coordinates extracted directly: {coords['lat']}, {coords['lon']}", file=sys.stderr)
+    else:
+        geocode_query = address or raw
+        if geocode_query:
+            geocoded = geocode_address(geocode_query, maps_key)
+            if geocoded:
+                location["coordinates"] = geocoded
+                print(f"[smart_extract] Coordinates: {geocoded['lat']}, {geocoded['lon']}", file=sys.stderr)
+            else:
+                print(f"[smart_extract] Geocoding returned no result from any provider.", file=sys.stderr)
+        else:
+            print(f"[smart_extract] No location info found in document — skipping geocoding.", file=sys.stderr)
+
+    result["location"] = location
+
+    md_content = result_to_md(result, headers=headers)
+
+    stem = Path(display_name).stem
+    if output_path:
+        out_path = output_path
+    else:
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        out_path = OUTPUT_DIR / f"{stem}_smart.md"
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(md_content, encoding="utf-8")
+    print(f"[smart_extract] Written to: {out_path}", file=sys.stderr)
+
+    return md_content, result
+
+
 # -------- MAIN --------
 def main():
     parser = argparse.ArgumentParser(description="Smart accessibility feature extractor")
@@ -513,97 +613,16 @@ def main():
         )
         sys.exit(1)
 
-    # Load API key
-    env = load_env(ENV_FILE)
-    api_key = env.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        print("Error: OPENAI_API_KEY not found in .env or environment.", file=sys.stderr)
+    try:
+        run_extraction(
+            input_path=input_path,
+            building_type=args.building_type,
+            model=args.model,
+            output_path=Path(args.output) if args.output else None,
+        )
+    except (ValueError, FileNotFoundError) as e:
+        print(f"Error: {e}", file=sys.stderr)
         sys.exit(1)
-
-    client = OpenAI(api_key=api_key)
-
-    # Auto-detect building type if not provided
-    if args.building_type:
-        building_type = args.building_type
-        print(f"[smart_extract] Building type: {building_type} (user specified)", file=sys.stderr)
-    else:
-        print(f"[smart_extract] No building type specified — detecting from document...", file=sys.stderr)
-        building_type = detect_building_type(client, input_path, args.model)
-
-    # Parse headers from the correct rubric md
-    md_path = HOUSING_MD if building_type == "housing" else COMMERCIAL_MD
-    if not md_path.exists():
-        print(f"Error: rubric file not found: {md_path}", file=sys.stderr)
-        sys.exit(1)
-
-    headers = parse_headers_from_md(md_path)
-    if not headers:
-        print(f"Warning: no headers parsed from {md_path}", file=sys.stderr)
-
-    header_str = headers_to_string(headers)
-    system = SYSTEM_PROMPT_TEMPLATE.format(
-        building_type=building_type,
-        header_str=header_str,
-    )
-
-    # Detect input type and extract
-    if is_pdf(input_path):
-        print(f"[smart_extract] PDF input: {input_path.name}", file=sys.stderr)
-        result = extract_from_pdf(client, input_path, system, args.model)
-        result["input_type"] = "pdf"
-    elif is_image(input_path):
-        print(f"[smart_extract] Image input: {input_path.name}", file=sys.stderr)
-        result = extract_from_image(client, input_path, system, args.model)
-        result["input_type"] = "image"
-    else:
-        print(f"[smart_extract] Text input: {input_path.name}", file=sys.stderr)
-        text = read_text(input_path)
-        result = extract_from_text(client, text, system, args.model)
-        result["input_type"] = "text"
-
-    result["source_file"] = str(input_path)
-    result["building_type"] = building_type
-    result["model"] = args.model
-
-    # Resolve location: geocode address → coordinates, or drop address if coordinates came directly
-    maps_key = env.get("GOOGLE_MAPS_API_KEY") or os.getenv("GOOGLE_MAPS_API_KEY")
-    location = result.get("location") or {}
-    address = location.get("address")
-    coords = location.get("coordinates")
-    coords_valid = isinstance(coords, dict) and coords.get("lat") is not None
-
-    raw = location.get("raw")
-
-    if coords_valid:
-        # Coordinates extracted directly from the document — address not needed
-        location["address"] = None
-        print(f"[smart_extract] Coordinates extracted directly: {coords['lat']}, {coords['lon']}", file=sys.stderr)
-    else:
-        # Use address if available, otherwise fall back to raw location text (e.g. building name + city)
-        geocode_query = address or raw
-        if geocode_query:
-            geocoded = geocode_address(geocode_query, maps_key)
-            if geocoded:
-                location["coordinates"] = geocoded
-                print(f"[smart_extract] Coordinates: {geocoded['lat']}, {geocoded['lon']}", file=sys.stderr)
-            else:
-                print(f"[smart_extract] Geocoding returned no result from any provider.", file=sys.stderr)
-        else:
-            print(f"[smart_extract] No location info found in document — skipping geocoding.", file=sys.stderr)
-
-    result["location"] = location
-
-    md_content = result_to_md(result, headers=headers)
-
-    if args.output:
-        out_path = Path(args.output)
-    else:
-        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-        out_path = OUTPUT_DIR / f"{input_path.stem}_smart.md"
-
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(md_content, encoding="utf-8")
-    print(f"[smart_extract] Written to: {out_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
