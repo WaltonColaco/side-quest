@@ -77,6 +77,25 @@ Defaults now target housing: BUILDING_TYPE=housing, OUTPUT_FILE=reports/housing.
 Override example for commercial interiors: `BUILDING_TYPE=commercial_interiors OUTPUT_FILE=reports/commercial_interiors.md DOC_PRIORITY="leed,standard" PER_CATEGORY=12 MIN_CONFIDENCE=0.9 TOP_N=40 bash scripts/run_postprocess.sh`
 Use `INCLUDE_PATTERN=<substring>` to run the pipeline on a subset of files (case-insensitive filename match).
 
+### 7) Chunk-level vector comparison + DB persistence
+- Apply the latest migration (adds chunk embeddings and comparisons tables):
+```
+sqlite3 db/assessment.db ".read migrations/003_chunk_vectors.sql"
+```
+- Compare extracted Markdown to the rubric, store embeddings and coverage results:
+```
+python scripts/compare_md_vectors.py \
+  --candidate extracted_output/ilovepdf_merged_organized_smart.md \
+  --rubric-housing reports/housing.md \
+  --rubric-commercial reports/commercial_interiors.md \
+  --db db/assessment.db \
+  --model text-embedding-3-small \
+  --write-assessment          # optional: also writes projects/assessments rows
+```
+- To run on all Markdown files in a folder: `python scripts/compare_md_vectors.py --candidate extracted_output`
+- Building type is auto-detected (housing if it looks like a personal/home doc; otherwise commercial).
+- Rubric weights are prioritised: high-impact accessibility markers (e.g., tactile/contrast/signage/egress cues) get a 3× weight bump before weights are normalised.
+
 ### Notes
 - Ground truth schema lives in `ground_truth_accessibility.json`; update it to change categories/ids.
 - Scripts assume Markdown pages are labeled with `## Page N` (added by the PDF→MD step) to derive page_numbers.
