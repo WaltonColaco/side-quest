@@ -17,7 +17,9 @@ function Name() {
 
   return (
     <section className="login-screen name-page" aria-label="Name page">
-      <img className="login-logo" src={logo} alt="Hacked logo" />
+      <Link to="/home" aria-label="Go home">
+        <img className="login-logo" src={logo} alt="Hacked logo" />
+      </Link>
 
       <div className="login-content">
         <div className="login-left name-left">

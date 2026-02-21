@@ -52,12 +52,11 @@ function Login() {
       </MapContainer>
 
       <div className="login-overlay-dim" />
-      <img className="login-overlay-logo" src={logo} alt="Hacked logo" />
+      <Link to="/home" aria-label="Go home">
+        <img className="login-overlay-logo" src={logo} alt="Hacked logo" />
+      </Link>
 
       <div className="login-overlay-card">
-        <Link className="login-overlay-close" to="/home" aria-label="Close login">
-          ×
-        </Link>
         <h1 className="login-overlay-title">Login</h1>
         <form className="login-overlay-form" onSubmit={handleSubmit}>
           <input

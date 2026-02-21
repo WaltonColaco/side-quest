@@ -1,7 +1,6 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import NavButton from "./components/NavButton";
-import TopNav from "./components/TopNav";
+import PostAuthChrome from "./components/PostAuthChrome";
 import About from "./pages/About";
 import AboutUser from "./pages/AboutUser";
 import Home from "./pages/Home";
@@ -17,28 +16,21 @@ import Signup from "./pages/Signup";
 
 function App() {
   const location = useLocation();
-  const showGlobalLogo =
-    location.pathname !== "/" &&
-    location.pathname !== "/home" &&
-    location.pathname !== "/information" &&
-    location.pathname !== "/aboutuser" &&
-    location.pathname !== "/name" &&
-    location.pathname !== "/location" &&
-    location.pathname !== "/signup" &&
-    location.pathname !== "/login";
-  const showTopNav =
-    location.pathname !== "/" &&
-    location.pathname !== "/information" &&
-    location.pathname !== "/aboutuser" &&
-    location.pathname !== "/name" &&
-    location.pathname !== "/location" &&
-    location.pathname !== "/signup" &&
-    location.pathname !== "/login";
+  const onboardingPaths = new Set([
+    "/",
+    "/home",
+    "/login",
+    "/aboutuser",
+    "/about-user",
+    "/name",
+    "/location",
+    "/signup",
+  ]);
+  const showPostAuthChrome = !onboardingPaths.has(location.pathname);
 
   return (
     <>
-      {showGlobalLogo ? <NavButton /> : null}
-      {showTopNav ? <TopNav /> : null}
+      {showPostAuthChrome ? <PostAuthChrome /> : null}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/map-heat" element={<MapHeat />} />
