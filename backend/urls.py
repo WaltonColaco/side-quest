@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from api.views import LatestAssessments, ComparisonList
+from api.views import LatestAssessments, ComparisonList, ExtractView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -10,4 +10,5 @@ urlpatterns = [
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/assessments/", LatestAssessments.as_view(), name="assessments"),
     path("api/comparisons/", ComparisonList.as_view(), name="comparisons"),
+    path("api/extract/", ExtractView.as_view(), name="extract"),
 ]
