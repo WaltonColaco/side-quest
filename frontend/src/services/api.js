@@ -25,4 +25,9 @@ export async function fetchComparisons() {
   return data;
 }
 
+export async function fetchFeatures() {
+  const { data } = await api.get("/api/features/");
+  return data;
+}
+
 export default api;

@@ -9,6 +9,7 @@ import marker from "leaflet/dist/images/marker-icon.png";
 import shadow from "leaflet/dist/images/marker-shadow.png";
 import { useSettings } from "../context/SettingsContext";
 import SettingsCard from "../components/SettingsCard";
+import { fetchFeatures } from "../services/api";
 
 const heatData = [
   [53.5444, -113.4909, 0.96], // Downtown
@@ -23,37 +24,37 @@ const heatData = [
   [53.5895, -113.4077, 0.6], // Northlands area
 ];
 
-const pins = [
+const basePins = [
   {
     id: "downtown",
     name: "Downtown Edmonton",
     position: [53.5444, -113.4909],
-    ramp: true,
-    powerDoors: true,
-    elevator: true,
+    ramp: false,
+    powerDoors: false,
+    elevator: false,
   },
   {
     id: "whyte",
     name: "Whyte Avenue",
     position: [53.5232, -113.5263],
-    ramp: true,
+    ramp: false,
     powerDoors: false,
-    elevator: true,
+    elevator: false,
   },
   {
     id: "west-edmonton",
     name: "West Edmonton",
     position: [53.5463, -113.5954],
     ramp: false,
-    powerDoors: true,
+    powerDoors: false,
     elevator: false,
   },
   {
     id: "southgate",
     name: "Southgate Area",
     position: [53.4978, -113.5144],
-    ramp: true,
-    powerDoors: true,
+    ramp: false,
+    powerDoors: false,
     elevator: false,
   },
 ];
@@ -94,10 +95,32 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
   const [showSettings, setShowSettings] = useState(
     initialShowSettings || location.pathname === "/settings"
   );
+  const [featureFlags, setFeatureFlags] = useState({ ramp: false, powerDoors: false, elevator: false });
 
   useEffect(() => {
     setShowSettings(initialShowSettings || location.pathname === "/settings");
   }, [initialShowSettings, location.pathname]);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const data = await fetchFeatures();
+        setFeatureFlags(data);
+      } catch (e) {
+        console.error("Failed to load features", e);
+      }
+    };
+    load();
+  }, []);
+
+  const pins = useMemo(() => {
+    return basePins.map((p) => ({
+      ...p,
+      ramp: featureFlags.ramp,
+      powerDoors: featureFlags.powerDoors,
+      elevator: featureFlags.elevator,
+    }));
+  }, [featureFlags]);
 
   const filteredPins = useMemo(() => {
     return pins.filter((pin) => {
