@@ -8,39 +8,29 @@
 - **Coordinates:** 53.5440376, -113.4897656
 
 ## Notes
-The document is a visitor guide with floor plans, legends, and general information about the Stanley A. Milner Library. Accessibility features such as elevators, ramps, universal washrooms, and clear wayfinding signage are visually confirmed. Some features (e.g., door widths, tactile signage, assistive listening systems) are not mentioned or visible in the provided content.
+The guide provides strong visual evidence of accessible routes, entrances, ramps, elevators, and universal washrooms. Audio tour and colour-coded wayfinding are present, but there is no explicit mention of tactile, braille, or assistive listening systems. No information on door widths, automatic doors, or adult changing facilities. Multilingual signage is not referenced.
 
 ## Found Requirements
 
 ### physical_access
 - **Accessible Routes** (confidence: 100%)
-  - Floor plans on pages 3-7 show elevators, ramps, and accessible routes connecting all public areas and floors.
-- **Exterior Building Entrances** (confidence: 90%)
-  - Main entrance, south entrance, and Second Cup entrance are marked on the Level 1 floor plan (page 4), indicating multiple accessible entry points.
+  - Floor plans on pages 3-7 show elevators, ramps, and accessible routes connecting all public floors.
+- **Exterior Building Entrances** (confidence: 100%)
+  - Main entrance, south entrance, and patio entrance are clearly marked on the Level 1 floor plan (page 4).
 - **Ramps** (confidence: 100%)
-  - Ramps are clearly labeled on Level 1 and Level 2 floor plans (pages 4 and 5), providing access between different areas.
-- **Elevators** (confidence: 100%)
-  - Elevators are present on all floor plans (pages 3-7), providing vertical access to all public floors.
+  - Access ramps are labeled on Level 1 and Level 2 floor plans (pages 4 and 5).
+- **Elevator** (confidence: 100%)
+  - Elevators are present and labeled on all floor plans (pages 3-7), providing access to all public floors.
 - **Universal Washroom** (confidence: 100%)
-  - Universal washrooms are marked on all floor plans (pages 3-7), indicating accessible restroom facilities.
+  - Universal washrooms are marked on all public floors in the floor plans (pages 3-7).
 
 ### neurodivergent
-- **Clear Wayfinding Signage** (confidence: 90%)
-  - Maps and legends on pages 3-7 use clear icons and color coding for navigation and wayfinding.
-- **Pattern and Colour Blocking for Key Access** (confidence: 80%)
-  - Floor plans (pages 3-7) use distinct color blocks to differentiate areas and functions, aiding navigation.
-- **Non-Text Diagrams and Symbols** (confidence: 100%)
-  - Maps on pages 3-7 use icons and symbols for elevators, washrooms, stairs, and other features.
-- **High Colour Contrast for Orientation Signs** (confidence: 80%)
-  - Maps and signage (pages 3-7) use high-contrast colors for different zones and features.
-
-### sensory_alerts
-- **Audible and Visual Alerts** (confidence: 70%)
-  - Audio tour icons are present on all floor plans (pages 3-7), indicating the availability of audio cues for navigation.
-
-### social_health
-- **Multilingual Signage** (confidence: 70%)
-  - World Languages section is marked on Level 3 (page 6), suggesting the presence of multilingual resources and possibly signage.
+- **Clear Wayfinding Signage** (confidence: 70%)
+  - Audio tour icons and clear map legends on all floor plans (pages 3-7) indicate wayfinding support.
+- **Pattern and Colour Blocking for Key Access** (confidence: 70%)
+  - Distinct colour zones and icons on floor plans (pages 3-7) visually differentiate areas and functions.
+- **Audio Tour** (confidence: 100%)
+  - Audio tour available for self-guided navigation, referenced on pages 2, 3, 4, 5, and 6.
 
 ## Not Found
 
@@ -57,15 +47,18 @@ The document is a visitor guide with floor plans, legends, and general informati
 
 ### neurodivergent
 - Braille, Visual, and Audio Cues
+- Non-Text Diagrams and Symbols
 - Tactile Signs for Doors and Openings
 - Tactile Signage Requirements
 - Accessible Control Mounting Height
 - Accessible Control Operation
 - Haptic and Tactile Maps
+- High Colour Contrast for Orientation Signs
 - Lighting, Audible, Tactile, Colour/Contrast, and Ergonomic Cues
 - Quiet Space Availability
 
 ### sensory_alerts
+- Audible and Visual Alerts
 - Warning Indicators
 - Tactile Attention Indicator Configuration
 - Tactile Attention Indicator Installation
@@ -80,3 +73,4 @@ The document is a visitor guide with floor plans, legends, and general informati
 
 ### social_health
 - Adult Changing Facility
+- Multilingual Signage

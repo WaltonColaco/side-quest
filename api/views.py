@@ -8,6 +8,7 @@ import subprocess
 from rest_framework import generics, permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+import httpx
 
 from .models import Assessment, Comparison, Location, ChunkMatch
 from .serializers import (
@@ -231,6 +232,22 @@ class LocationDetailView(APIView):
         if not loc:
             return Response({"detail": "No locations"}, status=404)
 
+        # If no address stored, reverse geocode from coords
+        if not loc.address and loc.latitude and loc.longitude:
+            try:
+                url = (
+                    "https://nominatim.openstreetmap.org/reverse"
+                    f"?format=jsonv2&lat={loc.latitude}&lon={loc.longitude}"
+                )
+                resp = httpx.get(url, headers={"User-Agent": "side-quest/1.0"}, timeout=6)
+                if resp.status_code == 200:
+                    data = resp.json()
+                    display_name = data.get("display_name")
+                    if display_name:
+                        loc.address = display_name
+            except Exception:
+                pass
+
         passes = []
         fails = []
         if loc.comparison_id:
@@ -241,6 +258,12 @@ class LocationDetailView(APIView):
             )
             for m in matches:
                 label = m["rubric_excerpt"] or m["rubric_path"]
+                if label and "desc:" in label:
+                    label = label.split("desc:", 1)[1]
+                if label and "- values" in label:
+                    label = label.split("- values", 1)[0]
+                if label:
+                    label = label.strip(" -\n\t")
                 item = {"label": label, "similarity": m["similarity"]}
                 if m["status"] in ("strong", "partial") and len(passes) < 2:
                     passes.append(item)

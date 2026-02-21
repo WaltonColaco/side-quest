@@ -23,7 +23,11 @@ function Information() {
 
   const scorePct =
     location && location.score != null ? Math.round(location.score * 100) : null;
-  const address = location?.address || location?.name || "Address not available";
+  const address =
+    location?.address ||
+    location?.name ||
+    location?.source ||
+    "Address not available";
 
   const passes = location?.passes || [];
   const fails = location?.fails || [];
