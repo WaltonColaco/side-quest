@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../hacked-logo.png";
 import mailLogo from "../../mail-logo.png";
 
@@ -12,7 +12,9 @@ function Signup() {
 
   return (
     <section className="signup-page" aria-label="Sign up">
-      <img className="signup-top-logo" src={logo} alt="Hacked logo" />
+      <Link to="/home" aria-label="Go home">
+        <img className="signup-top-logo" src={logo} alt="Hacked logo" />
+      </Link>
 
       <div className="signup-layout">
         <div className="signup-left">

@@ -6,8 +6,10 @@ const roles = ["Resident/Visitor", "Design Professional", "Business Owner"];
 
 function AboutUser() {
   return (
-    <section className="login-screen" aria-label="About user page">
-      <img className="login-logo" src={logo} alt="Hacked logo" />
+    <section className="login-screen about-user-page" aria-label="About user page">
+      <Link to="/home" aria-label="Go home">
+        <img className="login-logo" src={logo} alt="Hacked logo" />
+      </Link>
 
       <div className="login-content">
         <div className="login-left">
