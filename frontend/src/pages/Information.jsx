@@ -10,7 +10,7 @@ function Information() {
     <section className="information-screen" aria-label="Information page">
       <div className="information-frame">
         <Link className="information-back" to="/map-heat" aria-label="Back">
-          <img src={backButton} alt="Back" />
+          <img src={backButton} alt="Back" style={{ pointerEvents: "none" }} />
         </Link>
         <img className="information-menu" src={navMenu} alt="Menu" />
         <div className="information-main">
