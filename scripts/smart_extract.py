@@ -186,7 +186,7 @@ Return ONLY a JSON object with this exact structure:
 
 
 # -------- MARKDOWN RENDERER --------
-def result_to_md(result: dict) -> str:
+def result_to_md(result: dict, headers: dict = None) -> str:
     lines = []
     source = Path(result.get("source_file", "unknown")).name
     building = result.get("building_type", "unknown")
@@ -235,9 +235,23 @@ def result_to_md(result: dict) -> str:
     not_found = result.get("not_found", [])
     if not_found:
         lines.append("## Not Found")
-        for req in not_found:
-            lines.append(f"- {req}")
         lines.append("")
+        if headers:
+            # Build reverse map: requirement label -> category
+            req_to_cat = {req: cat for cat, reqs in headers.items() for req in reqs}
+            by_cat: dict[str, list] = {}
+            for req in not_found:
+                cat = req_to_cat.get(req, "other")
+                by_cat.setdefault(cat, []).append(req)
+            for cat, reqs in by_cat.items():
+                lines.append(f"### {cat}")
+                for req in reqs:
+                    lines.append(f"- {req}")
+                lines.append("")
+        else:
+            for req in not_found:
+                lines.append(f"- {req}")
+            lines.append("")
 
     return "\n".join(lines)
 
@@ -378,7 +392,7 @@ def main():
     result["building_type"] = building_type
     result["model"] = args.model
 
-    md_content = result_to_md(result)
+    md_content = result_to_md(result, headers=headers)
 
     if args.output:
         out_path = Path(args.output)
