@@ -210,3 +210,13 @@ __marimo__/
 # Claude
 CLAUDE.md
 .claude
+
+# database files
+*.db
+*.sqlite
+*.sqlite3
+*.sqlitedb
+*.db-wal
+*.db-shm
+*.dump
+
