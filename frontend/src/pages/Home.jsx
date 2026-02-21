@@ -11,10 +11,10 @@ function Home() {
         <h1 className="landing-title">Choose your view</h1>
         <div className="landing-actions">
           <Link className="landing-action" to="/map-heat">
-            explore the city
+            Explore the Map
           </Link>
-          <Link className="landing-action" to="/score-project">
-            score a project
+          <Link className="landing-action" to="/aboutuser">
+            Audit A Project
           </Link>
         </div>
       </div>
