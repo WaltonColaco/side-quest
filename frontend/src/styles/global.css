@@ -161,29 +161,44 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
-  padding-top: 130px;
+  padding: 48px 24px;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .template-panel {
   position: relative;
-  width: 1104px;
-  height: 650px;
-  border-radius: 20px;
-  opacity: 1;
-  background: var(--panel);
-  padding: clamp(28px, 5vh, 56px) clamp(28px, 4vw, 48px);
+  width: min(820px, 92vw);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: clamp(24px, 4vw, 48px);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e5e5;
 }
 
 .template-title {
-  margin: 0;
+  margin: 0 0 12px;
   color: var(--forest);
   font-family:
     "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 100%;
-  letter-spacing: 0.05em;
+  line-height: 110%;
+  letter-spacing: 0.02em;
+}
+
+.template-body {
+  color: #1f1f1f;
+  font-size: 16px;
+  line-height: 1.6;
+  display: grid;
+  gap: 12px;
+}
+
+.template-list {
+  padding-left: 18px;
+  margin: 0;
+  display: grid;
+  gap: 6px;
 }
 
 .hero-card {
@@ -449,6 +464,75 @@ h1 {
   padding: 4px 0;
 }
 
+.info-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  z-index: 1100;
+}
+
+.info-overlay.full-bleed {
+  background: #111;
+}
+
+.info-map-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1080;
+  pointer-events: none;
+  filter: brightness(0.9);
+}
+
+.info-card {
+  width: min(900px, 92vw);
+}
+
+.info-card-body {
+  position: relative;
+  z-index: 1115;
+  margin: 0 auto;
+  width: min(780px, 90vw);
+  max-height: 80vh;
+  overflow: auto;
+  background: rgba(245, 245, 245, 0.95);
+  border-radius: 22px;
+  padding: 22px 24px 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  color: #1f1f1f;
+  display: grid;
+  gap: 8px;
+}
+
+.info-card-body h2 {
+  margin: 0;
+  color: #3a5c44;
+}
+
+.info-card-body h3 {
+  margin: 8px 0 0;
+  color: #1f1f1f;
+}
+
+.info-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.compact {
+  width: min(720px, 88vw);
+  padding: 18px 20px 20px;
+  gap: 6px;
+}
+
+.info-card-body p {
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
 .information-screen {
   height: 100vh;
   width: 100%;
