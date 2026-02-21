@@ -1,46 +1,63 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { MapContainer, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import logo from "../../hacked-logo.png";
 
 function Login() {
   const navigate = useNavigate();
 
-  return (
-    <section className="login-screen" aria-label="Login">
-      <div className="login-panel">
-        <h1>Login</h1>
-        <form className="login-form">
-          <label className="sr-only" htmlFor="email">
-            Email
-          </label>
-          <input id="email" name="email" type="email" placeholder="Email" />
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate("/home");
+  };
 
-          <label className="sr-only" htmlFor="password">
-            Password
-          </label>
+  return (
+    <section className="login-overlay-screen" aria-label="Login">
+      <MapContainer
+        center={[53.5461, -113.4938]}
+        zoom={11}
+        zoomControl={false}
+        scrollWheelZoom
+        className="login-overlay-map"
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+      </MapContainer>
+
+      <div className="login-overlay-dim" />
+      <img className="login-overlay-logo" src={logo} alt="Hacked logo" />
+
+      <div className="login-overlay-card">
+        <Link className="login-overlay-close" to="/home" aria-label="Close login">
+          ×
+        </Link>
+        <h1 className="login-overlay-title">Login</h1>
+        <form className="login-overlay-form" onSubmit={handleSubmit}>
           <input
+            className="login-overlay-input"
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Email"
+          />
+          <input
+            className="login-overlay-input"
             id="password"
             name="password"
             type="password"
             placeholder="Password"
           />
-
-          <button type="button" className="login-forgot">
+          <button type="button" className="login-overlay-forgot">
             Forgot Password
           </button>
-
-          <button type="submit" className="login-submit">
+          <button type="submit" className="login-overlay-submit">
             Login
           </button>
         </form>
-
-        <p className="login-foot">
-          New user?{" "}
-          <button
-            type="button"
-            className="login-link"
-            onClick={() => navigate("/signup")}
-          >
-            here
-          </button>
+        <p className="login-overlay-signup">
+          New user? Sign up <Link to="/aboutuser">here</Link>
         </p>
       </div>
     </section>
