@@ -9,7 +9,6 @@ import Information from "./pages/Information";
 import MapHeat from "./pages/MapHeat";
 import NotFound from "./pages/NotFound";
 import ScoreProject from "./pages/ScoreProject";
-import Settings from "./pages/Settings";
 
 function App() {
   const location = useLocation();
@@ -25,7 +24,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/map-heat" element={<MapHeat />} />
         <Route path="/score-project" element={<ScoreProject />} />
-        <Route path="/settings" element={<Settings />} />
+        <Route path="/settings" element={<MapHeat showSettings />} />
         <Route path="/about" element={<About />} />
         <Route path="/information" element={<Information />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
