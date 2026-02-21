@@ -12,7 +12,6 @@ import MapHeat from "./pages/MapHeat";
 import Name from "./pages/Name";
 import NotFound from "./pages/NotFound";
 import ScoreProject from "./pages/ScoreProject";
-import AboutUser from "./pages/AboutUser";
 import Login from "./pages/Login";
 
 function App() {
