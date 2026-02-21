@@ -1,14 +1,17 @@
 """
 Smart Accessibility Feature Extractor
 
-- Auto-detects input as text or image
-- For images: identifies visible header topics first, then extracts only relevant info
+- Accepts PDF or text file as input
+- PDF: handles text pages, image pages, and mixed pages in a single call
+- Text: extracts features directly from content
 - Building type (housing / commercial) controls which headers are used
 - Headers are parsed in order from reports/housing.md or reports/commercial_interiors.md
-- Outputs structured JSON
+- Outputs a Markdown report to extracted_output/
 
 Usage:
-    python scripts/smart_extract.py --input <file> --building-type housing|commercial [--output out.json] [--model gpt-4.1]
+    python scripts/smart_extract.py --input <file.pdf|file.txt|file.md> [--building-type housing|commercial] [--output extracted_output/result.md] [--model gpt-4.1]
+
+If --building-type is omitted, OpenAI will detect it automatically from the document.
 """
 
 import os
@@ -27,8 +30,7 @@ REPORTS_DIR = ROOT / "reports"
 HOUSING_MD = REPORTS_DIR / "housing.md"
 COMMERCIAL_MD = REPORTS_DIR / "commercial_interiors.md"
 ENV_FILE = ROOT / ".env"
-
-IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".bmp", ".tiff", ".tif"}
+OUTPUT_DIR = ROOT / "extracted_output"
 
 
 # -------- ENV LOADER --------
@@ -37,13 +39,22 @@ def load_env(env_path: Path) -> dict:
     env = {}
     if not env_path.exists():
         return env
-    with open(env_path, encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line or line.startswith("#") or "=" not in line:
-                continue
-            key, _, val = line.partition("=")
-            env[key.strip()] = val.strip().strip('"').strip("'")
+    lines = None
+    for encoding in ("utf-8-sig", "utf-16", "utf-8", "latin-1"):
+        try:
+            with open(env_path, encoding=encoding) as f:
+                lines = f.readlines()
+            break
+        except (UnicodeDecodeError, UnicodeError):
+            continue
+    if lines is None:
+        return env
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, val = line.partition("=")
+        env[key.strip()] = val.strip().strip('"').strip("'")
     return env
 
 
@@ -77,9 +88,9 @@ def headers_to_string(headers: dict) -> str:
     return "\n".join(lines)
 
 
-# -------- INPUT DETECTION --------
-def is_image(file_path: Path) -> bool:
-    return file_path.suffix.lower() in IMAGE_EXTENSIONS
+# -------- FILE HELPERS --------
+def is_pdf(file_path: Path) -> bool:
+    return file_path.suffix.lower() == ".pdf"
 
 
 def read_text(file_path: Path) -> str:
@@ -87,19 +98,9 @@ def read_text(file_path: Path) -> str:
         return f.read()
 
 
-def encode_image_b64(file_path: Path) -> tuple[str, str]:
-    """Returns (base64_string, mime_type)."""
-    mime_map = {
-        ".jpg": "image/jpeg",
-        ".jpeg": "image/jpeg",
-        ".png": "image/png",
-        ".gif": "image/gif",
-        ".webp": "image/webp",
-        ".bmp": "image/bmp",
-    }
-    mime = mime_map.get(file_path.suffix.lower(), "image/png")
+def encode_file_b64(file_path: Path) -> str:
     with open(file_path, "rb") as f:
-        return base64.standard_b64encode(f.read()).decode("utf-8"), mime
+        return base64.standard_b64encode(f.read()).decode("utf-8")
 
 
 # -------- PROMPTS --------
@@ -116,7 +117,7 @@ Ordered categories and requirements to look for:
 Output ONLY a valid JSON object with this exact structure:
 {{
   "building_type": "{building_type}",
-  "input_type": "<text|image>",
+  "input_type": "<pdf|text>",
   "extracted": [
     {{
       "category": "<category name from list>",
@@ -134,15 +135,31 @@ Output ONLY a valid JSON object with this exact structure:
 Rules:
 - List every requirement that IS found in "extracted" (found: true).
 - List requirement labels NOT found in "not_found".
-- For images: first identify which header topics are visually present in the image \
-  (e.g. floor plan showing doors → Door Minimum Width; ramps drawn → Ramps), \
-  then only extract information relevant to those visible topics.
+- For diagram/floor plan pages: identify which header topics are visually present \
+  (e.g. doors drawn → Door Minimum Width, ramps drawn → Ramps, signage → Wayfinding Signage) \
+  and only extract info relevant to those visible topics.
+- For text pages: extract all requirements, measurements, and standards mentioned.
 - values should capture specific numbers, measurements, percentages, or standards mentioned.
 - confidence: 1.0 = explicitly stated, 0.7 = strongly implied, 0.5 = possible, 0.3 = uncertain.
 """
 
+PDF_USER_PROMPT = """\
+This is a PDF document. Read every page carefully.
+
+For pages containing diagrams, floor plans, or images:
+  - First identify which accessibility topics are visually present \
+(e.g. doors on a plan → Door Minimum Width; ramps or level changes → Ramps; \
+signage visible → Wayfinding Signage; counters drawn → Accessible Reception and Counters).
+  - Then extract only information relevant to those identified topics.
+
+For pages containing readable text:
+  - Extract all accessibility-related requirements, measurements, and standards mentioned.
+
+Return only the JSON output, no commentary.
+"""
+
 TEXT_USER_PROMPT = """\
-Extract all accessibility features from the following content.
+Extract all accessibility features from the following text content.
 
 --- CONTENT START ---
 {content}
@@ -151,24 +168,135 @@ Extract all accessibility features from the following content.
 Return only the JSON output, no commentary.
 """
 
-IMAGE_USER_PROMPT = """\
-Examine this image carefully.
 
-Step 1 — Identify: Which of the listed accessibility topics/categories are visible or \
-inferable from this image? (e.g. if you see doors on a floor plan, Door Minimum Width is relevant; \
-if you see ramps or level changes, Ramps is relevant; if you see signage, wayfinding requirements \
-are relevant, etc.)
+DETECT_BUILDING_TYPE_PROMPT = """\
+Look at this document and determine whether it relates to a HOUSING (residential) building \
+or a COMMERCIAL (office, retail, public, institutional) building.
 
-Step 2 — Extract: For each relevant topic you identified, extract all accessibility-related \
-information present in the image (labels, dimensions, annotations, symbols, room names, etc.).
+Clues to look for:
+- Housing: bedrooms, kitchens, bathrooms, residential units, dwelling, apartment, house
+- Commercial: office, lobby, reception, retail, meeting rooms, assembly, public corridor
 
-Return only the JSON output, no commentary.
+Return ONLY a JSON object with this exact structure:
+{
+  "building_type": "housing" or "commercial",
+  "reasoning": "<one sentence explaining why>"
+}
 """
 
 
+# -------- MARKDOWN RENDERER --------
+def result_to_md(result: dict) -> str:
+    lines = []
+    source = Path(result.get("source_file", "unknown")).name
+    building = result.get("building_type", "unknown")
+    input_type = result.get("input_type", "unknown")
+    model = result.get("model", "unknown")
+
+    lines.append(f"# Accessibility Extraction Report")
+    lines.append(f"")
+    lines.append(f"- **Source:** `{source}`")
+    lines.append(f"- **Building type:** {building}")
+    lines.append(f"- **Input type:** {input_type}")
+    lines.append(f"- **Model:** {model}")
+    lines.append(f"")
+
+    notes = result.get("notes", "").strip()
+    if notes:
+        lines.append(f"## Notes")
+        lines.append(notes)
+        lines.append("")
+
+    extracted = result.get("extracted", [])
+    if extracted:
+        # Group by category
+        by_cat: dict[str, list] = {}
+        for item in extracted:
+            cat = item.get("category", "uncategorised")
+            by_cat.setdefault(cat, []).append(item)
+
+        lines.append("## Found Requirements")
+        lines.append("")
+        for cat, items in by_cat.items():
+            lines.append(f"### {cat}")
+            for item in items:
+                conf = item.get("confidence", 0)
+                conf_pct = f"{int(conf * 100)}%"
+                lines.append(f"- **{item.get('requirement', '?')}** (confidence: {conf_pct})")
+                desc = item.get("description", "").strip()
+                if desc:
+                    lines.append(f"  - {desc}")
+                values = item.get("values", {})
+                if values:
+                    for k, v in values.items():
+                        lines.append(f"  - `{k}`: {v}")
+            lines.append("")
+
+    not_found = result.get("not_found", [])
+    if not_found:
+        lines.append("## Not Found")
+        for req in not_found:
+            lines.append(f"- {req}")
+        lines.append("")
+
+    return "\n".join(lines)
+
+
 # -------- API CALLS --------
+def detect_building_type(client: OpenAI, input_path: Path, model: str) -> str:
+    """Makes a quick first call to detect housing vs commercial. Returns 'housing' or 'commercial'."""
+    if is_pdf(input_path):
+        b64 = encode_file_b64(input_path)
+        content = [
+            {"type": "text", "text": DETECT_BUILDING_TYPE_PROMPT},
+            {"type": "file", "file": {"filename": input_path.name, "file_data": f"data:application/pdf;base64,{b64}"}},
+        ]
+    else:
+        text = read_text(input_path)[:6000]
+        content = DETECT_BUILDING_TYPE_PROMPT + f"\n\n--- DOCUMENT ---\n{text}"
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": content}],
+        response_format={"type": "json_object"},
+        temperature=0.1,
+    )
+    data = json.loads(response.choices[0].message.content)
+    detected = data.get("building_type", "commercial").lower()
+    reasoning = data.get("reasoning", "")
+    if detected not in ("housing", "commercial"):
+        detected = "commercial"
+    print(f"[smart_extract] Detected building type: {detected} — {reasoning}", file=sys.stderr)
+    return detected
+
+
+def extract_from_pdf(client: OpenAI, pdf_path: Path, system: str, model: str) -> dict:
+    b64 = encode_file_b64(pdf_path)
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": system},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": PDF_USER_PROMPT},
+                    {
+                        "type": "file",
+                        "file": {
+                            "filename": pdf_path.name,
+                            "file_data": f"data:application/pdf;base64,{b64}",
+                        },
+                    },
+                ],
+            },
+        ],
+        response_format={"type": "json_object"},
+        temperature=0.1,
+    )
+    return json.loads(response.choices[0].message.content)
+
+
 def extract_from_text(client: OpenAI, text: str, system: str, model: str) -> dict:
-    # Truncate to avoid token limits while keeping meaningful content
     truncated = text[:15000] if len(text) > 15000 else text
     response = client.chat.completions.create(
         model=model,
@@ -182,47 +310,21 @@ def extract_from_text(client: OpenAI, text: str, system: str, model: str) -> dic
     return json.loads(response.choices[0].message.content)
 
 
-def extract_from_image(client: OpenAI, image_path: Path, system: str, model: str) -> dict:
-    b64, mime = encode_image_b64(image_path)
-    response = client.chat.completions.create(
-        model=model,
-        messages=[
-            {"role": "system", "content": system},
-            {
-                "role": "user",
-                "content": [
-                    {"type": "text", "text": IMAGE_USER_PROMPT},
-                    {
-                        "type": "image_url",
-                        "image_url": {
-                            "url": f"data:{mime};base64,{b64}",
-                            "detail": "high",
-                        },
-                    },
-                ],
-            },
-        ],
-        response_format={"type": "json_object"},
-        temperature=0.1,
-    )
-    return json.loads(response.choices[0].message.content)
-
-
 # -------- MAIN --------
 def main():
     parser = argparse.ArgumentParser(description="Smart accessibility feature extractor")
-    parser.add_argument("--input", required=True, help="Path to input file (text/md/pdf or image)")
+    parser.add_argument("--input", required=True, help="Path to input file (.pdf or text file)")
     parser.add_argument(
         "--building-type",
-        required=True,
+        required=False,
+        default=None,
         choices=["housing", "commercial"],
-        help="Building type — controls which rubric headers are used",
+        help="Building type — if omitted, auto-detected from the document by OpenAI",
     )
-    parser.add_argument("--output", default=None, help="Output JSON path (default: stdout)")
+    parser.add_argument("--output", default=None, help="Output .md path (default: extracted_output/<input_stem>_smart.md)")
     parser.add_argument("--model", default="gpt-4.1", help="OpenAI model (default: gpt-4.1)")
     args = parser.parse_args()
 
-    # Resolve input path
     input_path = Path(args.input)
     if not input_path.exists():
         print(f"Error: file not found: {input_path}", file=sys.stderr)
@@ -237,8 +339,16 @@ def main():
 
     client = OpenAI(api_key=api_key)
 
+    # Auto-detect building type if not provided
+    if args.building_type:
+        building_type = args.building_type
+        print(f"[smart_extract] Building type: {building_type} (user specified)", file=sys.stderr)
+    else:
+        print(f"[smart_extract] No building type specified — detecting from document...", file=sys.stderr)
+        building_type = detect_building_type(client, input_path, args.model)
+
     # Parse headers from the correct rubric md
-    md_path = HOUSING_MD if args.building_type == "housing" else COMMERCIAL_MD
+    md_path = HOUSING_MD if building_type == "housing" else COMMERCIAL_MD
     if not md_path.exists():
         print(f"Error: rubric file not found: {md_path}", file=sys.stderr)
         sys.exit(1)
@@ -249,35 +359,36 @@ def main():
 
     header_str = headers_to_string(headers)
     system = SYSTEM_PROMPT_TEMPLATE.format(
-        building_type=args.building_type,
+        building_type=building_type,
         header_str=header_str,
     )
 
     # Detect input type and extract
-    if is_image(input_path):
-        print(f"[smart_extract] Image input detected: {input_path.name}", file=sys.stderr)
-        result = extract_from_image(client, input_path, system, args.model)
-        result["input_type"] = "image"
+    if is_pdf(input_path):
+        print(f"[smart_extract] PDF input: {input_path.name}", file=sys.stderr)
+        result = extract_from_pdf(client, input_path, system, args.model)
+        result["input_type"] = "pdf"
     else:
-        print(f"[smart_extract] Text input detected: {input_path.name}", file=sys.stderr)
+        print(f"[smart_extract] Text input: {input_path.name}", file=sys.stderr)
         text = read_text(input_path)
         result = extract_from_text(client, text, system, args.model)
         result["input_type"] = "text"
 
-    # Stamp metadata
     result["source_file"] = str(input_path)
-    result["building_type"] = args.building_type
+    result["building_type"] = building_type
     result["model"] = args.model
 
-    output_json = json.dumps(result, indent=2, ensure_ascii=False)
+    md_content = result_to_md(result)
 
     if args.output:
         out_path = Path(args.output)
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        out_path.write_text(output_json, encoding="utf-8")
-        print(f"[smart_extract] Written to: {out_path}", file=sys.stderr)
     else:
-        print(output_json)
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+        out_path = OUTPUT_DIR / f"{input_path.stem}_smart.md"
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(md_content, encoding="utf-8")
+    print(f"[smart_extract] Written to: {out_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
