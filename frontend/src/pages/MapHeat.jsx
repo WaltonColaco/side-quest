@@ -197,7 +197,9 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
             icon={createColoredIcon(getScoreColor(pin.score))}
             eventHandlers={{
               click: () =>
-                navigate(`/information?id=${pin.id.replace("loc-", "")}`),
+                navigate(`/information?id=${pin.id.replace("loc-", "")}`, {
+                  state: { score: pin.score, address: pin.address || pin.name },
+                }),
             }}
           >
             <Popup>
