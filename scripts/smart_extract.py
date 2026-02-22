@@ -279,6 +279,7 @@ def result_to_md(result: dict, headers: dict = None) -> str:
         lines.append("")
         for cat, items in by_cat.items():
             lines.append(f"### {cat}")
+            lines.append("")
             for item in items:
                 conf = item.get("confidence", 0)
                 conf_pct = f"{int(conf * 100)}%"
@@ -290,7 +291,7 @@ def result_to_md(result: dict, headers: dict = None) -> str:
                 if values:
                     for k, v in values.items():
                         lines.append(f"  - `{k}`: {v}")
-            lines.append("")
+                lines.append("")  # blank line after each requirement so chunker splits them individually
 
     not_found = result.get("not_found", [])
     if not_found:

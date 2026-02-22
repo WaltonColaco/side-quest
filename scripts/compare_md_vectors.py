@@ -45,7 +45,7 @@ DEFAULT_ENV = ROOT / ".env"
 DEFAULT_RUBRIC_HOUSING = ROOT / "reports" / "housing.md"
 DEFAULT_RUBRIC_COMMERCIAL = ROOT / "reports" / "commercial_interiors.md"
 
-STRONG_THRESHOLD = 0.80
+STRONG_THRESHOLD = 0.72
 PARTIAL_THRESHOLD = 0.45
 
 
