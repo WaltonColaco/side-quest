@@ -120,14 +120,15 @@ export default function SettingsCard({ onClose }) {
             <h2>Preferences</h2>
             <div className="settings-unit-row settings-preference-row">
               <UnitToggle
-                unit="Residential"
-                selected={state.preference === "Residential"}
-                onClick={() => setPreference("Residential")}
+                unit="Housing"
+                selected={state.preference === "housing"}
+                onClick={() => setPreference("housing")}
               />
               <UnitToggle
-                unit="Community"
-                selected={state.preference === "Community"}
-                onClick={() => setPreference("Community")}
+                unit="Commercial"
+                selected={state.preference === "commercial"}
+                onClick={() => setPreference("commercial")
+                }
               />
             </div>
           </div>
