@@ -8,9 +8,12 @@ import HowItWorks from "./pages/HowItWorks";
 import Information from "./pages/Information";
 import Login from "./pages/Login";
 import Location from "./pages/Location";
+import LocationFound from "./pages/LocationFound";
+import LocationNotFound from "./pages/LocationNotFound";
 import MapHeat from "./pages/MapHeat";
 import Name from "./pages/Name";
 import NotFound from "./pages/NotFound";
+import Reports from "./pages/Reports";
 import ScoreProject from "./pages/ScoreProject";
 import Signup from "./pages/Signup";
 
@@ -25,6 +28,9 @@ function App() {
     "/name",
     "/location",
     "/signup",
+    "/location-found",
+    "/location-not-found",
+    "/reports",
   ]);
   const showPostAuthChrome = !onboardingPaths.has(location.pathname);
 
@@ -42,6 +48,9 @@ function App() {
         <Route path="/aboutuser" element={<AboutUser />} />
         <Route path="/name" element={<Name />} />
         <Route path="/location" element={<Location />} />
+        <Route path="/location-found" element={<LocationFound />} />
+        <Route path="/location-not-found" element={<LocationNotFound />} />
+        <Route path="/reports" element={<Reports />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
