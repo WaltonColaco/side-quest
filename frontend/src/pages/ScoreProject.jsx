@@ -53,7 +53,7 @@ function ScoreProject() {
         id: Date.now(),
         fileName: file?.name || "Untitled",
         createdAt: new Date().toISOString(),
-        address: data?.address || "Location not detected",
+        address: detectedAddress,
         found,
       };
       const existing = JSON.parse(localStorage.getItem("sidequest_reports") || "[]");

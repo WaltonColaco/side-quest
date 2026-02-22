@@ -18,7 +18,7 @@ import plusSign from "../assets/images/plus-sign.png";
 import minusSign from "../assets/images/minus-sign.png";
 import { useSettings } from "../context/SettingsContext";
 import SettingsCard from "../components/SettingsCard";
-import { fetchLocations } from "../services/api";
+import { fetchFeatures, fetchLocations, geocodeSearch } from "../services/api";
 
 function getScoreColor(score) {
   if (score === null || score === undefined) return "#274b7b";
@@ -64,6 +64,74 @@ function HeatLayer({ data }) {
   return null;
 }
 
+function SearchZoomController({ query, pins, onSearchResult }) {
+  const map = useMap();
+
+  useEffect(() => {
+    const q = (query || "").trim();
+    if (!q) return;
+
+    const normalized = q.toLowerCase();
+    const localMatch = pins.find((pin) => {
+      const address = (pin.address || "").toLowerCase();
+      const name = (pin.name || "").toLowerCase();
+      return address.includes(normalized) || name.includes(normalized);
+    });
+
+    if (localMatch) {
+      map.setView(localMatch.position, 15, { animate: true });
+      onSearchResult?.({ ok: true });
+      return;
+    }
+
+    const bounds = map.getBounds();
+    const south = bounds.getSouth();
+    const west = bounds.getWest();
+    const north = bounds.getNorth();
+    const east = bounds.getEast();
+    const boundedQuery = `${q} within ${south.toFixed(4)},${west.toFixed(4)} to ${north.toFixed(4)},${east.toFixed(4)}`;
+
+    let cancelled = false;
+    const runGeocode = async () => {
+      try {
+        let result = null;
+        try {
+          result = await geocodeSearch(q);
+        } catch {
+          result = await geocodeSearch(boundedQuery);
+        }
+        if (cancelled || !result) return;
+
+        const lat = Number.parseFloat(result.lat);
+        const lon = Number.parseFloat(result.lng);
+        if (Number.isNaN(lat) || Number.isNaN(lon)) return;
+        map.setView([lat, lon], 14, { animate: true });
+        onSearchResult?.({ ok: true });
+      } catch (error) {
+        const statusCode = error?.response?.status;
+        if (statusCode === 404) {
+          onSearchResult?.({
+            ok: false,
+            message: "Location not found. Try a full address or postal code.",
+          });
+          return;
+        }
+        onSearchResult?.({
+          ok: false,
+          message: "Search failed. Please try again.",
+        });
+        console.error("Search geocoding failed", error);
+      }
+    };
+    runGeocode();
+    return () => {
+      cancelled = true;
+    };
+  }, [map, pins, query]);
+
+  return null;
+}
+
 function MapHeat({ showSettings: initialShowSettings = false }) {
   const navigate = useNavigate();
   const location = useLocation();
@@ -73,6 +141,8 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
   );
   const [showLegend, setShowLegend] = useState(false);
   const [dynamicPins, setDynamicPins] = useState([]);
+  const [heatPoints, setHeatPoints] = useState([]);
+  const [searchMessage, setSearchMessage] = useState("");
 
   useEffect(() => {
     setShowSettings(initialShowSettings || location.pathname === "/settings");
@@ -121,6 +191,13 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
   ]
     .filter(Boolean)
     .join(" ");
+  const searchQuery = useMemo(() => new URLSearchParams(location.search).get("q") || "", [location.search]);
+
+  useEffect(() => {
+    if (!searchMessage) return;
+    const timer = setTimeout(() => setSearchMessage(""), 3000);
+    return () => clearTimeout(timer);
+  }, [searchMessage]);
 
   return (
     <section
@@ -168,6 +245,12 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
         </aside>
       ) : null}
 
+      {searchMessage ? (
+        <div className="map-search-message" role="status" aria-live="polite">
+          {searchMessage}
+        </div>
+      ) : null}
+
       <MapContainer
         center={[53.5461, -113.4938]}
         zoom={12}
@@ -180,19 +263,27 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <HeatLayer data={filteredHeatPoints} />
+        <SearchZoomController
+          query={searchQuery}
+          pins={filteredPins}
+          onSearchResult={({ ok, message }) => {
+            if (ok) setSearchMessage("");
+            else setSearchMessage(message || "Location not found.");
+          }}
+        />
+        <HeatLayer data={heatPoints} />
         {filteredPins.map((pin) => (
           <Marker
             key={pin.id}
             position={pin.position}
             icon={createColoredIcon(getScoreColor(pin.score))}
-            eventHandlers={{
-              click: () =>
-                navigate(`/information?id=${pin.id.replace("loc-", "")}`, {
-                  state: { score: pin.score, address: pin.address || pin.name },
-                }),
-            }}
-          >
+              eventHandlers={{
+                click: () =>
+                  navigate(`/information?id=${pin.id.replace("loc-", "")}`, {
+                    state: { score: pin.score, address: pin.address || null },
+                  }),
+              }}
+            >
             <Popup>
               <div className="pin-popup">
                 <div className="pin-popup-score">

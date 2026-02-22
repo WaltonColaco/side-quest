@@ -10,16 +10,32 @@ function PostAuthChrome() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [activePanel, setActivePanel] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
   const hideBackButton = location.pathname === "/map-heat" || location.pathname === "/settings";
   const hideLeftChrome = location.pathname === "/information";
+  const scoreFlowPaths = new Set([
+    "/score-project",
+    "/reports",
+    "/final-score",
+    "/location-found",
+    "/location-not-found",
+    "/information",
+  ]);
+  const inScoreFlow = scoreFlowPaths.has(location.pathname);
   const hideBrand = location.pathname === "/score-project";
-  const isScoreProject = location.pathname === "/score-project";
-  const navItems = isScoreProject
+  const isMapView = location.pathname === "/map-heat" || location.pathname === "/settings";
+  const navItems = inScoreFlow
     ? [
         { id: "my-reports", label: "My Reports", path: "/reports" },
         { id: "new-audits", label: "New Audits", path: "/score-project" },
-        { id: "settings", label: "Settings" },
       ]
+    : isMapView
+      ? [
+          { id: "search", label: "Search" },
+          { id: "about", label: "About" },
+          { id: "how-it-works", label: "How It Works" },
+          { id: "settings", label: "Settings" },
+        ]
     : [
         { id: "about", label: "About" },
         { id: "how-it-works", label: "How It Works" },
@@ -32,6 +48,15 @@ function PostAuthChrome() {
       return;
     }
     navigate("/home");
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const query = searchQuery.trim();
+    if (!query) return;
+    navigate(`/map-heat?q=${encodeURIComponent(query)}`);
+    setActivePanel(null);
+    setOpen(false);
   };
 
   return (
@@ -112,9 +137,24 @@ function PostAuthChrome() {
                     ? "About"
                     : activePanel === "how-it-works"
                       ? "How it works"
+                      : activePanel === "search"
+                        ? "Search"
                       : "My Reports"}
                 </h2>
-                {activePanel === "about" ? (
+                {activePanel === "search" ? (
+                  <form className="post-auth-search" onSubmit={handleSearchSubmit}>
+                    <input
+                      className="post-auth-search-input"
+                      type="text"
+                      placeholder="Search address, area, or postal code"
+                      value={searchQuery}
+                      onChange={(event) => setSearchQuery(event.target.value)}
+                    />
+                    <button type="submit" className="post-auth-search-button">
+                      Search
+                    </button>
+                  </form>
+                ) : activePanel === "about" ? (
                   <>
                     <p>
                       Accessibility should not be a guessing game. Side-Quest bridges architectural complexity and

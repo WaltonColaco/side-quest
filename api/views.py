@@ -375,6 +375,66 @@ class LocationView(APIView):
         return Response(result)
 
 
+class GeocodeSearchView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        query = (request.query_params.get("q") or "").strip()
+        if not query:
+            return Response({"detail": "Missing query parameter 'q'."}, status=400)
+
+        q_lower = query.lower()
+        has_region = "alberta" in q_lower or "canada" in q_lower
+        primary_query = query if has_region else f"{query}, Alberta, Canada"
+        queries = [primary_query]
+        if primary_query != query:
+            queries.append(query)
+
+        try:
+            first = None
+            used_query = query
+            for q in queries:
+                resp = httpx.get(
+                    "https://nominatim.openstreetmap.org/search",
+                    params={
+                        "q": q,
+                        "format": "jsonv2",
+                        "limit": 1,
+                        "addressdetails": 1,
+                        "countrycodes": "ca",
+                    },
+                    headers={"User-Agent": "side-quest/1.0"},
+                    timeout=6,
+                )
+                if resp.status_code != 200:
+                    continue
+                results = resp.json()
+                if isinstance(results, list) and results:
+                    first = results[0]
+                    used_query = q
+                    break
+
+            if not first:
+                return Response({"detail": "No results found."}, status=404)
+
+            lat = first.get("lat")
+            lon = first.get("lon")
+            if lat is None or lon is None:
+                return Response({"detail": "Invalid geocoding response."}, status=502)
+
+            return Response(
+                {
+                    "query": used_query,
+                    "lat": float(lat),
+                    "lng": float(lon),
+                    "display_name": first.get("display_name"),
+                    "boundingbox": first.get("boundingbox"),
+                }
+            )
+        except Exception:
+            return Response({"detail": "Geocoding failed."}, status=502)
+
+
 class LocationDetailView(APIView):
     permission_classes = [permissions.AllowAny]
 

@@ -13,6 +13,7 @@ import LocationNotFound from "./pages/LocationNotFound";
 import MapHeat from "./pages/MapHeat";
 import Name from "./pages/Name";
 import NotFound from "./pages/NotFound";
+import FinalScore from "./pages/FinalScore";
 import Reports from "./pages/Reports";
 import ScoreProject from "./pages/ScoreProject";
 import Signup from "./pages/Signup";
@@ -31,6 +32,7 @@ function App() {
     "/location-found",
     "/location-not-found",
     "/reports",
+    "/final-score",
   ]);
   const showPostAuthChrome = !onboardingPaths.has(location.pathname);
 
@@ -51,6 +53,7 @@ function App() {
         <Route path="/location-found" element={<LocationFound />} />
         <Route path="/location-not-found" element={<LocationNotFound />} />
         <Route path="/reports" element={<Reports />} />
+        <Route path="/final-score" element={<FinalScore />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/how-it-works" element={<HowItWorks />} />

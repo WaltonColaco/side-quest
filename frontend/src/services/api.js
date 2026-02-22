@@ -43,6 +43,11 @@ export async function fetchLocationDetail(id = null) {
   return data;
 }
 
+export async function geocodeSearch(query) {
+  const { data } = await api.get("/api/geocode/", { params: { q: query } });
+  return data;
+}
+
 export async function extractFile(file, buildingType = null, model = "gpt-4.1") {
   const formData = new FormData();
   formData.append("file", file);

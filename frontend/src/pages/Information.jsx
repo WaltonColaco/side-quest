@@ -16,6 +16,7 @@ function Information() {
   const [location, setLocation] = useState(navState || null);
   const [passes, setPasses] = useState([]);
   const [fails, setFails] = useState([]);
+  const [loadingAddress, setLoadingAddress] = useState(Boolean(locationId));
 
   useEffect(() => {
     const load = async () => {
@@ -26,6 +27,8 @@ function Information() {
         setFails(data.fails || []);
       } catch (e) {
         console.error("Failed to load locations", e);
+      } finally {
+        setLoadingAddress(false);
       }
     };
     load();
@@ -37,9 +40,7 @@ function Information() {
       : null;
   const address =
     location?.address ||
-    location?.name ||
-    location?.source ||
-    "Address not available";
+    (loadingAddress ? "address loading.." : "Address not available");
 
   return (
     <section className="information-screen" aria-label="Information page">

@@ -10,6 +10,9 @@
   --flow-left: clamp(56px, 12vw, 185px);
   --flow-top: clamp(150px, 24vh, 220px);
   --flow-title-size: clamp(30px, 2.4vw, 36px);
+  --back-btn-top: 44px;
+  --back-btn-left: 58px;
+  --back-btn-size: 52px;
 }
 
 * {
@@ -346,12 +349,16 @@ h1 {
   padding: 40px 70px;
 }
 
+.reports-page {
+  background: #ffffff;
+}
+
 .location-status-back {
   position: absolute;
-  top: 44px;
-  left: 58px;
-  width: 52px;
-  height: 52px;
+  top: var(--back-btn-top);
+  left: var(--back-btn-left);
+  width: var(--back-btn-size);
+  height: var(--back-btn-size);
   display: inline-flex;
 }
 
@@ -500,20 +507,23 @@ h1 {
 }
 
 .reports-content-card {
-  width: min(1080px, calc(100% - 180px));
-  margin: 120px auto 0;
-  background: #cfcfcd;
-  border-radius: 20px;
-  padding: 42px;
-  min-height: 620px;
+  display: none;
+}
+
+.reports-wrap {
+  width: min(1100px, calc(100% - 160px));
+  margin: 92px auto 0;
 }
 
 .reports-title {
-  margin: 0 0 22px;
+  margin: 0 0 28px;
   color: var(--sage);
   font-family:
     "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
-  font-size: 48px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.02em;
 }
 
 .reports-empty {
@@ -523,30 +533,228 @@ h1 {
 
 .reports-list {
   display: grid;
+  gap: 24px;
+}
+
+.report-row {
+  background: #ffffff;
+  border-radius: 34px;
+  min-height: 90px;
+  display: grid;
+  grid-template-columns: 220px 1fr 170px;
+  align-items: center;
+  padding: 0 42px;
+  gap: 12px;
+}
+
+.report-score {
+  margin: 0;
+  color: var(--sage);
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.report-address {
+  margin: 0;
+  color: #111111;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  justify-self: center;
+}
+
+.report-view-more {
+  text-align: right;
+  color: var(--forest);
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.reports-actions {
+  width: 250px;
+  margin: 40px auto 0;
+  display: grid;
+  gap: 12px;
+}
+
+.reports-view-all,
+.reports-return-home {
+  height: 70px;
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+.reports-view-all {
+  background: var(--sage);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.reports-return-home {
+  background: var(--forest);
+  color: #ffffff;
+}
+
+.final-score-page {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 40px 70px;
+  position: relative;
+}
+
+.final-score-wrap {
+  margin: 120px auto 0;
+  width: min(1260px, calc(100% - 120px));
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 44px;
+}
+
+.final-score-legend {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 12px;
+  transform: translateY(-18px);
+}
+
+.final-score-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.legend-box {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+}
+
+.legend-missing {
+  background: #7a9e7e;
+}
+
+.legend-found {
+  background: #31493c;
+}
+
+.final-score-chart {
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding-left: 68px;
+  margin-top: -20px;
+}
+
+.final-score-bar {
+  width: 50px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.bar-found {
+  background: #31493c;
+}
+
+.bar-missing {
+  background: #7a9e7e;
+}
+
+.final-score-base {
+  height: 8px;
+  background: #000000;
+  margin-top: -2px;
+  width: 72%;
+  margin-left: 68px;
+}
+
+.final-score-percent-row {
+  display: flex;
+  align-items: center;
   gap: 14px;
 }
 
-.report-item {
-  background: #efefef;
-  border-radius: 14px;
-  padding: 18px;
-  border: 1px solid #bcc6be;
+.final-score-zoom {
+  color: var(--sage);
+  font-size: 46px;
+  line-height: 1;
 }
 
-.report-item h2 {
-  margin: 0 0 8px;
-  color: #22382d;
-  font-size: 28px;
+.final-score-percent-row h1 {
+  margin: 0;
+  color: var(--sage);
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 74px;
+  line-height: 100%;
 }
 
-.report-item p {
-  margin: 0 0 8px;
-  font-size: 22px;
+.final-score-right h2 {
+  margin: 30px 0 20px;
+  color: #000000;
+  font-size: 38px;
 }
 
-.report-item small {
-  color: #4b5d52;
-  font-size: 17px;
+.final-score-reasons {
+  display: grid;
+  gap: 16px;
+}
+
+.reason-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+}
+
+.reason-row img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.final-score-actions {
+  margin-top: 38px;
+  display: flex;
+  gap: 14px;
+}
+
+.final-score-home,
+.final-score-download {
+  width: 230px;
+  height: 68px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+.final-score-home {
+  background: var(--forest);
+  color: #ffffff;
+}
+
+.final-score-download {
+  border: none;
+  background: var(--sage);
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .map-heat-screen {
@@ -591,6 +799,24 @@ h1 {
   background: #c9c9c9;
   padding: 18px 18px 26px;
   z-index: 1100;
+}
+
+.map-search-message {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1200;
+  background: rgba(49, 73, 60, 0.92);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  max-width: min(560px, calc(100vw - 36px));
 }
 
 .leaflet-control-zoom a {
@@ -681,20 +907,22 @@ h1 {
 
 .information-back {
   position: absolute;
-  top: 48px;
-  left: 48px;
+  top: var(--back-btn-top);
+  left: var(--back-btn-left);
+  width: var(--back-btn-size);
+  height: var(--back-btn-size);
   display: inline-flex;
   background: transparent;
   border: none;
-  padding: 6px;
+  padding: 0;
   cursor: pointer;
   z-index: 20;
   pointer-events: auto;
 }
 
 .information-back img {
-  width: 42px;
-  height: 42px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -714,7 +942,7 @@ h1 {
   justify-content: center;
   gap: 56px;
   padding: 80px 24px 24px;
-  transform: translate(-40px, -56px);
+  transform: translate(-40px, -88px);
 }
 
 .information-art {
@@ -810,8 +1038,8 @@ h1 {
 
 .post-auth-left {
   position: fixed;
-  top: 10px;
-  left: 14px;
+  top: var(--back-btn-top);
+  left: var(--back-btn-left);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -820,8 +1048,8 @@ h1 {
 }
 
 .post-auth-back {
-  width: 50px;
-  height: 50px;
+  width: var(--back-btn-size);
+  height: var(--back-btn-size);
   border: none;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.88);
@@ -833,8 +1061,8 @@ h1 {
 }
 
 .post-auth-back img {
-  width: 38px;
-  height: 38px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -984,6 +1212,40 @@ h1 {
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0;
+}
+
+.post-auth-search {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.post-auth-search-input {
+  width: 100%;
+  height: 78px;
+  border: none;
+  border-radius: 20px;
+  background: #d9d9d9;
+  padding: 0 22px;
+  color: #555555;
+  font-size: 20px;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+}
+
+.post-auth-search-button {
+  width: 180px;
+  height: 70px;
+  border: none;
+  border-radius: 20px;
+  background: var(--forest);
+  color: #ffffff;
+  font-size: 20px;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  cursor: pointer;
+  justify-self: center;
 }
 
 .settings-card {
@@ -1143,8 +1405,20 @@ h1 {
   gap: 6px;
 }
 
+.settings-dual-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.settings-dual-col {
+  min-width: 0;
+  width: 700px;
+}
+
 .settings-unit-button {
-  width: 76px;
+  width: 140px;
   height: 62px;
   border: none;
   border-radius: 21px;
@@ -1153,6 +1427,7 @@ h1 {
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+  padding: 0 12px;
 }
 
 .settings-unit-button.off {
@@ -1403,6 +1678,11 @@ h1 {
 
   .settings-group h2 {
     font-size: 28px;
+  }
+
+  .settings-dual-row {
+    flex-direction: column;
+    gap: 14px;
   }
 
   .settings-filter-item,

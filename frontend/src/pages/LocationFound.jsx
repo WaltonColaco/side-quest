@@ -28,18 +28,30 @@ function LocationFound() {
   };
 
   return (
-    <section className="location-status-page location-found-page" aria-label="Location found">
-      <Link className="location-status-back" to="/score-project" aria-label="Back to score project">
+    <section
+      className="location-status-page location-found-page"
+      aria-label="Location found"
+    >
+      <Link
+        className="location-status-back"
+        to="/score-project"
+        aria-label="Back to score project"
+      >
         <img src={backButton} alt="Back" />
       </Link>
 
       <div className="location-status-content">
-        <img className="location-status-icon" src={locationFoundIcon} alt="" aria-hidden="true" />
+        <img
+          className="location-status-icon"
+          src={locationFoundIcon}
+          alt=""
+          aria-hidden="true"
+        />
         <h1 className="location-status-title">Location Found</h1>
         <h2 className="location-status-address">{address || "[address detected]"}</h2>
         <p className="location-status-copy">
-          We have detected this project location. Would you like to include this audit in the public accessibility
-          heatmap?
+          We have detected this project location. Would you like to include this
+          audit in the public accessibility heatmap?
         </p>
         {error ? <p className="location-status-error">{error}</p> : null}
         <div className="location-status-actions">
