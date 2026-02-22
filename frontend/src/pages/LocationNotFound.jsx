@@ -20,10 +20,10 @@ function LocationNotFound() {
         </p>
         <input className="location-status-input" type="text" placeholder="Enter project address or postal code" />
         <div className="location-status-actions">
-          <Link className="location-status-yes" to="/score-project">
+          <Link className="location-status-yes" to="/final-score">
             Yes, add to Map
           </Link>
-          <Link className="location-status-private" to="/home">
+          <Link className="location-status-private" to="/final-score">
             Keep private
           </Link>
         </div>

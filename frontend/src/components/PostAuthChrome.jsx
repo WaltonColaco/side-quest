@@ -14,12 +14,19 @@ function PostAuthChrome() {
   const hideLeftChrome = location.pathname === "/information";
   const hideBrand = location.pathname === "/score-project";
   const isScoreProject = location.pathname === "/score-project";
+  const isMapView = location.pathname === "/map-heat" || location.pathname === "/settings";
   const navItems = isScoreProject
     ? [
         { id: "my-reports", label: "My Reports", path: "/reports" },
         { id: "new-audits", label: "New Audits", path: "/score-project" },
-        { id: "settings", label: "Settings" },
       ]
+    : isMapView
+      ? [
+          { id: "search", label: "Search" },
+          { id: "about", label: "About" },
+          { id: "how-it-works", label: "How It Works" },
+          { id: "settings", label: "Settings" },
+        ]
     : [
         { id: "about", label: "About" },
         { id: "how-it-works", label: "How It Works" },
@@ -112,9 +119,22 @@ function PostAuthChrome() {
                     ? "About"
                     : activePanel === "how-it-works"
                       ? "How it works"
+                      : activePanel === "search"
+                        ? "Search"
                       : "My Reports"}
                 </h2>
-                {activePanel === "about" ? (
+                {activePanel === "search" ? (
+                  <div className="post-auth-search">
+                    <input
+                      className="post-auth-search-input"
+                      type="text"
+                      placeholder="Search address, area, or postal code"
+                    />
+                    <button type="button" className="post-auth-search-button">
+                      Search
+                    </button>
+                  </div>
+                ) : activePanel === "about" ? (
                   <>
                     <p>
                       Accessibility should not be a guessing game. Side-Quest bridges architectural complexity and

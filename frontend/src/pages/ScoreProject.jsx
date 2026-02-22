@@ -45,19 +45,24 @@ function ScoreProject() {
     try {
       const data = await extractFile(file, buildingType || null);
       setResult(data);
-      const found = Boolean(data?.address || (data?.lat != null && data?.lng != null));
+      const extractedAddress =
+        (typeof data?.address === "string" && data.address.trim()) ||
+        (typeof data?.result?.location?.address === "string" && data.result.location.address.trim()) ||
+        "";
+      const found = Boolean(extractedAddress);
+      const detectedAddress = extractedAddress || "Location not detected";
       const reportRecord = {
         id: Date.now(),
         fileName: file?.name || "Untitled",
         createdAt: new Date().toISOString(),
-        address: data?.address || "Location not detected",
+        address: detectedAddress,
         found,
       };
       const existing = JSON.parse(localStorage.getItem("sidequest_reports") || "[]");
       localStorage.setItem("sidequest_reports", JSON.stringify([reportRecord, ...existing].slice(0, 30)));
       navigate(found ? "/location-found" : "/location-not-found", {
         state: {
-          address: data?.address || "Location not detected",
+          address: detectedAddress,
           lat: data?.lat ?? null,
           lng: data?.lng ?? null,
           fileName: file?.name || "Untitled",
