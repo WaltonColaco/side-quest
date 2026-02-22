@@ -1,15 +1,9 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import backButton from "../../back-button.png";
-import hackedLogo from "../../hacked-logo.png";
-import navLogo from "../../nav-button.png";
+import backButton from "../assets/images/back-button.png";
+import hackedLogo from "../assets/images/hacked-logo.png";
+import navLogo from "../assets/images/nav-button.png";
 import SettingsCard from "./SettingsCard";
-
-const navItems = [
-  { id: "about", label: "About" },
-  { id: "how-it-works", label: "How It Works" },
-  { id: "settings", label: "Settings" },
-];
 
 function PostAuthChrome() {
   const location = useLocation();
@@ -17,6 +11,20 @@ function PostAuthChrome() {
   const [open, setOpen] = useState(false);
   const [activePanel, setActivePanel] = useState(null);
   const hideBackButton = location.pathname === "/map-heat" || location.pathname === "/settings";
+  const hideLeftChrome = location.pathname === "/information";
+  const hideBrand = location.pathname === "/score-project";
+  const isScoreProject = location.pathname === "/score-project";
+  const navItems = isScoreProject
+    ? [
+        { id: "my-reports", label: "My Reports" },
+        { id: "new-audits", label: "New Audits", path: "/score-project" },
+        { id: "settings", label: "Settings" },
+      ]
+    : [
+        { id: "about", label: "About" },
+        { id: "how-it-works", label: "How It Works" },
+        { id: "settings", label: "Settings" },
+      ];
 
   const handleBack = () => {
     if (window.history.length > 1) {
@@ -28,16 +36,25 @@ function PostAuthChrome() {
 
   return (
     <div className="post-auth-chrome">
-      <div className="post-auth-left">
-        {!hideBackButton ? (
-          <button type="button" className="post-auth-back" onClick={handleBack}>
-            <img src={backButton} alt="Back" />
-          </button>
-        ) : null}
-        <button type="button" className="post-auth-brand-button" onClick={() => navigate("/home")} aria-label="Go home">
-          <img className="post-auth-brand" src={hackedLogo} alt="Hacked logo" />
-        </button>
-      </div>
+      {!hideLeftChrome ? (
+        <div className="post-auth-left">
+          {!hideBackButton ? (
+            <button type="button" className="post-auth-back" onClick={handleBack}>
+              <img src={backButton} alt="Back" />
+            </button>
+          ) : null}
+          {!hideBrand ? (
+            <button
+              type="button"
+              className="post-auth-brand-button"
+              onClick={() => navigate("/home")}
+              aria-label="Go home"
+            >
+              <img className="post-auth-brand" src={hackedLogo} alt="Hacked logo" />
+            </button>
+          ) : null}
+        </div>
+      ) : null}
 
       <div className="post-auth-right">
         <button
@@ -58,6 +75,10 @@ function PostAuthChrome() {
                 className="post-auth-menu-item"
                 onClick={() => {
                   setOpen(false);
+                  if (item.path) {
+                    navigate(item.path);
+                    return;
+                  }
                   setActivePanel(item.id);
                 }}
               >
@@ -70,7 +91,10 @@ function PostAuthChrome() {
 
       {activePanel ? (
         <div className="post-auth-modal" onClick={() => setActivePanel(null)}>
-          <div className="post-auth-modal-card" onClick={(event) => event.stopPropagation()}>
+          <div
+            className={`post-auth-modal-card ${activePanel === "settings" ? "settings-modal-card" : ""}`}
+            onClick={(event) => event.stopPropagation()}
+          >
             {activePanel === "settings" ? (
               <SettingsCard onClose={() => setActivePanel(null)} />
             ) : (
@@ -83,7 +107,13 @@ function PostAuthChrome() {
                 >
                   x
                 </button>
-                <h2 className="post-auth-modal-title">{activePanel === "about" ? "About" : "How it works"}</h2>
+                <h2 className="post-auth-modal-title">
+                  {activePanel === "about"
+                    ? "About"
+                    : activePanel === "how-it-works"
+                      ? "How it works"
+                      : "My Reports"}
+                </h2>
                 {activePanel === "about" ? (
                   <>
                     <p>
@@ -102,7 +132,7 @@ function PostAuthChrome() {
                     <h3>Our team</h3>
                     <p>Built at HackED 2026 by a team focused on accessibility-first, explainable design.</p>
                   </>
-                ) : (
+                ) : activePanel === "how-it-works" ? (
                   <>
                     <h3>The Big Picture</h3>
                     <p>
@@ -119,6 +149,12 @@ function PostAuthChrome() {
                       Plans and place details are compared against standards (for example CSA B651) to produce clear,
                       explainable coverage scores.
                     </p>
+                  </>
+                ) : (
+                  <>
+                    <p>Your saved audit reports will appear here.</p>
+                    <h3>Coming soon</h3>
+                    <p>Report history, filters, and export options are being added next.</p>
                   </>
                 )}
               </div>

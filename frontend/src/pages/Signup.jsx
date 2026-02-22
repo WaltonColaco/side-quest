@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../hacked-logo.png";
-import mailLogo from "../../mail-logo.png";
+import logo from "../assets/images/hacked-logo.png";
+import mailLogo from "../assets/images/mail-logo.png";
 
 function Signup() {
   const navigate = useNavigate();

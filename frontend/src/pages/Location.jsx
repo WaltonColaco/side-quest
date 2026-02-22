@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../hacked-logo.png";
-import areaArt from "../../hacked-logo-2.png";
-import infoLogo from "../../info-logo.png";
+import logo from "../assets/images/hacked-logo.png";
+import areaArt from "../assets/images/hacked-logo-2.png";
+import infoLogo from "../assets/images/info-logo.png";
 
 function Location() {
   const [showInfo, setShowInfo] = useState(false);

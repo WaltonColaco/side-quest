@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from "../../hacked-logo.png";
-import userImage from "../../user.png.png";
+import logo from "../assets/images/hacked-logo.png";
+import userImage from "../assets/images/user.png.png";
 
 function Name() {
   return (

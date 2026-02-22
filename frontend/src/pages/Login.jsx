@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import logo from "../../hacked-logo.png";
+import logo from "../assets/images/hacked-logo.png";
 
 function Login() {
   const navigate = useNavigate();

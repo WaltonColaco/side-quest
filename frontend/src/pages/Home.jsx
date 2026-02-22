@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../hacked-logo.png";
+import logo from "../assets/images/hacked-logo.png";
 
 function Home() {
   return (

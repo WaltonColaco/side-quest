@@ -255,6 +255,89 @@ h1 {
   margin-top: 8px;
 }
 
+.score-project-screen {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 34px 34px 34px 34px;
+  position: relative;
+}
+
+.score-project-logo {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  width: 170px;
+  height: 170px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.score-project-card {
+  width: min(900px, calc(100% - 60px));
+  margin: 28px auto 0;
+  padding: 30px;
+  border: none;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.extract-form {
+  display: grid;
+  gap: 16px;
+}
+
+.drop-zone {
+  border: 2px dashed #9ba79d;
+  border-radius: 20px;
+  min-height: 170px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--forest);
+  background: #f8faf8;
+  cursor: pointer;
+  padding: 16px;
+}
+
+.drop-zone p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.3;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-weight: 700;
+}
+
+.drop-zone small {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.drop-zone.drag-over {
+  border-color: var(--forest);
+  background: #edf3ed;
+}
+
+.form-row {
+  display: grid;
+  gap: 8px;
+}
+
+.form-row label {
+  color: var(--forest);
+  font-weight: 700;
+}
+
+.form-row select {
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #adb7ae;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
 .map-heat-screen {
   position: fixed;
   inset: 0;
@@ -394,6 +477,8 @@ h1 {
   border: none;
   padding: 6px;
   cursor: pointer;
+  z-index: 20;
+  pointer-events: auto;
 }
 
 .information-back img {
@@ -622,12 +707,17 @@ h1 {
   position: absolute;
   top: 120px;
   left: 350px;
-  width: 1104px;
+  width: 940px;
   height: 550px;
   border-radius: 20px;
   background: #cececc;
   overflow: auto;
   opacity: 1;
+}
+
+.settings-modal-card {
+  width: 940px;
+  height: 550px;
 }
 
 .post-auth-modal-close {
@@ -683,6 +773,185 @@ h1 {
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0;
+}
+
+.settings-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: #cececc;
+  padding: 34px 38px;
+  overflow: auto;
+}
+
+.settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  color: var(--sage);
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}
+
+.settings-close {
+  width: 42px;
+  height: 42px;
+  border: none;
+  background: transparent;
+  color: var(--sage);
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 0.7;
+  cursor: pointer;
+}
+
+.settings-group {
+  margin-top: 34px;
+}
+
+.settings-card .settings-group:first-of-type {
+  margin-top: 0;
+}
+
+.settings-group h2 {
+  margin: 0 0 14px;
+  color: #000000;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.settings-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-top: 8px;
+}
+
+.settings-filter-item {
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #111111;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0;
+}
+
+.settings-filter-square {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+.settings-filter-square.off {
+  background: #9e9e9e;
+}
+
+.settings-filter-square.on {
+  background: #2f5140;
+}
+
+.settings-switches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+}
+
+.settings-switch-row {
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.settings-switch {
+  width: 120px;
+  height: 46px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.settings-switch.off {
+  background: #d9d9d9;
+}
+
+.settings-switch.on {
+  background: #7a9e7e;
+}
+
+.settings-switch-knob {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #2f5140;
+  transition: transform 0.2s ease;
+}
+
+.settings-switch.on .settings-switch-knob {
+  transform: translateX(74px);
+}
+
+.settings-switch-label {
+  color: #1a1a1a;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.settings-unit-row {
+  display: inline-flex;
+  align-items: center;
+  background: #d9d9d9;
+  border-radius: 21px;
+  padding: 8px;
+  gap: 6px;
+}
+
+.settings-unit-button {
+  width: 76px;
+  height: 62px;
+  border: none;
+  border-radius: 21px;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-unit-button.off {
+  background: transparent;
+  color: var(--sage);
+}
+
+.settings-unit-button.on {
+  background: #2f5140;
+  color: #ffffff;
 }
 
 .login-screen {
@@ -911,6 +1180,43 @@ h1 {
     height: auto;
     min-height: 300px;
     margin: 90px auto 0;
+  }
+
+  .settings-card {
+    padding: 22px 18px;
+  }
+
+  .settings-header h1 {
+    font-size: 32px;
+  }
+
+  .settings-group h2 {
+    font-size: 28px;
+  }
+
+  .settings-filter-item,
+  .settings-switch-label {
+    font-size: 20px;
+  }
+
+  .settings-switch {
+    width: 112px;
+    height: 46px;
+  }
+
+  .settings-switch-knob {
+    width: 34px;
+    height: 34px;
+  }
+
+  .settings-switch.on .settings-switch-knob {
+    transform: translateX(66px);
+  }
+
+  .settings-unit-button {
+    width: 76px;
+    height: 58px;
+    font-size: 28px;
   }
 
   .global-nav-button {

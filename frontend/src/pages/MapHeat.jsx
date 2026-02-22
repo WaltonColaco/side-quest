@@ -14,8 +14,8 @@ import {
 import marker2x from "leaflet/dist/images/marker-icon-2x.png";
 import marker from "leaflet/dist/images/marker-icon.png";
 import shadow from "leaflet/dist/images/marker-shadow.png";
-import plusSign from "../../plus-sign.png";
-import minusSign from "../../minus-sign.png";
+import plusSign from "../assets/images/plus-sign.png";
+import minusSign from "../assets/images/minus-sign.png";
 import { useSettings } from "../context/SettingsContext";
 import SettingsCard from "../components/SettingsCard";
 import { fetchFeatures, fetchLocations } from "../services/api";
