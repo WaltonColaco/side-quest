@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import hackedLogo from "../../hacked-logo.png";
+import hackedLogo from "../assets/images/hacked-logo.png";
 
 function NavButton() {
   return (

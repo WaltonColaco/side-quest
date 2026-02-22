@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/images/hacked-logo.png";
+import userImage from "../assets/images/user.png.png";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../hacked-logo.png";
-import userImage from "../../user.png.png";
 
 function Name() {
   const inputRef = useRef(null);
@@ -31,14 +32,22 @@ function Name() {
               type="text"
               placeholder="Your name"
             />
-            <button type="button" className="name-next-button" onClick={handleContinue}>
+            <button
+              type="button"
+              className="name-next-button"
+              onClick={handleContinue}
+            >
               Continue
             </button>
           </div>
         </div>
 
         <div className="login-right">
-          <img className="login-user-image" src={userImage} alt="User profile" />
+          <img
+            className="login-user-image"
+            src={userImage}
+            alt="User profile"
+          />
         </div>
       </div>
       <div className="login-bottom-shape" aria-hidden="true" />

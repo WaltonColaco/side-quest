@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/images/hacked-logo.png";
+import areaArt from "../assets/images/hacked-logo-2.png";
+import infoLogo from "../assets/images/info-logo.png";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../hacked-logo.png";
-import areaArt from "../../hacked-logo-2.png";
-import infoLogo from "../../info-logo.png";
 
 function Location() {
   const [showInfo, setShowInfo] = useState(false);
@@ -55,10 +56,18 @@ function Location() {
           />
 
           <div className="location-actions">
-            <button type="button" className="location-continue" onClick={handleContinue}>
+            <button
+              type="button"
+              className="location-continue"
+              onClick={handleContinue}
+            >
               Continue
             </button>
-            <button type="button" className="location-skip" onClick={handleSkip}>
+            <button
+              type="button"
+              className="location-skip"
+              onClick={handleSkip}
+            >
               Skip for now
             </button>
           </div>

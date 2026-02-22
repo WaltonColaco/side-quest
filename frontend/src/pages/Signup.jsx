@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../../hacked-logo.png";
-import mailLogo from "../../mail-logo.png";
+import logo from "../assets/images/hacked-logo.png";
+import mailLogo from "../assets/images/mail-logo.png";
 import { useAuth } from "../context/AuthContext";
 
 function Signup() {
@@ -33,7 +33,13 @@ function Signup() {
 
     setLoading(true);
     try {
-      await signup(email, password, collectedName, collectedRole, collectedLocation);
+      await signup(
+        email,
+        password,
+        collectedName,
+        collectedRole,
+        collectedLocation,
+      );
       // user_name / user_role / user_location stay in localStorage intentionally
       // so they're accessible across sessions
     } catch (err) {
@@ -55,7 +61,11 @@ function Signup() {
 
       <div className="signup-layout">
         <div className="signup-left">
-          <img className="signup-mail-logo" src={mailLogo} alt="Mail illustration" />
+          <img
+            className="signup-mail-logo"
+            src={mailLogo}
+            alt="Mail illustration"
+          />
         </div>
 
         <div className="signup-right">

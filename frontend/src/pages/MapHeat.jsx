@@ -11,12 +11,14 @@ import {
   useMap,
   ZoomControl,
 } from "react-leaflet";
-import plusSign from "../../plus-sign.png";
-import minusSign from "../../minus-sign.png";
+import marker2x from "leaflet/dist/images/marker-icon-2x.png";
+import marker from "leaflet/dist/images/marker-icon.png";
+import shadow from "leaflet/dist/images/marker-shadow.png";
+import plusSign from "../assets/images/plus-sign.png";
+import minusSign from "../assets/images/minus-sign.png";
 import { useSettings } from "../context/SettingsContext";
 import SettingsCard from "../components/SettingsCard";
 import { fetchFeatures, fetchLocations } from "../services/api";
-
 
 function getScoreColor(score) {
   if (score === null || score === undefined) return "#274b7b";
@@ -67,10 +69,14 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
   const location = useLocation();
   const { state } = useSettings();
   const [showSettings, setShowSettings] = useState(
-    initialShowSettings || location.pathname === "/settings"
+    initialShowSettings || location.pathname === "/settings",
   );
   const [showLegend, setShowLegend] = useState(false);
-  const [featureFlags, setFeatureFlags] = useState({ ramp: false, powerDoors: false, elevator: false });
+  const [featureFlags, setFeatureFlags] = useState({
+    ramp: false,
+    powerDoors: false,
+    elevator: false,
+  });
   const [dynamicPins, setDynamicPins] = useState([]);
   const [heatPoints, setHeatPoints] = useState([]);
 
@@ -105,7 +111,11 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
           powerDoors: featureFlags.powerDoors,
           elevator: featureFlags.elevator,
         }));
-        const heat = located.map((d) => [d.latitude, d.longitude, d.score ?? 0.5]);
+        const heat = located.map((d) => [
+          d.latitude,
+          d.longitude,
+          d.score ?? 0.5,
+        ]);
         setDynamicPins(pins);
         setHeatPoints(heat);
       } catch (e) {
@@ -132,7 +142,11 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
         onClick={() => setShowLegend((prev) => !prev)}
         aria-label={showLegend ? "Hide legend" : "Show legend"}
       >
-        <img src={showLegend ? minusSign : plusSign} alt="" aria-hidden="true" />
+        <img
+          src={showLegend ? minusSign : plusSign}
+          alt=""
+          aria-hidden="true"
+        />
       </button>
 
       {showLegend ? (
@@ -182,17 +196,22 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
             position={pin.position}
             icon={createColoredIcon(getScoreColor(pin.score))}
             eventHandlers={{
-              click: () => navigate(`/information?id=${pin.id.replace("loc-", "")}`, {
-                state: { score: pin.score, address: pin.address || pin.name },
-              }),
+              click: () =>
+                navigate(`/information?id=${pin.id.replace("loc-", "")}`, {
+                  state: { score: pin.score, address: pin.address || pin.name },
+                }),
             }}
           >
             <Popup>
               <div className="pin-popup">
                 <div className="pin-popup-score">
-                  {pin.score !== undefined && pin.score !== null ? `${Math.round(pin.score * 100)}%` : "—"}
+                  {pin.score !== undefined && pin.score !== null
+                    ? `${Math.round(pin.score * 100)}%`
+                    : "—"}
                 </div>
-                <div className="pin-popup-address">{pin.address || pin.name}</div>
+                <div className="pin-popup-address">
+                  {pin.address || pin.name}
+                </div>
                 <div className="pin-popup-tags">
                   {pin.ramp ? "✓ Ramp" : "✕ Ramp"}
                   {" • "}

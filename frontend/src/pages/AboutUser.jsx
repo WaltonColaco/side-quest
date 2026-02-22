@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
+import logo from "../assets/images/hacked-logo.png";
+import userImage from "../assets/images/user.png.png";
 import { useNavigate } from "react-router-dom";
-import logo from "../../hacked-logo.png";
-import userImage from "../../user.png.png";
 
 const roles = ["Resident/Visitor", "Design Professional", "Business Owner"];
 
@@ -13,7 +14,10 @@ function AboutUser() {
   };
 
   return (
-    <section className="login-screen about-user-page" aria-label="About user page">
+    <section
+      className="login-screen about-user-page"
+      aria-label="About user page"
+    >
       <Link to="/home" aria-label="Go home">
         <img className="login-logo" src={logo} alt="Hacked logo" />
       </Link>

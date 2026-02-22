@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import logo from "../../hacked-logo.png";
+import logo from "../assets/images/hacked-logo.png";
 import { useAuth } from "../context/AuthContext";
 
 function Login() {
@@ -79,7 +79,11 @@ function Login() {
           <button type="button" className="login-overlay-forgot">
             Forgot Password
           </button>
-          <button type="submit" className="login-overlay-submit" disabled={loading}>
+          <button
+            type="submit"
+            className="login-overlay-submit"
+            disabled={loading}
+          >
             {loading ? "Logging in…" : "Login"}
           </button>
         </form>
