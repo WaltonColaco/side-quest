@@ -11,9 +11,6 @@ import {
   useMap,
   ZoomControl,
 } from "react-leaflet";
-import marker2x from "leaflet/dist/images/marker-icon-2x.png";
-import marker from "leaflet/dist/images/marker-icon.png";
-import shadow from "leaflet/dist/images/marker-shadow.png";
 import plusSign from "../../plus-sign.png";
 import minusSign from "../../minus-sign.png";
 import { useSettings } from "../context/SettingsContext";
@@ -21,13 +18,27 @@ import SettingsCard from "../components/SettingsCard";
 import { fetchFeatures, fetchLocations } from "../services/api";
 
 
-const pinIcon = L.icon({
-  iconRetinaUrl: marker2x,
-  iconUrl: marker,
-  shadowUrl: shadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-});
+function getScoreColor(score) {
+  if (score === null || score === undefined) return "#274b7b";
+  if (score < 0.2) return "#274b7b";
+  if (score < 0.4) return "#80b7cf";
+  if (score < 0.6) return "#a5be83";
+  if (score < 0.8) return "#ccc272";
+  return "#e8c84f";
+}
+
+function createColoredIcon(color) {
+  return L.divIcon({
+    className: "",
+    html: `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41">
+      <path d="M12.5 0C5.596 0 0 5.596 0 12.5c0 9.375 12.5 28.5 12.5 28.5S25 21.875 25 12.5C25 5.596 19.404 0 12.5 0z" fill="${color}" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="12.5" cy="12.5" r="5" fill="#fff" opacity="0.7"/>
+    </svg>`,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [0, -41],
+  });
+}
 
 function HeatLayer({ data }) {
   const map = useMap();
@@ -169,9 +180,9 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
           <Marker
             key={pin.id}
             position={pin.position}
-            icon={pinIcon}
+            icon={createColoredIcon(getScoreColor(pin.score))}
             eventHandlers={{
-              click: () => navigate("/information"),
+              click: () => navigate(`/information?id=${pin.id.replace("loc-", "")}`),
             }}
           >
             <Popup>
