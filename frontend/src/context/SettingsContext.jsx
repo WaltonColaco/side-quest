@@ -10,7 +10,7 @@ const DEFAULT_STATE = {
   },
   theme: {
     darkMode: false,
-    highContrast: true,
+    highContrast: false,
   },
   units: "in", // "mm" or "in"
 };

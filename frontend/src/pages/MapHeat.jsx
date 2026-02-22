@@ -134,8 +134,18 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
     });
   }, [dynamicPins, state.filters]);
 
+  const themeClass = [
+    state.theme.darkMode ? "map-dark" : "",
+    state.theme.highContrast ? "map-high-contrast" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <section className="map-heat-screen" aria-label="Heatmap view">
+    <section
+      className={`map-heat-screen${themeClass ? ` ${themeClass}` : ""}`}
+      aria-label="Heatmap view"
+    >
       <button
         type="button"
         className="legend-toggle"

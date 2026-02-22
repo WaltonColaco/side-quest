@@ -2210,3 +2210,86 @@ h1 {
     margin-top: 16px;
   }
 }
+
+/* ── Dark mode (map page only) ───────────────────────────── */
+.map-dark .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.map-dark .map-legend {
+  background: #1a2232;
+  border: 1px solid #3a5070;
+}
+
+.map-dark .map-legend-title,
+.map-dark .map-legend-label {
+  color: #e0e8f0;
+}
+
+.map-dark .legend-toggle {
+  background: rgba(20, 30, 48, 0.92);
+}
+
+.map-dark .leaflet-popup-content-wrapper,
+.map-dark .leaflet-popup-tip {
+  background: #1a2232;
+  color: #e0e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.map-dark .pin-popup-score,
+.map-dark .pin-popup-address,
+.map-dark .pin-popup-tags {
+  color: #e0e8f0;
+}
+
+.map-dark .leaflet-control-zoom a {
+  background-color: rgba(20, 30, 48, 0.92) !important;
+  color: #e0e8f0 !important;
+  border-color: #3a5070 !important;
+}
+
+/* ── High contrast (map page only) ──────────────────────── */
+.map-high-contrast .leaflet-tile-pane {
+  filter: contrast(1.6) saturate(1.4);
+}
+
+.map-high-contrast .map-legend {
+  background: #000000;
+  border: 2px solid #ffffff;
+}
+
+.map-high-contrast .map-legend-title,
+.map-high-contrast .map-legend-label {
+  color: #ffffff;
+}
+
+.map-high-contrast .legend-toggle {
+  background: #000000;
+  border: 2px solid #ffffff;
+}
+
+.map-high-contrast .leaflet-popup-content-wrapper,
+.map-high-contrast .leaflet-popup-tip {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.map-high-contrast .pin-popup-score,
+.map-high-contrast .pin-popup-address,
+.map-high-contrast .pin-popup-tags {
+  color: #ffffff;
+}
+
+.map-high-contrast .leaflet-control-zoom a {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  font-weight: 900;
+}
+
+/* ── Dark + High Contrast combined ──────────────────────── */
+.map-dark.map-high-contrast .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) contrast(1.4);
+}
