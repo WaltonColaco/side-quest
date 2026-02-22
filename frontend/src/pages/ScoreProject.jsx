@@ -45,7 +45,10 @@ function ScoreProject() {
     try {
       const data = await extractFile(file, buildingType || null);
       setResult(data);
-      const found = Boolean(data?.address || (data?.lat != null && data?.lng != null));
+      // Only treat as "found" when real coordinates were extracted.
+      // An address string alone (without coords) still routes to LocationNotFound
+      // so the user can confirm/edit it before we geocode and save.
+      const found = data?.lat != null && data?.lng != null;
       const reportRecord = {
         id: Date.now(),
         fileName: file?.name || "Untitled",
@@ -55,9 +58,10 @@ function ScoreProject() {
       };
       const existing = JSON.parse(localStorage.getItem("sidequest_reports") || "[]");
       localStorage.setItem("sidequest_reports", JSON.stringify([reportRecord, ...existing].slice(0, 30)));
+      sessionStorage.setItem("sidequest_pending_filename", file?.name || "Untitled");
       navigate(found ? "/location-found" : "/location-not-found", {
         state: {
-          address: data?.address || "Location not detected",
+          address: data?.address || null,  // null when not found — never send fallback garbage to geocoder
           lat: data?.lat ?? null,
           lng: data?.lng ?? null,
           fileName: file?.name || "Untitled",

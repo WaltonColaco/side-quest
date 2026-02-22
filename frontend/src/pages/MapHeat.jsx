@@ -18,7 +18,7 @@ import plusSign from "../assets/images/plus-sign.png";
 import minusSign from "../assets/images/minus-sign.png";
 import { useSettings } from "../context/SettingsContext";
 import SettingsCard from "../components/SettingsCard";
-import { fetchFeatures, fetchLocations } from "../services/api";
+import { fetchLocations } from "../services/api";
 
 function getScoreColor(score) {
   if (score === null || score === undefined) return "#274b7b";
@@ -72,29 +72,11 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
     initialShowSettings || location.pathname === "/settings",
   );
   const [showLegend, setShowLegend] = useState(false);
-  const [featureFlags, setFeatureFlags] = useState({
-    ramp: false,
-    powerDoors: false,
-    elevator: false,
-  });
   const [dynamicPins, setDynamicPins] = useState([]);
-  const [heatPoints, setHeatPoints] = useState([]);
 
   useEffect(() => {
     setShowSettings(initialShowSettings || location.pathname === "/settings");
   }, [initialShowSettings, location.pathname]);
-
-  useEffect(() => {
-    const load = async () => {
-      try {
-        const data = await fetchFeatures();
-        setFeatureFlags(data);
-      } catch (e) {
-        console.error("Failed to load features", e);
-      }
-    };
-    load();
-  }, []);
 
   useEffect(() => {
     const loadLocs = async () => {
@@ -107,23 +89,17 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
           address: d.address,
           score: d.score,
           position: [d.latitude, d.longitude],
-          ramp: featureFlags.ramp,
-          powerDoors: featureFlags.powerDoors,
-          elevator: featureFlags.elevator,
+          ramp: d.ramp ?? false,
+          powerDoors: d.powerDoors ?? false,
+          elevator: d.elevator ?? false,
         }));
-        const heat = located.map((d) => [
-          d.latitude,
-          d.longitude,
-          d.score ?? 0.5,
-        ]);
         setDynamicPins(pins);
-        setHeatPoints(heat);
       } catch (e) {
         console.error("Failed to load location", e);
       }
     };
     loadLocs();
-  }, [featureFlags]);
+  }, []);
 
   const filteredPins = useMemo(() => {
     return dynamicPins.filter((pin) => {
@@ -133,6 +109,11 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
       return true;
     });
   }, [dynamicPins, state.filters]);
+
+  const filteredHeatPoints = useMemo(
+    () => filteredPins.map((pin) => [...pin.position, pin.score ?? 0.5]),
+    [filteredPins],
+  );
 
   const themeClass = [
     state.theme.darkMode ? "map-dark" : "",
@@ -199,7 +180,7 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <HeatLayer data={heatPoints} />
+        <HeatLayer data={filteredHeatPoints} />
         {filteredPins.map((pin) => (
           <Marker
             key={pin.id}

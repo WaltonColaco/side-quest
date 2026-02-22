@@ -98,6 +98,19 @@ def strip_markdown(text: str) -> str:
     return " ".join(text.split())
 
 
+def extract_found_section(md_text: str) -> str:
+    """Return only the 'Found Requirements' section of a candidate markdown.
+    Comparing only this section prevents 'Not Found' mentions from
+    generating spurious cosine similarity against rubric chunks.
+    Falls back to the full text if the section marker is absent."""
+    lower = md_text.lower()
+    start = lower.find("## found requirements")
+    if start == -1:
+        return md_text
+    end = lower.find("\n## ", start + 1)
+    return md_text[start:end] if end != -1 else md_text[start:]
+
+
 def detect_building_type(md_text: str) -> str:
     meta_match = re.search(r"building type:\s*([A-Za-z]+)", md_text, flags=re.I)
     if meta_match:
@@ -591,10 +604,16 @@ def main():
     ensure_schema(con)
 
     for cand in candidates:
-        cand_text = cand.read_text(encoding="utf-8", errors="replace")
-        building_type = detect_building_type(cand_text)
+        full_cand_text = cand.read_text(encoding="utf-8", errors="replace")
+        # Use full text for building-type detection (it has the metadata header)
+        building_type = detect_building_type(full_cand_text)
         rubric_path = rubric_paths[building_type]
         rubric_text = rubric_path.read_text(encoding="utf-8", errors="replace")
+
+        # Limit scoring to the "Found Requirements" section only.
+        # The "Not Found" section mentions the same features as the rubric,
+        # which inflates cosine similarity for absent features.
+        cand_text = extract_found_section(full_cand_text)
 
         # Hashes for cache control
         cand_hash = sha256_text(cand_text)

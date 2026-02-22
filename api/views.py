@@ -1,9 +1,11 @@
 import sys
 import tempfile
+import threading
 from pathlib import Path
 import re
 import sqlite3
 import subprocess
+from urllib.parse import quote as url_quote
 
 from django.contrib.auth.models import User
 from rest_framework import generics, permissions, status
@@ -132,11 +134,8 @@ class ExtractView(APIView):
             if tmp_path and tmp_path.exists():
                 tmp_path.unlink()
 
-        # Compute the permanent report path that smart_extract already wrote to
-        root_dir = Path(__file__).resolve().parent.parent
-        report_path = root_dir / "extracted_output" / f"{Path(uploaded_file.name).stem}_smart.md"
-
-        # Parse coordinates/address and persist to locations table
+        # Parse coordinates/address from extracted markdown.
+        # Do NOT save to DB yet — the user must confirm on LocationFound/LocationNotFound first.
         coord_re = re.compile(r"([-+]?\d+\.\d+)\s*,\s*([-+]?\d+\.\d+)")
         address = None
         lat = lng = None
@@ -152,84 +151,6 @@ class ExtractView(APIView):
         if match:
             lat, lng = match.groups()
             lat, lng = float(lat), float(lng)
-            db_path = root_dir / "db" / "assessment.db"
-            con = sqlite3.connect(db_path)
-            try:
-                # Ensure columns exist
-                for alter in (
-                    "ALTER TABLE locations ADD COLUMN score REAL",
-                    "ALTER TABLE locations ADD COLUMN comparison_id INTEGER",
-                    "ALTER TABLE locations ADD COLUMN report_path TEXT",
-                ):
-                    try:
-                        con.execute(alter)
-                    except sqlite3.OperationalError:
-                        pass
-
-                cur = con.execute(
-                    """
-                    INSERT INTO locations (name, address, latitude, longitude, source_doc, report_path)
-                    VALUES (?, ?, ?, ?, ?, ?)
-                    """,
-                    (address or uploaded_file.name, address, lat, lng, uploaded_file.name, str(report_path)),
-                )
-                location_id = cur.lastrowid
-                con.commit()
-            finally:
-                con.close()
-
-            # Run vector comparison against rubric using the permanent report file
-            try:
-                scripts_dir = root_dir / "scripts"
-                compare_script = scripts_dir / "compare_md_vectors.py"
-                rubric_housing = root_dir / "reports" / "housing.md"
-                rubric_commercial = root_dir / "reports" / "commercial_interiors.md"
-                db_path_arg = root_dir / "db" / "assessment.db"
-                subprocess.run(
-                    [
-                        sys.executable,
-                        str(compare_script),
-                        "--candidate",
-                        str(report_path),
-                        "--rubric-housing",
-                        str(rubric_housing),
-                        "--rubric-commercial",
-                        str(rubric_commercial),
-                        "--db",
-                        str(db_path_arg),
-                        "--model",
-                        "text-embedding-3-small",
-                        "--write-assessment",
-                    ],
-                    check=True,
-                )
-                # Read latest score for this report path
-                con = sqlite3.connect(db_path_arg)
-                try:
-                    cur = con.execute(
-                        """
-                        SELECT comparisons.id, comparisons.overall_score
-                        FROM comparisons
-                        JOIN documents ON documents.id = comparisons.candidate_document_id
-                        WHERE documents.path = ?
-                        ORDER BY comparisons.id DESC
-                        LIMIT 1
-                        """,
-                        (str(report_path),),
-                    )
-                    row = cur.fetchone()
-                    if row:
-                        comp_id, score = row
-                        con.execute(
-                            "UPDATE locations SET score = ?, comparison_id = ? WHERE id = ?",
-                            (score, comp_id, location_id),
-                        )
-                        con.commit()
-                finally:
-                    con.close()
-            except Exception as e:
-                # Don't fail extraction if scoring fails; just return without score.
-                print(f"[extract] compare scoring failed: {e}", file=sys.stderr)
 
         return Response(
             {
@@ -265,13 +186,193 @@ class FeatureFlagsView(APIView):
         return Response({"ramp": ramp, "powerDoors": power, "elevator": elevator})
 
 
+class LocationSaveView(APIView):
+    """
+    POST /api/location/save/
+    Called when the user confirms they want to add their audit to the public map.
+    Body: { address, lat, lng, source_doc }
+    If lat/lng are absent the address is geocoded via Nominatim before saving.
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        address = request.data.get("address") or None
+        lat = request.data.get("lat")
+        lng = request.data.get("lng")
+        source_doc = request.data.get("source_doc") or "Untitled"
+
+        # Geocode if coordinates were not extracted from the document
+        if lat is None or lng is None:
+            if not address:
+                return Response(
+                    {"error": "Address is required when coordinates are not provided."},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+
+            geo_lat = geo_lng = None
+
+            # 1) Google Maps Geocoding API (primary)
+            env = smart_extract.load_env(smart_extract.ENV_FILE)
+            gmaps_key = env.get("GOOGLE_MAPS_API_KEY") or os.getenv("GOOGLE_MAPS_API_KEY")
+            if gmaps_key:
+                try:
+                    gmaps_url = (
+                        "https://maps.googleapis.com/maps/api/geocode/json"
+                        f"?address={url_quote(address)}&key={gmaps_key}"
+                    )
+                    resp = httpx.get(gmaps_url, timeout=5)
+                    gmaps_data = resp.json() if resp.status_code == 200 else {}
+                    if gmaps_data.get("status") == "OK" and gmaps_data.get("results"):
+                        loc = gmaps_data["results"][0]["geometry"]["location"]
+                        geo_lat = float(loc["lat"])
+                        geo_lng = float(loc["lng"])
+                except Exception:
+                    pass  # fall through to Nominatim
+
+            # 2) Nominatim fallback
+            if geo_lat is None:
+                try:
+                    nom_url = (
+                        "https://nominatim.openstreetmap.org/search"
+                        f"?q={url_quote(address)}&format=json&limit=1"
+                    )
+                    resp = httpx.get(nom_url, headers={"User-Agent": "side-quest/1.0"}, timeout=5)
+                    nom_results = resp.json() if resp.status_code == 200 else []
+                    if not nom_results:
+                        return Response(
+                            {"error": "Could not geocode the provided address. Try a more specific address."},
+                            status=status.HTTP_400_BAD_REQUEST,
+                        )
+                    geo_lat = float(nom_results[0]["lat"])
+                    geo_lng = float(nom_results[0]["lon"])
+                except Exception as e:
+                    return Response(
+                        {"error": f"Geocoding failed: {e}"},
+                        status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    )
+
+            lat = geo_lat
+            lng = geo_lng
+        else:
+            lat = float(lat)
+            lng = float(lng)
+
+        root_dir = Path(__file__).resolve().parent.parent
+        report_path = root_dir / "extracted_output" / f"{Path(source_doc).stem}_smart.md"
+        db_path = root_dir / "db" / "assessment.db"
+
+        con = sqlite3.connect(db_path)
+        try:
+            for alter in (
+                "ALTER TABLE locations ADD COLUMN score REAL",
+                "ALTER TABLE locations ADD COLUMN comparison_id INTEGER",
+                "ALTER TABLE locations ADD COLUMN report_path TEXT",
+            ):
+                try:
+                    con.execute(alter)
+                except sqlite3.OperationalError:
+                    pass
+
+            cur = con.execute(
+                """
+                INSERT INTO locations (name, address, latitude, longitude, source_doc, report_path)
+                VALUES (?, ?, ?, ?, ?, ?)
+                """,
+                (address or source_doc, address, lat, lng, source_doc, str(report_path)),
+            )
+            location_id = cur.lastrowid
+            con.commit()
+        finally:
+            con.close()
+
+        # Run vector comparison in a background thread so the response returns
+        # immediately and the frontend doesn't time out waiting for OpenAI embeddings.
+        # The location row is already committed; the score/comparison_id will be
+        # written once the thread finishes (typically 30-60 s).
+        def _score_in_background(report_path, db_path, root_dir, location_id):
+            try:
+                scripts_dir = root_dir / "scripts"
+                compare_script = scripts_dir / "compare_md_vectors.py"
+                rubric_housing = root_dir / "reports" / "housing.md"
+                rubric_commercial = root_dir / "reports" / "commercial_interiors.md"
+                subprocess.run(
+                    [
+                        sys.executable,
+                        str(compare_script),
+                        "--candidate", str(report_path),
+                        "--rubric-housing", str(rubric_housing),
+                        "--rubric-commercial", str(rubric_commercial),
+                        "--db", str(db_path),
+                        "--model", "text-embedding-3-small",
+                        "--write-assessment",
+                    ],
+                    check=True,
+                )
+                con = sqlite3.connect(db_path)
+                try:
+                    cur = con.execute(
+                        """
+                        SELECT comparisons.id, comparisons.overall_score
+                        FROM comparisons
+                        JOIN documents ON documents.id = comparisons.candidate_document_id
+                        WHERE documents.path = ?
+                        ORDER BY comparisons.id DESC
+                        LIMIT 1
+                        """,
+                        (str(report_path),),
+                    )
+                    row = cur.fetchone()
+                    if row:
+                        comp_id, bg_score = row
+                        con.execute(
+                            "UPDATE locations SET score = ?, comparison_id = ? WHERE id = ?",
+                            (bg_score, comp_id, location_id),
+                        )
+                        con.commit()
+                finally:
+                    con.close()
+            except Exception as e:
+                print(f"[location-save] background scoring failed: {e}", file=sys.stderr)
+
+        threading.Thread(
+            target=_score_in_background,
+            args=(report_path, db_path, root_dir, location_id),
+            daemon=True,
+        ).start()
+
+        return Response({"id": location_id})
+
+
 class LocationView(APIView):
     permission_classes = [permissions.AllowAny]
+
+    _RAMP_KEYWORDS = ("ramp", "ramps", "sloped floor")
+    _POWER_KEYWORDS = ("power door", "automatic door", "door operator")
+    _ELEVATOR_KEYWORDS = ("elevator", "lift", "platform lift")
+
+    def _scan_report(self, report_path):
+        if not report_path:
+            return False, False, False
+        try:
+            text = Path(report_path).read_text(encoding="utf-8", errors="ignore").lower()
+            # Scope search to the Found Requirements section only
+            parts = text.split("## found requirements", 1)
+            search_text = parts[1].split("## not found", 1)[0] if len(parts) > 1 else ""
+            ramp = any(k in search_text for k in self._RAMP_KEYWORDS)
+            power = any(k in search_text for k in self._POWER_KEYWORDS)
+            elevator = any(k in search_text for k in self._ELEVATOR_KEYWORDS)
+        except Exception:
+            ramp = power = elevator = False
+        return ramp, power, elevator
 
     def get(self, request):
         qs = Location.objects.all().order_by("-created_at")
         serializer = LocationSerializer(qs, many=True)
-        return Response(serializer.data)
+        result = []
+        for item, loc in zip(serializer.data, qs):
+            ramp, power, elevator = self._scan_report(loc.report_path)
+            result.append({**item, "ramp": ramp, "powerDoors": power, "elevator": elevator})
+        return Response(result)
 
 
 class LocationDetailView(APIView):
