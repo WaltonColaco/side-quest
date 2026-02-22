@@ -13,7 +13,7 @@ const DEFAULT_STATE = {
     highContrast: false,
   },
   units: "in", // "mm" or "in"
-  preference: "public", // "public" or "private"
+  preference: "",
 };
 
 export function SettingsProvider({ children }) {
@@ -40,7 +40,7 @@ export function SettingsProvider({ children }) {
       setPreference: (preference) =>
         setState((s) => ({
           ...s,
-          preference,
+          preference: s.preference === preference ? "" : preference,
         })),
       reset: () => setState(DEFAULT_STATE),
     }),
