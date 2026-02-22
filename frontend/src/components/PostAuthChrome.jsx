@@ -10,6 +10,7 @@ function PostAuthChrome() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [activePanel, setActivePanel] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
   const hideBackButton = location.pathname === "/map-heat" || location.pathname === "/settings";
   const hideLeftChrome = location.pathname === "/information";
   const scoreFlowPaths = new Set([
@@ -47,6 +48,15 @@ function PostAuthChrome() {
       return;
     }
     navigate("/home");
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const query = searchQuery.trim();
+    if (!query) return;
+    navigate(`/map-heat?q=${encodeURIComponent(query)}`);
+    setActivePanel(null);
+    setOpen(false);
   };
 
   return (
@@ -132,16 +142,18 @@ function PostAuthChrome() {
                       : "My Reports"}
                 </h2>
                 {activePanel === "search" ? (
-                  <div className="post-auth-search">
+                  <form className="post-auth-search" onSubmit={handleSearchSubmit}>
                     <input
                       className="post-auth-search-input"
                       type="text"
                       placeholder="Search address, area, or postal code"
+                      value={searchQuery}
+                      onChange={(event) => setSearchQuery(event.target.value)}
                     />
-                    <button type="button" className="post-auth-search-button">
+                    <button type="submit" className="post-auth-search-button">
                       Search
                     </button>
-                  </div>
+                  </form>
                 ) : activePanel === "about" ? (
                   <>
                     <p>
