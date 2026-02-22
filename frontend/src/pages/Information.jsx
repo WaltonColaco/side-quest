@@ -43,10 +43,10 @@ function Information() {
     (loadingAddress ? "address loading.." : "Address not available");
   const topPasses = [...passes]
     .sort((a, b) => (b.similarity ?? -1) - (a.similarity ?? -1))
-    .slice(0, 2);
+    .slice(0, 4);
   const topFails = [...fails]
     .sort((a, b) => (a.similarity ?? 2) - (b.similarity ?? 2))
-    .slice(0, 1);
+    .slice(0, 2);
 
   return (
     <section className="information-screen" aria-label="Information page">

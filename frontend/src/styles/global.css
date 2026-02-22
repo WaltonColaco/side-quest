@@ -739,13 +739,13 @@ h1 {
   display: grid;
   gap: 16px;
   overflow-y: auto;
-  max-height: 320px;
+  max-height: 480px;
   scrollbar-gutter: stable;
 }
 
 .reason-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   font-size: 24px;
 }
@@ -753,7 +753,13 @@ h1 {
 .reason-row img {
   width: 42px;
   height: 42px;
+  flex-shrink: 0;
   object-fit: contain;
+}
+
+.reason-row span {
+  flex: 1;
+  min-width: 0;
 }
 
 .final-score-actions {
@@ -1041,7 +1047,7 @@ h1 {
 
 .info-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
@@ -1050,6 +1056,8 @@ h1 {
   font-weight: 600;
   font-size: 21px;
   line-height: 1.15;
+  flex: 1;
+  min-width: 0;
 }
 
 .nav-link {
@@ -1867,7 +1875,7 @@ h1 {
 
   .information-checklist {
     margin-top: 16px;
-    width: 52px;
+    width: auto;
     gap: 10px;
   }
 

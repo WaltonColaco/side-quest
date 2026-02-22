@@ -165,8 +165,17 @@ Output ONLY a valid JSON object with this exact structure:
 }}
 
 Rules:
-- List every requirement that IS found in "extracted" (found: true).
-- List requirement labels NOT found in "not_found".
+- COMPLIANCE REQUIRED: Only include a requirement in "extracted" if the implementation described \
+  genuinely meets or exceeds the accessibility standard. If a feature is mentioned but with values \
+  that clearly fail the standard, do NOT include it in "extracted" — place it in "not_found" instead. \
+  Examples of non-compliant values that must go to not_found: \
+  doorway width 760 mm (standard: min 860 mm); \
+  hallway width 800 mm (standard: min 1200 mm interior); \
+  light switch at 1400 mm (standard: 400–1100 mm range); \
+  ramp slope steeper than 1:12; \
+  no visual fire alarm (standard: both audible AND visual required). \
+  Use your knowledge of Canadian accessibility standards (CSA B651, CSA B652, NBC) to assess compliance.
+- List requirement labels NOT found (or found but non-compliant) in "not_found".
 - For diagram/floor plan pages: identify which header topics are visually present \
   (e.g. doors drawn → Door Minimum Width, ramps drawn → Ramps, signage → Wayfinding Signage) \
   and only extract info relevant to those visible topics.
@@ -268,6 +277,9 @@ def result_to_md(result: dict, headers: dict = None) -> str:
         lines.append("")
 
     extracted = result.get("extracted", [])
+    # Always write the header so extract_found_section() doesn't fall back to full text
+    lines.append("## Found Requirements")
+    lines.append("")
     if extracted:
         # Group by category
         by_cat: dict[str, list] = {}
@@ -275,10 +287,9 @@ def result_to_md(result: dict, headers: dict = None) -> str:
             cat = item.get("category", "uncategorised")
             by_cat.setdefault(cat, []).append(item)
 
-        lines.append("## Found Requirements")
-        lines.append("")
         for cat, items in by_cat.items():
             lines.append(f"### {cat}")
+            lines.append("")
             for item in items:
                 conf = item.get("confidence", 0)
                 conf_pct = f"{int(conf * 100)}%"
@@ -290,7 +301,7 @@ def result_to_md(result: dict, headers: dict = None) -> str:
                 if values:
                     for k, v in values.items():
                         lines.append(f"  - `{k}`: {v}")
-            lines.append("")
+                lines.append("")  # blank line after each requirement so chunker splits them individually
 
     not_found = result.get("not_found", [])
     if not_found:
@@ -450,7 +461,7 @@ def extract_from_pdf(client: OpenAI, pdf_path: Path, system: str, model: str) ->
 
 
 def extract_from_text(client: OpenAI, text: str, system: str, model: str) -> dict:
-    truncated = text[:15000] if len(text) > 15000 else text
+    truncated = text[:80000] if len(text) > 80000 else text
     response = client.chat.completions.create(
         model=model,
         messages=[

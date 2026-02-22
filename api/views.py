@@ -403,26 +403,37 @@ class LocationView(APIView):
 
     def _scan_report(self, report_path):
         if not report_path:
-            return False, False, False
+            return False, False, False, ""
         try:
-            text = Path(report_path).read_text(encoding="utf-8", errors="ignore").lower()
-            # Scope search to the Found Requirements section only
-            parts = text.split("## found requirements", 1)
+            text = Path(report_path).read_text(encoding="utf-8", errors="ignore")
+            text_lower = text.lower()
+            # Extract building type from the header (before any section)
+            bt_match = re.search(r'\*\*building type:\*\*\s*(\w+)', text_lower)
+            building_type = bt_match.group(1) if bt_match else ""
+            # Scope keyword search to the Found Requirements section only
+            parts = text_lower.split("## found requirements", 1)
             search_text = parts[1].split("## not found", 1)[0] if len(parts) > 1 else ""
             ramp = any(k in search_text for k in self._RAMP_KEYWORDS)
             power = any(k in search_text for k in self._POWER_KEYWORDS)
             elevator = any(k in search_text for k in self._ELEVATOR_KEYWORDS)
         except Exception:
             ramp = power = elevator = False
-        return ramp, power, elevator
+            building_type = ""
+        return ramp, power, elevator, building_type
 
     def get(self, request):
         qs = Location.objects.all().order_by("-created_at")
         serializer = LocationSerializer(qs, many=True)
         result = []
         for item, loc in zip(serializer.data, qs):
-            ramp, power, elevator = self._scan_report(loc.report_path)
-            result.append({**item, "ramp": ramp, "powerDoors": power, "elevator": elevator})
+            ramp, power, elevator, building_type = self._scan_report(loc.report_path)
+            result.append({
+                **item,
+                "ramp": ramp,
+                "powerDoors": power,
+                "elevator": elevator,
+                "buildingType": building_type,
+            })
         return Response(result)
 
 
@@ -614,3 +625,97 @@ class LocationDetailView(APIView):
             "breakdown": breakdown,
         }
         return Response(data)
+
+
+def _md_to_pdf_bytes(md_content: str) -> bytes:
+    """Convert markdown text to PDF bytes using PyMuPDF Story (multi-page)."""
+    import io
+    import fitz  # PyMuPDF
+
+    # Minimal markdown → HTML conversion
+    def md_to_html(text: str) -> str:
+        import re as _re
+        text = _re.sub(r'^### (.+)$', r'<h3>\1</h3>', text, flags=_re.MULTILINE)
+        text = _re.sub(r'^## (.+)$', r'<h2>\1</h2>', text, flags=_re.MULTILINE)
+        text = _re.sub(r'^# (.+)$', r'<h1>\1</h1>', text, flags=_re.MULTILINE)
+        text = _re.sub(r'\*\*(.+?)\*\*', r'<b>\1</b>', text)
+        text = _re.sub(r'\*(.+?)\*', r'<i>\1</i>', text)
+        paragraphs = _re.split(r'\n\n+', text)
+        parts = []
+        for p in paragraphs:
+            p = p.strip()
+            if not p:
+                continue
+            if p.startswith('<h'):
+                parts.append(p)
+            else:
+                p = p.replace('\n', '<br/>')
+                parts.append(f'<p>{p}</p>')
+        return '\n'.join(parts)
+
+    html = (
+        "<html><head><style>"
+        "body{font-family:Helvetica,Arial,sans-serif;font-size:10pt;color:#111;}"
+        "h1{font-size:16pt;color:#31493c;margin-top:16pt;}"
+        "h2{font-size:13pt;color:#31493c;margin-top:12pt;}"
+        "h3{font-size:11pt;color:#31493c;margin-top:8pt;}"
+        "p{margin:3pt 0;line-height:1.45;}"
+        "</style></head><body>"
+        f"{md_to_html(md_content)}"
+        "</body></html>"
+    )
+
+    buf = io.BytesIO()
+    story = fitz.Story(html)
+    writer = fitz.DocumentWriter(buf)
+    mediabox = fitz.paper_rect("a4")
+    where = mediabox + (50, 50, -50, -50)  # margins
+    more = 1
+    while more:
+        device = writer.begin_page(mediabox)
+        more, _ = story.place(where)
+        story.draw(device)
+        writer.end_page()
+    writer.close()
+    return buf.getvalue()
+
+
+class LocationReportDownloadView(APIView):
+    """
+    GET /api/location/download/?id=<location_id>
+    Returns the accessibility report for the given location as a PDF download.
+    Falls back to serving the raw markdown file if PDF generation fails.
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        from django.http import HttpResponse
+
+        location_id = request.query_params.get("id")
+        if not location_id:
+            return Response({"detail": "Missing id parameter."}, status=400)
+
+        loc = Location.objects.filter(id=location_id).first()
+        if not loc:
+            return Response({"detail": "Location not found."}, status=404)
+
+        report_path = loc.report_path
+        if not report_path or not Path(report_path).exists():
+            return Response({"detail": "Report file not found."}, status=404)
+
+        md_content = Path(report_path).read_text(encoding="utf-8")
+        stem = Path(report_path).stem
+
+        try:
+            pdf_bytes = _md_to_pdf_bytes(md_content)
+            response = HttpResponse(pdf_bytes, content_type="application/pdf")
+            response["Content-Disposition"] = f'attachment; filename="{stem}.pdf"'
+            return response
+        except Exception:
+            # Fall back to raw markdown
+            response = HttpResponse(
+                md_content.encode("utf-8"),
+                content_type="text/plain; charset=utf-8",
+            )
+            response["Content-Disposition"] = f'attachment; filename="{stem}.md"'
+            return response

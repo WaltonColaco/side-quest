@@ -141,7 +141,6 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
   );
   const [showLegend, setShowLegend] = useState(false);
   const [dynamicPins, setDynamicPins] = useState([]);
-  const [heatPoints, setHeatPoints] = useState([]);
   const [searchMessage, setSearchMessage] = useState("");
 
   useEffect(() => {
@@ -162,6 +161,7 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
           ramp: d.ramp ?? false,
           powerDoors: d.powerDoors ?? false,
           elevator: d.elevator ?? false,
+          buildingType: d.buildingType || "",
         }));
         setDynamicPins(pins);
       } catch (e) {
@@ -176,9 +176,10 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
       if (state.filters.ramp && !pin.ramp) return false;
       if (state.filters.powerDoors && !pin.powerDoors) return false;
       if (state.filters.elevator && !pin.elevator) return false;
+      if (state.preference && pin.buildingType && pin.buildingType !== state.preference) return false;
       return true;
     });
-  }, [dynamicPins, state.filters]);
+  }, [dynamicPins, state.filters, state.preference]);
 
   const filteredHeatPoints = useMemo(
     () => filteredPins.map((pin) => [...pin.position, pin.score ?? 0.5]),
@@ -271,7 +272,7 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
             else setSearchMessage(message || "Location not found.");
           }}
         />
-        <HeatLayer data={heatPoints} />
+        <HeatLayer data={filteredHeatPoints} />
         {filteredPins.map((pin) => (
           <Marker
             key={pin.id}

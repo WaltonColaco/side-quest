@@ -1,0 +1,82 @@
+-------------------------------------------------
+GENERAL OVERVIEW
+--------------------------------------------------
+Single-storey bungalow with unfinished basement.
+Total Area: 1350 sq ft
+Rooms: Living Room, Kitchen, Dining Area, 2 Bedrooms,
+1 Bathroom, Laundry Closet, Small Office.
+
+Some accessibility ideas included, but not designed to full standards.
+
+--------------------------------------------------
+PHYSICAL ACCESS FEATURES
+--------------------------------------------------
+
+1. ACCESSIBLE ROUTES
+- Rear entrance has small ramp (1:10 slope).
+- Front entrance has 2 steps.
+- Interior hallways: 1000 mm width (below recommended 1200 mm).
+- Exterior path width: 1100 mm.
+
+2. DOORS
+- Main doors: 820 mm width.
+- Bedroom doors: 800 mm width.
+- Limited maneuvering clearance at bathroom door.
+
+3. MANEUVERING SPACE
+- Living room allows ~1500 mm turning space.
+- Kitchen aisle: 1000 mm.
+- Other rooms tight.
+
+4. SECOND FLOOR / BASEMENT ACCESS
+- Basement stairs only.
+- No lift retrofit planning.
+
+5. KITCHEN
+- Lowered section of counter at 800 mm height.
+- Sink cabinet removable for wheelchair access.
+- No full accessible-ready layout.
+
+6. BATHROOM
+- Grab bar backing installed near toilet.
+- Walk-in shower planned but narrow (900 mm).
+- Turning radius limited.
+
+7. BEDROOMS
+- Wider space on one side of bed.
+- Closet doors standard width.
+- No ceiling lift reinforcement.
+
+8. LAUNDRY
+- Front-loading washer/dryer.
+- Tight clearance around machines.
+
+9. OPERATING CONTROLS
+- Some switches at 1100 mm.
+- Others at 1300 mm.
+- Thermostat at 1200 mm.
+
+--------------------------------------------------
+SENSORY ALERT FEATURES
+--------------------------------------------------
+
+- Smoke detectors with audible alarm.
+- One visual strobe in hallway only.
+- No visual doorbell or CO alarm strobe.
+
+--------------------------------------------------
+SOCIAL HEALTH FEATURES
+--------------------------------------------------
+
+- Some signage in plain-language English.
+- Large-font labels in kitchen.
+- No ASL or LSQ materials.
+- No braille signage.
+
+--------------------------------------------------
+ADDITIONAL FEATURES
+--------------------------------------------------
+
+- Lever handles on main doors only.
+- Slip-resistant bathroom floor.
+- One parking space with extra side clearance.

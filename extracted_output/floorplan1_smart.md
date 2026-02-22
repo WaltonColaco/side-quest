@@ -6,23 +6,34 @@
 - **Model:** gpt-4.1
 
 ## Notes
-This is a residential floor plan with labeled rooms and fixtures. No explicit accessibility signage, measurements, or alerts are visible. The presence of showers, bathtubs, and labeled rooms allows inference of some accessible-ready features, but no explicit ADA or accessibility standards are indicated.
+This is a residential floor plan with labeled rooms and some features that could potentially be made accessible, but no explicit accessibility measurements, signage, or compliance details are provided. No location information is visible.
 
 ## Found Requirements
 
 ### physical_access
-- **Door Minimum Width** (confidence: 70%)
-  - Multiple doors are drawn throughout the floor plan, including entry, interior, and bathroom doors.
+
 - **Accessible-Ready Bathroom Showers** (confidence: 70%)
-  - Bath 2 is labeled with 'SHOWER', indicating a shower is present.
+  - Master bath includes a labeled shower area, which could potentially be made accessible.
+  - `room_label`: M. BATH
+  - `shower_present`: True
+
 - **Accessible-Ready Bathroom Bathtubs** (confidence: 70%)
-  - Master Bath is labeled with 'TUB', indicating a bathtub is present.
+  - Master bath includes a labeled tub area, which could potentially be made accessible.
+  - `room_label`: M. BATH
+  - `tub_present`: True
+
 - **Accessible-Ready Kitchens** (confidence: 70%)
-  - Kitchen is clearly labeled and centrally located with open access to adjacent rooms.
+  - Kitchen is labeled and centrally located, with open access to adjacent rooms.
+  - `room_label`: KITCHEN
+  - `open_access`: True
+
 - **Accessible-Ready Bedrooms** (confidence: 70%)
-  - Three bedrooms are labeled and accessible from hallways.
+  - Multiple bedrooms are labeled and appear to have direct access from hallways.
+  - `bedrooms`: 3
+
 - **Accessible-Ready Laundry Rooms** (confidence: 70%)
-  - Laundry room is labeled and located near the entry and master bedroom.
+  - Laundry room is labeled and accessible from main hallway.
+  - `room_label`: LAUNDRY
 
 ## Not Found
 
@@ -32,6 +43,7 @@ This is a residential floor plan with labeled rooms and fixtures. No explicit ac
 ### physical_access
 - Accessible Routes
 - Alternate Accessible Routes (Stair Alternatives)
+- Door Minimum Width
 - Accessible Maneuvering Area at Doors
 - Accessible-Ready Bathroom Medicine Cabinets
 - Operating Controls Height and Reach

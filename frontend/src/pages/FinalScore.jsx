@@ -188,17 +188,32 @@ function FinalScore() {
             <Link className="final-score-home" to="/home">
               Return to Home
             </Link>
-            <Link
-              className="final-score-download"
-              to="/map-heat"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              View on Map
-            </Link>
+            {locationId ? (
+              <a
+                className="final-score-download"
+                href={`/api/location/download/?id=${locationId}`}
+                download
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                Download PDF
+              </a>
+            ) : (
+              <Link
+                className="final-score-download"
+                to="/map-heat"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                View on Map
+              </Link>
+            )}
           </div>
         </div>
       </div>

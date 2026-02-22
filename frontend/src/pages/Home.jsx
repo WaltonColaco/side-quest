@@ -16,6 +16,9 @@ function Home() {
           <Link className="landing-action" to="/score-project">
             Audit A Project
           </Link>
+          <Link className="landing-action" to="/reports">
+            View Reports
+          </Link>
         </div>
       </div>
     </section>

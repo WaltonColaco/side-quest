@@ -10,6 +10,7 @@ from api.views import (
     GeocodeSearchView,
     LocationView, LocationSaveView, MyLocationsView,
     LocationDetailView,
+    LocationReportDownloadView,
     RegisterView,
     MeView,
 )
@@ -28,5 +29,6 @@ urlpatterns = [
     path("api/location/mine/", MyLocationsView.as_view(), name="location-mine"),
     path("api/geocode/", GeocodeSearchView.as_view(), name="geocode"),
     path("api/location/detail/", LocationDetailView.as_view(), name="location-detail"),
+    path("api/location/download/", LocationReportDownloadView.as_view(), name="location-download"),
     path("api/location/", LocationView.as_view(), name="location"),
 ]
