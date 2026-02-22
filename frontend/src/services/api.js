@@ -37,8 +37,9 @@ export async function fetchLocations() {
   return data;
 }
 
-export async function fetchLocationDetail() {
-  const { data } = await api.get("/api/location/detail/");
+export async function fetchLocationDetail(id = null) {
+  const params = id ? { id } : {};
+  const { data } = await api.get("/api/location/detail/", { params });
   return data;
 }
 

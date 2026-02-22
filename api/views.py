@@ -278,7 +278,11 @@ class LocationDetailView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def get(self, request):
-        loc = Location.objects.order_by("-created_at").first()
+        location_id = request.query_params.get("id")
+        if location_id:
+            loc = Location.objects.filter(id=location_id).first()
+        else:
+            loc = Location.objects.order_by("-created_at").first()
         if not loc:
             return Response({"detail": "No locations"}, status=404)
 

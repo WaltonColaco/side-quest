@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import backButton from "../../back-button.png";
 import houseImage from "../../hacked-logo.png";
 import checkIcon from "../../tick-mark.png";
@@ -8,18 +8,20 @@ import { fetchLocationDetail } from "../services/api";
 
 function Information() {
   const [location, setLocation] = useState(null);
+  const [searchParams] = useSearchParams();
+  const locationId = searchParams.get("id");
 
   useEffect(() => {
     const load = async () => {
       try {
-        const data = await fetchLocationDetail();
+        const data = await fetchLocationDetail(locationId);
         setLocation(data);
       } catch (e) {
         console.error("Failed to load locations", e);
       }
     };
     load();
-  }, []);
+  }, [locationId]);
 
   const scorePct =
     location && location.score != null ? Math.round(location.score * 100) : null;
