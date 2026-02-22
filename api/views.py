@@ -5,12 +5,14 @@ import re
 import sqlite3
 import subprocess
 
+from django.contrib.auth.models import User
 from rest_framework import generics, permissions, status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework_simplejwt.authentication import JWTAuthentication
 import httpx
 
-from .models import Assessment, Comparison, Location, ChunkMatch
+from .models import Assessment, Comparison, Location, ChunkMatch, UserProfile
 from .serializers import (
     AssessmentSerializer,
     ComparisonSerializer,
@@ -23,6 +25,54 @@ if _SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, _SCRIPTS_DIR)
 
 import smart_extract  # noqa: E402
+
+
+class RegisterView(APIView):
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        email = request.data.get("email", "").strip().lower()
+        password = request.data.get("password", "")
+        if not email or not password:
+            return Response(
+                {"error": "Email and password are required."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        if "@" not in email:
+            return Response(
+                {"error": "Please enter a valid email address."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        if User.objects.filter(username=email).exists():
+            return Response(
+                {"error": "An account with this email already exists."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        name = request.data.get("name", "").strip()
+        role = request.data.get("role", "").strip()
+        location = request.data.get("location", "").strip()
+        user = User.objects.create_user(username=email, email=email, password=password)
+        if name:
+            user.first_name = name
+            user.save()
+        UserProfile.objects.create(user=user, role=role, location=location)
+        return Response({"id": user.id, "email": user.email}, status=status.HTTP_201_CREATED)
+
+
+class MeView(APIView):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        user = request.user
+        profile = getattr(user, "profile", None)
+        return Response({
+            "id": user.id,
+            "email": user.email or user.username,
+            "name": user.first_name,
+            "role": profile.role if profile else "",
+            "location": profile.location if profile else "",
+        })
 
 
 class LatestAssessments(generics.ListAPIView):
@@ -82,6 +132,10 @@ class ExtractView(APIView):
             if tmp_path and tmp_path.exists():
                 tmp_path.unlink()
 
+        # Compute the permanent report path that smart_extract already wrote to
+        root_dir = Path(__file__).resolve().parent.parent
+        report_path = root_dir / "extracted_output" / f"{Path(uploaded_file.name).stem}_smart.md"
+
         # Parse coordinates/address and persist to locations table
         coord_re = re.compile(r"([-+]?\d+\.\d+)\s*,\s*([-+]?\d+\.\d+)")
         address = None
@@ -98,13 +152,14 @@ class ExtractView(APIView):
         if match:
             lat, lng = match.groups()
             lat, lng = float(lat), float(lng)
-            db_path = Path(__file__).resolve().parent.parent / "db" / "assessment.db"
+            db_path = root_dir / "db" / "assessment.db"
             con = sqlite3.connect(db_path)
             try:
                 # Ensure columns exist
                 for alter in (
                     "ALTER TABLE locations ADD COLUMN score REAL",
                     "ALTER TABLE locations ADD COLUMN comparison_id INTEGER",
+                    "ALTER TABLE locations ADD COLUMN report_path TEXT",
                 ):
                     try:
                         con.execute(alter)
@@ -113,33 +168,29 @@ class ExtractView(APIView):
 
                 cur = con.execute(
                     """
-                    INSERT INTO locations (name, address, latitude, longitude, source_doc)
-                    VALUES (?, ?, ?, ?, ?)
+                    INSERT INTO locations (name, address, latitude, longitude, source_doc, report_path)
+                    VALUES (?, ?, ?, ?, ?, ?)
                     """,
-                    (address or uploaded_file.name, address, lat, lng, uploaded_file.name),
+                    (address or uploaded_file.name, address, lat, lng, uploaded_file.name, str(report_path)),
                 )
                 location_id = cur.lastrowid
                 con.commit()
             finally:
                 con.close()
 
-            # Run vector comparison against rubric and capture score
+            # Run vector comparison against rubric using the permanent report file
             try:
-                scripts_dir = Path(__file__).parent.parent / "scripts"
+                scripts_dir = root_dir / "scripts"
                 compare_script = scripts_dir / "compare_md_vectors.py"
-                rubric_housing = Path(__file__).parent.parent / "reports" / "housing.md"
-                rubric_commercial = Path(__file__).parent.parent / "reports" / "commercial_interiors.md"
-                db_path_arg = Path(__file__).parent.parent / "db" / "assessment.db"
-                # Write the extracted markdown to a temp file for comparison
-                with tempfile.NamedTemporaryFile(suffix=".md", delete=False) as tmp_md:
-                    tmp_md.write(md_content.encode("utf-8"))
-                    tmp_md_path = Path(tmp_md.name)
+                rubric_housing = root_dir / "reports" / "housing.md"
+                rubric_commercial = root_dir / "reports" / "commercial_interiors.md"
+                db_path_arg = root_dir / "db" / "assessment.db"
                 subprocess.run(
                     [
                         sys.executable,
                         str(compare_script),
                         "--candidate",
-                        str(tmp_md_path),
+                        str(report_path),
                         "--rubric-housing",
                         str(rubric_housing),
                         "--rubric-commercial",
@@ -152,7 +203,7 @@ class ExtractView(APIView):
                     ],
                     check=True,
                 )
-                # Read latest score for this temp doc path
+                # Read latest score for this report path
                 con = sqlite3.connect(db_path_arg)
                 try:
                     cur = con.execute(
@@ -164,7 +215,7 @@ class ExtractView(APIView):
                         ORDER BY comparisons.id DESC
                         LIMIT 1
                         """,
-                        (str(tmp_md_path),),
+                        (str(report_path),),
                     )
                     row = cur.fetchone()
                     if row:
@@ -176,7 +227,6 @@ class ExtractView(APIView):
                         con.commit()
                 finally:
                     con.close()
-                tmp_md_path.unlink(missing_ok=True)
             except Exception as e:
                 # Don't fail extraction if scoring fails; just return without score.
                 print(f"[extract] compare scoring failed: {e}", file=sys.stderr)
@@ -228,7 +278,11 @@ class LocationDetailView(APIView):
     permission_classes = [permissions.AllowAny]
 
     def get(self, request):
-        loc = Location.objects.order_by("-created_at").first()
+        location_id = request.query_params.get("id")
+        if location_id:
+            loc = Location.objects.filter(id=location_id).first()
+        else:
+            loc = Location.objects.order_by("-created_at").first()
         if not loc:
             return Response({"detail": "No locations"}, status=404)
 

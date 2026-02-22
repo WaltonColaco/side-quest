@@ -1,11 +1,26 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/hacked-logo.png";
 import areaArt from "../assets/images/hacked-logo-2.png";
 import infoLogo from "../assets/images/info-logo.png";
+import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Location() {
   const [showInfo, setShowInfo] = useState(false);
+  const inputRef = useRef(null);
+  const navigate = useNavigate();
+
+  const handleContinue = () => {
+    const location = inputRef.current?.value.trim();
+    if (location) {
+      localStorage.setItem("user_location", location);
+    }
+    navigate("/signup");
+  };
+
+  const handleSkip = () => {
+    navigate("/signup");
+  };
 
   return (
     <section className="location-page" aria-label="Location page">
@@ -34,18 +49,27 @@ function Location() {
           <h1 className="location-title">Where are you based?</h1>
 
           <input
+            ref={inputRef}
             className="location-input"
             type="text"
             placeholder="Enter neighbourhood or postal code"
           />
 
           <div className="location-actions">
-            <Link className="location-continue" to="/signup">
+            <button
+              type="button"
+              className="location-continue"
+              onClick={handleContinue}
+            >
               Continue
-            </Link>
-            <Link className="location-skip" to="/signup">
+            </button>
+            <button
+              type="button"
+              className="location-skip"
+              onClick={handleSkip}
+            >
               Skip for now
-            </Link>
+            </button>
           </div>
         </div>
 

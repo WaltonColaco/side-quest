@@ -20,67 +20,34 @@ import { useSettings } from "../context/SettingsContext";
 import SettingsCard from "../components/SettingsCard";
 import { fetchFeatures, fetchLocations } from "../services/api";
 
-const heatData = [
-  [53.5444, -113.4909, 0.96], // Downtown
-  [53.5461, -113.4938, 0.88], // Ice District
-  [53.5232, -113.5263, 0.82], // Whyte Ave
-  [53.5408, -113.505, 0.78], // River Valley central
-  [53.5463, -113.5954, 0.74], // West Edmonton
-  [53.5717, -113.428, 0.69], // Northeast Edmonton
-  [53.4978, -113.5144, 0.71], // Southgate area
-  [53.5585, -113.4186, 0.65], // Highlands
-  [53.5157, -113.6158, 0.63], // Callingwood
-  [53.5895, -113.4077, 0.6], // Northlands area
-];
+function getScoreColor(score) {
+  if (score === null || score === undefined) return "#274b7b";
+  if (score < 0.2) return "#274b7b";
+  if (score < 0.4) return "#80b7cf";
+  if (score < 0.6) return "#a5be83";
+  if (score < 0.8) return "#ccc272";
+  return "#e8c84f";
+}
 
-const basePins = [
-  {
-    id: "downtown",
-    name: "Downtown Edmonton",
-    position: [53.5444, -113.4909],
-    ramp: false,
-    powerDoors: false,
-    elevator: false,
-  },
-  {
-    id: "whyte",
-    name: "Whyte Avenue",
-    position: [53.5232, -113.5263],
-    ramp: false,
-    powerDoors: false,
-    elevator: false,
-  },
-  {
-    id: "west-edmonton",
-    name: "West Edmonton",
-    position: [53.5463, -113.5954],
-    ramp: false,
-    powerDoors: false,
-    elevator: false,
-  },
-  {
-    id: "southgate",
-    name: "Southgate Area",
-    position: [53.4978, -113.5144],
-    ramp: false,
-    powerDoors: false,
-    elevator: false,
-  },
-];
+function createColoredIcon(color) {
+  return L.divIcon({
+    className: "",
+    html: `<svg xmlns="http://www.w3.org/2000/svg" width="25" height="41" viewBox="0 0 25 41">
+      <path d="M12.5 0C5.596 0 0 5.596 0 12.5c0 9.375 12.5 28.5 12.5 28.5S25 21.875 25 12.5C25 5.596 19.404 0 12.5 0z" fill="${color}" stroke="#fff" stroke-width="1.5"/>
+      <circle cx="12.5" cy="12.5" r="5" fill="#fff" opacity="0.7"/>
+    </svg>`,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [0, -41],
+  });
+}
 
-const pinIcon = L.icon({
-  iconRetinaUrl: marker2x,
-  iconUrl: marker,
-  shadowUrl: shadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-});
-
-function HeatLayer() {
+function HeatLayer({ data }) {
   const map = useMap();
 
   useEffect(() => {
-    const layer = L.heatLayer(heatData, {
+    if (!data.length) return;
+    const layer = L.heatLayer(data, {
       radius: 30,
       blur: 20,
       maxZoom: 17,
@@ -92,7 +59,7 @@ function HeatLayer() {
     return () => {
       map.removeLayer(layer);
     };
-  }, [map]);
+  }, [map, data]);
 
   return null;
 }
@@ -102,11 +69,16 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
   const location = useLocation();
   const { state } = useSettings();
   const [showSettings, setShowSettings] = useState(
-    initialShowSettings || location.pathname === "/settings"
+    initialShowSettings || location.pathname === "/settings",
   );
   const [showLegend, setShowLegend] = useState(false);
-  const [featureFlags, setFeatureFlags] = useState({ ramp: false, powerDoors: false, elevator: false });
+  const [featureFlags, setFeatureFlags] = useState({
+    ramp: false,
+    powerDoors: false,
+    elevator: false,
+  });
   const [dynamicPins, setDynamicPins] = useState([]);
+  const [heatPoints, setHeatPoints] = useState([]);
 
   useEffect(() => {
     setShowSettings(initialShowSettings || location.pathname === "/settings");
@@ -128,18 +100,24 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
     const loadLocs = async () => {
       try {
         const data = await fetchLocations();
-        const pins = (data || [])
-          .filter((d) => d.latitude && d.longitude)
-          .map((d) => ({
-            id: `loc-${d.id}`,
-            name: d.name || d.address || d.source_doc || "Analyzed Location",
-            address: d.address,
-            position: [d.latitude, d.longitude],
-            ramp: featureFlags.ramp,
-            powerDoors: featureFlags.powerDoors,
-            elevator: featureFlags.elevator,
-          }));
+        const located = (data || []).filter((d) => d.latitude && d.longitude);
+        const pins = located.map((d) => ({
+          id: `loc-${d.id}`,
+          name: d.name || d.address || d.source_doc || "Analyzed Location",
+          address: d.address,
+          score: d.score,
+          position: [d.latitude, d.longitude],
+          ramp: featureFlags.ramp,
+          powerDoors: featureFlags.powerDoors,
+          elevator: featureFlags.elevator,
+        }));
+        const heat = located.map((d) => [
+          d.latitude,
+          d.longitude,
+          d.score ?? 0.5,
+        ]);
         setDynamicPins(pins);
+        setHeatPoints(heat);
       } catch (e) {
         console.error("Failed to load location", e);
       }
@@ -147,24 +125,14 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
     loadLocs();
   }, [featureFlags]);
 
-  const pins = useMemo(() => {
-    const mapped = basePins.map((p) => ({
-      ...p,
-      ramp: featureFlags.ramp,
-      powerDoors: featureFlags.powerDoors,
-      elevator: featureFlags.elevator,
-    }));
-    return [...dynamicPins, ...mapped];
-  }, [featureFlags, dynamicPins]);
-
   const filteredPins = useMemo(() => {
-    return pins.filter((pin) => {
+    return dynamicPins.filter((pin) => {
       if (state.filters.ramp && !pin.ramp) return false;
       if (state.filters.powerDoors && !pin.powerDoors) return false;
       if (state.filters.elevator && !pin.elevator) return false;
       return true;
     });
-  }, [state.filters]);
+  }, [dynamicPins, state.filters]);
 
   return (
     <section className="map-heat-screen" aria-label="Heatmap view">
@@ -174,7 +142,11 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
         onClick={() => setShowLegend((prev) => !prev)}
         aria-label={showLegend ? "Hide legend" : "Show legend"}
       >
-        <img src={showLegend ? minusSign : plusSign} alt="" aria-hidden="true" />
+        <img
+          src={showLegend ? minusSign : plusSign}
+          alt=""
+          aria-hidden="true"
+        />
       </button>
 
       {showLegend ? (
@@ -217,22 +189,27 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <HeatLayer />
+        <HeatLayer data={heatPoints} />
         {filteredPins.map((pin) => (
           <Marker
             key={pin.id}
             position={pin.position}
-            icon={pinIcon}
+            icon={createColoredIcon(getScoreColor(pin.score))}
             eventHandlers={{
-              click: () => navigate("/information"),
+              click: () =>
+                navigate(`/information?id=${pin.id.replace("loc-", "")}`),
             }}
           >
             <Popup>
               <div className="pin-popup">
                 <div className="pin-popup-score">
-                  {pin.score !== undefined && pin.score !== null ? `${Math.round(pin.score * 100)}%` : "—"}
+                  {pin.score !== undefined && pin.score !== null
+                    ? `${Math.round(pin.score * 100)}%`
+                    : "—"}
                 </div>
-                <div className="pin-popup-address">{pin.address || pin.name}</div>
+                <div className="pin-popup-address">
+                  {pin.address || pin.name}
+                </div>
                 <div className="pin-popup-tags">
                   {pin.ramp ? "✓ Ramp" : "✕ Ramp"}
                   {" • "}

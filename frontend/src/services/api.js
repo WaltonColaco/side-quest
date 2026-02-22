@@ -6,6 +6,15 @@ const api = axios.create({
   timeout: 10000,
 });
 
+// Attach JWT token from localStorage on every request (if present)
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("access_token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 api.interceptors.response.use(
   (response) => response,
   (error) => {
@@ -28,8 +37,9 @@ export async function fetchLocations() {
   return data;
 }
 
-export async function fetchLocationDetail() {
-  const { data } = await api.get("/api/location/detail/");
+export async function fetchLocationDetail(id = null) {
+  const params = id ? { id } : {};
+  const { data } = await api.get("/api/location/detail/", { params });
   return data;
 }
 
@@ -50,6 +60,22 @@ export async function extractFile(file, buildingType = null, model = "gpt-4.1") 
 
 export async function fetchFeatures() {
   const { data } = await api.get("/api/features/");
+  return data;
+}
+
+export async function fetchMe() {
+  const { data } = await api.get("/api/me/");
+  return data; // { id, username, name, role, location }
+}
+
+export async function registerUser(email, password, name = "", role = "", location = "") {
+  const { data } = await api.post("/api/register/", { email, password, name, role, location });
+  return data;
+}
+
+export async function loginUser(email, password) {
+  // Django simplejwt expects { username, password } — we store email as the username
+  const { data } = await api.post("/api/token/", { username: email, password });
   return data;
 }
 
