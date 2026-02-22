@@ -8,25 +8,25 @@
 - **Coordinates:** 53.5054235, -113.5048268
 
 ## Notes
-This is a residential floor plan with labeled rooms and measurements. No explicit accessibility signage, routes, or alert systems are visible. Door widths and maneuvering spaces are inferred from the layout, but not explicitly dimensioned for accessibility. No multilingual signage or sensory alerts are present.
+This is a residential floor plan for a single-family home. No explicit accessibility features (such as ramps, grab bars, or signage) are marked, but several rooms and layouts could potentially be made accessible. No meeting rooms or public spaces are present. No signage or alert systems are visible.
 
 ## Found Requirements
 
 ### physical_access
 - **Door Minimum Width** (confidence: 70%)
-  - Doors are visibly marked on the floor plan; standard door symbols are present throughout the house, including entry, bedrooms, bathrooms, and closets.
+  - Doors are visibly marked throughout the floor plan, with most interior doors appearing to be standard width. No explicit measurements, but presence is clear.
 - **Accessible-Ready Bathroom Showers** (confidence: 70%)
-  - Master bathroom includes a shower area labeled 'SHWR', which could potentially be made accessible.
+  - Master bath shows a separate shower area, which could potentially be made accessible.
 - **Accessible-Ready Bathroom Bathtubs** (confidence: 70%)
-  - Master bathroom and Bath 2 both show bathtub locations.
+  - Master bath and Bath 2 both show bathtubs, which could potentially be made accessible.
 - **Accessible-Ready Kitchens** (confidence: 70%)
-  - Kitchen is clearly labeled and centrally located with open access to adjacent rooms.
+  - Kitchen is open and adjacent to main living areas, with clear maneuvering space.
 - **Accessible-Ready Bedrooms** (confidence: 70%)
-  - Three bedrooms are labeled and accessible from main hallways.
+  - Bedrooms are shown with clear entry and maneuvering space.
 - **Accessible-Ready Laundry Rooms** (confidence: 70%)
-  - Laundry room is labeled and located near the master bedroom and entry.
+  - Laundry room is present and appears to have space for maneuvering.
 - **Accessible Maneuvering Area at Doors** (confidence: 70%)
-  - Entryways and rooms appear to have sufficient maneuvering space based on drawn layout.
+  - Most rooms, including bathrooms, bedrooms, and kitchen, show space adjacent to doors for maneuvering.
 
 ## Not Found
 
