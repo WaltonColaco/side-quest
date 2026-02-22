@@ -450,7 +450,7 @@ def extract_from_pdf(client: OpenAI, pdf_path: Path, system: str, model: str) ->
 
 
 def extract_from_text(client: OpenAI, text: str, system: str, model: str) -> dict:
-    truncated = text[:15000] if len(text) > 15000 else text
+    truncated = text[:80000] if len(text) > 80000 else text
     response = client.chat.completions.create(
         model=model,
         messages=[
