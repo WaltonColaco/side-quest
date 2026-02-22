@@ -16,7 +16,7 @@ function PostAuthChrome() {
   const isScoreProject = location.pathname === "/score-project";
   const navItems = isScoreProject
     ? [
-        { id: "my-reports", label: "My Reports" },
+        { id: "my-reports", label: "My Reports", path: "/reports" },
         { id: "new-audits", label: "New Audits", path: "/score-project" },
         { id: "settings", label: "Settings" },
       ]

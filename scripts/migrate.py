@@ -3,6 +3,17 @@
 import sqlite3
 from pathlib import Path
 
+
+def strip_sql_comments(sql: str) -> str:
+    cleaned_lines = []
+    for line in sql.splitlines():
+        # Remove inline or full-line SQL comments.
+        if "--" in line:
+            line = line.split("--", 1)[0]
+        cleaned_lines.append(line)
+    return "\n".join(cleaned_lines)
+
+
 def main():
     db_path = Path('db/assessment.db')
     mig_dir = Path('migrations')
@@ -13,9 +24,10 @@ def main():
 
     for mig in sorted(mig_dir.glob('*.sql')):
         sql = mig.read_text(encoding='utf-8')
+        sql = strip_sql_comments(sql)
         # Run each statement individually so ALTER TABLE re-runs are skipped gracefully.
         # executescript() would abort the whole file on first error.
-        statements = [s.strip() for s in sql.split(';') if s.strip() and not s.strip().startswith('--')]
+        statements = [s.strip() for s in sql.split(';') if s.strip()]
         for stmt in statements:
             try:
                 cur.execute(stmt)

@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/images/hacked-logo.png";
 import { extractFile } from "../services/api";
 
 const ACCEPTED_TYPES = ".pdf,.png,.jpg,.jpeg,.webp,.gif,.bmp,.tiff,.tif,.txt,.md";
 
 function ScoreProject() {
+  const navigate = useNavigate();
   const [file, setFile] = useState(null);
   const [buildingType, setBuildingType] = useState("");
   const [loading, setLoading] = useState(false);
@@ -43,6 +45,24 @@ function ScoreProject() {
     try {
       const data = await extractFile(file, buildingType || null);
       setResult(data);
+      const found = Boolean(data?.address || (data?.lat != null && data?.lng != null));
+      const reportRecord = {
+        id: Date.now(),
+        fileName: file?.name || "Untitled",
+        createdAt: new Date().toISOString(),
+        address: data?.address || "Location not detected",
+        found,
+      };
+      const existing = JSON.parse(localStorage.getItem("sidequest_reports") || "[]");
+      localStorage.setItem("sidequest_reports", JSON.stringify([reportRecord, ...existing].slice(0, 30)));
+      navigate(found ? "/location-found" : "/location-not-found", {
+        state: {
+          address: data?.address || "Location not detected",
+          lat: data?.lat ?? null,
+          lng: data?.lng ?? null,
+          fileName: file?.name || "Untitled",
+        },
+      });
     } catch (err) {
       setError(err.response?.data?.error || err.message || "Extraction failed.");
     } finally {
