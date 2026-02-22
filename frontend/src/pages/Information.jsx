@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import backButton from "../assets/images/back-button.png";
 import houseImage from "../assets/images/hacked-logo.png";
 import checkIcon from "../assets/images/tick-mark.png";
@@ -7,6 +7,7 @@ import crossIcon from "../assets/images/cross-mark.png";
 import { fetchLocationDetail } from "../services/api";
 
 function Information() {
+  const navigate = useNavigate();
   const { state: navState } = useLocation();
   const [searchParams] = useSearchParams();
   const locationId = searchParams.get("id");
