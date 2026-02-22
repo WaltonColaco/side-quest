@@ -63,6 +63,21 @@ export async function extractFile(file, buildingType = null, model = "gpt-4.1") 
   return data;
 }
 
+export async function saveLocation({ address, lat, lng, sourceDoc }) {
+  const { data } = await api.post("/api/location/save/", {
+    address,
+    lat,
+    lng,
+    source_doc: sourceDoc,
+  });
+  return data;
+}
+
+export async function fetchMyLocations() {
+  const { data } = await api.get("/api/location/mine/");
+  return data;
+}
+
 export async function fetchFeatures() {
   const { data } = await api.get("/api/features/");
   return data;
