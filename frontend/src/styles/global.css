@@ -801,6 +801,24 @@ h1 {
   z-index: 1100;
 }
 
+.map-search-message {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1200;
+  background: rgba(49, 73, 60, 0.92);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-family:
+    "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  max-width: min(560px, calc(100vw - 36px));
+}
+
 .leaflet-control-zoom a {
   width: 48px !important;
   height: 48px !important;
@@ -924,7 +942,7 @@ h1 {
   justify-content: center;
   gap: 56px;
   padding: 80px 24px 24px;
-  transform: translate(-40px, -56px);
+  transform: translate(-40px, -88px);
 }
 
 .information-art {
