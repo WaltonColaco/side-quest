@@ -478,10 +478,12 @@ h1 {
 .location-status-private {
   height: 72px;
   width: 220px;
+  border: none;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   font-family:
     "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
   font-size: 18px;

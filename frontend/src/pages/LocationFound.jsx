@@ -11,6 +11,7 @@ function LocationFound() {
   const { address, lat, lng, fileName: stateFileName } = location.state || {};
   const fileName = stateFileName || sessionStorage.getItem("sidequest_pending_filename") || undefined;
   const [saving, setSaving] = useState(false);
+  const [savingPrivate, setSavingPrivate] = useState(false);
   const [error, setError] = useState(null);
 
   const handleAddToMap = async () => {
@@ -24,6 +25,26 @@ function LocationFound() {
       setError(e.response?.data?.error || "Failed to save location. Please try again.");
     } finally {
       setSaving(false);
+    }
+  };
+
+  const handleKeepPrivate = async () => {
+    setSavingPrivate(true);
+    setError(null);
+    try {
+      // Save a hidden/private report record using sentinel coords so it won't render on the map.
+      const result = await saveLocation({
+        address: address || null,
+        lat: 0,
+        lng: 0,
+        sourceDoc: fileName,
+      });
+      navigate(`/final-score?id=${result.id}`);
+    } catch (e) {
+      console.error("Failed to save private report", e);
+      setError(e.response?.data?.error || "Failed to save report. Please try again.");
+    } finally {
+      setSavingPrivate(false);
     }
   };
 
@@ -55,12 +76,22 @@ function LocationFound() {
         </p>
         {error ? <p className="location-status-error">{error}</p> : null}
         <div className="location-status-actions">
-          <button className="location-status-yes" type="button" onClick={handleAddToMap} disabled={saving}>
+          <button
+            className="location-status-yes"
+            type="button"
+            onClick={handleAddToMap}
+            disabled={saving || savingPrivate}
+          >
             {saving ? "Saving…" : "Yes, Add to Map"}
           </button>
-          <Link className="location-status-private" to="/home">
-            Keep private
-          </Link>
+          <button
+            className="location-status-private"
+            type="button"
+            onClick={handleKeepPrivate}
+            disabled={saving || savingPrivate}
+          >
+            {savingPrivate ? "Saving…" : "Keep private"}
+          </button>
         </div>
       </div>
 
