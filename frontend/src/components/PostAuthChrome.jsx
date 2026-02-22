@@ -12,10 +12,18 @@ function PostAuthChrome() {
   const [activePanel, setActivePanel] = useState(null);
   const hideBackButton = location.pathname === "/map-heat" || location.pathname === "/settings";
   const hideLeftChrome = location.pathname === "/information";
+  const scoreFlowPaths = new Set([
+    "/score-project",
+    "/reports",
+    "/final-score",
+    "/location-found",
+    "/location-not-found",
+    "/information",
+  ]);
+  const inScoreFlow = scoreFlowPaths.has(location.pathname);
   const hideBrand = location.pathname === "/score-project";
-  const isScoreProject = location.pathname === "/score-project";
   const isMapView = location.pathname === "/map-heat" || location.pathname === "/settings";
-  const navItems = isScoreProject
+  const navItems = inScoreFlow
     ? [
         { id: "my-reports", label: "My Reports", path: "/reports" },
         { id: "new-audits", label: "New Audits", path: "/score-project" },

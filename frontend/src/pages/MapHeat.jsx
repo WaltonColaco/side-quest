@@ -205,13 +205,13 @@ function MapHeat({ showSettings: initialShowSettings = false }) {
             key={pin.id}
             position={pin.position}
             icon={createColoredIcon(getScoreColor(pin.score))}
-            eventHandlers={{
-              click: () =>
-                navigate(`/information?id=${pin.id.replace("loc-", "")}`, {
-                  state: { score: pin.score, address: pin.address || pin.name },
-                }),
-            }}
-          >
+              eventHandlers={{
+                click: () =>
+                  navigate(`/information?id=${pin.id.replace("loc-", "")}`, {
+                    state: { score: pin.score, address: pin.address || null },
+                  }),
+              }}
+            >
             <Popup>
               <div className="pin-popup">
                 <div className="pin-popup-score">
