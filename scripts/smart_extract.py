@@ -554,7 +554,7 @@ def run_extraction(
     if coords_valid:
         print(f"[smart_extract] Coordinates extracted directly: {coords['lat']}, {coords['lon']}", file=sys.stderr)
     else:
-        geocode_query = address or raw
+        geocode_query = ", ".join(filter(None, [address, raw])) or None
         if geocode_query:
             geocoded = geocode_address(geocode_query, maps_key)
             if geocoded:
