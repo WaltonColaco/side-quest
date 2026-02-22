@@ -35,7 +35,12 @@ function Reports() {
         ) : error ? (
           <p className="reports-error">{error}</p>
         ) : reports.length === 0 ? (
-          <p className="reports-empty">No reports yet. Upload a project to get started.</p>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "32px" }}>
+            <p className="reports-empty">No reports yet. Upload a project to get started.</p>
+            <Link className="reports-return-home" to="/home">
+              Return to Home
+            </Link>
+          </div>
         ) : (
           <>
             <div className="reports-list">

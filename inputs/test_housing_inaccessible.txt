@@ -1,0 +1,79 @@
+--------------------------------------------------
+GENERAL OVERVIEW
+--------------------------------------------------
+Two-storey house.
+Total Area: 1400 sq ft
+Rooms: Living Room, Kitchen, Dining Room, 3 Bedrooms,
+1 Bathroom upstairs, Laundry in basement.
+
+Designed as a typical home with minimal accessibility considerations.
+
+--------------------------------------------------
+PHYSICAL ACCESS FEATURES
+--------------------------------------------------
+
+1. ACCESSIBLE ROUTES
+- Front entrance has 3 steps and no ramp.
+- Exterior walkway width: 900 mm.
+- Interior hallways: 800 mm.
+
+2. DOORS
+- Doorway widths: 760 mm.
+- No extra maneuvering space.
+
+3. MANEUVERING SPACE
+- Rooms sized for standard furniture only.
+- No turning radius planned.
+
+4. SECOND FLOOR ACCESS
+- Only access is stairs.
+- No structural allowance for lift installation.
+
+5. KITCHEN
+- Fixed-height counters.
+- Narrow aisle (900 mm).
+- No accessible-ready planning.
+
+6. BATHROOM
+- Standard bathtub/shower combo.
+- No reinforcement for grab bars.
+- Small layout with tight clearance.
+
+7. BEDROOMS
+- Standard layout.
+- No lift reinforcement.
+- Limited clearance around beds.
+
+8. LAUNDRY ROOM
+- Located in basement with stairs only.
+- Tight space.
+
+9. OPERATING CONTROLS
+- Light switches at 1400 mm height.
+- Thermostat at 1500 mm.
+- No relocation planning.
+
+--------------------------------------------------
+SENSORY ALERT FEATURES
+--------------------------------------------------
+
+- Standard smoke alarms with sound only.
+- No visual alerts.
+- Standard doorbell only.
+
+--------------------------------------------------
+SOCIAL HEALTH FEATURES
+--------------------------------------------------
+
+- No multilingual signage.
+- No braille labels.
+- No ASL or LSQ materials.
+
+--------------------------------------------------
+ADDITIONAL FEATURES
+--------------------------------------------------
+
+- Round doorknobs.
+- No smart controls.
+- No accessible parking.
+- No ramp or patio access.
