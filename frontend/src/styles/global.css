@@ -614,31 +614,56 @@ h1 {
 }
 
 .final-score-wrap {
-  margin: 120px auto 0;
+  margin: clamp(32px, 6vh, 64px) auto 0;
   width: min(1260px, calc(100% - 120px));
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 44px;
+  align-items: end;
+}
+
+.final-score-left {
+  --chart-inset: clamp(20px, 3vw, 40px);
+  --bar-width: clamp(56px, 5vw, 72px);
+  --bar-gap: clamp(10px, 1.2vw, 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  /* Align chart baseline with the bottom of the scrollable reasons box (not the action buttons). */
+  padding-bottom: 106px;
+}
+
+.final-score-graph-block {
+  width: min(100%, 760px);
+  margin-inline: auto;
+}
+
+.final-score-right {
+  display: flex;
+  flex-direction: column;
 }
 
 .final-score-legend {
   display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 12px;
-  transform: translateY(-18px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 22px;
+  margin-left: var(--chart-inset);
+  transform: none;
 }
 
 .final-score-legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 16px;
+  gap: 12px;
+  font-size: 18px;
 }
 
 .legend-box {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   display: inline-block;
 }
 
@@ -651,16 +676,16 @@ h1 {
 }
 
 .final-score-chart {
-  min-height: 300px;
+  min-height: 380px;
   display: flex;
   align-items: flex-end;
-  gap: 10px;
-  padding-left: 68px;
-  margin-top: -20px;
+  gap: var(--bar-gap);
+  padding-left: var(--chart-inset);
+  margin-top: -8px;
 }
 
 .final-score-bar {
-  width: 50px;
+  width: var(--bar-width);
   display: flex;
   flex-direction: column-reverse;
 }
@@ -676,9 +701,9 @@ h1 {
 .final-score-base {
   height: 8px;
   background: #000000;
-  margin-top: -2px;
-  width: 72%;
-  margin-left: 68px;
+  margin-top: 2px;
+  width: min(88%, 650px);
+  margin-left: var(--chart-inset);
 }
 
 .final-score-percent-row {
@@ -705,12 +730,15 @@ h1 {
 .final-score-right h2 {
   margin: 30px 0 20px;
   color: #000000;
-  font-size: 38px;
+  font-size: 32px;
 }
 
 .final-score-reasons {
   display: grid;
   gap: 16px;
+  overflow-y: auto;
+  max-height: 320px;
+  scrollbar-gutter: stable;
 }
 
 .reason-row {
@@ -987,7 +1015,7 @@ h1 {
   font-family:
     "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 100%;
   letter-spacing: 0.05em;
 }
@@ -1018,6 +1046,8 @@ h1 {
 .info-label {
   color: #2f4b3d;
   font-weight: 600;
+  font-size: 21px;
+  line-height: 1.15;
 }
 
 .nav-link {
@@ -1830,7 +1860,7 @@ h1 {
   }
 
   .information-address {
-    font-size: clamp(1.4rem, 6vw, 2rem);
+    font-size: clamp(1.1rem, 4.4vw, 1.6rem);
   }
 
   .information-checklist {
@@ -1842,6 +1872,10 @@ h1 {
   .information-check-icon {
     width: 52px;
     height: auto;
+  }
+
+  .info-label {
+    font-size: clamp(0.95rem, 3.2vw, 1.1rem);
   }
 
   .login-screen {

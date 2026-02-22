@@ -6,7 +6,7 @@ import checkIcon from "../assets/images/tick-mark.png";
 import crossIcon from "../assets/images/cross-mark.png";
 import { fetchLocationDetail } from "../services/api";
 
-const MAX_BAR_HEIGHT = 220; // px — tallest bar will reach this height
+const MAX_BAR_HEIGHT = 300; // px — tallest bar will reach this height
 const POLL_INTERVAL_MS = 8000; // re-fetch every 8 s while score is null
 const MAX_POLLS = 15; // give up after ~2 minutes
 
@@ -55,7 +55,16 @@ function FinalScore() {
     `${Math.round((count / maxTotal) * MAX_BAR_HEIGHT)}px`;
 
   return (
-    <section className="final-score-page" aria-label="Final score page">
+    <section
+      className="final-score-page"
+      aria-label="Final score page"
+      style={{
+        height: "100vh",
+        minHeight: "100vh",
+        overflowY: "auto",
+        overflowX: "hidden",
+      }}
+    >
       <button
         className="location-status-back"
         type="button"
@@ -69,6 +78,7 @@ function FinalScore() {
       <div className="final-score-wrap">
         {/* LEFT — bar chart */}
         <div className="final-score-left">
+          <div className="final-score-graph-block">
           <div className="final-score-legend">
             <div className="final-score-legend-item">
               <span className="legend-box legend-missing" />
@@ -113,17 +123,17 @@ function FinalScore() {
             <div
               style={{
                 display: "flex",
-                gap: "10px",
-                paddingLeft: "68px",
-                marginTop: "4px",
+                gap: "var(--bar-gap)",
+                paddingLeft: "var(--chart-inset)",
+                marginTop: "6px",
               }}
             >
               {breakdown.map((bar, i) => (
                 <div
                   key={i}
                   style={{
-                    width: "50px",
-                    fontSize: "10px",
+                    width: "var(--bar-width)",
+                    fontSize: "12px",
                     textAlign: "center",
                     color: "#31493c",
                     fontWeight: 600,
@@ -137,6 +147,7 @@ function FinalScore() {
           )}
 
           <div className="final-score-base" />
+          </div>
         </div>
 
         {/* RIGHT — score + address + checklist */}
@@ -153,10 +164,7 @@ function FinalScore() {
 
           <h2>{address}</h2>
 
-          <div
-            className="final-score-reasons"
-            style={{ overflowY: "auto", maxHeight: "320px" }}
-          >
+          <div className="final-score-reasons">
             {passes.slice(0, 6).map((item, idx) => (
               <div key={`p-${idx}`} className="reason-row">
                 <img src={checkIcon} alt="Criteria met" />
