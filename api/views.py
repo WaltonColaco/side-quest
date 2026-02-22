@@ -293,7 +293,7 @@ class LocationDetailView(APIView):
                     "https://nominatim.openstreetmap.org/reverse"
                     f"?format=jsonv2&lat={loc.latitude}&lon={loc.longitude}"
                 )
-                resp = httpx.get(url, headers={"User-Agent": "side-quest/1.0"}, timeout=6)
+                resp = httpx.get(url, headers={"User-Agent": "side-quest/1.0"}, timeout=2)
                 if resp.status_code == 200:
                     data = resp.json()
                     display_name = data.get("display_name")

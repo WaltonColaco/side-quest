@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import backButton from "../../back-button.png";
 import houseImage from "../../hacked-logo.png";
 import checkIcon from "../../tick-mark.png";
@@ -7,15 +7,22 @@ import crossIcon from "../../cross-mark.png";
 import { fetchLocationDetail } from "../services/api";
 
 function Information() {
-  const [location, setLocation] = useState(null);
+  const { state: navState } = useLocation();
   const [searchParams] = useSearchParams();
   const locationId = searchParams.get("id");
+
+  // Seed instantly from router state so score/address appear without waiting for the API
+  const [location, setLocation] = useState(navState || null);
+  const [passes, setPasses] = useState([]);
+  const [fails, setFails] = useState([]);
 
   useEffect(() => {
     const load = async () => {
       try {
         const data = await fetchLocationDetail(locationId);
         setLocation(data);
+        setPasses(data.passes || []);
+        setFails(data.fails || []);
       } catch (e) {
         console.error("Failed to load locations", e);
       }
@@ -30,9 +37,6 @@ function Information() {
     location?.name ||
     location?.source ||
     "Address not available";
-
-  const passes = location?.passes || [];
-  const fails = location?.fails || [];
 
   return (
     <section className="information-screen" aria-label="Information page">
