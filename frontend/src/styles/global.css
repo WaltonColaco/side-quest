@@ -1015,7 +1015,7 @@ h1 {
   font-family:
     "Golos Text", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
   font-weight: 700;
-  font-size: 34px;
+  font-size: 28px;
   line-height: 100%;
   letter-spacing: 0.05em;
 }
@@ -1046,6 +1046,8 @@ h1 {
 .info-label {
   color: #2f4b3d;
   font-weight: 600;
+  font-size: 21px;
+  line-height: 1.15;
 }
 
 .nav-link {
@@ -1858,7 +1860,7 @@ h1 {
   }
 
   .information-address {
-    font-size: clamp(1.4rem, 6vw, 2rem);
+    font-size: clamp(1.1rem, 4.4vw, 1.6rem);
   }
 
   .information-checklist {
@@ -1870,6 +1872,10 @@ h1 {
   .information-check-icon {
     width: 52px;
     height: auto;
+  }
+
+  .info-label {
+    font-size: clamp(0.95rem, 3.2vw, 1.1rem);
   }
 
   .login-screen {

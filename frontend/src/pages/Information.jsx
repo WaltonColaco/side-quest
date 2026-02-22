@@ -41,6 +41,12 @@ function Information() {
   const address =
     location?.address ||
     (loadingAddress ? "address loading.." : "Address not available");
+  const topPasses = [...passes]
+    .sort((a, b) => (b.similarity ?? -1) - (a.similarity ?? -1))
+    .slice(0, 2);
+  const topFails = [...fails]
+    .sort((a, b) => (a.similarity ?? 2) - (b.similarity ?? 2))
+    .slice(0, 1);
 
   return (
     <section className="information-screen" aria-label="Information page">
@@ -65,7 +71,7 @@ function Information() {
             </div>
             <h2 className="information-address">{address}</h2>
             <div className="information-checklist" aria-label="Checklist">
-              {passes.map((item, idx) => (
+              {topPasses.map((item, idx) => (
                 <div key={`p-${idx}`} className="info-row">
                   <img
                     className="information-check-icon"
@@ -75,7 +81,7 @@ function Information() {
                   <span className="info-label">{item.label}</span>
                 </div>
               ))}
-              {fails.map((item, idx) => (
+              {topFails.map((item, idx) => (
                 <div key={`f-${idx}`} className="info-row">
                   <img
                     className="information-check-icon"
