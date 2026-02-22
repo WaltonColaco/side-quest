@@ -17,8 +17,8 @@ function LocationFound() {
     setSaving(true);
     setError(null);
     try {
-      await saveLocation({ address, lat, lng, sourceDoc: fileName });
-      navigate("/map-heat");
+      const result = await saveLocation({ address, lat, lng, sourceDoc: fileName });
+      navigate(`/final-score?id=${result.id}`);
     } catch (e) {
       console.error("Failed to save location", e);
       setError(e.response?.data?.error || "Failed to save location. Please try again.");

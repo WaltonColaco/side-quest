@@ -1,0 +1,238 @@
+ACCESSIBILITY COMPLIANCE REPORT
+Centennial Place Commercial Office and Retail Complex
+10155 102 Street NW, Edmonton, Alberta T5J 4G8
+Building Type: Commercial — Mixed Office and Retail Occupancy (Group D / Group E)
+Total Gross Floor Area: 12,400 m²
+Prepared under: Alberta Barrier-Free Design Guide (2024), CAN/CSA B651, CAN/ULC-S526, IEC60118-4
+
+---
+
+SECTION 1 — PROJECT OVERVIEW
+
+Centennial Place is a seven-storey mixed commercial office and retail complex designed to meet the full requirements of the Alberta Accessibility Design Guide (2024) and the Alberta Barrier-Free Design Guide (Fifth Edition, 2017). This report documents all accessibility features incorporated into the building design and construction, across all four compliance categories: physical access, neurodivergent support, sensory alerts, and social health.
+
+Location: 10155 102 Street NW, Edmonton, Alberta T5J 4G8
+Coordinates: 53.5444, -113.4909
+Building Type: Commercial — Mixed Office (Group D) and Retail (Group E) occupancy
+Gross Floor Area: 12,400 m² (7 storeys above grade, 1 underground parkade)
+Compliance Standards: Alberta Accessibility Design Guide 2024, AB Barrier-Free Design Guide 5th Ed. 2017, CAN/CSA B651, CAN/ULC-S526, IEC60118-4 2014
+
+---
+
+SECTION 2 — PHYSICAL ACCESS
+
+2.1 Accessible Routes
+
+A continuous barrier-free path of travel is provided between all accessible building entrances, the designated accessible parking spaces, the passenger-loading zone on 102 Street, and all public thoroughfares. The barrier-free path of travel has a minimum clear width of 1600 mm throughout (recommended 1800 mm in primary corridors to allow two wheelchair users to pass side by side). At pinch points, the reduced width of 850 mm is maintained for no more than 600 mm in length. Turning spaces of 1500 mm x 1000 mm are provided at all direction changes. Passing spaces of 1700 mm x 1700 mm are provided every 24 m along primary corridors. Rest areas of 1500 mm x 2000 mm are provided every 30 m along accessible routes. Cross-slope does not exceed 1:50. Minimum overhead clearance is 1980 mm throughout. All gratings and joints on the accessible route have openings no greater than 13 mm and depth no greater than 6 mm.
+
+2.2 Exterior Building Entrances
+
+All primary building entrances on 102 Street and 101A Street are fully accessible. Main entrance doors provide a minimum clear opening width of 850 mm (preferred 900 mm) and are served by power-operated door operators on both interior and exterior sides. A level, unobstructed area of 1500 mm x 1500 mm is provided immediately outside and inside each accessible entrance. Door viewers (peepholes) are installed at heights of 1500–1700 mm, with a second viewer at 1000–1200 mm for seated users. Universal washrooms are located directly on a barrier-free path of travel and are served by power-operated doors as required. All entrance ramps have a slope of less than 1:20.
+
+2.3 Automatic Door Operation (Power Door Operators)
+
+Power door operators are installed at all primary building entrances, all universal washroom entries, all elevator lobbies, and all service counter entries. Door operators activate automatically via motion sensors and via accessible push-plate controls. Push-plate controls are located at two heights: 150–300 mm above the floor (for knee/foot activation) and 900–1100 mm above the floor (for hand activation). Controls are marked with the International Symbol of Access. All door pull hardware is 140 mm in length, installed at 900–1000 mm above the floor, and located 200–300 mm from the hinge edge of the door to allow easy gripping without tight grasping, pinching, or twisting.
+
+2.4 Door Minimum Width
+
+All doorways on barrier-free paths of travel throughout the building have a minimum clear width of 850 mm when the door is open. Doorways providing access to examination and treatment rooms have a minimum clear width of 915 mm. Primary corridors maintain a clear width of 1000–1200 mm. All doors are equipped with lever-type hardware operable with a closed fist.
+
+2.5 Alternate Accessible Routes — Stair Alternatives (Elevators and Ramps)
+
+Four passenger elevators provide barrier-free access to all floors. Each elevator cab is a minimum of 1500 mm x 2000 mm with a minimum clear opening width of 900 mm. Where escalators provide primary access between floors, an elevator or platform lift is also provided on the same path of travel to that floor, ensuring no floor is accessible only by escalator. Ramps with a maximum slope of 1:12, minimum width of 1000 mm, level landing areas of 1700 mm x 1700 mm at top and bottom, and continuous handrails at 865–965 mm height are provided at all changes in level greater than 13 mm in the barrier-free path of travel.
+
+2.6 Mobility Device Space in Meeting Rooms and Assembly Areas
+
+All meeting rooms, assembly areas, and waiting rooms with fixed seating provide designated wheelchair spaces. Spaces comply with Table 3.8.2.3: rooms with 2–99 seats provide 2 wheelchair spaces; rooms with 100–499 seats provide 3 spaces plus 1 per 70 additional seats over 100; rooms with 500 or more seats provide proportional additional spaces. Each wheelchair space is a minimum of 900 mm wide and 1525 mm long for side approach, or 1220 mm long for front/rear approach. Turning diameter of 1700 mm is provided adjacent to all wheelchair spaces. Transfer space of 900 mm is provided beside all wheelchair spaces. All designated wheelchair spaces allow clear, unobstructed passage.
+
+2.7 Accessible Viewing Space Dimensions
+
+In all assembly areas with tiered or fixed seating, accessible viewing spaces are provided with a minimum independent clear space of 850 mm wide by 1390 mm long per space. All viewing spaces have unobstructed sightlines to the presentation area equivalent to or better than those provided to adjacent fixed seats.
+
+2.8 Aisle Width Behind Accessible Seating
+
+The aisle width behind all accessible seating areas is fully maintained at the required minimum. No accessible seating is positioned such that maneuvering into or out of the space would require encroachment into the adjacent aisle or reduce the accessible aisle width below its required minimum.
+
+2.9 Limits of Protruding Objects
+
+No building elements within 1980 mm of the finished floor project more than 100 mm horizontally into any path of travel. Signage, light fixtures, structural elements, and wall-mounted equipment are either recessed into the wall, mounted with undersides at or below 680 mm above the floor (providing cane detection), or set back so that projection does not exceed 100 mm. All protruding elements are clearly distinguishable by colour contrast or tactile warning surfaces below.
+
+2.10 Wheel Stops
+
+Wheel stops are provided in all surface and underground parking areas to prevent vehicles from intruding onto barrier-free paths of travel and sidewalks adjacent to the building. Wheel stops are positioned to maintain a minimum clear sidewalk width of 1500 mm at all points along the accessible route.
+
+2.11 Curb Ramp Detectability
+
+All curb cuts and curb ramps on the building site are designed with colour contrast and textural contrast (truncated dome tactile attention indicator surfaces) to be easily detected by persons with low vision, blindness, or cognitive impairments. Curb ramps are finished in a colour that provides a minimum 70% luminance contrast with adjacent pavement. Tactile attention indicator surfaces are installed at the base of each curb ramp and at all pedestrian crossing points, conforming to CSA B651.
+
+2.12 Ramps
+
+All ramps throughout the building and site comply with the following specifications: minimum width 1000 mm (1140 mm preferred), maximum slope 1:12 (1:10 for assembly and care residential), maximum rise per run 750 mm, maximum ramp length 9 m before landing, level landings of 1500 mm x 1500 mm at top, bottom, and all intermediate landings. Handrails are provided on both sides of every ramp at 865–965 mm height. Curb edges or curb walls at least 75 mm high are provided on the open sides of all ramps. Edge protection is provided at all exposed ramp edges. Ramp surfaces are slip-resistant.
+
+---
+
+SECTION 3 — NEURODIVERGENT SUPPORT
+
+3.1 Clear Wayfinding Signage
+
+Clear signage indicating the location of all accessible washrooms, elevators, accessible parking, accessible routes, and emergency exits is provided throughout all public areas of the building. Signage uses large print (minimum 18 pt font), tonal contrast (minimum 70% luminance contrast between text/symbol and background), and internationally recognized pictograms. Wayfinding signage is positioned at all decision points along the barrier-free path of travel and at a height of 1500–1800 mm above the finished floor for reading by both standing and seated users.
+
+3.2 Pattern and Colour Blocking for Key Access
+
+Visual and tactile warning systems are provided at all escalator landings — both at the top and bottom of every escalator — using truncated dome tactile attention indicator surfaces and high-contrast colour bands on escalator steps. Floor surfaces at the top and bottom of escalators are finished with a textural change (truncated dome pattern) extending 600 mm back from the escalator threshold to provide orientation cues for persons with visual impairments, blindness, or cognitive impairments.
+
+3.3 Braille, Visual, and Audio Cues
+
+Building directories are provided in the main lobby and on every floor elevator lobby. All directories are displayed on a sloping plane mounted 760–900 mm above the finished floor. Directory characters are raised a minimum of 0.7 mm. Braille is provided on all building directories and on all room identification signs. Braille is located 1015 mm minimum to 1525 mm maximum above the finished floor. Braille dot base diameter is 1.5 mm and dot height is 0.6–0.8 mm. Audio announcement systems are provided in all elevator cabs and in primary lobby areas, announcing floor numbers, room names, and building services.
+
+3.4 Non-Text Diagrams and Symbols (International Symbol of Access)
+
+The International Symbol of Access is displayed at all accessible parking spaces, accessible entrances, accessible washrooms, elevator entries, and on all accessible route signage. The International Symbol of Access for Hearing Loss is displayed at all assistive listening system locations and hearing loop access points. All pictogram fields are a minimum of 150 mm in height. All symbols conform to ISO 7001 and ISO 21942.
+
+3.5 Tactile Signs for Doors and Openings
+
+All doors and openings from public areas are identified by tactile signs. Letter heights are a minimum of 60 mm. Characters are raised a minimum of 0.7 mm above the sign background. Signs are located at 1200 mm above the finished floor to the centreline of the sign and within 150 mm of the door or opening. All tactile signs contrast in colour with the door or wall surface to which they are mounted, providing a minimum 70% luminance contrast.
+
+3.6 Tactile Signage Requirements
+
+All tactile signage throughout the building complies with the following requirements: minimum letter height 60 mm, characters raised approximately 0.7 mm, sign mounting height maximum 1200 mm above the finished floor, located within 150 mm of the associated entrance or door, and providing colour contrast with adjacent surfaces. All tactile signage is installed consistently throughout the building to enable wayfinding for persons with visual impairments.
+
+3.7 Accessible Control Mounting Height
+
+All controls — including light switches, thermostats, entry keypads, elevator call buttons, intercom panels, vending machine controls, and electrical outlets — are mounted 900 mm to 1200 mm above the finished floor. All controls are provided with an adjacent clear floor space of 1350 mm x 800 mm to allow a wheelchair user to approach and operate the control from a forward or side position. Controls requiring display reading are positioned at the upper end of the 900–1200 mm range.
+
+3.8 Accessible Control Operation
+
+All controls throughout the building are operable with one hand using a closed fist, without the need for tight grasping, pinching, or twisting of the wrist. The maximum operating force for all controls is 22 N (Newtons). Hardware includes lever handles, push-type mechanisms, loop pulls, and capacitive touch panels. No controls require simultaneous two-handed operation.
+
+3.9 Haptic and Tactile Maps
+
+Tactile maps and tactile building directories are provided in the main lobby and at all primary elevator lobbies. Maps are raised a minimum of 0.8 mm above the surface. Tactile text characters are 13–19 mm in height; visual text characters adjacent to tactile maps are 16–51 mm in height. Pre-recorded audio description of building layout is available via a push-button audio station adjacent to each tactile map and via QR code linking to an accessible audio recording. Tactile maps identify all primary facilities: washrooms, elevators, emergency exits, accessible parking, and service counters.
+
+3.10 High Colour Contrast for Orientation Signs
+
+All identification-of-floor signs and orientation signs for visually disabled users provide maximum colour contrast, using white lettering on a black background or black lettering on a white background, or equivalent high-contrast schemes providing a minimum luminance contrast of 70%. Signs in stairwells, elevator lobbies, and at all floor level changes are provided in this high-contrast format. Edge contrast strips are applied to all stair nosings in contrasting colour (minimum 50 mm wide, minimum 70% luminance contrast with stair tread).
+
+3.11 Lighting, Audible, Tactile, Colour/Contrast, and Ergonomic Cues
+
+Orientation for persons with visual disabilities is supported throughout the building via a combination of wayfinding cues: uniform, glare-free illumination (minimum 200 lux on all accessible routes, 300 lux at service counters); audible directional announcements at primary intersections and elevator lobbies; tactile guide strips on the main floor indicating primary routes; colour and luminance contrast at all changes in floor level, at door frames, at counter edges, and at all hazard locations; ergonomically designed rest areas and waiting spaces with appropriate seat heights (430–500 mm) and armrests to assist persons with limited mobility to rise.
+
+3.12 Quiet Space Availability
+
+A dedicated quiet room is provided on the main floor and on each occupied floor of the building. Quiet spaces are acoustically separated from open office and retail areas (minimum STC 45 wall assembly). Each quiet room includes a small table for communication devices (minimum table surface 600 mm x 900 mm), at a height of 710–760 mm, with knee clearance underneath. Each quiet room is accessible from the barrier-free path, has a minimum clear floor space of 1500 mm x 1500 mm, and is identified by tactile and visual signage. These spaces accommodate persons with neurodiversity, communication disorders, and cognitive disabilities requiring a low-stimulation environment.
+
+---
+
+SECTION 4 — SENSORY ALERTS
+
+4.1 Audible and Visual Alerts
+
+All building entrances equipped with security access systems provide both visual and audible signals when the door lock is released, in accordance with the Alberta Barrier-Free Design Guide. In all areas of the building where an occupancy of 50 or more persons may occur, the fire alarm system provides both audible and visual alert signals simultaneously. Visual signal devices are installed in all publicly accessible rooms and spaces, including all washrooms, meeting rooms, elevator cabs, corridors, stairwells, and service areas, conforming to CAN/ULC-S526. All visual and audible alert signals are interconnected throughout the building.
+
+4.2 Warning Indicators — Tactile Attention Indicator Surfaces
+
+Tactile attention indicator surfaces (truncated dome pattern) are installed per CSA B651 at all downward changes in elevation in the barrier-free path of travel exceeding 300 mm, at the top and bottom of all stairways, at all pedestrian crossing points, at all curb ramps, at elevator doors, at escalator landings, and at platform edges. Tactile attention indicators extend the full width of the hazard. Platform offset from the tactile indicator to the stair nosing is 610 mm. Railway-adjacent installations maintain 1800–4600 mm setback distance from the railway. Curb setback is 150–200 mm from the curb edge. Tactile indicators provide a minimum luminance contrast of 50% with adjacent surfaces per the Michelson contrast formula.
+
+4.3 Tactile Attention Indicator Configuration
+
+All tactile attention indicator surfaces use truncated dome geometry: dome height 4–5 mm, top diameter 12–25 mm, base diameter equal to top diameter plus 10±1 mm, arranged in a square grid pattern with spacing of 42–70 mm between dome centres. Materials are durable, slip-resistant, and UV-stable. Truncated dome surfaces are tested to CSA B651 and conform to the Alberta Barrier-Free Design Guide 2024 specifications.
+
+4.4 Tactile Attention Indicator Installation
+
+Tactile attention indicator surfaces are installed along the full width of each hazard. The depth of each installation is 600–650 mm, measured perpendicular to the direction of travel. One side of each installation is positioned directly against the edge of the hazard (e.g., stair nosing, curb edge, platform edge). Installation is flush-mounted with a maximum 3 mm edge transition. All tactile indicator panels are permanently anchored to prevent displacement.
+
+4.5 Visual Contrast Between Walls and Floors (Luminance Contrast)
+
+Tactile attention indicator surfaces provide a luminance contrast of at least 50% with all adjacent floor surfaces, calculated using the Michelson contrast formula: (L1 – L2) / (L1 + L2) where L1 is the higher luminance value. Yellow truncated dome panels on grey concrete, and charcoal dome panels on light-coloured tile, are the two systems used. Both meet the minimum 50% luminance contrast requirement. Visual contrast is also provided at all stair nosings (minimum 50 mm wide, minimum 50% luminance contrast), at the junction of walls and floors in all corridors (contrasting base trim at minimum 100 mm height), and at all door frames (contrasting frame finish).
+
+4.6 Tactile Direction Indicator Configuration
+
+Tactile direction indicator surfaces (elongated bar pattern) are installed on all primary barrier-free paths of travel to guide persons with visual impairments between key destinations. Bars are flat-topped and parallel: bar height 4–5 mm, top width 17–30 mm, base width equal to top width plus 10±1 mm, top length minimum 270 mm. Bars are oriented in the direction of travel. Direction indicator surfaces are distinguished from attention indicator surfaces by their elongated bar geometry versus the truncated dome geometry of attention indicators.
+
+4.7 Fire Alarm Sound Pressure Levels
+
+The building fire alarm system is designed and installed per CAN/ULC-S524. Audible fire alarm signal sound pressure level does not exceed 110 dBA in any normally occupied area of the building. In sleeping rooms (applicable to hotel/hospitality occupancies on upper floors), the minimum sound pressure level is 75 dBA with the room door closed. All audible alarm devices produce a minimum signal of 10 dBA above the ambient noise level measured in the space during normal occupancy. Maximum alarm level is designed not to exceed 110 dBA at 3 m from any alarm device.
+
+4.8 Visual Signal Device Installation
+
+Visual signal devices (strobes) are installed in addition to all audible alarm devices throughout the building, in accordance with CAN/ULC-S526. Visual signal devices are visible from all areas within each space in which they are installed. Visual devices are installed in all suites, all public corridors, all washrooms (including individual stalls), all meeting rooms, all service areas, and all elevator cabs. Flash rate is 1–3 Hz. Candela rating is adequate to illuminate the full room area. All visual signal devices are on a dedicated supervised circuit and are fully tested annually.
+
+4.9 Assistive Listening Systems at Service Counters
+
+All service counters in the building where verbal communication between staff and the public takes place are equipped with an assistive listening system or adaptive technology. At least one service counter in each public-facing area is equipped with a hearing loop (induction loop) system. Additional counters have portable amplification devices available upon request. Each assistive listening position at service counters is clearly identified by the International Symbol of Access for Hearing Loss. Amplification is provided wherever a glazed or physical barrier creates a communication barrier between staff and public.
+
+4.10 Assistive Listening Systems in Public Areas
+
+Assistive listening devices (ALDs) — specifically induction loop (hearing loop) systems — are installed in all assembly areas, meeting rooms, conference rooms, and public gathering spaces where the anticipated occupancy is 50 persons or more. All areas served by a public address (PA) or sound reinforcement system for safety or communication purposes are additionally equipped with a magnetic induction loop system covering the full seating/standing area. Coverage is verified by field measurement to ensure IEC60118-4 2014 compliance throughout the loop area.
+
+4.11 Induction Loop Receiver Ratio
+
+In every area where an induction loop system is installed, a minimum of 1 portable loop receiver is available for every 50 occupants (design capacity), for use by persons without compatible hearing aids. Receivers are stored in a clearly identified, easily accessible location adjacent to each loop-equipped area. The number of available receivers is posted on signage outside each loop-equipped space.
+
+4.12 Annual ALD and Loop System Testing
+
+All assistive listening devices and induction loop installations in the building are inspected, tested, and calibrated once per year by a qualified technician. Annual testing follows the IEC60118-4 2014 Standard protocol. A Certificate of Conformity is issued for each installation following each annual test and is retained in the building's accessibility compliance file. Deficiencies identified during testing are corrected within 30 days of the test date.
+
+---
+
+SECTION 5 — SOCIAL HEALTH
+
+5.1 Adult Changing Facility
+
+An adult-sized accessible change table is provided in the universal washroom on the main floor, and one additional adult change table is provided in the universal washroom on floor 3. Each adult change table is height-adjustable from a low position of 450–500 mm above the finished floor to a high position of 850–900 mm above the finished floor. A minimum clear floor space of 900 mm wide by 1830 mm long is provided in front of each change table on the transfer side. Change tables are wall-mounted with a folding/raising mechanism and are load-rated for a minimum of 200 kg. Change tables are located directly on the barrier-free path of travel within universal washrooms accessed by power-operated doors.
+
+5.2 Multilingual Signage
+
+All building signage, safety information, building directories, accessibility guides, wayfinding, and operational instructions are available in multiple formats for diverse users. Plain-language versions of all key information are posted throughout the building. ASL (American Sign Language) summary videos for all emergency procedures, accessibility features, and building services are accessible via QR codes on all major signage panels and at the building's information kiosks. LSQ (Langue des signes québécoise) summary videos are similarly available. All print materials are available in large-print format (minimum 18 pt font), in Braille, and in WCAG 2.1 AA-compliant accessible digital formats. This multi-format approach ensures equitable access for users with diverse communication needs, language backgrounds, and disabilities.
+
+---
+
+SECTION 6 — SUMMARY OF FOUND REQUIREMENTS
+
+The following accessibility features have been confirmed as installed, operational, and compliant in this building:
+
+Physical Access:
+- Accessible Routes: Barrier-free path between all accessible entrances, parking, passenger-loading zones, and public thoroughfares; minimum 1600 mm wide; turning spaces 1500 mm x 1000 mm; passing spaces 1700 mm x 1700 mm every 24 m; rest areas every 30 m; cross-slope max 1:50; overhead clearance min 1980 mm.
+- Exterior Building Entrances: Power-operated doors at all accessible entrances; minimum clear opening 850 mm; level area 1500 mm x 1500 mm; ramp slope less than 1:20; universal washrooms on barrier-free path with power-operated doors.
+- Automatic Door Operation: Power door operators at all primary entrances and universal washrooms; controls at 150–300 mm and 900–1100 mm above floor; marked with International Symbol of Access; door pull 140 mm length at 900–1000 mm height, 200–300 mm from hinge edge.
+- Door Minimum Width: All barrier-free path doors minimum 850 mm clear width; examination rooms 915 mm; lever hardware; closed-fist operable.
+- Alternate Accessible Routes (Stair Alternatives): Four elevators serve all floors; ramps at all level changes greater than 13 mm; minimum slope 1:12; minimum width 1000 mm; level landings 1700 mm x 1700 mm; handrails at 865–965 mm.
+- Mobility Device Space in Meeting Rooms: Wheelchair spaces per Table 3.8.2.3; each space min 900 mm wide x 1525 mm long (side approach); turning diameter 1700 mm; transfer space 900 mm.
+- Accessible Viewing Space Dimensions: Minimum 850 mm x 1390 mm independent clear space per accessible viewing position; unobstructed sightlines.
+- Maintain Required Aisle Width Behind Accessible Seating: Aisle widths behind accessible seating maintained at required minimums; no intrusion into accessible aisle.
+- Limits of Protruding Objects: No elements project more than 100 mm horizontally into paths within 1980 mm of the floor; all protruding elements provide cane-detectable undersides at or below 680 mm.
+- Wheel Stops: Wheel stops provided in all parking areas to prevent vehicle intrusion onto barrier-free paths and sidewalks.
+- Curb Ramp Detectability: All curb ramps identified by colour contrast and truncated dome tactile attention indicators for detection by persons with low vision, blindness, or cognitive impairments.
+- Ramps: Maximum slope 1:12; minimum width 1000 mm (1140 mm preferred); maximum rise 750 mm; maximum length 9 m; level landings 1500 mm x 1500 mm; handrails 865–965 mm both sides; curb edges 75 mm minimum; slip-resistant surfaces.
+
+Neurodivergent Support:
+- Clear Wayfinding Signage: Large print, tonal contrast (min 70% luminance), pictograms at all decision points; accessible washrooms, elevators, and accessible routes clearly marked; mounted 1500–1800 mm above floor.
+- Pattern and Colour Blocking for Key Access: Truncated dome tactile attention indicators and high-contrast colour bands at all escalator tops and bottoms; 600 mm depth of textural floor change.
+- Braille, Visual, and Audio Cues: Building directories on sloping plane at 760–900 mm; characters raised 0.7 mm; Braille at 1015–1525 mm; dot base 1.5 mm, dot height 0.6–0.8 mm; audio announcements in all elevators and lobby.
+- Non-Text Diagrams and Symbols: International Symbol of Access at all accessible facilities; International Symbol of Access for Hearing Loss at all ALD locations; pictogram field minimum 150 mm; conform to ISO 7001 and ISO 21942.
+- Tactile Signs for Doors and Openings: Letters minimum 60 mm high, raised 0.7 mm, at 1200 mm above floor, within 150 mm of door; colour contrast minimum 70% luminance.
+- Tactile Signage Requirements: Minimum 60 mm letter height, 0.7 mm raised characters, maximum 1200 mm mounting height, within 150 mm of entrance, colour contrasting.
+- Accessible Control Mounting Height: All controls mounted 900–1200 mm above floor; adjacent clear floor space 1350 mm x 800 mm.
+- Accessible Control Operation: All controls operable with one hand in closed fist position; maximum 22 N operating force; no tight grasping, pinching, or twisting required.
+- Haptic and Tactile Maps: Raised minimum 0.8 mm; tactile characters 13–19 mm; visual characters 16–51 mm; audio description stations in lobby and all elevator lobbies.
+- High Colour Contrast for Orientation Signs: White on black or black on white; minimum 70% luminance contrast; floor identification and orientation signs in all stairwells and elevator lobbies.
+- Lighting, Audible, Tactile, Colour/Contrast, and Ergonomic Cues: Minimum 200 lux on accessible routes, 300 lux at service counters; audible directional announcements; tactile guide strips; luminance contrast at all level changes and hazards; ergonomic seating at 430–500 mm height with armrests.
+- Quiet Space Availability: Dedicated quiet rooms on every occupied floor; STC 45 acoustic separation; table for communication devices at 710–760 mm height with knee clearance; minimum 1500 mm x 1500 mm clear floor space; tactile and visual signage.
+
+Sensory Alerts:
+- Audible and Visual Alerts: All security-controlled entrances provide both visual and audible signals on lock release; all fire alarm areas provide simultaneous audible and visual signals; visual devices in all rooms conform to CAN/ULC-S526; all systems interconnected.
+- Warning Indicators: Tactile attention indicator surfaces per CSA B651 at all downward elevation changes exceeding 300 mm; stair tops/bottoms; pedestrian crossings; curb ramps; elevator doors; escalator landings; full width of hazard; 610 mm platform offset; 150–200 mm curb setback.
+- Tactile Attention Indicator Configuration: Truncated domes 4–5 mm high; top diameter 12–25 mm; base diameter top+10±1 mm; square grid; spacing 42–70 mm between dome centres; durable, slip-resistant, UV-stable materials; CSA B651 compliant.
+- Tactile Attention Indicator Installation: Full width of hazard; depth 600–650 mm; one side against hazard edge; flush-mounted maximum 3 mm edge transition; permanently anchored.
+- Visual Contrast Between Walls and Floors: Luminance contrast minimum 50% between tactile attention indicator surfaces and adjacent floor surfaces per Michelson formula; stair nosings minimum 50 mm wide minimum 50% luminance contrast; wall-floor junctions have contrasting base trim; door frames have contrasting finish.
+- Tactile Direction Indicator Configuration: Flat-topped parallel bars; height 4–5 mm; top width 17–30 mm; base width top+10±1 mm; top length minimum 270 mm; bars oriented in direction of travel; distinguishable from attention indicators.
+- Fire Alarm Sound Pressure Levels: Maximum 110 dBA in all normally occupied areas; minimum 75 dBA in sleeping rooms with doors closed; minimum 10 dBA above ambient; conforms to CAN/ULC-S524.
+- Visual Signal Device Installation: Strobes installed in addition to audible devices in all suites, corridors, washrooms, meeting rooms, service areas, and elevator cabs; visible throughout each space; flash rate 1–3 Hz; fully supervised; conforms to CAN/ULC-S526.
+- Assistive Listening at Service Counters: Induction loop or amplification system at all service counters with verbal communication; at least one counter per area with hearing loop; marked with International Symbol of Access for Hearing Loss; amplification at all barrier-protected counters.
+- Assistive Listening Systems in Public Areas: Induction loop systems in all areas with anticipated occupancy of 50 or more persons; all PA/sound system areas equipped with magnetic induction loop; coverage verified to IEC60118-4 2014.
+- Induction Loop Receiver Ratio: Minimum 1 portable loop receiver per 50 occupants in all loop-equipped spaces; receivers stored in clearly identified accessible locations adjacent to each loop area; quantity posted on signage.
+- Annual ALD and Loop System Testing: All ALDs and induction loop installations tested once per year; IEC60118-4 2014 protocol followed; Certificate of Conformity issued after each annual test; deficiencies corrected within 30 days.
+
+Social Health:
+- Adult Changing Facility: Height-adjustable adult change tables on main floor and floor 3; height range 450–500 mm (low) to 850–900 mm (high); clear floor space minimum 900 mm x 1830 mm in front; load-rated 200 kg; located on barrier-free path in universal washrooms with power-operated doors.
+- Multilingual Signage: All building signage and safety information available in plain-language, ASL, and LSQ formats; large-print (minimum 18 pt); Braille; and WCAG 2.1 AA-compliant digital formats.

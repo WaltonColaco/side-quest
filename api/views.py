@@ -1,3 +1,4 @@
+import os
 import sys
 import tempfile
 import threading
@@ -192,6 +193,7 @@ class LocationSaveView(APIView):
     Called when the user confirms they want to add their audit to the public map.
     Body: { address, lat, lng, source_doc }
     If lat/lng are absent the address is geocoded via Nominatim before saving.
+    Optionally authenticated: if a valid JWT is present the location is linked to that user.
     """
     permission_classes = [permissions.AllowAny]
 
@@ -200,6 +202,15 @@ class LocationSaveView(APIView):
         lat = request.data.get("lat")
         lng = request.data.get("lng")
         source_doc = request.data.get("source_doc") or "Untitled"
+
+        # Optionally link to the authenticated user (AllowAny — anonymous uploads still work)
+        user_id = None
+        try:
+            result = JWTAuthentication().authenticate(request)
+            if result is not None:
+                user_id = result[0].id
+        except Exception:
+            pass
 
         # Geocode if coordinates were not extracted from the document
         if lat is None or lng is None:
@@ -275,10 +286,10 @@ class LocationSaveView(APIView):
 
             cur = con.execute(
                 """
-                INSERT INTO locations (name, address, latitude, longitude, source_doc, report_path)
-                VALUES (?, ?, ?, ?, ?, ?)
+                INSERT INTO locations (name, address, latitude, longitude, source_doc, report_path, user_id)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
                 """,
-                (address or source_doc, address, lat, lng, source_doc, str(report_path)),
+                (address or source_doc, address, lat, lng, source_doc, str(report_path), user_id),
             )
             location_id = cur.lastrowid
             con.commit()
@@ -341,6 +352,46 @@ class LocationSaveView(APIView):
         ).start()
 
         return Response({"id": location_id})
+
+
+class MyLocationsView(APIView):
+    """
+    GET /api/location/mine/
+    Returns only the locations uploaded by the currently authenticated user,
+    ordered newest first. Used by the Reports page.
+    """
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request):
+        user_id = request.user.id
+        db_path = Path(__file__).resolve().parent.parent / "db" / "assessment.db"
+        con = sqlite3.connect(db_path)
+        try:
+            cur = con.execute(
+                """
+                SELECT id, address, score, source_doc, created_at
+                FROM locations
+                WHERE user_id = ?
+                ORDER BY created_at DESC
+                """,
+                (user_id,),
+            )
+            rows = cur.fetchall()
+        finally:
+            con.close()
+
+        data = [
+            {
+                "id": row[0],
+                "address": row[1],
+                "score": row[2],
+                "source_doc": row[3],
+                "created_at": row[4],
+            }
+            for row in rows
+        ]
+        return Response(data)
 
 
 class LocationView(APIView):
@@ -465,6 +516,7 @@ class LocationDetailView(APIView):
 
         passes = []
         fails = []
+        breakdown = []
         if loc.comparison_id:
             raw = list(
                 ChunkMatch.objects.filter(comparison_id=loc.comparison_id).values(
@@ -495,7 +547,36 @@ class LocationDetailView(APIView):
                         label = label + "."
                 return label
 
-            # Best 2 passes by highest similarity
+            _CAT_MAP = {
+                "phys": "Physical Access",
+                "sens": "Sensory Alerts",
+                "soc": "Social & Health",
+                "neuro": "Neurodivergent",
+            }
+
+            def extract_category(excerpt: str | None) -> str:
+                if excerpt:
+                    m = re.search(r'id:\s*([a-z]+)_', excerpt)
+                    if m:
+                        return _CAT_MAP.get(m.group(1), m.group(1).capitalize())
+                return "Other"
+
+            # Build per-category breakdown
+            cat_counts: dict[str, dict] = {}
+            for m in raw:
+                cat = extract_category(m["rubric_excerpt"] or m["rubric_path"])
+                if cat not in cat_counts:
+                    cat_counts[cat] = {"found": 0, "missing": 0}
+                if m["status"] in ("strong", "partial"):
+                    cat_counts[cat]["found"] += 1
+                else:
+                    cat_counts[cat]["missing"] += 1
+            breakdown = [
+                {"name": k, "found": v["found"], "missing": v["missing"]}
+                for k, v in cat_counts.items()
+            ]
+
+            # All passes ordered by highest similarity
             for m in sorted(raw, key=lambda x: x["similarity"], reverse=True):
                 if m["status"] not in ("strong", "partial"):
                     continue
@@ -503,29 +584,25 @@ class LocationDetailView(APIView):
                 if not label:
                     continue
                 passes.append({"label": label, "similarity": m["similarity"]})
-                if len(passes) >= 2:
-                    break
 
-            # Worst (most-missing) single fail by lowest similarity
-            missing = [m for m in raw if m["status"] == "missing"]
-            for m in sorted(missing, key=lambda x: x["similarity"]):
+            # All fails ordered by lowest similarity (worst first)
+            for m in sorted(raw, key=lambda x: x["similarity"]):
+                if m["status"] != "missing":
+                    continue
                 label = clean_label(m["rubric_excerpt"] or m["rubric_path"])
                 if not label:
                     continue
                 fails.append({"label": label, "similarity": m["similarity"]})
-                break
 
-            # If no explicit missing, fall back to weakest partial to still show a concern
+            # If no explicit missing, fall back to weakest partials
             if not fails:
-                weakest_partial = [
-                    m for m in sorted(raw, key=lambda x: x["similarity"]) if m["status"] == "partial"
-                ]
-                for m in weakest_partial:
+                for m in sorted(raw, key=lambda x: x["similarity"]):
+                    if m["status"] != "partial":
+                        continue
                     label = clean_label(m["rubric_excerpt"] or m["rubric_path"])
                     if not label:
                         continue
                     fails.append({"label": label, "similarity": m["similarity"]})
-                    break
 
         data = {
             "score": loc.score,
@@ -534,5 +611,6 @@ class LocationDetailView(APIView):
             "source": loc.source_doc,
             "passes": passes,
             "fails": fails,
+            "breakdown": breakdown,
         }
         return Response(data)

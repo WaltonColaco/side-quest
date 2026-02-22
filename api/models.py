@@ -61,6 +61,7 @@ class Location(models.Model):
     score = models.FloatField(null=True)
     comparison_id = models.IntegerField(null=True)
     report_path = models.TextField(null=True)
+    user_id = models.IntegerField(null=True)
     created_at = models.TextField()
 
     class Meta:

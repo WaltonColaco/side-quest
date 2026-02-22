@@ -8,23 +8,25 @@
 - **Coordinates:** 53.546971, -113.4978032
 
 ## Notes
-The floor plan provides room dimensions and layout, but does not explicitly show accessible routes, door widths, or signage. Stairs are present at the entry and to the basement, which may limit accessibility. No explicit accessibility features or measurements are labeled.
+This is a main level floor plan for a residential building. Some features such as door widths, maneuvering clearances, and specific accessibility fixtures are not explicitly labeled. There are stairs indicated (DN to basement, DN at porch), but no ramps or alternate accessible routes are shown. No signage or sensory alert systems are visible.
 
 ## Found Requirements
 
 ### physical_access
 - **Accessible-Ready Bathroom Showers** (confidence: 70%)
-  - A separate shower (SHWR 4x4) is present in Bath #1, which could potentially be made accessible.
+  - A shower (SHWR 4x4) is present in the bathroom area, which could potentially be accessible-ready.
   - `shower_size_ft`: 4x4
 - **Accessible-Ready Bathroom Bathtubs** (confidence: 70%)
-  - A bathtub is present in Bath #1.
+  - A bathtub is present in Bath #1 (5x14), which could potentially be accessible-ready.
   - `bathroom_size_ft`: 5x14
 - **Accessible-Ready Kitchens** (confidence: 70%)
-  - Kitchen is labeled and its layout is visible, allowing for potential accessibility modifications.
+  - Kitchen (10x11) is labeled and shown with open space, potentially allowing for accessible design.
   - `kitchen_size_ft`: 10x11
 - **Accessible-Ready Bedrooms** (confidence: 70%)
-  - Bedroom #1 is labeled and its size is provided.
+  - Bedroom #1 (13x14) is labeled and appears to have maneuvering space.
   - `bedroom_size_ft`: 13x14
+- **Accessible Routes** (confidence: 50%)
+  - Hallways and open connections between rooms suggest possible accessible routes.
 
 ## Not Found
 
@@ -32,7 +34,6 @@ The floor plan provides room dimensions and layout, but does not explicitly show
 - Multilingual Signage
 
 ### physical_access
-- Accessible Routes
 - Alternate Accessible Routes (Stair Alternatives)
 - Door Minimum Width
 - Accessible Maneuvering Area at Doors

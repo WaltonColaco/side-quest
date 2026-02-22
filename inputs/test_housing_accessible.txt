@@ -1,0 +1,136 @@
+ACCESSIBILITY COMPLIANCE REPORT
+Maple Ridge Accessible-Ready Housing Development
+123 Maple Ridge Crescent, Edmonton, Alberta T6G 2R3
+Building Type: Residential / Housing
+Prepared under: CSA/ASC B652 Accessible and Barrier-Free Design Standard
+
+---
+
+SECTION 1 — PROJECT OVERVIEW
+
+Maple Ridge is a 24-unit multi-storey residential development designed from the ground up to meet and exceed Canada's accessible-ready housing requirements under CSA/ASC B652. This report documents all accessibility features incorporated into the design, as well as provisions made for future retrofit without modification to structural, electrical, plumbing, or HVAC systems.
+
+Location: 123 Maple Ridge Crescent, Edmonton, Alberta T6G 2R3
+Coordinates: 53.5232, -113.5263
+Building Type: Multi-storey residential housing, 4 storeys above grade
+Total Units: 24 (8 per floor, floors 2–4)
+Compliance Standard: CSA/ASC B652 — Accessible and Barrier-Free Design
+
+---
+
+SECTION 2 — ACCESSIBLE ROUTES AND PATHS OF TRAVEL
+
+2.1 Accessible Routes to Main Entrance
+
+A continuous barrier-free path of travel is provided from the public sidewalk to all main building entrances, fully compliant with CSA/ASC B652 clauses 4.3.2 and 5.2.1. All interior accessible routes maintain a minimum clear width of 1200 mm. All exterior accessible routes maintain a minimum clear width of 1500 mm. The path is level, smooth, slip-resistant, and free of abrupt level changes greater than 13 mm.
+
+Ramp access is provided at all level changes greater than 13 mm in the barrier-free path, with a maximum slope of 1:12, minimum width of 1000 mm, level areas of 1500 mm x 1500 mm at top and bottom, and continuous handrails at 865–965 mm height on both sides.
+
+2.2 Alternate Accessible Routes — Stair Alternatives
+
+This multi-storey accessible-ready home development has been designed to allow installation of accessible elevating devices between storeys and mezzanines at any future time, without modifications to structural, electrical, plumbing, or HVAC systems. Structural blocking and reinforced floor areas are provided at designated lift shaft locations on every floor. Electrical conduit rough-ins are pre-installed. This ensures full compliance with the requirement for stair alternatives (elevating device) per CSA/ASC B652 clause 5.8.2.2.
+
+---
+
+SECTION 3 — DOORS AND MANEUVERING AREAS
+
+3.1 Door Minimum Width
+
+All doorways throughout the building, including unit entry doors, bathroom doors, bedroom doors, kitchen passage doors, laundry room doors, and building entrance doors, have a minimum clear width of 860 mm when open, as required under CSA/ASC B652. All hardware is lever type, operable with a closed fist without tight grasping, pinching, or twisting.
+
+3.2 Accessible Maneuvering Areas at Doors
+
+Every doorway in the building is provided with a level, clear, unobstructed maneuvering area on both sides. On the pull (latch) side, a minimum clear space of 600 mm beyond the latch edge is provided. On the push side, a minimum clear space of 300 mm beyond the latch edge is provided. Interior path maneuvering areas are a minimum of 1200 mm. Exterior path maneuvering areas are a minimum of 1500 mm. All maneuvering areas are level (maximum slope 1:50) and unobstructed.
+
+---
+
+SECTION 4 — BATHROOMS
+
+4.1 Accessible-Ready Bathroom Showers
+
+All unit bathrooms with showers are designed to allow future retrofit to full compliance with CSA/ASC B652 clause 5.9.13 without significant modifications to structural, electrical, plumbing, or HVAC systems. Structural reinforcement backing is pre-installed in all shower walls for future grab bar installation. Curbless or low-threshold shower bases (maximum 13 mm threshold) are installed. Plumbing rough-ins accommodate roll-in shower conversion. Shower areas provide a minimum 900 mm x 900 mm clear turning space.
+
+4.2 Accessible-Ready Bathroom Bathtubs
+
+All unit bathrooms with bathtubs are designed to allow future retrofit to full compliance with CSA/ASC B652 clause 5.9.14 without significant modifications to structural, electrical, plumbing, or HVAC systems. Structural backing is pre-installed in all bathtub surround walls to support future grab bar installation at any position. Bathtub controls are located within easy reach from outside the tub. Clear floor space of 900 mm x 1500 mm is provided beside each bathtub.
+
+4.3 Accessible-Ready Bathroom Medicine Cabinets
+
+All bathroom medicine cabinets are designed to allow future retrofit to full compliance with CSA/ASC B652 clause 5.9.15 without significant modifications to structural, electrical, plumbing, or HVAC systems. Medicine cabinets are recessed and adjustable in height. All shelving is accessible within the 400–1100 mm reach range. Blocking is provided in walls adjacent to all medicine cabinets for future repositioning.
+
+---
+
+SECTION 5 — KITCHENS
+
+5.1 Accessible-Ready Kitchens
+
+All unit kitchens are designed to allow future retrofit to full compliance with CSA/ASC B652 clause 5.10 without significant modifications to structural, plumbing, or HVAC systems. Kitchen layouts provide a minimum 1500 mm x 1500 mm clear turning diameter for wheelchair users at the primary work area. Under-counter cabinet space is designed to allow removal without structural modification to accommodate knee clearance. Plumbing supply and drain connections are designed for repositioning. All upper cabinets are also designed to allow lowering without structural modification. Knee clearance blocking is pre-installed beneath sink areas.
+
+---
+
+SECTION 6 — BEDROOMS
+
+6.1 Accessible-Ready Bedrooms
+
+All bedrooms in every unit are designed to allow future retrofit to full compliance with CSA/ASC B652 clauses 5.11.1, 5.11.2, and 5.11.3 without significant modifications to structural, electrical, plumbing, or HVAC systems. Each bedroom provides a minimum clear floor space of 900 mm on one side and 1500 mm at the foot of the bed for wheelchair maneuvering. Doorway widths (minimum 860 mm) allow direct wheelchair access. Closet layouts accommodate conversion to accessible wardrobe configurations. Electrical rough-ins are in place for future motorized closet systems and adjustable-height fixtures.
+
+---
+
+SECTION 7 — LAUNDRY ROOMS
+
+7.1 Accessible-Ready Laundry Rooms
+
+All unit laundry rooms and common laundry facilities are designed to allow future retrofit to full compliance with CSA/ASC B652 clause 5.12 without significant modifications to structural, electrical, plumbing, or HVAC systems. Front-loading washer and dryer units are specified in all units. A minimum clear floor space of 900 mm x 1500 mm is provided in front of all laundry appliances. Plumbing connections and electrical outlets are located to accommodate side-mounted or top-mounted controls without repositioning.
+
+---
+
+SECTION 8 — OPERATING CONTROLS
+
+8.1 Operating Controls Height and Reach
+
+All operating controls throughout the building — including light switches, thermostats, electrical outlets, intercoms, call buttons, door hardware, and appliance controls — are installed at heights between 400 mm and 1100 mm above the finished floor. Controls that require the user to read a display (e.g., thermostats, entry keypads) are installed between 900 mm and 1100 mm above the finished floor. All controls are designed to allow relocation to any height between 400 mm and 1500 mm without modification to structural elements. Controls are operable with a single hand in a closed fist without tight grasping, pinching, or twisting.
+
+---
+
+SECTION 9 — MOBILITY DEVICE SPACE
+
+9.1 Clear Floor and Turning Space for Wheeled Mobility Devices
+
+All common rooms, meeting rooms, amenity spaces, lobby areas, and corridors throughout the building provide clear floor spaces to accommodate persons using wheeled mobility devices. Stationary clear floor spaces are a minimum of 820 mm x 1390 mm. Turning diameters of 1800 mm are provided in all rooms where a wheelchair user must change direction. T-turn spaces of 1800 mm x 1200 mm x 1200 mm are provided in longer corridors. All unit interiors provide a continuous barrier-free route with the above turning provisions at primary destinations (kitchen, bathroom, bedroom, living area).
+
+---
+
+SECTION 10 — SENSORY ALERTS
+
+10.1 Audible and Visual Alerts
+
+All units and common areas are equipped with interconnected fire alarm systems, smoke detectors, and carbon monoxide detectors that provide both audible and visual signals simultaneously. Audible alarms produce a minimum of 75 dBA within sleeping rooms with doors closed, and a maximum of 110 dBA in normally occupied areas, per CAN/ULC-S524. Visual strobe alarm devices are installed in all rooms of every unit, including sleeping rooms, bathrooms, kitchens, and living areas, and in all common corridors, lobbies, laundry rooms, and amenity spaces. Visual signal devices conform to CAN/ULC-S526. The combined audible-visual alarm system ensures that persons with hearing impairments, visual impairments, or both receive appropriate emergency notification.
+
+---
+
+SECTION 11 — SIGNAGE AND COMMUNICATIONS
+
+11.1 Multilingual Signage
+
+All building signage, including emergency procedures, accessibility information, building rules, wayfinding, and operational instructions, is available in multiple formats. Plain-language versions are posted at all key locations. ASL (American Sign Language) summary videos are accessible via QR codes posted beside all major signage. LSQ (Langue des signes québécoise) summary videos are also accessible. All printed materials are available in large-print format (minimum 18 pt font), in Braille, and in digital accessible formats (WCAG 2.1 AA compliant PDFs). This multilingual and multi-format approach ensures accessibility for diverse users with varying communication needs.
+
+---
+
+SECTION 12 — SUMMARY OF FOUND REQUIREMENTS
+
+The following accessibility features have been confirmed as installed and operational in this building:
+
+- Accessible Routes: Barrier-free path to main entrance, interior minimum 1200 mm, exterior minimum 1500 mm, compliant with CSA/ASC B652 clauses 4.3.2 and 5.2.1.
+- Alternate Accessible Routes (Stair Alternatives): Multi-storey design allows installation of elevating device between storeys without structural, electrical, plumbing, or HVAC modification, per CSA/ASC B652 clause 5.8.2.2.
+- Door Minimum Width: All doorways minimum 860 mm clear width.
+- Accessible Maneuvering Area at Doors: 600 mm pull side, 300 mm push side, 1200 mm interior, 1500 mm exterior maneuvering areas.
+- Accessible-Ready Bathroom Showers: Designed for retrofit to CSA/ASC B652 clause 5.9.13 without structural, electrical, plumbing, or HVAC modification.
+- Accessible-Ready Bathroom Bathtubs: Designed for retrofit to CSA/ASC B652 clause 5.9.14 without structural, electrical, plumbing, or HVAC modification.
+- Accessible-Ready Bathroom Medicine Cabinets: Designed for retrofit to CSA/ASC B652 clause 5.9.15 without structural, electrical, plumbing, or HVAC modification.
+- Accessible-Ready Kitchens: Designed for retrofit to CSA/ASC B652 clause 5.10 without structural, plumbing, or HVAC modification.
+- Accessible-Ready Bedrooms: Designed for retrofit to CSA/ASC B652 clauses 5.11.1, 5.11.2, and 5.11.3 without structural, electrical, plumbing, or HVAC modification.
+- Accessible-Ready Laundry Rooms: Designed for retrofit to CSA/ASC B652 clause 5.12 without structural, electrical, plumbing, or HVAC modification.
+- Operating Controls Height and Reach: All controls 400–1100 mm above floor; display controls 900–1100 mm; relocation range 400–1500 mm.
+- Mobility Device Space: Clear floor space 820 mm x 1390 mm; turning diameter 1800 mm; T-turn 1800 mm x 1200 mm x 1200 mm in all primary spaces.
+- Audible and Visual Alerts: Fire alarms, smoke detectors, and carbon monoxide detectors provide both audible and visual signals in all rooms and common areas.
+- Multilingual Signage: All signage available in plain-language, ASL, and LSQ formats, as well as large-print, Braille, and accessible digital formats.

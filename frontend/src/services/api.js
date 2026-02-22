@@ -73,6 +73,11 @@ export async function saveLocation({ address, lat, lng, sourceDoc }) {
   return data;
 }
 
+export async function fetchMyLocations() {
+  const { data } = await api.get("/api/location/mine/");
+  return data;
+}
+
 export async function fetchFeatures() {
   const { data } = await api.get("/api/features/");
   return data;
